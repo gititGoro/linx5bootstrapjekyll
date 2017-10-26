@@ -36,9 +36,6 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 
 Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
-<details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
-{% markdown %}
 - Alerts for dismissing
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
@@ -48,8 +45,8 @@ Curious which components explicitly require jQuery, our JS, and Popper.js? Click
 - Navbar for extending our Collapse plugin to implement responsive behavior
 - Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
 - Scrollspy for scroll behavior and navigation updates
-{% endmarkdown %}
-</details>
+
+
 
 ## Starter template
 
