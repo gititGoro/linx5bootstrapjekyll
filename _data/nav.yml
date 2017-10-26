@@ -1,88 +1,120 @@
 - title: Getting started
   pages:
-    - title: Introduction
-    - title: Download
     - title: Licence
-    - title: Contents
-    - title: Browsers & devices
-    - title: JavaScript
-    - title: Theming
-    - title: Themedcopy
-    - title: Build tools
-    # - title: Best practices # TODO: Write this content
-    - title: Webpack
-    - title: Accessibility
 
-- title: Layout
-  pages:
-    - title: Overview
-    - title: Grid
-    - title: Media object
-    - title: Utilities for layout
-
-- title: Content
-  pages:
-    - title: Reboot
-    - title: Typography
-    - title: Code
-    - title: Images
-    - title: Tables
-    - title: Figures
-
-- title: Components
-  pages:
-    - title: Alerts
-    - title: Badge
-    - title: Breadcrumb
-    - title: Buttons
-    - title: Button group
-    - title: Card
-    - title: Carousel
-    - title: Collapse
-    - title: Dropdowns
-    - title: Forms
-    - title: Input group
-    - title: Jumbotron
-    - title: List group
-    - title: Modal
-    - title: Navs
-    - title: Navbar
-    - title: Pagination
-    - title: Popovers
-    - title: Progress
-    - title: Scrollspy
-    - title: Tooltips
-
-- title: Utilities
-  pages:
-    - title: Borders
-    - title: Clearfix
-    - title: Close icon
-    - title: Colors
-    - title: Display
-    - title: Embed
-    - title: Flex
-    - title: Float
-    - title: Image replacement
-    - title: Position
-    - title: Screenreaders
-    - title: Sizing
-    - title: Spacing
-    - title: Text
-    - title: Vertical align
-    - title: Visibility
-
-- title: Extend
-  pages:
-    # - title: Approach
-    - title: Icons
-
-- title: Migration
-
-- title: About
-  pages:
-    - title: History
-    - title: Team
-    - title: Brand
-    - title: License
-    - title: Translations
+- title: "linx5main"
+  pages: 
+    - title: Licence
+    - title: ReleaseNotes
+  features:
+    - feature: "Functions"
+      sections:
+        - section: "AddToList"
+          pages:
+            - title: index
+        - section: "ClearList"
+          pages:
+            - title: index
+        - section: "DoWhile"
+          pages:
+            - title: index
+        - section: "ForEach"
+          pages:
+            - title: index
+        - section: "IfElse"
+          pages:
+            - title: index
+        - section: "RunProcess"
+          pages:
+            - title: index
+        - section: "SetValue"
+          pages:
+            - title: index
+        - section: "ThrowException"
+          pages:
+            - title: index
+        - section: "TryCatch"
+          pages:
+            - title: index
+    - feature: "Samples"
+      sections:
+        - section: "ParseCSVFile"
+          pages:
+            - title: index
+        - section: "ParseXmlFile"
+          pages:
+            - title: index
+        - section: "PublishWebService"
+          pages:
+            - title: index
+        - section: "SendEmail"
+          pages:
+            - title: index
+        - section: "StoreImagesInDatabase"
+          pages:
+            - title: index
+        - section: "WriteCSVFile"
+          pages:
+            - title: index
+        - section: "WriteLargeFile"
+          pages:
+            - title: index
+        - section: "WriteTextFiles"
+          pages:
+            - title: index
+        - section: "TryCatch"
+          pages:
+            - title: index
+    - feature: "Tools"
+      sections:
+        - section: "Debug"
+          pages:
+            - title: index
+        - section: "Deploy"
+          pages:
+            - title: index
+        - section: "ExpressionEditor"
+          pages:
+            - title: index
+        - section: "Flow"
+          pages:
+            - title: index
+        - section: "Run"
+          pages:
+            - title: index
+        - section: "Settings"
+          pages:
+            - title: index
+    - feature: "Types"
+      sections:
+        - section: "Boolean"
+          pages:
+            - title: index
+        - section: "Byte"
+          pages:
+            - title: index
+        - section: "CustomType"
+          pages:
+            - title: index
+        - section: "DateTime"
+          pages:
+            - title: index
+        - section: "Decimal"
+          pages:
+            - title: index
+        - section: "Double"
+          pages:
+            - title: index
+        - section: "Integer"
+          pages:
+            - title: index
+        - section: "List"
+          pages:
+            - title: index
+        - section: "String"
+          pages:
+            - title: index
+#  pages: 
+#    - title: Licence
+#    - title: ReleaseNotes
+#    

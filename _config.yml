@@ -13,7 +13,7 @@ source:         "."
 destination:    ./_gh_pages
 port:           9001
 baseurl:        ""
-url:            "https://getbootstrap.com"
+url:            "https://twenty57.com/products/linx/"
 encoding:       UTF-8
 exclude:
   - .git/
@@ -51,16 +51,6 @@ social_logo_path:   /assets/brand/bootstrap-social-logo.png
 # Custom variables
 current_version:      4.0.0-beta.2
 current_ruby_version: 4.0.0.beta2
-repo:                 "https://github.com/twbs/bootstrap"
-slack:                "https://bootstrap-slack.herokuapp.com"
-blog:                 "https://blog.getbootstrap.com"
-expo:                 "https://expo.getbootstrap.com"
-jobs:                 "https://jobs.getbootstrap.com"
-themes:               "https://themes.getbootstrap.com"
-
-download:
-  source:           "https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip"
-  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.0.0-beta.2/bootstrap-4.0.0-beta.2-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
