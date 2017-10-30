@@ -22,7 +22,7 @@
         {{ group.title }}
       </a>
 
-      <ul class="nav bd-sidenav">
+      <ul class="nested">
         {%- for doc in group.pages -%}
           {%- assign doc_slug = doc.title | slugify -%}
           {%- assign active = nil -%}
@@ -32,16 +32,16 @@
           {%- endif -%}
 
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-            <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
+            <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
               {{ doc.title }}
             </a>
 
             {%- comment -%}
             {% unless doc.sections == nil %}
-              <ul class="nav">
+              <ul class="">
                 {% for section in doc.sections %}
                   <li>
-                    <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
+                    <a class="bd-toc-link" href="#{{ section.title | downcase | replace: ' ', '-' }}">
                       {{ section.title }}
                     </a>
                   </li>
@@ -51,6 +51,42 @@
             {%- endcomment -%}
           </li>
         {%- endfor -%}
+     
+          {%- for feature in group.features -%}
+
+            {%- assign active = nil -%}
+            {%- assign component  = feature.components | first -%}
+            {%- assign componentPage  = component.pages | first -%}
+            {%- if page.component == component.component -%}
+              {%- assign active = 'active bd-sidenav-active' -%}
+            {%- endif -%}
+
+          <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
+            <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ component.component }}/{{ componentPage.title }}">
+              {{ feature.feature }}
+          </a>
+          
+          {%- if page.component == component.component -%}
+              <ul class="nested">
+               
+                  {%- for current in feature.components -%}
+                  {%- assign active = nil -%}
+                  {%- if current.component == page.component -%}
+                      {%- assign active = 'active' -%}
+                  {%- endif -%}
+                    <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
+                      {%- assign currentPage  = current.pages | first -%}
+                     <a class="bd-toc-link" href ="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ current.component }}/{{ currentPage.title }}">
+                       {{ current.component }}</a>
+                      </li>
+                  {%- endfor -%}
+      
+                  </ul>
+          {%- endif -%}
+            
+          </li>
+          {%- endfor -%}
+       
       </ul>
     </div>
   {%- endfor -%}

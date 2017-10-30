@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Licence
+description: Look at this function
+group: linx5main
+feature: Functions
+component: AddToList
+toc: true
+redirect_from: "/docs/linx5main/functions/addtolist/index"
+---
 AddToList
 =========
 

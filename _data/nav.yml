@@ -8,113 +8,109 @@
     - title: ReleaseNotes
   features:
     - feature: "Functions"
-      sections:
-        - section: "AddToList"
+      components:
+        - component: "AddToList"
           pages:
-            - title: index
-        - section: "ClearList"
+            - title: Index
+        - component: "ClearList"
           pages:
-            - title: index
-        - section: "DoWhile"
+            - title: Index
+        - component: "DoWhile"
           pages:
-            - title: index
-        - section: "ForEach"
+            - title: Index
+        - component: "ForEach"
           pages:
-            - title: index
-        - section: "IfElse"
+            - title: Index
+        - component: "IfElse"
           pages:
-            - title: index
-        - section: "RunProcess"
+            - title: Index
+        - component: "RunProcess"
           pages:
-            - title: index
-        - section: "SetValue"
+            - title: Index
+        - component: "SetValue"
           pages:
-            - title: index
-        - section: "ThrowException"
+            - title: Index
+        - component: "ThrowException"
           pages:
-            - title: index
-        - section: "TryCatch"
+            - title: Index
+        - component: "TryCatch"
           pages:
-            - title: index
+            - title: Index
     - feature: "Samples"
-      sections:
-        - section: "ParseCSVFile"
+      components:
+        - component: "ParseCSVFile"
           pages:
-            - title: index
-        - section: "ParseXmlFile"
+            - title: Index
+        - component: "ParseXmlFile"
           pages:
-            - title: index
-        - section: "PublishWebService"
+            - title: Index
+        - component: "PublishWebService"
           pages:
-            - title: index
-        - section: "SendEmail"
+            - title: Index
+        - component: "SendEmail"
           pages:
-            - title: index
-        - section: "StoreImagesInDatabase"
+            - title: Index
+        - component: "StoreImagesInDatabase"
           pages:
-            - title: index
-        - section: "WriteCSVFile"
+            - title: Index
+        - component: "WriteCSVFile"
           pages:
-            - title: index
-        - section: "WriteLargeFile"
+            - title: Index
+        - component: "WriteLargeFile"
           pages:
-            - title: index
-        - section: "WriteTextFiles"
+            - title: Index
+        - component: "WriteTextFiles"
           pages:
-            - title: index
-        - section: "TryCatch"
+            - title: Index
+        - component: "TryCatch"
           pages:
-            - title: index
+            - title: Index
     - feature: "Tools"
-      sections:
-        - section: "Debug"
+      components:
+        - component: "Debug"
           pages:
-            - title: index
-        - section: "Deploy"
+            - title: Index
+        - component: "Deploy"
           pages:
-            - title: index
-        - section: "ExpressionEditor"
+            - title: Index
+        - component: "ExpressionEditor"
           pages:
-            - title: index
-        - section: "Flow"
+            - title: Index
+        - component: "Flow"
           pages:
-            - title: index
-        - section: "Run"
+            - title: Index
+        - component: "Run"
           pages:
-            - title: index
-        - section: "Settings"
+            - title: Index
+        - component: "Settings"
           pages:
-            - title: index
+            - title: Index
     - feature: "Types"
-      sections:
-        - section: "Boolean"
+      components:
+        - component: "Boolean"
           pages:
-            - title: index
-        - section: "Byte"
+            - title: Index
+        - component: "Byte"
           pages:
-            - title: index
-        - section: "CustomType"
+            - title: Index
+        - component: "CustomType"
           pages:
-            - title: index
-        - section: "DateTime"
+            - title: Index
+        - component: "DateTime"
           pages:
-            - title: index
-        - section: "Decimal"
+            - title: Index
+        - component: "Decimal"
           pages:
-            - title: index
-        - section: "Double"
+            - title: Index
+        - component: "Double"
           pages:
-            - title: index
-        - section: "Integer"
+            - title: Index
+        - component: "Integer"
           pages:
-            - title: index
-        - section: "List"
+            - title: Index
+        - component: "List"
           pages:
-            - title: index
-        - section: "String"
+            - title: Index
+        - component: "String"
           pages:
-            - title: index
-#  pages: 
-#    - title: Licence
-#    - title: ReleaseNotes
-#    
+            - title: Index

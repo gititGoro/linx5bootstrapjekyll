@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Licence
+description: This is for doing
+group: linx5main
+feature: Functions
+component: DoWhile
+toc: true
+redirect_from: "/docs/linx5main/functions/dowhile/index"
+---
 DoWhile
 =======
 
