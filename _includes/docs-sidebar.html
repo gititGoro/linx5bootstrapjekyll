@@ -53,38 +53,42 @@
         {%- endfor -%}
      
           {%- for feature in group.features -%}
-
             {%- assign active = nil -%}
-            {%- assign component  = feature.components | first -%}
-            {%- assign componentPage  = component.pages | first -%}
-            {%- if page.component == component.component -%}
+            {%- if page.feautre == feature.feature -%}
               {%- assign active = 'active bd-sidenav-active' -%}
             {%- endif -%}
 
-          <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-            <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ component.component }}/{{ componentPage.title }}">
-              {{ feature.feature }}
-          </a>
-          
-          {%- if page.component == component.component -%}
-              <ul class="nested">
-               
-                  {%- for current in feature.components -%}
-                  {%- assign active = nil -%}
-                  {%- if current.component == page.component -%}
-                      {%- assign active = 'active' -%}
-                  {%- endif -%}
-                    <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-                      {%- assign currentPage  = current.pages | first -%}
-                     <a class="bd-toc-link" href ="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ current.component }}/{{ currentPage.title }}">
-                       {{ current.component }}</a>
-                      </li>
-                  {%- endfor -%}
-      
-                  </ul>
-          {%- endif -%}
+            {%- assign firstComponent = feature.components | first -%}
+            {%- assign firstComponentPage  = firstComponent.pages | first -%}
+            <li class="{{ active }}">
+                <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ firstComponent.component }}/{{ firstComponentPage.title }}">
+                 {{ feature.feature }}
+              </a>
+
+            {%- for component in feature.components -%}
+
+              {%- assign componentPage  = component.pages | first -%}
             
-          </li>
+              {%- if page.component == component.component -%}
+                  <ul class="nested">
+                  
+                      {%- for current in feature.components -%}
+                      {%- assign active = nil -%}
+                      {%- if current.component == page.component -%}
+                          {%- assign active = 'active' -%}
+                      {%- endif -%}
+                        <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
+                          {%- assign currentPage  = current.pages | first -%}
+                        <a class="bd-toc-link" href ="{{ site.baseurl }}/docs/{{ group_slug }}/{{ feature.feature }}/{{ current.component }}/{{ currentPage.title }}">
+                          {{ current.component }}</a>
+                          </li>
+                      {%- endfor -%}
+          
+                      </ul>
+              {%- endif -%}
+                
+              </li>
+              {%- endfor -%}
           {%- endfor -%}
        
       </ul>
