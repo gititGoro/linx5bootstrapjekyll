@@ -21,20 +21,5 @@ do
     block="${block}redirect_from: docs/${group}/${feature}/${component}/index"$'\n'
     block="${block}---"$'\n'
     fileContents="${block}${fileContents}"
-    echo "$fileContents">"$line.example"
-    #TODO: read contents of each line into a variable and then prepend block to the content and then write it back to the file
+    echo "$fileContents">"$line"
 done
-
-
-: <<'COMMENT'
----
-layout: docs
-title: Licence
-description: Look at this function
-group: linx5main
-feature: Functions
-component: ForEach
-toc: true
-redirect_from: "/docs/linx5main/functions/foreach/index"
----
-COMMENT

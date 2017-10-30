@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Decimal
+description: Decimal
+group: linx5main
+feature: Types
+component: Decimal
+toc: true
+redirect_from: docs/linx5main/Types/Decimal/index
+---
 Decimal
 =======
 

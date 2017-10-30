@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Licence
-description: This is for doing
+title: DoWhile
+description: DoWhile
 group: linx5main
 feature: Functions
 component: DoWhile
 toc: true
-redirect_from: "/docs/linx5main/functions/dowhile/index"
+redirect_from: docs/linx5main/Functions/DoWhile/index
 ---
 DoWhile
 =======
@@ -25,5 +25,3 @@ Properties
 -  #### Test
 
     When to test the condition, before or after the loop.
-
-

@@ -1,13 +1,14 @@
 ---
 layout: docs
-title: Licence
-description: Look at this function
+title: ForEach
+description: ForEach
 group: linx5main
 feature: Functions
 component: ForEach
 toc: true
-redirect_from: "/docs/linx5main/functions/foreach/index"
+redirect_from: docs/linx5main/Functions/ForEach/index
 ---
+
 ForEach
 =======
 
@@ -24,5 +25,3 @@ Properties
 <hr>
 #### Videos
 [Linx 5 Lists and ForEach ](https://www.youtube.com/watch?v=VfIWh2P7mSU)
-
-

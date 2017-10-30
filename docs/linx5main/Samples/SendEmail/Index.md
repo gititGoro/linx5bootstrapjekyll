@@ -1,3 +1,13 @@
+---
+layout: docs
+title: SendEmail
+description: SendEmail
+group: linx5main
+feature: Samples
+component: SendEmail
+toc: true
+redirect_from: docs/linx5main/Samples/SendEmail/index
+---
 Send Email
 ==========
 

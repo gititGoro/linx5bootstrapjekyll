@@ -1,3 +1,13 @@
+---
+layout: docs
+title: String
+description: String
+group: linx5main
+feature: Types
+component: String
+toc: true
+redirect_from: docs/linx5main/Types/String/index
+---
 String
 ======
 

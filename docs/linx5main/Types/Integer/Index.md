@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Integer
+description: Integer
+group: linx5main
+feature: Types
+component: Integer
+toc: true
+redirect_from: docs/linx5main/Types/Integer/index
+---
 Integer
 =======
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ParseXmlFile
+description: ParseXmlFile
+group: linx5main
+feature: Samples
+component: ParseXmlFile
+toc: true
+redirect_from: docs/linx5main/Samples/ParseXmlFile/index
+---
 Parse XML File
 ==============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: WriteCSVFile
+description: WriteCSVFile
+group: linx5main
+feature: Samples
+component: WriteCSVFile
+toc: true
+redirect_from: docs/linx5main/Samples/WriteCSVFile/index
+---
 Write CSV File
 ==============
 

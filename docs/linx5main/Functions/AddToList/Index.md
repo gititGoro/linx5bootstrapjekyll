@@ -1,13 +1,14 @@
 ---
 layout: docs
-title: Licence
-description: Look at this function
+title: AddToList
+description: AddToList
 group: linx5main
 feature: Functions
 component: AddToList
 toc: true
-redirect_from: "/docs/linx5main/functions/addtolist/index"
+redirect_from: docs/linx5main/Functions/AddToList/index
 ---
+
 AddToList
 =========
 

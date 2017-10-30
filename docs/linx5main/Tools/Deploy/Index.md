@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Deploy
+description: Deploy
+group: linx5main
+feature: Tools
+component: Deploy
+toc: true
+redirect_from: docs/linx5main/Tools/Deploy/index
+---
 Deploy
 ======
 

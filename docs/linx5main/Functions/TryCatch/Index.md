@@ -1,3 +1,13 @@
+---
+layout: docs
+title: TryCatch
+description: TryCatch
+group: linx5main
+feature: Functions
+component: TryCatch
+toc: true
+redirect_from: docs/linx5main/Functions/TryCatch/index
+---
 TryCatch
 ========
 
@@ -24,5 +34,3 @@ Properties
     are trying to read these, you may want to clear the folder of the
     files again when you are done with them, regardless of whether you could read them or not. The
     logic to remove these files or back them up to another folder would fit well into 'Finally'.
-
-
