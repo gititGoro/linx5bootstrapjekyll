@@ -1,7 +1,7 @@
 MongoDBRead
 ===========
 
-MongoDBRead performs read operations on a Mongo database.  
+MongoDBRead performs read operations on a Mongo database.
 
 <span class="recommendation">Use the 'loop results' function of this
 function for large datasets!</span>
