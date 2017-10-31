@@ -3,7 +3,7 @@ MongoDBRead
 
 MongoDBRead performs read operations on a Mongo database.
 
-<span class="recommendation">Use 'Row by row' under 'Return options' for large datasets.</span>
+<span class="recommendation">Use "Row by row" under "Return options" for large datasets.</span>
 
 Properties
 ----------
