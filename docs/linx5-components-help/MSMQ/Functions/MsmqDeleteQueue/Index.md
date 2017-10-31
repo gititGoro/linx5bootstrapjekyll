@@ -8,7 +8,7 @@ Properties
 
 -  #### Computer name
 
-    The name of the computer that holds the queue ("†'.'†ù indicates the
+    The name of the computer that holds the queue ("'.' indicates the
     local computer).
 
 -  #### Queue name
