@@ -1,0 +1,4 @@
+<Item>
+	<Name>UpdatePayment</Name>
+	<Description>Use this method to delete (reverse) payments to invoices, credit notes, prepayments and overpayments. Note that payments created via batch payments and receipts are not supported. Payments cannot be modified, only created and deleted.</Description>
+</Item>

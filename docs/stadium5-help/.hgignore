@@ -1,0 +1,15 @@
+syntax: glob
+
+bin
+Bin
+obj
+Debug
+Release
+_vti*
+*.suo
+*.user
+*.projdata
+*.webinfo
+Thumbs.db
+glob:InformationLog*
+Stadium5Help/Content/.sass-cache

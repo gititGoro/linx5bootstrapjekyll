@@ -1,0 +1,4 @@
+	<Item>
+		<Name>DB Bulk Copy</Name>
+		<Description>Copy many rows of data to a table in a SQL Server or Oracle database.</Description>
+	</Item>

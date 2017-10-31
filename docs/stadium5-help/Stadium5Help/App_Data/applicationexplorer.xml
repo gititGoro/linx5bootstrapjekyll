@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Item>
+		<Name>Application</Name>
+		<Description>The Application contains pages, scripts, constants and data sources.</Description>
+	</Item>
+	<Item>
+		<Name>Pages</Name>
+		<Description>Pages are what makes up Stadium applications. Create pages and provide navigation to allow users to browse the site.</Description>
+	</Item>
+	<Item>
+		<Name>Scripts</Name>
+		<Description>Scripts can be added to pages to provide functionality and behaviours. Right-click on a page to add a script, then add components to the script to make it do stuff. The scripts are generated in the Stadium Server using Javascript and JQuery.</Description>
+	</Item>
+	<Item>
+		<Name>Constants</Name>
+		<Description>Constants are static values that cannot be changed. If you use constants for environment-specific values, such as file paths, it becomes easier to migrate applications between environments.</Description>
+	</Item>
+	<Item>
+		<Name>Connections</Name>
+		<Description>Stadium currently supports connections to Microsoft SQLServer as well as Oracle databases. Any reasonably recent version of either of these should work. We are planning to add MySQL and others soon.</Description>
+	</Item>
+	<Item>
+		<Name>Events</Name>
+		<Description>You can add Events for controls that support them by using the relevant panel in the Stadium Designer. At the moment the only event we support is 'click' and the only thing you can do is run a script.</Description>
+	</Item>
+	<Item>
+		<Name>Queries</Name>
+		<Description>You can add any valid SQL into the query window and connect to Microsoft SQL, Oracle or ODBC supported databases. Write your SQL directly in Stadium or call a procedure stored on the SQL Server.</Description>
+	</Item>
+	<Item>
+		<Name>DataSources</Name>
+		<DisplayName>Data Sources</DisplayName>
+		<Description>The only DataSource Stadium Stadium currently supports is databases, Microsoft SQL, Oracle and ODBC for databases like MySQL, DB2, PostgreSQL and others. We are planning to add other DataSources, such as files and Web Services in the near future.</Description>
+	</Item>
+</ArrayOfItem>

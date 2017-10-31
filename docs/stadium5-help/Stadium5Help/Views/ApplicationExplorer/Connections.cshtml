@@ -1,0 +1,31 @@
+﻿<h1>Connections</h1>
+<img style="float:right;padding:0;margin:0 0 10px 10px;max-width:360px;width:100%;height:auto;" src="~/Images/PageControls/connection.png" alt="" border="0">
+<p>Here you need to add all connections you require for your entire application. When you add a new query you will need to select the required connection from the list.</p>
+<p>We support Microsoft SQL Server and Oracle through Native connections and you can also connect to any Database that supports ODBC (like MySQL, DB2 and PosgreSQL).When using MSSQL you can also run stored procedures</p>
+<hr>
+<h2>Properties</h2>
+<ol>
+    <li>
+        <h4>Name</h4>
+        A name you can use to identify the connection in a list 
+    </li>
+    <li>
+        <h4>Server Name/Dsn Name</h4>
+        <p>A SQL or Oracle server name This is typically a &lt;network machine name&gt;/&lt;SQL instance name&gt; combination.</p>
+		<p>For ODBC use the Dsn name you specified when setting up the ODBC Datasource. You'll need a User DSN to connect via the Designer, and a Service DSN on the server to connect through the Generated App. Make sure you add a "System DSN" here, as a "User DSN" does not work. If you are working on a 64-bit environment, set up a 64-bit ODBC Data Source.</p>
+    </li>
+    <li>
+        <h4>SQL Server/Oracle/ODBC Authentication</h4>
+        SQL Server, Oracle and all ODBC databases can be set up to be accessible by way of a username and password combination for the database server.
+    </li>
+    <li>
+        <h4>Use Windows Authentication (SQL Server only)</h4>
+        SQL Server can be set up to be accessible by using Windows credentials.
+    </li>
+    <li>
+        <h4>Select or enter a database name (SQL and ODBC)</h4>
+        The database you wish to access when using the connection. If the database server is accessible from the designer machine, then you can use the drop-down to find the database.
+    </li>
+</ol>
+<hr>
+<img src="~/Images/PageControls/Connection-add.png" border="0">

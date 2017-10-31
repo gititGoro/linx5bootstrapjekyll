@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Call REST WebService</Name>
+		<Description>Connect to web APIs using REST principals.</Description>
+	</Item>

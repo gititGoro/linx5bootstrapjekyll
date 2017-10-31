@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Stadium Search";
+}
+
+<input id="searchTerm" type="hidden" value="@Model" />
+<div id="searchSummary"></div>
+<br />
+<div id="searchBody"></div>
+<div id="searchNav">
+    <a id="prevResults" href="#" style="display: none">Previous</a>
+    <label id="paging"></label>
+    <a id="nextResults" href="#" style="display: none">Next</a>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/App/Pages/search.js"></script>
+}

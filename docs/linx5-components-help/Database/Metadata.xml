@@ -1,0 +1,4 @@
+<Item>
+	<Name>Database</Name>
+	<Description>Support for MSSQLServer, Oracle, MySQL, Postgres and many more databases. Write SQL or execute Stored Procedures. Bulk copy data with DbBulkCopy.</Description>
+</Item>

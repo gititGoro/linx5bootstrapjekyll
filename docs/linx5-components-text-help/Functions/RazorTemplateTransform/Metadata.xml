@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Razor Template Transform</Name>
+		<Description>Transform a Razor template to an output string. Use this for mixing data and text to produce formatted output in HTML or text.</Description>
+	</Item>

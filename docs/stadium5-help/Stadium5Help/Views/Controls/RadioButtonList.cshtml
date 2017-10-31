@@ -1,0 +1,29 @@
+<h1>Radio Button List</h1>
+<p>A Check box list renders a list of options and allows user to select one value. It is identical in function to a drop down. The selected value is passed through to a script as part of an event.</p>
+<hr>
+<h2>Properties</h2>
+<ol>
+    <li>
+<h4>Direction</h4>
+TopToBottom or LeftToRight - How the options should display to the user
+</li>
+<li><h4>Options</h4>
+<p>Specify a list of options to display in the control. It can be generated from a static list or from a query. Text is the field the user sees. Value is the field you want to save to your Database.</p>
+<p>Options is a collection of name & value pairs. These will be injected into the <option /> tags in the select. The name being the display name and the value being the value attribute for an <option /> tag.</p>
+</li>
+<li><h4>Display Value</h4>
+The option selected when the page loads. The Display Value must map to one of the Options Values (not Text) in order to work. This option is saved if the user doesn't change it
+</li>
+	<li>
+        <h4>Read-only</h4>
+		Set to True if you want the control to display as read-only (value can't be changed) on the page.
+	</li>
+	<li>
+        <h4>Visible</h4>
+        Set to False if you don't want this control to render on the page and be visible to the user. In the near future, you will be able to use a script to make it visible when an event occurs.
+    </li>
+    <li>
+        <h4>Validations</h4>
+        Some Validators that can be applied to the RadioButtonList
+    </li>
+</ol>

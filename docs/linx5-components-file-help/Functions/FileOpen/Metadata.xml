@@ -1,0 +1,4 @@
+	<Item>
+		<Name>File Open</Name>
+		<Description>Keeps a file open for speeding up large numbers of write operations.</Description>
+	</Item>

@@ -1,0 +1,5 @@
+	<Item>
+		<Name>Generate ECDSA Signature</Name>
+		<Description>Signs data using an ECDSA private key.</Description>
+		<Category>ECDSA Cryptography</Category>
+	</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>XML Peek</Name>
+		<Description>Reads one or more nodes from an XML document.</Description>
+	</Item>

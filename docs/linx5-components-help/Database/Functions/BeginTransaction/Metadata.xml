@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Begin Transaction</Name>
+		<Description>Starts a transaction in a database to facilitate performing multiple database operations on the same transaction.</Description>
+	</Item>

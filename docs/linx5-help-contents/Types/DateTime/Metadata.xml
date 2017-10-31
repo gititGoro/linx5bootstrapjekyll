@@ -1,0 +1,6 @@
+<Item>
+  <Name>DateTime</Name>
+  <Description>
+    Date and time. Use [.ToString(format)] in the Expression Editor to output your desired format in text.
+  </Description>
+</Item>

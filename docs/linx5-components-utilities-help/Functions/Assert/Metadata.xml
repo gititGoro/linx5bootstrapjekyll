@@ -1,0 +1,5 @@
+<Item>
+  <Name>Assert</Name>
+  <Description>Add run-time checks to a process to assert the validity of predicates that should hold true.</Description>
+  <Category>Other</Category>
+</Item>

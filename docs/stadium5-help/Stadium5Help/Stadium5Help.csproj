@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18091DBA-D08E-4057-953A-F16CC782238C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stadium5Help</RootNamespace>
+    <AssemblyName>Stadium5Help</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ApplicationExplorerController.cs" />
+    <Compile Include="Controllers\ControlsController.cs" />
+    <Compile Include="Controllers\FrameworksController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HowItWorksController.cs" />
+    <Compile Include="Controllers\PageScriptsController.cs" />
+    <Compile Include="Controllers\ReleasenotesController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\Section.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\pagescripts.xml" />
+    <Content Include="App_Data\frameworks.xml" />
+    <Content Include="App_Data\howitworks.xml" />
+    <Content Include="App_Data\applicationexplorer.xml" />
+    <Content Include="App_Data\controls.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\releasenotes.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\main-help.css" />
+    <Content Include="Content\print.css" />
+    <Content Include="Content\slimbox2.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\main-help.scss" />
+    <None Include="Properties\PublishProfiles\Package.pubxml" />
+    <None Include="Properties\PublishProfiles\twenty57.pubxml" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Images\662623.pic1.png" />
+    <Content Include="Images\arrow-down-black-small.png" />
+    <Content Include="Images\arrow-down-black.png" />
+    <Content Include="Images\closelabel.gif" />
+    <Content Include="Images\connections.jpg" />
+    <Content Include="Images\ConnWizard.jpg" />
+    <Content Include="Images\constants-select.png" />
+    <Content Include="Images\constants.jpg" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\exceptionhandler1.png" />
+    <Content Include="Images\exceptionhandler2.png" />
+    <Content Include="Images\ExecuteSQl1.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\google.png" />
+    <Content Include="Images\googleplus.png" />
+    <Content Include="Images\Icons\appexplorer.png" />
+    <Content Include="Images\Icons\Application.png" />
+    <Content Include="Images\Icons\bootstrap.png" />
+    <Content Include="Images\Icons\button.png" />
+    <Content Include="Images\Icons\callwebservice.png" />
+    <Content Include="Images\Icons\callwebservice1.png" />
+    <Content Include="Images\Icons\callwebservice3.png" />
+    <Content Include="Images\Icons\Checkbox.png" />
+    <Content Include="Images\Icons\CheckboxList.png" />
+    <Content Include="Images\Icons\Connections.png" />
+    <Content Include="Images\Icons\connectionwizard.png" />
+    <Content Include="Images\Icons\constants.png" />
+    <Content Include="Images\Icons\datagrid.png" />
+    <Content Include="Images\Icons\datagrid1.png" />
+    <Content Include="Images\Icons\datagrid2.png" />
+    <Content Include="Images\Icons\datagrid3.png" />
+    <Content Include="Images\Icons\DataSources.png" />
+    <Content Include="Images\Icons\datepicker.png" />
+    <Content Include="Images\Icons\datepicker1.png" />
+    <Content Include="Images\Icons\decision.png" />
+    <Content Include="Images\Icons\Events.png" />
+    <Content Include="Images\Icons\ForEach.png" />
+    <Content Include="Images\Icons\Image.png" />
+    <Content Include="Images\Icons\layout table.png" />
+    <Content Include="Images\Icons\layout grid.png" />
+    <Content Include="Images\Icons\RadiobuttonList.png" />
+    <Content Include="Images\Icons\SetValue.png" />
+    <Content Include="Images\Icons\Variable.png" />
+    <Content Include="Images\Icons\stadiumdesigner.png" />
+    <Content Include="Images\Icons\dropdown.png" />
+    <Content Include="Images\Icons\ExecuteSQL.png" />
+    <Content Include="Images\Icons\executesql1.png" />
+    <Content Include="Images\Icons\executesql2.png" />
+    <Content Include="Images\Icons\getfile.png" />
+    <Content Include="Images\Icons\getfile1.png" />
+    <Content Include="Images\Icons\getfile3.png" />
+    <Content Include="Images\Icons\jquery.png" />
+    <Content Include="Images\Icons\jqueryui.png" />
+    <Content Include="Images\Icons\label.png" />
+    <Content Include="Images\Icons\link.png" />
+    <Content Include="Images\Icons\link2.png" />
+    <Content Include="Images\Icons\menu.png" />
+    <Content Include="Images\Icons\messagebox.png" />
+    <Content Include="Images\Icons\messagebox2.png" />
+    <Content Include="Images\Icons\navigatetopage.png" />
+    <Content Include="Images\Icons\openfile.png" />
+    <Content Include="Images\Icons\setoutputparameter.png" />
+    <Content Include="Images\Icons\pages.png" />
+    <Content Include="Images\Icons\panel.png" />
+    <Content Include="Images\Icons\queries.png" />
+    <Content Include="Images\Icons\scripts.png" />
+    <Content Include="Images\Icons\StadiumIntro.png" />
+    <Content Include="Images\Icons\stadiumserver.png" />
+    <Content Include="Images\Icons\SetVariable.png" />
+    <Content Include="Images\Icons\sqleditor.png" />
+    <Content Include="Images\Icons\textbox.png" />
+    <Content Include="Images\Icons\uploadfile.png" />
+    <Content Include="Images\InputVars.jpg" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mobilemenu.png" />
+    <Content Include="Images\new-Script.jpg" />
+    <Content Include="Images\nextlabel.gif" />
+    <Content Include="Images\PageControls\application-properties.png" />
+    <Content Include="Images\PageControls\application-rendered.png" />
+    <Content Include="Images\PageControls\column-select.png" />
+    <Content Include="Images\PageControls\Connection-add.png" />
+    <Content Include="Images\PageControls\connection.png" />
+    <Content Include="Images\PageControls\decision-conditions.png" />
+    <Content Include="Images\PageControls\events-panel.png" />
+    <Content Include="Images\PageControls\events-window.png" />
+    <Content Include="Images\PageControls\LayoutGrid.png" />
+    <Content Include="Images\PageControls\LayoutGridMultiMerge.png" />
+    <Content Include="Images\PageControls\LayoutGridRightClick.png" />
+    <Content Include="Images\PageControls\link-clickeventparameters.png" />
+    <Content Include="Images\PageControls\link-clickeventparameters2.png" />
+    <Content Include="Images\PageControls\menu-item-editor.png" />
+    <Content Include="Images\PageControls\menu-item-rightclick.png" />
+    <Content Include="Images\PageControls\menu-items-view.png" />
+    <Content Include="Images\PageControls\menu-left-to-right.png" />
+    <Content Include="Images\PageControls\menu-link.png" />
+    <Content Include="Images\PageControls\menu-selected.png" />
+    <Content Include="Images\PageControls\menu-top-to-bottom.png" />
+    <Content Include="Images\PageControls\output-parameters-setup.png" />
+    <Content Include="Images\PageControls\output-parameters.png" />
+    <Content Include="Images\PageControls\Query-add.png" />
+    <Content Include="Images\PageControls\Query-Add_a_query.png" />
+    <Content Include="Images\PageControls\Query-fields.png" />
+    <Content Include="Images\PageControls\Query-parameters.png" />
+    <Content Include="Images\PageControls\Query-query.png" />
+    <Content Include="Images\PageControls\Query_with_sql.png" />
+    <Content Include="Images\PageControls\table-column-rightclick.png" />
+    <Content Include="Images\PageControls\table-control-canvas-lg.png" />
+    <Content Include="Images\PageControls\table-search-bar.png" />
+    <Content Include="Images\PageControls\table-select.png" />
+    <Content Include="Images\PageControls\tbl-column-rightclick.png" />
+    <Content Include="Images\PageControls\tbl-column-with-control.png" />
+    <Content Include="Images\PageControls\tbl-properties.png" />
+    <Content Include="Images\pages.jpg" />
+    <Content Include="Images\prevlabel.gif" />
+    <Content Include="Images\print-white.png" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\queries.jpg" />
+    <Content Include="Images\recommendation-alert.png" />
+    <Content Include="Images\script-view1.jpg" />
+    <Content Include="Images\search-dark.png" />
+    <Content Include="Images\search-white.png" />
+    <Content Include="Images\StadiumApplication.png" />
+    <Content Include="Images\StadiumDesigner.png" />
+    <Content Include="Images\Staff\anton.jpg" />
+    <Content Include="Images\Staff\brenna.jpg" />
+    <Content Include="Images\Staff\dawood.jpg" />
+    <Content Include="Images\Staff\gawie.jpg" />
+    <Content Include="Images\Staff\vimesh.jpg" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Scripts\App\index.js" />
+    <Content Include="Scripts\App\Pages\search.js" />
+    <Content Include="Scripts\App\plugins.js" />
+    <Content Include="Scripts\App\search.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\slimbox2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Controls\Button.cshtml" />
+    <Content Include="Views\Controls\DataGrid.cshtml" />
+    <Content Include="Views\Controls\DatePicker.cshtml" />
+    <Content Include="Views\Controls\DropDown.cshtml" />
+    <Content Include="Views\Controls\Label.cshtml" />
+    <Content Include="Views\Controls\Menu.cshtml" />
+    <Content Include="Views\Controls\Panel.cshtml" />
+    <Content Include="Views\Controls\TextBox.cshtml" />
+    <Content Include="Views\Controls\UploadFile.cshtml" />
+    <Content Include="Views\Frameworks\JQuery.cshtml" />
+    <Content Include="Views\Frameworks\JQueryUI.cshtml" />
+    <Content Include="Views\HowItWorks\StadiumDesigner.cshtml" />
+    <Content Include="Views\PageScripts\CallWebservice.cshtml" />
+    <Content Include="Views\PageScripts\Decision.cshtml" />
+    <Content Include="Views\PageScripts\ExecuteSql.cshtml" />
+    <Content Include="Views\PageScripts\GetFile.cshtml" />
+    <Content Include="Views\PageScripts\MessageBox.cshtml" />
+    <Content Include="Views\PageScripts\NavigateToPage.cshtml" />
+    <Content Include="Views\PageScripts\SetOutputParameter.cshtml" />
+    <Content Include="Views\PageScripts\SetVariable.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Pages.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Scripts.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Constants.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Connections.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Queries.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Index.cshtml" />
+    <Content Include="Views\Controls\Index.cshtml" />
+    <Content Include="Views\Frameworks\Index.cshtml" />
+    <Content Include="Views\HowItWorks\Index.cshtml" />
+    <Content Include="Views\PageScripts\Index.cshtml" />
+    <Content Include="Views\Controls\Link.cshtml" />
+    <Content Include="Views\HowItWorks\StadiumIntro.cshtml" />
+    <Content Include="Views\Controls\Checkbox.cshtml" />
+    <Content Include="Views\Controls\CheckboxList.cshtml" />
+    <Content Include="Views\Controls\Image.cshtml" />
+    <Content Include="Views\Controls\RadioButtonList.cshtml" />
+    <Content Include="Views\Releasenotes\Index.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Application.cshtml" />
+    <Content Include="Views\ApplicationExplorer\DataSources.cshtml" />
+    <Content Include="Views\ApplicationExplorer\Events.cshtml" />
+    <Content Include="Views\Controls\Layout Grid.cshtml" />
+    <Content Include="Views\Controls\Layout Table.cshtml" />
+    <Content Include="Views\Frameworks\Bootstrap.cshtml" />
+    <Content Include="Views\PageScripts\Variable.cshtml" />
+    <Content Include="Views\PageScripts\SetValue.cshtml" />
+    <Content Include="Views\PageScripts\Notification.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63537</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63537/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

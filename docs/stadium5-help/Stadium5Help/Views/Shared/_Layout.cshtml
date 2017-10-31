@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@ViewBag.Title :: Stadium Help</title>
+@Styles.Render("~/Content/css")
+<link href="~/Content/slimbox2.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="print" href="~/Content/print.css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+</head>
+<body>
+	<header>
+		<div id="header-content">
+			<div id="menu-top">
+				<input placeholder="Search..." class="search-input" id="searchField" data-search-url="@Href("~/Search/Index")" />
+				<img src="~/Images/print-white.png" alt="" width="24" height="24" border="0" class="printPage">
+			</div>
+        <div id="mobilemenu">
+            <img src="~/Images/mobilemenu.png" class="icon-64">
+        </div>
+			<a href="/">
+				<div id="logo"></div>
+			</a>
+			<nav>
+				<ul id="menu">
+					<li>
+						<a href="~/controls" class="menu-tab">Page Controls</a>
+						<ul class="sub-menu">
+							@foreach (var item in Stadium5Help.Models.Section.Controls)
+	   {
+								<li><a href="@Href(item.Href)">@item.DisplayName</a></li>
+	   }
+						</ul>
+					</li>
+					<li>
+						<a href="~/pagescripts" class="menu-tab">Script Components</a>
+						<ul class="sub-menu">
+							@foreach (var item in Stadium5Help.Models.Section.PageScripts)
+	   {
+								<li><a href="@Href(item.Href)">@item.DisplayName</a></li>
+	   }
+						</ul>
+					</li>
+					<li>
+						<a href="~/applicationexplorer" class="menu-tab">Designer Features</a>
+						<ul class="sub-menu small">
+							@foreach (var item in Stadium5Help.Models.Section.ApplicationExplorer)
+	   {
+								<li><a href="@Href(item.Href)">@item.DisplayName</a></li>
+	   }
+						</ul>
+					</li>
+					<li>
+						<a href="~/frameworks" class="menu-tab">Frameworks</a>
+						<ul class="sub-menu small">
+							@foreach (var item in Stadium5Help.Models.Section.Frameworks)
+	   {
+								<li><a href="@Href(item.Href)">@item.DisplayName</a></li>
+	   }
+						</ul>
+					</li>
+					<li>
+						<a href="~/howitworks" class="menu-tab">How it works</a>
+						<ul class="sub-menu small">
+							@foreach (var item in Stadium5Help.Models.Section.HowItWorks)
+	   {
+								<li><a href="@Href(item.Href)">@item.DisplayName</a></li>
+	   }
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="main">
+		<div id="content" class="cms-editable">
+			@RenderBody()
+		</div>
+        <div id="MobileMenuItems"></div>
+	</div>
+
+	<div class="clearfix"></div>
+	<iframe name='print_frame' width='0' height='0' frameborder='0' src='about:blank'></iframe>
+	<footer>
+		<div class="feature-block">
+			<h2>About Us</h2>
+			<a href="http://www.twenty57.com" target="_blank" rel="noopener">Twenty57</a>
+			<a href="http://www.digiata.com/careers" target="_blank" rel="noopener">Jobs</a>
+		</div>
+		<div class="feature-block">
+			<h2>Stadium</h2>
+			<a href="http://stadium.twenty57.com">Get Stadium</a>
+		</div>
+		<div class="feature-block" id="contact-form">
+			<form>
+			<h2>Contact Us</h2>
+			<input id="contactus-name" value="Name" initial-data="Name">
+			<input id="contactus-email" value="Email" initial-data="Email">
+			<textarea id="contactus-message" initial-data="Message">Message</textarea>
+			<button type="button" id="contactUs" name="contactUs" data-request-url="@Href("~/Home/SendMessage")">Send</button>
+			<div id="contactus-status" class="overlay" style="display: none">
+				<span id="contactus-status-message" class='white'></span>
+			</div>
+				</form>
+		</div>
+		<div id="copyright">&copy;&nbsp;<a href="http://www.twenty57.com" target="_blank" rel="noopener">Twenty57</a> 2014 and beyond</div>
+	</footer>
+	<script>
+	    var version = navigator.appVersion;
+	    if ((version.indexOf("MSIE 8") > 0) || ((version.indexOf("MSIE 7") > 0))) {
+	        document.write('<script src="@Href("~/Scripts/jquery-1.10.2.min.js")"></' + 'script>');
+		}
+		else {
+		    document.write('<script src="@Href("~/Scripts/jquery-2.0.3.js")"></' + 'script>');
+		}
+	</script>
+	@RenderSection("scripts", required: false)
+	@Scripts.Render("~/bundles/custom")
+	@Scripts.Render("~/bundles/modernizr")
+	<script type="text/javascript">
+	    (function (i, s, o, g, r, a, m) {
+	        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+	            (i[r].q = i[r].q || []).push(arguments)
+	        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	    ga('create', 'UA-43351764-8', 'auto');
+	    ga('send', 'pageview');
+	    ga('require', 'displayfeatures');
+
+	</script>
+</body>
+</html>

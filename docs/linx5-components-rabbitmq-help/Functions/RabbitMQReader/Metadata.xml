@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Rabbit MQ Reader</Name>
+		<Description>Fetches messages from a specified Queue on a RabbitMQ server.</Description>
+	</Item>

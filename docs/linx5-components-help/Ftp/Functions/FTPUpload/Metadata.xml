@@ -1,0 +1,4 @@
+	<Item>
+		<Name>FTP Upload</Name>
+		<Description>Uploads a file to an FTP-site.</Description>
+	</Item>

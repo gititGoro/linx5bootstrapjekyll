@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Mongo DB Map Reduce</Name>
+		<Description>Performs map-reduce style data aggregation on a Mongo database.</Description>
+	</Item>
