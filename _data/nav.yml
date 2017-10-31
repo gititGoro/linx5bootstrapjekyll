@@ -107,3 +107,9 @@
         - component: "String"
           pages:
             - title: Index
+
+- title: "linx5filehelp"
+  project: true
+  pages: 
+    - title: Licence
+    - title: ReleaseNotes
