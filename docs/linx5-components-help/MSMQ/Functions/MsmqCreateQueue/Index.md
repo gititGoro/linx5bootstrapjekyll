@@ -8,7 +8,7 @@ Properties
 
 -  #### Computer name
 
-    The name of the computer to create the queue on ("†'.'†ù indicates
+    The name of the computer to create the queue on ("'.' indicates
     the local computer).
 
 -  #### Queue name
