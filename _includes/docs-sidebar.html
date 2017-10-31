@@ -36,8 +36,7 @@
           {%- endif -%}
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
             <a class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ doc_slug }}/">
-              <!-- {{ doc.title }} -->
-              {{ site.baseurl }}{{ docs }}{{ group_slug }}/{{ doc_slug }}/
+              {{ doc.title }}
             </a>
 
             {%- comment -%}
