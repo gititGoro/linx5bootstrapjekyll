@@ -1,7 +1,7 @@
 MongoDBWrite
 ============
 
-MongoDBWrite performs write operations on a Mongo database.  
+MongoDBWrite performs write operations on a Mongo database.
 
 Properties
 ----------
