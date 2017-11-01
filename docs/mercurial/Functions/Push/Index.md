@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Push
+description: Push
+group: mercurial
+feature: Functions
+component: Push
+toc: true
+redirect_from: docs/mercurial/Functions/Push/index
+---
 Push
 ====
 

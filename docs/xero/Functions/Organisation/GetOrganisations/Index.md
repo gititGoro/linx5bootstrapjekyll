@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetOrganisations
+description: GetOrganisations
+group: Functions
+feature: Organisation
+component: GetOrganisations
+toc: true
+redirect_from: docs/Functions/Organisation/GetOrganisations/index
+---
 GetOrganisations
 ============
 

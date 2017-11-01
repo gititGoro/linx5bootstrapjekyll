@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: pastel
+toc: true
+redirect_from: docs/pastel/releasenotes
+---
 # Release Notes for Pastel plugin
 <a id="1_7_42_98"></a>
 ## 1.7.42.98

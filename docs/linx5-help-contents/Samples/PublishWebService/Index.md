@@ -1,3 +1,13 @@
+---
+layout: docs
+title: PublishWebService
+description: PublishWebService
+group: linx5-help-contents
+feature: Samples
+component: PublishWebService
+toc: true
+redirect_from: docs/linx5-help-contents/Samples/PublishWebService/index
+---
 Publish Web Service
 ===================
 

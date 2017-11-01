@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: email
+toc: true
+redirect_from: docs/email/releasenotes
+---
 # Release Notes for Email plugin
 <a id="1_5_78_185"></a>
 ## 1.5.78.185

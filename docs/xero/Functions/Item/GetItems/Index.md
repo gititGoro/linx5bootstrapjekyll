@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetItems
+description: GetItems
+group: Functions
+feature: Item
+component: GetItems
+toc: true
+redirect_from: docs/Functions/Item/GetItems/index
+---
 GetItems
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateBankTransfer
+description: CreateBankTransfer
+group: Functions
+feature: BankTransfer
+component: CreateBankTransfer
+toc: true
+redirect_from: docs/Functions/BankTransfer/CreateBankTransfer/index
+---
 CreateBankTransfer
 ============
 

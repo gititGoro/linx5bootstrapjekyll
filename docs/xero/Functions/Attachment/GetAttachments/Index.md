@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetAttachments
+description: GetAttachments
+group: Functions
+feature: Attachment
+component: GetAttachments
+toc: true
+redirect_from: docs/Functions/Attachment/GetAttachments/index
+---
 GetAttachments
 ============
 

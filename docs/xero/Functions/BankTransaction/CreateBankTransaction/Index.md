@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateBankTransaction
+description: CreateBankTransaction
+group: Functions
+feature: BankTransaction
+component: CreateBankTransaction
+toc: true
+redirect_from: docs/Functions/BankTransaction/CreateBankTransaction/index
+---
 CreateBankTransaction
 ============
 

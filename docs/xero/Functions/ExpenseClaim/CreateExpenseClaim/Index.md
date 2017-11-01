@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateExpenseClaim
+description: CreateExpenseClaim
+group: Functions
+feature: ExpenseClaim
+component: CreateExpenseClaim
+toc: true
+redirect_from: docs/Functions/ExpenseClaim/CreateExpenseClaim/index
+---
 CreateExpenseClaim
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: PastelImportGLBatch
+description: PastelImportGLBatch
+group: pastel
+feature: Functions
+component: PastelImportGLBatch
+toc: true
+redirect_from: docs/pastel/Functions/PastelImportGLBatch/index
+---
 PastelImportGLBatch
 ====================
 
@@ -140,5 +150,3 @@ Links
 
 - [Pastel Website](https://www.pastel.co.za/)
 - [Download Pastel SDK](https://www.sage.com/za/partners/developers/sage-pastel-accounting)
-
-

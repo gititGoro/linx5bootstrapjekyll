@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateTrackingCategory
+description: UpdateTrackingCategory
+group: Functions
+feature: TrackingCategory
+component: UpdateTrackingCategory
+toc: true
+redirect_from: docs/Functions/TrackingCategory/UpdateTrackingCategory/index
+---
 UpdateTrackingCategory
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetCreditNotes
+description: GetCreditNotes
+group: Functions
+feature: CreditNote
+component: GetCreditNotes
+toc: true
+redirect_from: docs/Functions/CreditNote/GetCreditNotes/index
+---
 GetCreditNotes
 ============
 

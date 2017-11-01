@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CallRESTWebService
+description: CallRESTWebService
+group: web
+feature: Functions
+component: CallRESTWebService
+toc: true
+redirect_from: docs/web/Functions/CallRESTWebService/index
+---
 CallRESTWebService
 ==================
 

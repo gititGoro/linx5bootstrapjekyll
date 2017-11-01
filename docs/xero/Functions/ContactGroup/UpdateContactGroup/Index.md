@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateContactGroup
+description: UpdateContactGroup
+group: Functions
+feature: ContactGroup
+component: UpdateContactGroup
+toc: true
+redirect_from: docs/Functions/ContactGroup/UpdateContactGroup/index
+---
 UpdateContactGroup
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DbBulkCopy
+description: DbBulkCopy
+group: database
+feature: Functions
+component: DbBulkCopy
+toc: true
+redirect_from: docs/database/Functions/DbBulkCopy/index
+---
 DBBulkCopy
 ==========
 

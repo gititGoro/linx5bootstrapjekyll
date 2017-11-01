@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MongoDBRead
+description: MongoDBRead
+group: database
+feature: Functions
+component: MongoDBRead
+toc: true
+redirect_from: docs/database/Functions/MongoDBRead/index
+---
 MongoDBRead
 ===========
 

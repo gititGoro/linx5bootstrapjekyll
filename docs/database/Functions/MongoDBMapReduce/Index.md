@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MongoDBMapReduce
+description: MongoDBMapReduce
+group: database
+feature: Functions
+component: MongoDBMapReduce
+toc: true
+redirect_from: docs/database/Functions/MongoDBMapReduce/index
+---
 MongoDBMapReduce
 ===========
 
@@ -183,4 +193,3 @@ Links
 - [Map-Reduce](https://docs.mongodb.com/manual/reference/method/db.collection.mapReduce/)
 - [Query documents](http://docs.mongodb.org/manual/tutorial/query-documents/)
 - [Object Ids](http://docs.mongodb.org/manual/reference/object-id/)  
-

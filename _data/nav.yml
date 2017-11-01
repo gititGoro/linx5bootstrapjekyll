@@ -108,7 +108,26 @@
           pages:
             - title: Index
 
-- title: "linx5filehelp"
+- title: "aws"
   pages: 
     - title: Licence
     - title: ReleaseNotes
+  features:
+    - feature: "Functions"
+      components:
+        - component: "AmazonEC2API"
+          pages:
+            - title: Index
+- title: "compression"
+  pages: 
+    - title: Licence
+    - title: ReleaseNotes
+  features:
+    - feature: "Functions"
+      components:
+        - component: "Unzip"
+          pages:
+            - title: Index
+        - component: "Zip"
+          pages:
+            - title: Index

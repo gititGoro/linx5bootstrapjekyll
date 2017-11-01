@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RESTWebService
+description: RESTWebService
+group: web
+feature: Services
+component: RESTWebService
+toc: true
+redirect_from: docs/web/Services/RESTWebService/index
+---
 RESTWebService
 ==============
 

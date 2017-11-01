@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FinSwitchDownloadFile
+description: FinSwitchDownloadFile
+group: finswitch
+feature: Functions
+component: FinSwitchDownloadFile
+toc: true
+redirect_from: docs/finswitch/Functions/FinSwitchDownloadFile/index
+---
 FinSwitchDownloadFile
 =====================
 

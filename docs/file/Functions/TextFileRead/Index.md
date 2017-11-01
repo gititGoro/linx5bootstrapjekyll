@@ -1,3 +1,13 @@
+---
+layout: docs
+title: TextFileRead
+description: TextFileRead
+group: file
+feature: Functions
+component: TextFileRead
+toc: true
+redirect_from: docs/file/Functions/TextFileRead/index
+---
 TextFileRead
 ============
 

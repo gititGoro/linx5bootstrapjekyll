@@ -8,6 +8,16 @@ component: DateTime
 toc: true
 redirect_from: docs/linx5main/Types/DateTime/index
 ---
+---
+layout: docs
+title: DateTime
+description: DateTime
+group: linx5main
+feature: Types
+component: DateTime
+toc: true
+redirect_from: docs/linx5main/Types/DateTime/index
+---
 DateTime
 ===========
 

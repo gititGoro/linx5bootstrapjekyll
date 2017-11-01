@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteTrackingOption
+description: DeleteTrackingOption
+group: Functions
+feature: TrackingOption
+component: DeleteTrackingOption
+toc: true
+redirect_from: docs/Functions/TrackingOption/DeleteTrackingOption/index
+---
 DeleteTrackingOption
 ============
 

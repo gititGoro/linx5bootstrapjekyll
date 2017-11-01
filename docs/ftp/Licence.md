@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: ftp
+toc: true
+redirect_from: docs/ftp/licence
+---
 # Licence for FTP plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

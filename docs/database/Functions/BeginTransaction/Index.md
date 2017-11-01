@@ -1,3 +1,13 @@
+---
+layout: docs
+title: BeginTransaction
+description: BeginTransaction
+group: database
+feature: Functions
+component: BeginTransaction
+toc: true
+redirect_from: docs/database/Functions/BeginTransaction/index
+---
 BeginTransaction
 ==========
 

@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: linx5main
+toc: true
+redirect_from: docs/linx5main/releasenotes
+---
 # Release Notes for Linx
 <a id="5_13_9671_0"></a>
 ## 5.13.9671

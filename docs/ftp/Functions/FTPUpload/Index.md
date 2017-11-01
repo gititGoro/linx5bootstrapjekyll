@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FTPUpload
+description: FTPUpload
+group: ftp
+feature: Functions
+component: FTPUpload
+toc: true
+redirect_from: docs/ftp/Functions/FTPUpload/index
+---
 FTPUpload
 =========
 

@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: compression
+toc: true
+redirect_from: docs/compression/licence
+---
 # Licence for Compression plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

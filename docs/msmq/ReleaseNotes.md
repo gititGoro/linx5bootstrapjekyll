@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: msmq
+toc: true
+redirect_from: docs/msmq/releasenotes
+---
 # Release Notes for MSMQ plugin
 <a id="1_4_59_160"></a>
 ## 1.4.59.160

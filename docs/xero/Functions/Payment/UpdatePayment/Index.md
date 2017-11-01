@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdatePayment
+description: UpdatePayment
+group: Functions
+feature: Payment
+component: UpdatePayment
+toc: true
+redirect_from: docs/Functions/Payment/UpdatePayment/index
+---
 UpdatePayment
 ============
 

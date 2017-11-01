@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Authentication
+description: Authentication
+group: xero
+feature: Common
+component: Authentication
+toc: true
+redirect_from: docs/xero/Common/Authentication/index
+---
 # Authentication
 The authentication parameter specifies all the necessary information to authenticate the user against the desired Xero organization. 
 

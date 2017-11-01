@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateInvoice
+description: CreateInvoice
+group: Functions
+feature: Invoice
+component: CreateInvoice
+toc: true
+redirect_from: docs/Functions/Invoice/CreateInvoice/index
+---
 CreateInvoice
 ============
 

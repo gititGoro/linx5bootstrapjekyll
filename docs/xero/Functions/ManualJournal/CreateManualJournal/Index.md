@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateManualJournal
+description: CreateManualJournal
+group: Functions
+feature: ManualJournal
+component: CreateManualJournal
+toc: true
+redirect_from: docs/Functions/ManualJournal/CreateManualJournal/index
+---
 CreateManualJournal
 ============
 

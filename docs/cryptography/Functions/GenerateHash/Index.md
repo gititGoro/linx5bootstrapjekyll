@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GenerateHash
+description: GenerateHash
+group: cryptography
+feature: Functions
+component: GenerateHash
+toc: true
+redirect_from: docs/cryptography/Functions/GenerateHash/index
+---
 GenerateHash
 ============
 
@@ -20,4 +30,3 @@ Output
 ------
 
 -  A string-formatted hexadecimal number that contains the computed hash.
-

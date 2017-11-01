@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetExpenseClaims
+description: GetExpenseClaims
+group: Functions
+feature: ExpenseClaim
+component: GetExpenseClaims
+toc: true
+redirect_from: docs/Functions/ExpenseClaim/GetExpenseClaims/index
+---
 GetExpenseClaims
 ============
 

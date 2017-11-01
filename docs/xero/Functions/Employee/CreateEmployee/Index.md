@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateEmployee
+description: CreateEmployee
+group: Functions
+feature: Employee
+component: CreateEmployee
+toc: true
+redirect_from: docs/Functions/Employee/CreateEmployee/index
+---
 CreateEmployee
 ============
 

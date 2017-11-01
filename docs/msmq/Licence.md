@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: msmq
+toc: true
+redirect_from: docs/msmq/licence
+---
 # Licence for MSMQ plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

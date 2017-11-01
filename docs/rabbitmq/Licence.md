@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: rabbitmq
+toc: true
+redirect_from: docs/rabbitmq/licence
+---
 # Licence for RabbitMQ plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

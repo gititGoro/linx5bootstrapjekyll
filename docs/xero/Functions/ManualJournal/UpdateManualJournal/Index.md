@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateManualJournal
+description: UpdateManualJournal
+group: Functions
+feature: ManualJournal
+component: UpdateManualJournal
+toc: true
+redirect_from: docs/Functions/ManualJournal/UpdateManualJournal/index
+---
 UpdateManualJournal
 ============
 

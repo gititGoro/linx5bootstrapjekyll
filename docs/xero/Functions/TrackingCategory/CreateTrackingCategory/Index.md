@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateTrackingCategory
+description: CreateTrackingCategory
+group: Functions
+feature: TrackingCategory
+component: CreateTrackingCategory
+toc: true
+redirect_from: docs/Functions/TrackingCategory/CreateTrackingCategory/index
+---
 CreateTrackingCategory
 ============
 

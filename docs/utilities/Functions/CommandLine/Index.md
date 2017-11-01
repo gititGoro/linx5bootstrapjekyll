@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CommandLine
+description: CommandLine
+group: utilities
+feature: Functions
+component: CommandLine
+toc: true
+redirect_from: docs/utilities/Functions/CommandLine/index
+---
 CommandLine
 ===========
 
@@ -66,5 +76,3 @@ set to true.
 -  #### Output
 
     The output of the command that was executed.
-
-

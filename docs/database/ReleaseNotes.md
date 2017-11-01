@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: database
+toc: true
+redirect_from: docs/database/releasenotes
+---
 # Release Notes for Database plugin
 <a id="1_12_100_660"></a>
 ## 1.12.100.660

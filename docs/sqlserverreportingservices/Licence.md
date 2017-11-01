@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: sqlserverreportingservices
+toc: true
+redirect_from: docs/sqlserverreportingservices/licence
+---
 # Licence for ReportingServices plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

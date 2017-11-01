@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DoWhile
+description: DoWhile
+group: linx5-help-contents
+feature: Functions
+component: DoWhile
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/DoWhile/index
+---
 DoWhile
 =======
 
@@ -15,5 +25,3 @@ Properties
 -  #### Test
 
     When to test the condition, before or after the loop.
-
-

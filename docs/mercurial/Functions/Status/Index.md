@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Status
+description: Status
+group: mercurial
+feature: Functions
+component: Status
+toc: true
+redirect_from: docs/mercurial/Functions/Status/index
+---
 Status
 ======
 

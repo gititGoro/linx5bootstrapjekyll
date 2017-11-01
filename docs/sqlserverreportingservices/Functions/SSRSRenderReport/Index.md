@@ -1,3 +1,13 @@
+---
+layout: docs
+title: SSRSRenderReport
+description: SSRSRenderReport
+group: sqlserverreportingservices
+feature: Functions
+component: SSRSRenderReport
+toc: true
+redirect_from: docs/sqlserverreportingservices/Functions/SSRSRenderReport/index
+---
 SSRSRenderReport
 ================
 
@@ -37,14 +47,3 @@ Properties
 		The port number of the proxy server.
 	- **Bypass on local**:  
 		True to bypass the proxy if the Reporting Server is on localhost.
-
-
-
-
-
-
-
-
-
-
-

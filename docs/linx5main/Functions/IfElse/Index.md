@@ -8,6 +8,16 @@ component: IfElse
 toc: true
 redirect_from: docs/linx5main/Functions/IfElse/index
 ---
+---
+layout: docs
+title: IfElse
+description: IfElse
+group: linx5main
+feature: Functions
+component: IfElse
+toc: true
+redirect_from: docs/linx5main/Functions/IfElse/index
+---
 IfElse
 ======
 

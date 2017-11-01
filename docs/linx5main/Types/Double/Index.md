@@ -8,6 +8,16 @@ component: Double
 toc: true
 redirect_from: docs/linx5main/Types/Double/index
 ---
+---
+layout: docs
+title: Double
+description: Double
+group: linx5main
+feature: Types
+component: Double
+toc: true
+redirect_from: docs/linx5main/Types/Double/index
+---
 Double
 ======
 

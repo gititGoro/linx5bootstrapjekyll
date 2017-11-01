@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetEmployees
+description: GetEmployees
+group: Functions
+feature: Employee
+component: GetEmployees
+toc: true
+redirect_from: docs/Functions/Employee/GetEmployees/index
+---
 GetEmployees
 ============
 

@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: graphicsmagick
+toc: true
+redirect_from: docs/graphicsmagick/releasenotes
+---
 # Release Notes for GraphicsMagick plugin
 <a id="1_8_60_236"></a>
 ## 1.8.60.236

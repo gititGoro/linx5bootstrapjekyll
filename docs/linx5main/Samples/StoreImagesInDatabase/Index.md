@@ -8,6 +8,16 @@ component: StoreImagesInDatabase
 toc: true
 redirect_from: docs/linx5main/Samples/StoreImagesInDatabase/index
 ---
+---
+layout: docs
+title: StoreImagesInDatabase
+description: StoreImagesInDatabase
+group: linx5main
+feature: Samples
+component: StoreImagesInDatabase
+toc: true
+redirect_from: docs/linx5main/Samples/StoreImagesInDatabase/index
+---
 Store Images In Database
 ========================
 

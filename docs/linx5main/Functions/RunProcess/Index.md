@@ -8,6 +8,16 @@ component: RunProcess
 toc: true
 redirect_from: docs/linx5main/Functions/RunProcess/index
 ---
+---
+layout: docs
+title: RunProcess
+description: RunProcess
+group: linx5main
+feature: Functions
+component: RunProcess
+toc: true
+redirect_from: docs/linx5main/Functions/RunProcess/index
+---
 Running a process
 =================
 

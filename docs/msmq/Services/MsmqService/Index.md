@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MsmqService
+description: MsmqService
+group: msmq
+feature: Services
+component: MsmqService
+toc: true
+redirect_from: docs/msmq/Services/MsmqService/index
+---
 MSMQService
 ===========
 

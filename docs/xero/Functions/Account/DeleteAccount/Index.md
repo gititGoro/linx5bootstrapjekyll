@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteAccount
+description: DeleteAccount
+group: Functions
+feature: Account
+component: DeleteAccount
+toc: true
+redirect_from: docs/Functions/Account/DeleteAccount/index
+---
 DeleteAccount
 ============
 

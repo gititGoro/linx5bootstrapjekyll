@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreatePayment
+description: CreatePayment
+group: Functions
+feature: Payment
+component: CreatePayment
+toc: true
+redirect_from: docs/Functions/Payment/CreatePayment/index
+---
 CreatePayment
 ============
 

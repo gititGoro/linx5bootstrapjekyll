@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Clone
+description: Clone
+group: mercurial
+feature: Functions
+component: Clone
+toc: true
+redirect_from: docs/mercurial/Functions/Clone/index
+---
 Clone
 =====
 

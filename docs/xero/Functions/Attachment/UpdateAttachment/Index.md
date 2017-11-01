@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateAttachment
+description: UpdateAttachment
+group: Functions
+feature: Attachment
+component: UpdateAttachment
+toc: true
+redirect_from: docs/Functions/Attachment/UpdateAttachment/index
+---
 UpdateAttachment
 ============
 

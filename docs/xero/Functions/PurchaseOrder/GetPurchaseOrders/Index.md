@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetPurchaseOrders
+description: GetPurchaseOrders
+group: Functions
+feature: PurchaseOrder
+component: GetPurchaseOrders
+toc: true
+redirect_from: docs/Functions/PurchaseOrder/GetPurchaseOrders/index
+---
 GetPurchaseOrders
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateContact
+description: CreateContact
+group: Functions
+feature: Contact
+component: CreateContact
+toc: true
+redirect_from: docs/Functions/Contact/CreateContact/index
+---
 CreateContact
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: WriteTextFiles
+description: WriteTextFiles
+group: linx5-help-contents
+feature: Samples
+component: WriteTextFiles
+toc: true
+redirect_from: docs/linx5-help-contents/Samples/WriteTextFiles/index
+---
 Write CSV or Fixed Length File
 ====================
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetLinkedTransactions
+description: GetLinkedTransactions
+group: Functions
+feature: LinkedTransaction
+component: GetLinkedTransactions
+toc: true
+redirect_from: docs/Functions/LinkedTransaction/GetLinkedTransactions/index
+---
 GetLinkedTransactions
 ============
 

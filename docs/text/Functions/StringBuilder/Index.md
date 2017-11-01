@@ -1,3 +1,13 @@
+---
+layout: docs
+title: StringBuilder
+description: StringBuilder
+group: text
+feature: Functions
+component: StringBuilder
+toc: true
+redirect_from: docs/text/Functions/StringBuilder/index
+---
 StringBuilder
 ======================
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateTrackingOption
+description: CreateTrackingOption
+group: Functions
+feature: TrackingOption
+component: CreateTrackingOption
+toc: true
+redirect_from: docs/Functions/TrackingOption/CreateTrackingOption/index
+---
 CreateTrackingOption
 ============
 

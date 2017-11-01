@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetInvoices
+description: GetInvoices
+group: Functions
+feature: Invoice
+component: GetInvoices
+toc: true
+redirect_from: docs/Functions/Invoice/GetInvoices/index
+---
 GetInvoices
 ============
 

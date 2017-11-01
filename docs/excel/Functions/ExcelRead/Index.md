@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ExcelRead
+description: ExcelRead
+group: excel
+feature: Functions
+component: ExcelRead
+toc: true
+redirect_from: docs/excel/Functions/ExcelRead/index
+---
 ExcelRead
 =========
 

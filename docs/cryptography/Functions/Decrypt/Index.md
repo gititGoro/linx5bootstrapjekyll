@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Decrypt
+description: Decrypt
+group: cryptography
+feature: Functions
+component: Decrypt
+toc: true
+redirect_from: docs/cryptography/Functions/Decrypt/index
+---
 Decrypt
 =======
 

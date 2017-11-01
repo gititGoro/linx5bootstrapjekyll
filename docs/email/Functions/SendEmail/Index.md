@@ -1,3 +1,13 @@
+---
+layout: docs
+title: SendEmail
+description: SendEmail
+group: email
+feature: Functions
+component: SendEmail
+toc: true
+redirect_from: docs/email/Functions/SendEmail/index
+---
 SendEmail
 =========
 

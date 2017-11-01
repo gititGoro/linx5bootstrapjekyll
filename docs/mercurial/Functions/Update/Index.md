@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Update
+description: Update
+group: mercurial
+feature: Functions
+component: Update
+toc: true
+redirect_from: docs/mercurial/Functions/Update/index
+---
 Update
 ======
 

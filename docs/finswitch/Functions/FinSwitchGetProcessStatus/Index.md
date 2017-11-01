@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FinSwitchGetProcessStatus
+description: FinSwitchGetProcessStatus
+group: finswitch
+feature: Functions
+component: FinSwitchGetProcessStatus
+toc: true
+redirect_from: docs/finswitch/Functions/FinSwitchGetProcessStatus/index
+---
 FinSwitchGetProcessStatus
 =========================
 

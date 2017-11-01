@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GraphicsMagick
+description: GraphicsMagick
+group: graphicsmagick
+feature: Functions
+component: GraphicsMagick
+toc: true
+redirect_from: docs/graphicsmagick/Functions/GraphicsMagick/index
+---
 GraphicsMagick
 ==============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ReadEmail
+description: ReadEmail
+group: email
+feature: Functions
+component: ReadEmail
+toc: true
+redirect_from: docs/email/Functions/ReadEmail/index
+---
 ReadEmail
 =========
 

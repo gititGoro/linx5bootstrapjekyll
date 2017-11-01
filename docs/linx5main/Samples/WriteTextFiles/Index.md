@@ -8,6 +8,16 @@ component: WriteTextFiles
 toc: true
 redirect_from: docs/linx5main/Samples/WriteTextFiles/index
 ---
+---
+layout: docs
+title: WriteTextFiles
+description: WriteTextFiles
+group: linx5main
+feature: Samples
+component: WriteTextFiles
+toc: true
+redirect_from: docs/linx5main/Samples/WriteTextFiles/index
+---
 Write CSV or Fixed Length File
 ====================
 

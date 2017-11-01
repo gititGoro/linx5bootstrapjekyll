@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Double
+description: Double
+group: linx5-help-contents
+feature: Types
+component: Double
+toc: true
+redirect_from: docs/linx5-help-contents/Types/Double/index
+---
 Double
 ======
 

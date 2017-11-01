@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RabbitMQReader
+description: RabbitMQReader
+group: rabbitmq
+feature: Functions
+component: RabbitMQReader
+toc: true
+redirect_from: docs/rabbitmq/Functions/RabbitMQReader/index
+---
 RabbitMQReader
 ==============
 

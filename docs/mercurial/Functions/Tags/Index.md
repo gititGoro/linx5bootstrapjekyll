@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Tags
+description: Tags
+group: mercurial
+feature: Functions
+component: Tags
+toc: true
+redirect_from: docs/mercurial/Functions/Tags/index
+---
 Tags
 ====
 

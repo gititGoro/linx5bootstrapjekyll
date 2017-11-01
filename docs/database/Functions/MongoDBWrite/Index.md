@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MongoDBWrite
+description: MongoDBWrite
+group: database
+feature: Functions
+component: MongoDBWrite
+toc: true
+redirect_from: docs/database/Functions/MongoDBWrite/index
+---
 MongoDBWrite
 ============
 
@@ -137,4 +147,3 @@ Links
 - [Query documents](http://docs.mongodb.org/manual/tutorial/query-documents/)  
 - [Update Operators](http://docs.mongodb.org/manual/reference/operator/update/#id1)  
 - [Mongo Object Ids](http://docs.mongodb.org/manual/reference/object-id/)  
-

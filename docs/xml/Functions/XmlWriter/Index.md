@@ -1,3 +1,13 @@
+---
+layout: docs
+title: XmlWriter
+description: XmlWriter
+group: xml
+feature: Functions
+component: XmlWriter
+toc: true
+redirect_from: docs/xml/Functions/XmlWriter/index
+---
 XMLWriter
 =========
 

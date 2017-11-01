@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RabbitMQWriter
+description: RabbitMQWriter
+group: rabbitmq
+feature: Functions
+component: RabbitMQWriter
+toc: true
+redirect_from: docs/rabbitmq/Functions/RabbitMQWriter/index
+---
 RabbitMQWriter
 ==============
 

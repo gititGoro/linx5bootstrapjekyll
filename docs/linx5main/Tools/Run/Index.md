@@ -8,6 +8,16 @@ component: Run
 toc: true
 redirect_from: docs/linx5main/Tools/Run/index
 ---
+---
+layout: docs
+title: Run
+description: Run
+group: linx5main
+feature: Tools
+component: Run
+toc: true
+redirect_from: docs/linx5main/Tools/Run/index
+---
 Run
 ===
 

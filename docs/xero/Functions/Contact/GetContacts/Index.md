@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetContacts
+description: GetContacts
+group: Functions
+feature: Contact
+component: GetContacts
+toc: true
+redirect_from: docs/Functions/Contact/GetContacts/index
+---
 GetContacts
 ============
 

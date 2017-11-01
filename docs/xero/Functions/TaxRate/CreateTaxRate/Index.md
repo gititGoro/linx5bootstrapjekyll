@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateTaxRate
+description: CreateTaxRate
+group: Functions
+feature: TaxRate
+component: CreateTaxRate
+toc: true
+redirect_from: docs/Functions/TaxRate/CreateTaxRate/index
+---
 CreateTaxRate
 ============
 

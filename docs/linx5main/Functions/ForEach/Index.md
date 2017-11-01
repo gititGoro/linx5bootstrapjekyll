@@ -8,6 +8,16 @@ component: ForEach
 toc: true
 redirect_from: docs/linx5main/Functions/ForEach/index
 ---
+---
+layout: docs
+title: ForEach
+description: ForEach
+group: linx5main
+feature: Functions
+component: ForEach
+toc: true
+redirect_from: docs/linx5main/Functions/ForEach/index
+---
 
 ForEach
 =======

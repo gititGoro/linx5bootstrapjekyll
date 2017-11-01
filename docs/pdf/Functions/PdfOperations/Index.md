@@ -1,3 +1,13 @@
+---
+layout: docs
+title: PdfOperations
+description: PdfOperations
+group: pdf
+feature: Functions
+component: PdfOperations
+toc: true
+redirect_from: docs/pdf/Functions/PdfOperations/index
+---
 PDFOperations
 =============
 
@@ -344,5 +354,3 @@ The Sign operation adds a digital signature to the document.
 - #### Page
 
     The page number on which the signature should be placed.
-
-

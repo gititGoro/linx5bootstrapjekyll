@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetCurrencies
+description: GetCurrencies
+group: Functions
+feature: Currency
+component: GetCurrencies
+toc: true
+redirect_from: docs/Functions/Currency/GetCurrencies/index
+---
 GetCurrencies
 ============
 

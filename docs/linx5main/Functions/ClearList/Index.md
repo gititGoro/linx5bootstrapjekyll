@@ -8,6 +8,16 @@ component: ClearList
 toc: true
 redirect_from: docs/linx5main/Functions/ClearList/index
 ---
+---
+layout: docs
+title: ClearList
+description: ClearList
+group: linx5main
+feature: Functions
+component: ClearList
+toc: true
+redirect_from: docs/linx5main/Functions/ClearList/index
+---
 
 ClearList
 =========

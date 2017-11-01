@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DirectoryOperations
+description: DirectoryOperations
+group: file
+feature: Functions
+component: DirectoryOperations
+toc: true
+redirect_from: docs/file/Functions/DirectoryOperations/index
+---
 DirectoryOperations
 ==============
 

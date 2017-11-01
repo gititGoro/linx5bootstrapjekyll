@@ -8,6 +8,16 @@ component: PublishWebService
 toc: true
 redirect_from: docs/linx5main/Samples/PublishWebService/index
 ---
+---
+layout: docs
+title: PublishWebService
+description: PublishWebService
+group: linx5main
+feature: Samples
+component: PublishWebService
+toc: true
+redirect_from: docs/linx5main/Samples/PublishWebService/index
+---
 Publish Web Service
 ===================
 

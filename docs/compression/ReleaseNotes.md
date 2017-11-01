@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: compression
+toc: true
+redirect_from: docs/compression/releasenotes
+---
 # Release Notes for Compression plugin
 <a id="1_5_55_159"></a>
 ## 1.5.55.159

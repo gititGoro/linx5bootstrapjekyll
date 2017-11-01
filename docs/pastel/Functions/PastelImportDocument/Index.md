@@ -1,3 +1,13 @@
+---
+layout: docs
+title: PastelImportDocument
+description: PastelImportDocument
+group: pastel
+feature: Functions
+component: PastelImportDocument
+toc: true
+redirect_from: docs/pastel/Functions/PastelImportDocument/index
+---
 PastelImportDocument
 ====================
 
@@ -263,5 +273,3 @@ Links
 
 - [Pastel Website](https://www.pastel.co.za/)
 - [Download Pastel SDK](https://www.sage.com/za/partners/developers/sage-pastel-accounting)
-
-

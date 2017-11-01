@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateExpenseClaim
+description: UpdateExpenseClaim
+group: Functions
+feature: ExpenseClaim
+component: UpdateExpenseClaim
+toc: true
+redirect_from: docs/Functions/ExpenseClaim/UpdateExpenseClaim/index
+---
 UpdateExpenseClaim
 ============
 

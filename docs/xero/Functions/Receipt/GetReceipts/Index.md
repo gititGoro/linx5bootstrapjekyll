@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetReceipts
+description: GetReceipts
+group: Functions
+feature: Receipt
+component: GetReceipts
+toc: true
+redirect_from: docs/Functions/Receipt/GetReceipts/index
+---
 GetReceipts
 ============
 

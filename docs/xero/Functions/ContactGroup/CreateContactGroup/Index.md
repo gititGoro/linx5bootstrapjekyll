@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateContactGroup
+description: CreateContactGroup
+group: Functions
+feature: ContactGroup
+component: CreateContactGroup
+toc: true
+redirect_from: docs/Functions/ContactGroup/CreateContactGroup/index
+---
 CreateContactGroup
 ============
 

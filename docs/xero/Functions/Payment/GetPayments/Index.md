@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetPayments
+description: GetPayments
+group: Functions
+feature: Payment
+component: GetPayments
+toc: true
+redirect_from: docs/Functions/Payment/GetPayments/index
+---
 GetPayments
 ============
 

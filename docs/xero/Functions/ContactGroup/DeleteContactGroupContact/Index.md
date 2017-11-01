@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteContactGroupContact
+description: DeleteContactGroupContact
+group: Functions
+feature: ContactGroup
+component: DeleteContactGroupContact
+toc: true
+redirect_from: docs/Functions/ContactGroup/DeleteContactGroupContact/index
+---
 DeleteContactGroupContact
 ============
 

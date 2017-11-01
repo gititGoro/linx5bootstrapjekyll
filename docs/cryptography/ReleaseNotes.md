@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: cryptography
+toc: true
+redirect_from: docs/cryptography/releasenotes
+---
 # Release Notes for Cryptography plugin
 <a id="1_4_35_95"></a>
 ## 1.4.35.95

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MsmqSendMessage
+description: MsmqSendMessage
+group: msmq
+feature: Functions
+component: MsmqSendMessage
+toc: true
+redirect_from: docs/msmq/Functions/MsmqSendMessage/index
+---
 MSMQSendMessage
 ===============
 

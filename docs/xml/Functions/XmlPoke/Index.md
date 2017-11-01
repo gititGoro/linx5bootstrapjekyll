@@ -1,3 +1,13 @@
+---
+layout: docs
+title: XmlPoke
+description: XmlPoke
+group: xml
+feature: Functions
+component: XmlPoke
+toc: true
+redirect_from: docs/xml/Functions/XmlPoke/index
+---
 XMLPoke
 =======
 

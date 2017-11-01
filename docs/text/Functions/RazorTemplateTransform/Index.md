@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RazorTemplateTransform
+description: RazorTemplateTransform
+group: text
+feature: Functions
+component: RazorTemplateTransform
+toc: true
+redirect_from: docs/text/Functions/RazorTemplateTransform/index
+---
 RazorTemplateTransform
 ======================
 

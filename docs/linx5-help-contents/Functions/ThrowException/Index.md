@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ThrowException
+description: ThrowException
+group: linx5-help-contents
+feature: Functions
+component: ThrowException
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/ThrowException/index
+---
 Throw Exception
 ===============
 
@@ -9,5 +19,3 @@ Properties
 -  #### Message
 
     The message that the exception should carry when thrown.
-
-

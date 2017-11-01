@@ -8,6 +8,16 @@ component: SetValue
 toc: true
 redirect_from: docs/linx5main/Functions/SetValue/index
 ---
+---
+layout: docs
+title: SetValue
+description: SetValue
+group: linx5main
+feature: Functions
+component: SetValue
+toc: true
+redirect_from: docs/linx5main/Functions/SetValue/index
+---
 SetValue
 ========
 

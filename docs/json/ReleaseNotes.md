@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: json
+toc: true
+redirect_from: docs/json/releasenotes
+---
 # Release Notes for Json plugin
 <a id="1_7_92_232"></a>
 ## 1.7.92.232

@@ -8,6 +8,16 @@ component: CustomType
 toc: true
 redirect_from: docs/linx5main/Types/CustomType/index
 ---
+---
+layout: docs
+title: CustomType
+description: CustomType
+group: linx5main
+feature: Types
+component: CustomType
+toc: true
+redirect_from: docs/linx5main/Types/CustomType/index
+---
 Custom Type
 ===========
 

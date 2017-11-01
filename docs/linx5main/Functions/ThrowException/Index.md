@@ -8,6 +8,16 @@ component: ThrowException
 toc: true
 redirect_from: docs/linx5main/Functions/ThrowException/index
 ---
+---
+layout: docs
+title: ThrowException
+description: ThrowException
+group: linx5main
+feature: Functions
+component: ThrowException
+toc: true
+redirect_from: docs/linx5main/Functions/ThrowException/index
+---
 Throw Exception
 ===============
 

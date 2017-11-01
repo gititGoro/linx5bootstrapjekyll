@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateAccount
+description: UpdateAccount
+group: Functions
+feature: Account
+component: UpdateAccount
+toc: true
+redirect_from: docs/Functions/Account/UpdateAccount/index
+---
 UpdateAccount
 ============
 

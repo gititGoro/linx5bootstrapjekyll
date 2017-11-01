@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteItem
+description: DeleteItem
+group: Functions
+feature: Item
+component: DeleteItem
+toc: true
+redirect_from: docs/Functions/Item/DeleteItem/index
+---
 DeleteItem
 ============
 

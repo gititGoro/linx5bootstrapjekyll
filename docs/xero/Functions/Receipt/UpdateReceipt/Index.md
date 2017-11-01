@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateReceipt
+description: UpdateReceipt
+group: Functions
+feature: Receipt
+component: UpdateReceipt
+toc: true
+redirect_from: docs/Functions/Receipt/UpdateReceipt/index
+---
 UpdateReceipt
 ============
 

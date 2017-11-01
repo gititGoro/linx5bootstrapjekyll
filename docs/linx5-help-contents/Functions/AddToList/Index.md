@@ -1,3 +1,13 @@
+---
+layout: docs
+title: AddToList
+description: AddToList
+group: linx5-help-contents
+feature: Functions
+component: AddToList
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/AddToList/index
+---
 AddToList
 =========
 

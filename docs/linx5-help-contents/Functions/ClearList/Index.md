@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ClearList
+description: ClearList
+group: linx5-help-contents
+feature: Functions
+component: ClearList
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/ClearList/index
+---
 ClearList
 =========
 
@@ -10,5 +20,3 @@ Properties
 -  #### List
 
     The list to clear.
-
-

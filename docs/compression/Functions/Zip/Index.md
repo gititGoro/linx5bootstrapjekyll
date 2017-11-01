@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Zip
+description: Zip
+group: compression
+feature: Functions
+component: Zip
+toc: true
+redirect_from: docs/compression/Functions/Zip/index
+---
 # Zip
 
 Adds files to a zip archive.

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Pull
+description: Pull
+group: mercurial
+feature: Functions
+component: Pull
+toc: true
+redirect_from: docs/mercurial/Functions/Pull/index
+---
 Pull
 ====
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CustomType
+description: CustomType
+group: linx5-help-contents
+feature: Types
+component: CustomType
+toc: true
+redirect_from: docs/linx5-help-contents/Types/CustomType/index
+---
 Custom Type
 ===========
 

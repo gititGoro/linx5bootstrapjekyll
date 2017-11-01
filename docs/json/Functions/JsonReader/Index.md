@@ -1,3 +1,13 @@
+---
+layout: docs
+title: JsonReader
+description: JsonReader
+group: json
+feature: Functions
+component: JsonReader
+toc: true
+redirect_from: docs/json/Functions/JsonReader/index
+---
 JSONReader
 ==========
 

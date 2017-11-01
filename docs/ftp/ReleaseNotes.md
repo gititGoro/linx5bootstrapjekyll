@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: ftp
+toc: true
+redirect_from: docs/ftp/releasenotes
+---
 # Release Notes for FTP plugin
 <a id="1_11_60_257"></a>
 ## 1.11.60.257

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateTrackingOption
+description: UpdateTrackingOption
+group: Functions
+feature: TrackingOption
+component: UpdateTrackingOption
+toc: true
+redirect_from: docs/Functions/TrackingOption/UpdateTrackingOption/index
+---
 UpdateTrackingOption
 ============
 

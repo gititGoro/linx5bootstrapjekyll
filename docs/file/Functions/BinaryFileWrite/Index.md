@@ -1,3 +1,13 @@
+---
+layout: docs
+title: BinaryFileWrite
+description: BinaryFileWrite
+group: file
+feature: Functions
+component: BinaryFileWrite
+toc: true
+redirect_from: docs/file/Functions/BinaryFileWrite/index
+---
 BinaryFileWrite
 ===============
 

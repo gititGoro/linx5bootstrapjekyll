@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetManualJournals
+description: GetManualJournals
+group: Functions
+feature: ManualJournal
+component: GetManualJournals
+toc: true
+redirect_from: docs/Functions/ManualJournal/GetManualJournals/index
+---
 GetManualJournals
 ============
 

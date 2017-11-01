@@ -8,6 +8,16 @@ component: ExpressionEditor
 toc: true
 redirect_from: docs/linx5main/Tools/ExpressionEditor/index
 ---
+---
+layout: docs
+title: ExpressionEditor
+description: ExpressionEditor
+group: linx5main
+feature: Tools
+component: ExpressionEditor
+toc: true
+redirect_from: docs/linx5main/Tools/ExpressionEditor/index
+---
 Expressions
 =================
 

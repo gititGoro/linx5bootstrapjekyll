@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ExpressionEditor
+description: ExpressionEditor
+group: linx5-help-contents
+feature: Tools
+component: ExpressionEditor
+toc: true
+redirect_from: docs/linx5-help-contents/Tools/ExpressionEditor/index
+---
 Expressions
 =================
 

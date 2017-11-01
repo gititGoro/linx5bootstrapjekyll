@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: linx5-help-contents
+toc: true
+redirect_from: docs/linx5-help-contents/licence
+---
 # Linx Licence
 
 ### Licence

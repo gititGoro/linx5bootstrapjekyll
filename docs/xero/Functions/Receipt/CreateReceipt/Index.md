@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateReceipt
+description: CreateReceipt
+group: Functions
+feature: Receipt
+component: CreateReceipt
+toc: true
+redirect_from: docs/Functions/Receipt/CreateReceipt/index
+---
 CreateReceipt
 ============
 

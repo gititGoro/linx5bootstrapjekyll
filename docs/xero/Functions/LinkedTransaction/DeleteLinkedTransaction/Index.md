@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteLinkedTransaction
+description: DeleteLinkedTransaction
+group: Functions
+feature: LinkedTransaction
+component: DeleteLinkedTransaction
+toc: true
+redirect_from: docs/Functions/LinkedTransaction/DeleteLinkedTransaction/index
+---
 DeleteLinkedTransaction
 ============
 

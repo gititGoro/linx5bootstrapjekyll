@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateItem
+description: CreateItem
+group: Functions
+feature: Item
+component: CreateItem
+toc: true
+redirect_from: docs/Functions/Item/CreateItem/index
+---
 CreateItem
 ============
 

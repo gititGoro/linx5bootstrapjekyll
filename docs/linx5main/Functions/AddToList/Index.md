@@ -8,6 +8,16 @@ component: AddToList
 toc: true
 redirect_from: docs/linx5main/Functions/AddToList/index
 ---
+---
+layout: docs
+title: AddToList
+description: AddToList
+group: linx5main
+feature: Functions
+component: AddToList
+toc: true
+redirect_from: docs/linx5main/Functions/AddToList/index
+---
 
 AddToList
 =========

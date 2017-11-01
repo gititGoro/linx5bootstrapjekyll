@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DateTime
+description: DateTime
+group: linx5-help-contents
+feature: Types
+component: DateTime
+toc: true
+redirect_from: docs/linx5-help-contents/Types/DateTime/index
+---
 DateTime
 ===========
 

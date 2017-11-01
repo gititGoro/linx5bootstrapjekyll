@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RunProcess
+description: RunProcess
+group: linx5-help-contents
+feature: Functions
+component: RunProcess
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/RunProcess/index
+---
 Running a process
 =================
 

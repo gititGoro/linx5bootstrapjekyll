@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateAttachment
+description: CreateAttachment
+group: Functions
+feature: Attachment
+component: CreateAttachment
+toc: true
+redirect_from: docs/Functions/Attachment/CreateAttachment/index
+---
 CreateAttachment
 ============
 

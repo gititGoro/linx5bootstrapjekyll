@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FTPOperations
+description: FTPOperations
+group: ftp
+feature: Functions
+component: FTPOperations
+toc: true
+redirect_from: docs/ftp/Functions/FTPOperations/index
+---
 FTPOperations
 =============
 

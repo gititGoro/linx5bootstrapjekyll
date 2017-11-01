@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: finswitch
+toc: true
+redirect_from: docs/finswitch/releasenotes
+---
 # Release Notes for FinSwitch plugin
 <a id="1_8_88_215"></a>
 ## 1.8.88.215

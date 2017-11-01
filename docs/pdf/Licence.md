@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: pdf
+toc: true
+redirect_from: docs/pdf/licence
+---
 # Licence for Pdf plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

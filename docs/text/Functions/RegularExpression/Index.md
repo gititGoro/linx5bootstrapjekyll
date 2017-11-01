@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RegularExpression
+description: RegularExpression
+group: text
+feature: Functions
+component: RegularExpression
+toc: true
+redirect_from: docs/text/Functions/RegularExpression/index
+---
 Regular Expression
 =================
 

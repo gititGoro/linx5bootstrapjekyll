@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: email
+toc: true
+redirect_from: docs/email/licence
+---
 # Licence for Email plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

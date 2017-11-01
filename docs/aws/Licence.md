@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: aws
+toc: true
+redirect_from: docs/aws/licence
+---
 # Licence for AWS plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

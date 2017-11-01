@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: encryption
+toc: true
+redirect_from: docs/encryption/releasenotes
+---
 
 # Release Notes for Encryption plugin
 

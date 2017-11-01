@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: utilities
+toc: true
+redirect_from: docs/utilities/releasenotes
+---
 # Release Notes for Utilities plugin
 <a id="1_10_112_285"></a>
 ## 1.10.112.285

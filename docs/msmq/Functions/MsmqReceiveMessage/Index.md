@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MsmqReceiveMessage
+description: MsmqReceiveMessage
+group: msmq
+feature: Functions
+component: MsmqReceiveMessage
+toc: true
+redirect_from: docs/msmq/Functions/MsmqReceiveMessage/index
+---
 MSMQReceiveMessage
 ==================
 

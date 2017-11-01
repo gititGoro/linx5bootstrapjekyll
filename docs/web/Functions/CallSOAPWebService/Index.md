@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CallSOAPWebService
+description: CallSOAPWebService
+group: web
+feature: Functions
+component: CallSOAPWebService
+toc: true
+redirect_from: docs/web/Functions/CallSOAPWebService/index
+---
 CallSOAPWebService
 ==================
 

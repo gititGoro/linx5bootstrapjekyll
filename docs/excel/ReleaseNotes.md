@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: excel
+toc: true
+redirect_from: docs/excel/releasenotes
+---
 # Release Notes for Excel plugin
 <a id="1_6_76_226"></a>
 ## 1.6.76.226

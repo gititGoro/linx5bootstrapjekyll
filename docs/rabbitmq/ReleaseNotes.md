@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: rabbitmq
+toc: true
+redirect_from: docs/rabbitmq/releasenotes
+---
 # Release Notes for RabbitMQ plugin
 <a id="1_5_57_146"></a>
 ## 1.5.57.146

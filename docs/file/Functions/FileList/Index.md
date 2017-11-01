@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FileList
+description: FileList
+group: file
+feature: Functions
+component: FileList
+toc: true
+redirect_from: docs/file/Functions/FileList/index
+---
 FileList
 ========
 
@@ -32,5 +42,3 @@ Properties
     \* matches zero or more characters.
 
     ? matches exactly zero or one character.
-
-

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: AmazonEC2API
+description: AmazonEC2API
+group: aws
+feature: Functions
+component: AmazonEC2API
+toc: true
+redirect_from: docs/aws/Functions/AmazonEC2API/index
+---
 AmazonEC2API
 ============
 
@@ -276,5 +286,3 @@ Actions
     ##### Output:
 
     None
-
-

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Unzip
+description: Unzip
+group: compression
+feature: Functions
+component: Unzip
+toc: true
+redirect_from: docs/compression/Functions/Unzip/index
+---
 # Unzip
 
 Extracts a zip archive to a given directory.

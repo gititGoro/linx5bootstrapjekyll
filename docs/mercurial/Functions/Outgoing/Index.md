@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Outgoing
+description: Outgoing
+group: mercurial
+feature: Functions
+component: Outgoing
+toc: true
+redirect_from: docs/mercurial/Functions/Outgoing/index
+---
 Outgoing
 ========
 

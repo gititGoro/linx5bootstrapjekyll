@@ -8,6 +8,16 @@ component: TryCatch
 toc: true
 redirect_from: docs/linx5main/Functions/TryCatch/index
 ---
+---
+layout: docs
+title: TryCatch
+description: TryCatch
+group: linx5main
+feature: Functions
+component: TryCatch
+toc: true
+redirect_from: docs/linx5main/Functions/TryCatch/index
+---
 TryCatch
 ========
 

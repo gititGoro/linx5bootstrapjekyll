@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetTrackingCategories
+description: GetTrackingCategories
+group: Functions
+feature: TrackingCategory
+component: GetTrackingCategories
+toc: true
+redirect_from: docs/Functions/TrackingCategory/GetTrackingCategories/index
+---
 GetTrackingCategories
 ============
 

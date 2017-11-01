@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Decrypt
+description: Decrypt
+group: encryption
+feature: Functions
+component: Decrypt
+toc: true
+redirect_from: docs/encryption/Functions/Decrypt/index
+---
 Decrypt
 =======
 
@@ -6,4 +16,3 @@ Decrypt
 in the <a href="/Support/Plugins/Cryptography/">Cryptography plugin</a>.</p>
 
 Decrypts data encrypted by the "Encrypt" function.
-

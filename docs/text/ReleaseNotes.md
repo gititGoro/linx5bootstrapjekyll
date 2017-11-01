@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: text
+toc: true
+redirect_from: docs/text/releasenotes
+---
 # Release Notes for Text plugin
 <a id="1_4_82_194"></a>
 ## 1.4.82.194

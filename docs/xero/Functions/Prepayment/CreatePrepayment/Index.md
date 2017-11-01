@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreatePrepayment
+description: CreatePrepayment
+group: Functions
+feature: Prepayment
+component: CreatePrepayment
+toc: true
+redirect_from: docs/Functions/Prepayment/CreatePrepayment/index
+---
 CreatePrepayment
 ============
 

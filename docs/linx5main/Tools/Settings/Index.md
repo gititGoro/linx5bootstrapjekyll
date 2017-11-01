@@ -8,6 +8,16 @@ component: Settings
 toc: true
 redirect_from: docs/linx5main/Tools/Settings/index
 ---
+---
+layout: docs
+title: Settings
+description: Settings
+group: linx5main
+feature: Tools
+component: Settings
+toc: true
+redirect_from: docs/linx5main/Tools/Settings/index
+---
 Settings
 ========
 

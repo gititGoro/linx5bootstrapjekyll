@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Archive
+description: Archive
+group: mercurial
+feature: Functions
+component: Archive
+toc: true
+redirect_from: docs/mercurial/Functions/Archive/index
+---
 Archive
 =======
 

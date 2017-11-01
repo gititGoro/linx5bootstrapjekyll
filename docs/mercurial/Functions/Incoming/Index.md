@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Incoming
+description: Incoming
+group: mercurial
+feature: Functions
+component: Incoming
+toc: true
+redirect_from: docs/mercurial/Functions/Incoming/index
+---
 Incoming
 ========
 

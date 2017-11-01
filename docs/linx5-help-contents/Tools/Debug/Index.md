@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Debug
+description: Debug
+group: linx5-help-contents
+feature: Tools
+component: Debug
+toc: true
+redirect_from: docs/linx5-help-contents/Tools/Debug/index
+---
 Debug
 =====
 

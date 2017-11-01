@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Byte
+description: Byte
+group: linx5-help-contents
+feature: Types
+component: Byte
+toc: true
+redirect_from: docs/linx5-help-contents/Types/Byte/index
+---
 Byte
 ====
 

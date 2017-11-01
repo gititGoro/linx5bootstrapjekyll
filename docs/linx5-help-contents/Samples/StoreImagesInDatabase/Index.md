@@ -1,3 +1,13 @@
+---
+layout: docs
+title: StoreImagesInDatabase
+description: StoreImagesInDatabase
+group: linx5-help-contents
+feature: Samples
+component: StoreImagesInDatabase
+toc: true
+redirect_from: docs/linx5-help-contents/Samples/StoreImagesInDatabase/index
+---
 Store Images In Database
 ========================
 

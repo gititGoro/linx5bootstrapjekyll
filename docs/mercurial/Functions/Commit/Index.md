@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Commit
+description: Commit
+group: mercurial
+feature: Functions
+component: Commit
+toc: true
+redirect_from: docs/mercurial/Functions/Commit/index
+---
 Commit
 ======
 

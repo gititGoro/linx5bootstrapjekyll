@@ -1,3 +1,13 @@
+---
+layout: docs
+title: BinaryFileRead
+description: BinaryFileRead
+group: file
+feature: Functions
+component: BinaryFileRead
+toc: true
+redirect_from: docs/file/Functions/BinaryFileRead/index
+---
 BinaryFileRead
 ==============
 
@@ -12,5 +22,3 @@ Properties
 -  #### File Path
 
     The path to the binary file.
-
-

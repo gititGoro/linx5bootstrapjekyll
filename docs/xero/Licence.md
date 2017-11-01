@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: xero
+toc: true
+redirect_from: docs/xero/licence
+---
 # Licence for Xero plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

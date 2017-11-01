@@ -1,3 +1,13 @@
+---
+layout: docs
+title: SOAPWebService
+description: SOAPWebService
+group: web
+feature: Services
+component: SOAPWebService
+toc: true
+redirect_from: docs/web/Services/SOAPWebService/index
+---
 SOAPWebService
 ==============
 

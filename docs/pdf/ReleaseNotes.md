@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: pdf
+toc: true
+redirect_from: docs/pdf/releasenotes
+---
 # Release Notes for PDF plugin
 <a id="1_4_56_32"></a>
 ## 1.4.56.32

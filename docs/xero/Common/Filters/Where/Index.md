@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Where
+description: Where
+group: Common
+feature: Filters
+component: Where
+toc: true
+redirect_from: docs/Common/Filters/Where/index
+---
 # Where Filter
 
 The where parameter allows you to filter elements using operators on their properties.

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetTaxRates
+description: GetTaxRates
+group: Functions
+feature: TaxRate
+component: GetTaxRates
+toc: true
+redirect_from: docs/Functions/TaxRate/GetTaxRates/index
+---
 GetTaxRates
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: List
+description: List
+group: linx5-help-contents
+feature: Types
+component: List
+toc: true
+redirect_from: docs/linx5-help-contents/Types/List/index
+---
 List
 ====
 

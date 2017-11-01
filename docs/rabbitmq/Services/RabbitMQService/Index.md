@@ -1,3 +1,13 @@
+---
+layout: docs
+title: RabbitMQService
+description: RabbitMQService
+group: rabbitmq
+feature: Services
+component: RabbitMQService
+toc: true
+redirect_from: docs/rabbitmq/Services/RabbitMQService/index
+---
 RabbitMQService
 ===============
 

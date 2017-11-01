@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Boolean
+description: Boolean
+group: linx5-help-contents
+feature: Types
+component: Boolean
+toc: true
+redirect_from: docs/linx5-help-contents/Types/Boolean/index
+---
 Boolean
 =======
 

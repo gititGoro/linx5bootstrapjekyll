@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetBankTransactions
+description: GetBankTransactions
+group: Functions
+feature: BankTransaction
+component: GetBankTransactions
+toc: true
+redirect_from: docs/Functions/BankTransaction/GetBankTransactions/index
+---
 GetBankTransactions
 ============
 

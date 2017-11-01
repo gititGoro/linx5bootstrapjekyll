@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateAccount
+description: CreateAccount
+group: Functions
+feature: Account
+component: CreateAccount
+toc: true
+redirect_from: docs/Functions/Account/CreateAccount/index
+---
 CreateAccount
 ============
 

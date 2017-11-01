@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Encrypt
+description: Encrypt
+group: cryptography
+feature: Functions
+component: Encrypt
+toc: true
+redirect_from: docs/cryptography/Functions/Encrypt/index
+---
 Encrypt
 =======
 

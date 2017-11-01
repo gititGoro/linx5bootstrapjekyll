@@ -1,3 +1,13 @@
+---
+layout: docs
+title: IfElse
+description: IfElse
+group: linx5-help-contents
+feature: Functions
+component: IfElse
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/IfElse/index
+---
 IfElse
 ======
 

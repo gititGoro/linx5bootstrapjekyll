@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateContact
+description: UpdateContact
+group: Functions
+feature: Contact
+component: UpdateContact
+toc: true
+redirect_from: docs/Functions/Contact/UpdateContact/index
+---
 UpdateContact
 ============
 

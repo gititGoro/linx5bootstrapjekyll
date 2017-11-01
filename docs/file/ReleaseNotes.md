@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: file
+toc: true
+redirect_from: docs/file/releasenotes
+---
 # Release Notes for File plugin
 <a id="1_10_109_324"></a>
 ## 1.10.109.324

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: XmlReader
+description: XmlReader
+group: xml
+feature: Functions
+component: XmlReader
+toc: true
+redirect_from: docs/xml/Functions/XmlReader/index
+---
 XMLReader
 =========
 

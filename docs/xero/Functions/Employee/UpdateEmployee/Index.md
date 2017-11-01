@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateEmployee
+description: UpdateEmployee
+group: Functions
+feature: Employee
+component: UpdateEmployee
+toc: true
+redirect_from: docs/Functions/Employee/UpdateEmployee/index
+---
 UpdateEmployee
 ============
 

@@ -8,6 +8,16 @@ component: DoWhile
 toc: true
 redirect_from: docs/linx5main/Functions/DoWhile/index
 ---
+---
+layout: docs
+title: DoWhile
+description: DoWhile
+group: linx5main
+feature: Functions
+component: DoWhile
+toc: true
+redirect_from: docs/linx5main/Functions/DoWhile/index
+---
 DoWhile
 =======
 

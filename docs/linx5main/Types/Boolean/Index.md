@@ -8,6 +8,16 @@ component: Boolean
 toc: true
 redirect_from: docs/linx5main/Types/Boolean/index
 ---
+---
+layout: docs
+title: Boolean
+description: Boolean
+group: linx5main
+feature: Types
+component: Boolean
+toc: true
+redirect_from: docs/linx5main/Types/Boolean/index
+---
 Boolean
 =======
 

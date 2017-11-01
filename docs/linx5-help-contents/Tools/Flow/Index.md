@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Flow
+description: Flow
+group: linx5-help-contents
+feature: Tools
+component: Flow
+toc: true
+redirect_from: docs/linx5-help-contents/Tools/Flow/index
+---
 Flow
 ====
 

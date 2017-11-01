@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DeleteTrackingCategory
+description: DeleteTrackingCategory
+group: Functions
+feature: TrackingCategory
+component: DeleteTrackingCategory
+toc: true
+redirect_from: docs/Functions/TrackingCategory/DeleteTrackingCategory/index
+---
 DeleteTrackingCategory
 ============
 

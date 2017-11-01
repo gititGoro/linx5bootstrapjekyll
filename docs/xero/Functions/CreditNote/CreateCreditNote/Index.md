@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateCreditNote
+description: CreateCreditNote
+group: Functions
+feature: CreditNote
+component: CreateCreditNote
+toc: true
+redirect_from: docs/Functions/CreditNote/CreateCreditNote/index
+---
 CreateCreditNote
 ============
 

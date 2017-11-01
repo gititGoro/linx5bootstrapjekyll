@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: aws
+toc: true
+redirect_from: docs/aws/releasenotes
+---
 # Release Notes for AWS plugin
 <a id="1_7_74_176"></a>
 ## 1.7.74.176

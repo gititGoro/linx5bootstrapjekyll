@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreatePrepaymentAllocation
+description: CreatePrepaymentAllocation
+group: Functions
+feature: PrepaymentAllocation
+component: CreatePrepaymentAllocation
+toc: true
+redirect_from: docs/Functions/PrepaymentAllocation/CreatePrepaymentAllocation/index
+---
 CreatePrepaymentAllocation
 ============
 

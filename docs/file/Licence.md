@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: file
+toc: true
+redirect_from: docs/file/licence
+---
 # Licence for File plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

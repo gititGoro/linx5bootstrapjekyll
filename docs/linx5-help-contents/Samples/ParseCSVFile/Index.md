@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ParseCSVFile
+description: ParseCSVFile
+group: linx5-help-contents
+feature: Samples
+component: ParseCSVFile
+toc: true
+redirect_from: docs/linx5-help-contents/Samples/ParseCSVFile/index
+---
 Parse CSV File
 ==============
 

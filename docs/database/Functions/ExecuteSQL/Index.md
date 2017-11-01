@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ExecuteSQL
+description: ExecuteSQL
+group: database
+feature: Functions
+component: ExecuteSQL
+toc: true
+redirect_from: docs/database/Functions/ExecuteSQL/index
+---
 ExecuteSQL
 ==========
 

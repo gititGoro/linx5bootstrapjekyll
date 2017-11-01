@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetUsers
+description: GetUsers
+group: Functions
+feature: User
+component: GetUsers
+toc: true
+redirect_from: docs/Functions/User/GetUsers/index
+---
 GetUsers
 ============
 

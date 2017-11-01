@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MsmqDeleteQueue
+description: MsmqDeleteQueue
+group: msmq
+feature: Functions
+component: MsmqDeleteQueue
+toc: true
+redirect_from: docs/msmq/Functions/MsmqDeleteQueue/index
+---
 MSMQDeleteQueue
 ===============
 

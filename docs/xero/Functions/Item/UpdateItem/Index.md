@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateItem
+description: UpdateItem
+group: Functions
+feature: Item
+component: UpdateItem
+toc: true
+redirect_from: docs/Functions/Item/UpdateItem/index
+---
 UpdateItem
 ============
 

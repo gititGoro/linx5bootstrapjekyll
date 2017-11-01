@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Encrypt
+description: Encrypt
+group: encryption
+feature: Functions
+component: Encrypt
+toc: true
+redirect_from: docs/encryption/Functions/Encrypt/index
+---
 Encrypt
 =======
 
@@ -6,4 +16,3 @@ Encrypt
 in the [Cryptography plugin](~/Support/Plugins/Cryptography/).</span>
 
 Encrypts text or binary data.
-

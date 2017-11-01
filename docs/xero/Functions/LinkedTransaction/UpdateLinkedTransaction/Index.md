@@ -1,3 +1,13 @@
+---
+layout: docs
+title: UpdateLinkedTransaction
+description: UpdateLinkedTransaction
+group: Functions
+feature: LinkedTransaction
+component: UpdateLinkedTransaction
+toc: true
+redirect_from: docs/Functions/LinkedTransaction/UpdateLinkedTransaction/index
+---
 UpdateLinkedTransaction
 ============
 

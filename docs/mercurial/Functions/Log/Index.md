@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Log
+description: Log
+group: mercurial
+feature: Functions
+component: Log
+toc: true
+redirect_from: docs/mercurial/Functions/Log/index
+---
 Log
 ===
 

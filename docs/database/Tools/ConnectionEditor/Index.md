@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ConnectionEditor
+description: ConnectionEditor
+group: database
+feature: Tools
+component: ConnectionEditor
+toc: true
+redirect_from: docs/database/Tools/ConnectionEditor/index
+---
 # Connection Editor
 
 The connection string specifies the configuration values required by the data provider to connect to the database. The content of the connection string depends on the database driver used. The Connection Editor helps build the connection string by offering the most common connection properties depending on the selected connection type.

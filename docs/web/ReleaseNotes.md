@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: web
+toc: true
+redirect_from: docs/web/releasenotes
+---
 # Release Notes for Web plugin
 <a id="1_11_162_521"></a>
 ## 1.11.162.521

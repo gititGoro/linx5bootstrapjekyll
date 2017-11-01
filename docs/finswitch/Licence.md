@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: finswitch
+toc: true
+redirect_from: docs/finswitch/licence
+---
 # Licence for FinSwitch plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

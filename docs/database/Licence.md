@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: database
+toc: true
+redirect_from: docs/database/licence
+---
 # Licence for Database plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: sqlserverreportingservices
+toc: true
+redirect_from: docs/sqlserverreportingservices/releasenotes
+---
 # Release Notes for ReportingServices plugin
 <a id="1_5_56_134"></a>
 ## 1.5.56.134

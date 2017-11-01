@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Merge
+description: Merge
+group: mercurial
+feature: Functions
+component: Merge
+toc: true
+redirect_from: docs/mercurial/Functions/Merge/index
+---
 Merge
 =====
 

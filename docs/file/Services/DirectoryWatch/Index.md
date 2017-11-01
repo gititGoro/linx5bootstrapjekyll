@@ -1,3 +1,13 @@
+---
+layout: docs
+title: DirectoryWatch
+description: DirectoryWatch
+group: file
+feature: Services
+component: DirectoryWatch
+toc: true
+redirect_from: docs/file/Services/DirectoryWatch/index
+---
 DirectoryWatch
 ==============
 

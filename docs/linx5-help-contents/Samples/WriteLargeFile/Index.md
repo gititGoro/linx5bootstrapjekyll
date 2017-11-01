@@ -1,3 +1,13 @@
+---
+layout: docs
+title: WriteLargeFile
+description: WriteLargeFile
+group: linx5-help-contents
+feature: Samples
+component: WriteLargeFile
+toc: true
+redirect_from: docs/linx5-help-contents/Samples/WriteLargeFile/index
+---
 Write large file
 ================
 

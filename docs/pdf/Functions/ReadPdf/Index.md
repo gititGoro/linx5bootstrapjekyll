@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ReadPdf
+description: ReadPdf
+group: pdf
+feature: Functions
+component: ReadPdf
+toc: true
+redirect_from: docs/pdf/Functions/ReadPdf/index
+---
 ReadPDF
 =======
 
@@ -135,5 +145,3 @@ The signatures present in the document.
         The revision number signed.
     7.  IsLatestRevision  
         No further revisions have been made since signing.
-
-

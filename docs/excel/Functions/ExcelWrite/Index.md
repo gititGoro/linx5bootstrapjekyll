@@ -1,3 +1,13 @@
+---
+layout: docs
+title: ExcelWrite
+description: ExcelWrite
+group: excel
+feature: Functions
+component: ExcelWrite
+toc: true
+redirect_from: docs/excel/Functions/ExcelWrite/index
+---
 # ExcelWrite
 
 <span class="recommendation">This function supports files that have been created using Microsoft Excel 2007 or later (.xlsx file extension).</span>

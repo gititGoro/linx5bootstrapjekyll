@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: text
+toc: true
+redirect_from: docs/text/licence
+---
 # Licence for Text plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

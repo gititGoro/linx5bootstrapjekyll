@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreateLinkedTransaction
+description: CreateLinkedTransaction
+group: Functions
+feature: LinkedTransaction
+component: CreateLinkedTransaction
+toc: true
+redirect_from: docs/Functions/LinkedTransaction/CreateLinkedTransaction/index
+---
 CreateLinkedTransaction
 ============
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FTPDownload
+description: FTPDownload
+group: ftp
+feature: Functions
+component: FTPDownload
+toc: true
+redirect_from: docs/ftp/Functions/FTPDownload/index
+---
 FTPDownload
 ===========
 

@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetAccounts
+description: GetAccounts
+group: Functions
+feature: Account
+component: GetAccounts
+toc: true
+redirect_from: docs/Functions/Account/GetAccounts/index
+---
 GetAccounts
 ============
 

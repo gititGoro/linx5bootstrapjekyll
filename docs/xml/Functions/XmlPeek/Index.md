@@ -1,3 +1,13 @@
+---
+layout: docs
+title: XmlPeek
+description: XmlPeek
+group: xml
+feature: Functions
+component: XmlPeek
+toc: true
+redirect_from: docs/xml/Functions/XmlPeek/index
+---
 XMLPeek
 =======
 

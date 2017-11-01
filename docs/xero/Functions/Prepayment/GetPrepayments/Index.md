@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetPrepayments
+description: GetPrepayments
+group: Functions
+feature: Prepayment
+component: GetPrepayments
+toc: true
+redirect_from: docs/Functions/Prepayment/GetPrepayments/index
+---
 GetPrepayments
 ============
 

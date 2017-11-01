@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: encryption
+toc: true
+redirect_from: docs/encryption/licence
+---
 # Licence for Encryption plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)
@@ -18,4 +26,3 @@ IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal ag
 8.	LIMITATION OF LIABILITY AND REMEDIES. NOTWITHSTANDING ANY DAMAGES THAT YOU MIGHT INCUR FOR ANY REASON WHATSOEVER (INCLUDING, WITHOUT LIMITATION, ALL DAMAGES REFERENCED HEREIN AND ALL DIRECT OR GENERAL DAMAGES IN CONTRACT OR ANYTHING ELSE), THE ENTIRE LIABILITY OF TWENTY57 AND ANY OF ITS SUPPLIERS UNDER ANY PROVISION OF THIS EULA AND YOUR EXCLUSIVE REMEDY HEREUNDER SHALL BE LIMITED TO THE ACTUAL DAMAGES YOU INCUR IN REASONABLE RELIANCE ON THE SOFTWARE UP TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE.  THE FOREGOING LIMITATIONS, EXCLUSIONS AND DISCLAIMERS SHALL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EVEN IF ANY REMEDY FAILS ITS ESSENTIAL PURPOSE.
 9.	APPLICABLE LAW.  This EULA is governed by the laws of South Africa.  If you acquired this Software in any other country, then local law may apply. 
 10.	ENTIRE AGREEMENT; SEVERABILITY.  This EULA (including any addendum or amendment to this EULA which is included with the Software) are the entire agreement between you and Twenty57 relating to the Software and the support services (if any) and they supersede all prior or contemporaneous oral or written communications, proposals and representations with respect to the Software or any other subject matter covered by this EULA.  To the extent the terms of any Twenty57 policies or programs for support services conflict with the terms of this EULA, the terms of this EULA shall control.  If any provision of this EULA is held to be void, invalid, unenforceable or illegal, the other provisions shall continue in full force and effect.
-

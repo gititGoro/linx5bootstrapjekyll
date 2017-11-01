@@ -1,3 +1,13 @@
+---
+layout: docs
+title: SetValue
+description: SetValue
+group: linx5-help-contents
+feature: Functions
+component: SetValue
+toc: true
+redirect_from: docs/linx5-help-contents/Functions/SetValue/index
+---
 SetValue
 ========
 
@@ -24,5 +34,3 @@ Properties
 -  #### Source
 
     The value that you want to assign to the target.
-
-

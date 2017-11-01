@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: excel
+toc: true
+redirect_from: docs/excel/licence
+---
 # Licence for Excel plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

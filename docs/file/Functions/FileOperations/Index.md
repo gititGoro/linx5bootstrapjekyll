@@ -1,3 +1,13 @@
+---
+layout: docs
+title: FileOperations
+description: FileOperations
+group: file
+feature: Functions
+component: FileOperations
+toc: true
+redirect_from: docs/file/Functions/FileOperations/index
+---
 FileOperations
 ==============
 
@@ -51,5 +61,3 @@ Properties
     file with the name *temp\_1.txt*. The next time the function
     attempts to copy or move *temp.txt* to this folder, it will be
     called *temp\_2.txt*.
-
-

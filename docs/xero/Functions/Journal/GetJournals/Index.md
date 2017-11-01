@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetJournals
+description: GetJournals
+group: Functions
+feature: Journal
+component: GetJournals
+toc: true
+redirect_from: docs/Functions/Journal/GetJournals/index
+---
 GetJournals
 ============
 

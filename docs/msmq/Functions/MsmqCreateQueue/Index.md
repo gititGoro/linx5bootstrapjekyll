@@ -1,3 +1,13 @@
+---
+layout: docs
+title: MsmqCreateQueue
+description: MsmqCreateQueue
+group: msmq
+feature: Functions
+component: MsmqCreateQueue
+toc: true
+redirect_from: docs/msmq/Functions/MsmqCreateQueue/index
+---
 MSMQCreateQueue
 ===============
 

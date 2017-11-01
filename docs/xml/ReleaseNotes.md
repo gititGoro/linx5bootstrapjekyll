@@ -1,3 +1,11 @@
+---
+layout: docs
+title: ReleaseNotes
+description: Release Notes
+group: xml
+toc: true
+redirect_from: docs/xml/releasenotes
+---
 # Release Notes for Xml plugin
 <a id="1_5_75_200"></a>
 ## 1.5.75.200

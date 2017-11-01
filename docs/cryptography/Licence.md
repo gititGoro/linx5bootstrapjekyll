@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: cryptography
+toc: true
+redirect_from: docs/cryptography/licence
+---
 # Licence for Cryptography plugin
 
 ### Author: [Twenty57](http://www.twenty57.com)

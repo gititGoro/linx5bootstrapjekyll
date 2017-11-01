@@ -1,3 +1,13 @@
+---
+layout: docs
+title: OrderBy
+description: OrderBy
+group: Common
+feature: Filters
+component: OrderBy
+toc: true
+redirect_from: docs/Common/Filters/OrderBy/index
+---
 # Order by Filter
 
 A list of items can be returned in a specific order. To specify the ordering, provide a property to order by and wether the order is ascending or descending.

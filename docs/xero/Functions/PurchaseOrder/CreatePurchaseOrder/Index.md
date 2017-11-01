@@ -1,3 +1,13 @@
+---
+layout: docs
+title: CreatePurchaseOrder
+description: CreatePurchaseOrder
+group: Functions
+feature: PurchaseOrder
+component: CreatePurchaseOrder
+toc: true
+redirect_from: docs/Functions/PurchaseOrder/CreatePurchaseOrder/index
+---
 CreatePurchaseOrder
 ============
 

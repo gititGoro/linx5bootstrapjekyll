@@ -1,3 +1,13 @@
+---
+layout: docs
+title: TimerService
+description: TimerService
+group: utilities
+feature: Services
+component: TimerService
+toc: true
+redirect_from: docs/utilities/Services/TimerService/index
+---
 TimerService
 ===========
 

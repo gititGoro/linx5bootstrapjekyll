@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Licence
+description: Licence
+group: web
+toc: true
+redirect_from: docs/web/licence
+---
 # Licence for WebService
 
 ### Author: [Twenty57](http://www.twenty57.com)

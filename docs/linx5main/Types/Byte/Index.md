@@ -8,6 +8,16 @@ component: Byte
 toc: true
 redirect_from: docs/linx5main/Types/Byte/index
 ---
+---
+layout: docs
+title: Byte
+description: Byte
+group: linx5main
+feature: Types
+component: Byte
+toc: true
+redirect_from: docs/linx5main/Types/Byte/index
+---
 Byte
 ====
 

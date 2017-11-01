@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetBankTransfers
+description: GetBankTransfers
+group: Functions
+feature: BankTransfer
+component: GetBankTransfers
+toc: true
+redirect_from: docs/Functions/BankTransfer/GetBankTransfers/index
+---
 GetBankTransfers
 ============
 

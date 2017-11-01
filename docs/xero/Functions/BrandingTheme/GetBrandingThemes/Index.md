@@ -1,3 +1,13 @@
+---
+layout: docs
+title: GetBrandingThemes
+description: GetBrandingThemes
+group: Functions
+feature: BrandingTheme
+component: GetBrandingThemes
+toc: true
+redirect_from: docs/Functions/BrandingTheme/GetBrandingThemes/index
+---
 GetBrandingThemes
 ============
 

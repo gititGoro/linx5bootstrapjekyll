@@ -1,3 +1,13 @@
+---
+layout: docs
+title: Init
+description: Init
+group: mercurial
+feature: Functions
+component: Init
+toc: true
+redirect_from: docs/mercurial/Functions/Init/index
+---
 Init
 ====
 
