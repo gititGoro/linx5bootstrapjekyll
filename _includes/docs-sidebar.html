@@ -36,7 +36,7 @@
             {%- assign active = 'active bd-sidenav-active' -%}
           {%- endif -%}
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-            <a class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ doc_slug }}/">
+            <a class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ doc_slug }}/#{{ group_slug }}">
               {{ doc.title }}
             </a>
 
@@ -45,7 +45,7 @@
               <ul class="">
                 {% for section in doc.sections %}
                   <li>
-                    <a class="bd-toc-link" href="#{{ section.title | downcase | replace: ' ', '-' }}">
+                    <a class="bd-toc-link" href="#{{ section.title | downcase | replace: ' ', '-' }}#{{ group_slug }}">
                       {{ section.title }}
                     </a>
                   </li>
