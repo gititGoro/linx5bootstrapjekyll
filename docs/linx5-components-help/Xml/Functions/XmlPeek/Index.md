@@ -69,7 +69,7 @@ Properties
         matching nodes.
     4.  Loop nodes  
         The function will return the contents of each matched node one
-        item at a time. You will see a "ForEachNodeù loop icon as a
+        item at a time. You will see a "ForEachNode loop icon as a
         child of this function. Any function added to the loop will be
         able to access the contents of the node in an output variable
         named "Node".
