@@ -1,61 +1,48 @@
 #!/bin/bash
-find | grep "Index.md" | while read -r line
+yaml=""
+function appendToYaml()  {
+  echo "appending: ${yaml}$1"$'\n'
+}
+ls -d */ | while read -r groupDirectory
 do
-    fileContents=$(< $line)
-    noIndex=${line%%/Index.md}
-    component=${noIndex##*/}
-    noComponent=${noIndex%/*}
-    feature=${noComponent##*/}
-    noFeature=${noComponent%/*}
-    group=${noFeature##*/}
-    stringWithNewLines="Group: $group"$'\n'"Feature: $feature\n Component: $component"  
+    groupTitle=${groupDirectory%%/}
+    # yaml="${yaml}layout: docs"$'\n'
 
-    block="---"$'\n'
-    block="${block}layout: docs"$'\n'
-    block="${block}title: ${component}"$'\n'
-    block="${block}description: ${component}"$'\n'
-    block="${block}group: ${group}"$'\n'
-    block="${block}feature: ${feature}"$'\n'
-    block="${block}component: ${component}"$'\n'
-    block="${block}toc: true"$'\n'
-    block="${block}redirect_from: docs/${group}/${feature}/${component}/index"$'\n'
-    block="${block}---"$'\n'
-    fileContents="${block}${fileContents}"
-    echo "$fileContents">"$line"
+ #  yaml="${yaml}- title: ${groupTitle}"$'\n'
+    echo "- title: $groupTitle"
+    cd $groupDirectory
+    if [[ $(ls *.md) ]]; then #top level markdown files
+       echo "  pages: "
+       ls *.md | while read -r topLevelPage
+       do
+        noExtension=${topLevelPage%%.md}
+       echo "    - title: $noExtension"
+       done
+    fi
+
+    if [[ $(ls -d */) ]]; then #features
+       echo "  features:"
+        ls -d */ | while read -r featureDirectory
+        do
+             featureString=${featureDirectory%%/} 
+            echo "    - feature: $featureString"
+             cd $featureDirectory
+                  if [[ $(ls -d */) ]]; then #components
+                       echo "      components:"
+                           ls -d */ | while read -r componentDirectory
+                           do
+                                componentString=${componentDirectory%%/} 
+                               echo "        - component: $componentString"
+                               echo "          pages:"
+                               echo "            - title: Index"
+                           done
+                  fi
+             cd ..
+        done
+    fi
+    
+    cd ..
 done
 
-find | grep "ReleaseNotes.md" | while read -r line
-do
-    fileContents=$(< $line)
-    noIndex=${line%%/ReleaseNotes.md}
-    group=${noIndex##*/}
-    stringWithNewLines="Group: $group"$'\n'
-    block="---"$'\n'
-    block="${block}layout: docs"$'\n'
-    block="${block}title: ReleaseNotes"$'\n'
-    block="${block}description: Release Notes"$'\n'
-    block="${block}group: ${group}"$'\n'
-    block="${block}toc: true"$'\n'
-    block="${block}redirect_from: docs/${group}/releasenotes"$'\n'
-    block="${block}---"$'\n'
-    fileContents="${block}${fileContents}"
-    echo "$fileContents">"$line"
-done
 
-find | grep "Licence.md" | while read -r line
-do
-    fileContents=$(< $line)
-    noIndex=${line%%/Licence.md}
-    group=${noIndex##*/}
-    stringWithNewLines="Group: $group"$'\n'
-    block="---"$'\n'
-    block="${block}layout: docs"$'\n'
-    block="${block}title: Licence"$'\n'
-    block="${block}description: Licence"$'\n'
-    block="${block}group: ${group}"$'\n'
-    block="${block}toc: true"$'\n'
-    block="${block}redirect_from: docs/${group}/licence"$'\n'
-    block="${block}---"$'\n'
-    fileContents="${block}${fileContents}"
-    echo "$fileContents">"$line"
-done
+

@@ -22,7 +22,8 @@
   {%- endif -%}
 
   <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless %}">
-      <a class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
+      {%- assign linkId = group_slug | append: link_slug | strip_newlines -%}
+      <a id= "{{ linkId }}" class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}#{{ linkId }}">
         {{ group.title }}
       </a>
 
@@ -64,7 +65,8 @@
             {%- assign firstComponent = feature.components | first -%}
             {%- assign firstComponentPage  = firstComponent.pages | first -%}
             <li class="{{ active }}">
-                <a class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ feature.feature }}/{{ firstComponent.component }}/{{ firstComponentPage.title }}">
+                {%- assign linkId = group_slug | append: feature.feature | append: firstComponent.component | append: firstComponentPage.title | strip_newlines -%}
+                <a id= "{{ linkId }}" class="bd-toc-link" href="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ feature.feature }}/{{ firstComponent.component }}/{{ firstComponentPage.title }}#{{ linkId }}">
                  {{ feature.feature }}
               </a>
 
@@ -81,9 +83,10 @@
                       {%- endif -%}
                         <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
                           {%- assign currentPage  = current.pages | first -%}
-                    
-                        <a class="bd-toc-link" href ="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ feature.feature }}/{{ current.component }}/{{ currentPage.title }}">
-                          {{ current.component }}</a>
+                          {%- assign linkId = group.title | append: feature.feature | append: current.component | append: currentPage.title | strip_newlines -%}
+                        <a id="{{ linkId }}" class="bd-toc-link" href ="{{ site.baseurl }}/{{ docs }}{{ group_slug }}/{{ feature.feature }}/{{ current.component }}/{{ currentPage.title }}#{{ linkId }}">
+                          {{ current.component }}
+                        </a>
                           </li>
                       {%- endfor -%}
           
