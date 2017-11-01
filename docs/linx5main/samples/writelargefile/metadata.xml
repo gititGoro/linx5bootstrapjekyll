@@ -1,4 +1,0 @@
-<Item>
-  <Name>Write Large File</Name>
-  <Description>Write a very large file using a FileOpen and a TextFileWrite.</Description>
-</Item>

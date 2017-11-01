@@ -1,6 +1,0 @@
-<Item>
-  <Name>List</Name>
-  <Description>
-    A list containing values of some Type. The Type can be any of the built in types or a Custom Type.
-  </Description>
-</Item>
