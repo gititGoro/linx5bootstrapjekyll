@@ -42,14 +42,14 @@ Properties
 -  #### Timeout
 
     *(Only shown if [Return option](#returnoptionproperty) is set to
-    "Next messageù or "Next message, else emptyù)*  
+    "Next message or "Next message, else empty)*  
      If the queue is empty, the function will keep looking in the queue
     for new messages until the specified number of milliseconds run out.
 
 -  #### Message count limit
 
     *(Only shown if [Return option](#returnoptionproperty) is set to
-    "List of messagesù or "Loop messagesù)*  
+    "List of messages or "Loop messages)*  
      Specifies the maximum number of messages that will be fetched from
     the queue. Use 0 for no limit.
 

@@ -11,7 +11,7 @@ Properties
 
     The name of the Exchange to publish to.  
      If this property is left blank, the default Exchange will be
-    selected. The default Exchange is a "directù Exchange which will
+    selected. The default Exchange is a "direct Exchange which will
     route the message to the queue having the name specified in the
     routing key.
 
