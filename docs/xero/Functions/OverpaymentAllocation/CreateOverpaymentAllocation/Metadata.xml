@@ -1,0 +1,4 @@
+<Item>
+	<Name>CreateOverpaymentAllocation</Name>
+	<Description>Allows you to allocate overpayments to outstanding invoices.</Description>
+</Item>

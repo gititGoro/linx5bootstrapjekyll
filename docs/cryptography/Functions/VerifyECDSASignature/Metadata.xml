@@ -1,0 +1,5 @@
+	<Item>
+		<Name>Verify ECDSA Signature</Name>
+		<Description>Verifies a digital signature against the specified ECDSA public key.</Description>
+		<Category>ECDSA Cryptography</Category>
+	</Item>

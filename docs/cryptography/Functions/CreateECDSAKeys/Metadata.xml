@@ -1,0 +1,5 @@
+	<Item>
+		<Name>Create ECDSA Keys</Name>
+		<Description>Creates a new Elliptic Curve Digital Signature Algorithm (ECDSA) public/private key pair.</Description>
+		<Category>ECDSA Cryptography</Category>
+	</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Rabbit MQ Service</Name>
+		<Description>Listens to a queue on a RabbitMQ server and triggers an event when a new message arrives.</Description>
+	</Item>

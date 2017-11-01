@@ -1,4 +1,0 @@
-	<Item>
-		<Name>Binary File Write</Name>
-		<Description>Writes list of byte from memory to file.</Description>
-	</Item>

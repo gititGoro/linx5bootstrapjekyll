@@ -1,9 +1,9 @@
 #!/bin/bash
 ls -d */ | while read -r line
 do
-    noLinx=${line##linx5-components-}
-    echo $noLinx
-    mv $line $noLinx
+    nohelp=${line%-help/}
+    echo $nohelp
+    mv $line $nohelp
     # fileContents=$(< $line)
     # noIndex=${line%%/Index.md}
     # component=${noIndex##*/}

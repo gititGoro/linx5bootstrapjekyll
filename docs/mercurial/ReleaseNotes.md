@@ -1,0 +1,1 @@
+# Release Notes for Mercurial plugin

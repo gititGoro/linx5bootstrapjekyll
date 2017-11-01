@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Unzip</Name>
+		<Description>Extracts a zip archive to a given directory.</Description>
+	</Item>

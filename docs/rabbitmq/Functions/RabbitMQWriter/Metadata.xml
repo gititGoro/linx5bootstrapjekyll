@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Rabbit MQ Writer</Name>
+		<Description>Publishes a message on a RabbitMQ server to the Exchange with the specified name.</Description>
+	</Item>

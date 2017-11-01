@@ -1,4 +1,0 @@
-	<Item>
-		<Name>Generate Hash</Name>
-		<Description>Computes a Base64-encoded hash for the input data using the hashing algorithm specified.</Description>
-	</Item>

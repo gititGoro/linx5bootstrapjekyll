@@ -1,0 +1,32 @@
+﻿<h1>Queries</h1>
+<p>Write a SQL, Oracle, MySQL, DB2 or other ODBC database query to view, insert to update your tables. The queries are available across all controls and components to set values and generate data. </p>
+<p>Use @@[ParameterName] for SQL eg select * from table where Column1 = @@Column1</p>
+<p>Use :[ParameterName] for Oracle eg select * from table where Column1 = :Column1</p>
+<p>Use ? for ODBC eg select * from table where Column1 = ?</p>
+<p>Click the "Fetch Fields & Parameters" button to run the query and expose them. Set the field alias which makes the most sense.  Parameters for ODBC will list in order as Parameter1, Parameter2 etc. You can rename these for easier identification. Parameters are all defaulted to input values and type String. For SQL, type string works for all input parameters. Oracle requires correct parameter typing. ODBC depends on the Database. Change this to Output and specify the type if needed.</p>
+<img src="~/Images/PageControls/Query-Add_a_query.png" style="float:left;padding:0;margin:0 0 10px 10px;max-width:580px;width:100%;height:auto;" border="0">
+<img src="~/Images/PageControls/Query_with_sql.png" style="float:left;padding:0;margin:0 0 10px 10px;max-width:580px;width:100%;height:auto;" border="0">
+<hr style="clear:both;">
+<h2>Query Tab Properties</h2>
+<ol>
+	<li>
+        <h4>Name</h4>
+        A name you can use to identify the query in a list
+	</li>
+    <li>
+        <h4>Connection</h4>
+        The connection you want to use when executing this query	
+    </li>
+    <li>
+        <h4>Timeout</h4>
+       The timeout for the query execution
+    </li>
+    <li>
+        <h4>SQL</h4>
+        SQL that defines the data you wish to return
+    </li>
+    <li>
+        <h4>StoredProc (SQL Only)</h4>
+        A Stored Procedure on the database server that you wish to use
+    </li>
+</ol>

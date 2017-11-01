@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Cryptography</Name>
+		<Description>Functions for performing encryption, decryption, hashing, and other cryptography operations.</Description>
+	</Item>

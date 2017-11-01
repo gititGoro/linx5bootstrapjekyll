@@ -1,4 +1,0 @@
-	<Item>
-		<Name>Binary File Read</Name>
-		<Description>Reads entire binary file into memory as a list of byte.</Description>
-	</Item>

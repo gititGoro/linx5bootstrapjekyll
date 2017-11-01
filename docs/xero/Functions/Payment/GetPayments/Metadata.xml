@@ -1,0 +1,4 @@
+<Item>
+	<Name>GetPayments</Name>
+	<Description>Use this method to retrieve either one or many payments for invoices and credit notes.</Description>
+</Item>

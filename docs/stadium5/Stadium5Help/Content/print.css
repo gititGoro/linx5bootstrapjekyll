@@ -1,0 +1,21 @@
+body {
+	background: none;
+	color: black;
+	font-weight:normal;
+}
+#content {
+	width: 100%;
+	margin: 0; padding: 0;
+	background: none;
+	border: 1px solid #666;
+	padding: 10px;
+}
+header, footer {
+	display: none;
+}
+a:after {
+	content: " [" attr(href) "] ";
+}
+img {
+	max-width:300px !important;
+}

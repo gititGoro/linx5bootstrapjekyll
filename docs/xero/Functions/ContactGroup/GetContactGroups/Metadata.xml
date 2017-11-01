@@ -1,0 +1,4 @@
+<Item>
+	<Name>GetContactGroups</Name>
+	<Description>Allows you to retrieve a list of all the contact groups, or a single contact group with all its contacts (ContactID and Name).</Description>
+</Item>
