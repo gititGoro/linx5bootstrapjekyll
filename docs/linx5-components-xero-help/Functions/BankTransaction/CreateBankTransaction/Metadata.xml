@@ -1,4 +1,0 @@
-<Item>
-	<Name>CreateBankTransaction</Name>
-	<Description>Use this function to create spend money, receive money, spend prepayment, receive prepayment, spend overpayment or receive overpayment transactions.</Description>
-</Item>

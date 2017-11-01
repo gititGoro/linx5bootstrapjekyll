@@ -1,0 +1,4 @@
+	<Item>
+		<Name>JSON Reader</Name>
+		<Description>Parse a JSON string and output the object.</Description>
+	</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Archive</Name>
+		<Description>Creates an unversioned archive of a repository revision.</Description>
+	</Item>

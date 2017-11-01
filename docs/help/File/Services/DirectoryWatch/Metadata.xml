@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Directory Watch</Name>
+		<Description>Watch a directory for file changes, creations, renaming and deletions and call a process or run some logic when the event occurs.</Description>
+	</Item>

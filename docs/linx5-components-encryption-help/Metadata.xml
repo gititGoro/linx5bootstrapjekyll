@@ -1,5 +1,0 @@
-	<Item>
-		<Name>Encryption</Name>
-		<Description>Encryption and hashing tools.</Description>
-		<Deprecated>Replaced by the Cryptography plugin.</Deprecated>
-	</Item>

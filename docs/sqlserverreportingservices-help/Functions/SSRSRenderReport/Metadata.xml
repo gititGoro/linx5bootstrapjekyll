@@ -1,0 +1,4 @@
+	<Item>
+		<Name>SQL Server Reporting Services Render Report</Name>
+		<Description>Executes and exports a report on SQL Server Reporting Services.</Description>
+	</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Decrypt</Name>
+		<Description>Decrypt data encrypted by the encrypt function.</Description>
+	</Item>

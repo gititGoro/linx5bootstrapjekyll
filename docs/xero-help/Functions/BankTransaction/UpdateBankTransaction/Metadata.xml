@@ -1,0 +1,4 @@
+<Item>
+	<Name>UpdateBankTransaction</Name>
+	<Description>Use this function to update spend money and receive money transactions. Updates on spend prepayment, receive prepayment, spend overpayment or receive overpayment transactions are NOT currently supported.</Description>
+</Item>

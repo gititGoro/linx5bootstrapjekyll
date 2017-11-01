@@ -1,0 +1,4 @@
+	<Item>
+		<Name>XML Writer</Name>
+		<Description>Write XML documents. Use XSLT transformations for additional processing.</Description>
+	</Item>

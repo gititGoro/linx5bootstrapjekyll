@@ -1,4 +1,0 @@
-	<Item>
-		<Name>Mongo DB Read</Name>
-		<Description>Retrieve objects from a Mongo database.</Description>
-	</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>FTP List</Name>
+		<Description>Return a list of all the files and directories in the specified remote path.</Description>
+	</Item>

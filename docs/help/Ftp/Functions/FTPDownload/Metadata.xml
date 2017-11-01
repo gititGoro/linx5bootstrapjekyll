@@ -1,0 +1,4 @@
+	<Item>
+		<Name>FTP Download</Name>
+		<Description>Downloads a file from an FTP-site.</Description>
+	</Item>

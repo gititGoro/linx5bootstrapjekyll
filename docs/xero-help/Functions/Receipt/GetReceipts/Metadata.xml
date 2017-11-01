@@ -1,0 +1,4 @@
+<Item>
+	<Name>GetReceipts</Name>
+	<Description>Use this method to retrieve either one or many draft receipts.</Description>
+</Item>

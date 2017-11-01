@@ -1,0 +1,4 @@
+	<Item>
+		<Name>MSMQ Send Message</Name>
+		<Description>Sends an MSMQ message.</Description>
+	</Item>

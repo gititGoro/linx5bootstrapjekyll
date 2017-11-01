@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Msmq Receive Message</Name>
+		<Description>Receives an MSMQ message.</Description>
+	</Item>
