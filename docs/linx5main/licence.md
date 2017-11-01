@@ -1,10 +1,9 @@
 ---
 layout: docs
-title: Licence
-description: Why hello there
+title: licence
+description: licence
 group: linx5main
 toc: true
-redirect_from: "/docs/linx5main/options/"
 ---
 # Linx Licence
 

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>MSMQ Service</Name>
+		<Description>Listens to a MSMQ queue and triggers an event when a new message arrives.</Description>
+	</Item>

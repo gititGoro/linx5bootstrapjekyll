@@ -1,0 +1,4 @@
+	<Item>
+		<Name>MSMQ Delete Queue</Name>
+		<Description>Deletes a MSMQ queue.</Description>
+	</Item>

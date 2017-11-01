@@ -1,0 +1,4 @@
+	<Item>
+		<Name>REST Web Service</Name>
+		<Description>Assemble and publish a REST web service endpoint by implementing its web methods through events.</Description>
+	</Item>

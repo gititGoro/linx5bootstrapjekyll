@@ -1,746 +1,746 @@
 - title: aws
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: AmazonEC2API
+        - component: amazonec2api
           pages:
-            - title: Index
+            - title: index
 - title: compression
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: Unzip
+        - component: unzip
           pages:
-            - title: Index
-        - component: Zip
+            - title: index
+        - component: zip
           pages:
-            - title: Index
+            - title: index
 - title: cryptography
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: CreateECDSAKeys
+        - component: createecdsakeys
           pages:
-            - title: Index
-        - component: Decrypt
+            - title: index
+        - component: decrypt
           pages:
-            - title: Index
-        - component: Encrypt
+            - title: index
+        - component: encrypt
           pages:
-            - title: Index
-        - component: GenerateECDSASignature
+            - title: index
+        - component: generateecdsasignature
           pages:
-            - title: Index
-        - component: GenerateHash
+            - title: index
+        - component: generatehash
           pages:
-            - title: Index
-        - component: VerifyECDSASignature
+            - title: index
+        - component: verifyecdsasignature
           pages:
-            - title: Index
+            - title: index
 - title: database
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: BeginTransaction
+        - component: begintransaction
           pages:
-            - title: Index
-        - component: DbBulkCopy
+            - title: index
+        - component: dbbulkcopy
           pages:
-            - title: Index
-        - component: ExecuteSQL
+            - title: index
+        - component: executesql
           pages:
-            - title: Index
-        - component: ExecuteStoredProcedure
+            - title: index
+        - component: executestoredprocedure
           pages:
-            - title: Index
-        - component: MongoDBMapReduce
+            - title: index
+        - component: mongodbmapreduce
           pages:
-            - title: Index
-        - component: MongoDBRead
+            - title: index
+        - component: mongodbread
           pages:
-            - title: Index
-        - component: MongoDBWrite
+            - title: index
+        - component: mongodbwrite
           pages:
-            - title: Index
-    - feature: Tools
+            - title: index
+    - feature: tools
       components:
-        - component: ConnectionEditor
+        - component: connectioneditor
           pages:
-            - title: Index
+            - title: index
 - title: email
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: ReadEmail
+        - component: reademail
           pages:
-            - title: Index
-        - component: SendEmail
+            - title: index
+        - component: sendemail
           pages:
-            - title: Index
+            - title: index
 - title: encryption
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: Decrypt
+        - component: decrypt
           pages:
-            - title: Index
-        - component: Encrypt
+            - title: index
+        - component: encrypt
           pages:
-            - title: Index
-        - component: GenerateHash
+            - title: index
+        - component: generatehash
           pages:
-            - title: Index
+            - title: index
 - title: excel
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: ExcelRead
+        - component: excelread
           pages:
-            - title: Index
-        - component: ExcelWrite
+            - title: index
+        - component: excelwrite
           pages:
-            - title: Index
+            - title: index
 - title: file
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: BinaryFileRead
+        - component: binaryfileread
           pages:
-            - title: Index
-        - component: BinaryFileWrite
+            - title: index
+        - component: binaryfilewrite
           pages:
-            - title: Index
-        - component: DirectoryOperations
+            - title: index
+        - component: directoryoperations
           pages:
-            - title: Index
-        - component: FileList
+            - title: index
+        - component: filelist
           pages:
-            - title: Index
-        - component: FileOpen
+            - title: index
+        - component: fileopen
           pages:
-            - title: Index
-        - component: FileOperations
+            - title: index
+        - component: fileoperations
           pages:
-            - title: Index
-        - component: Robocopy
+            - title: index
+        - component: robocopy
           pages:
-            - title: Index
-        - component: TextFileRead
+            - title: index
+        - component: textfileread
           pages:
-            - title: Index
-        - component: TextFileWrite
+            - title: index
+        - component: textfilewrite
           pages:
-            - title: Index
-    - feature: Services
+            - title: index
+    - feature: services
       components:
-        - component: DirectoryWatch
+        - component: directorywatch
           pages:
-            - title: Index
+            - title: index
 - title: finswitch
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: FinSwitchDownloadFile
+        - component: finswitchdownloadfile
           pages:
-            - title: Index
-        - component: FinSwitchGetProcessStatus
+            - title: index
+        - component: finswitchgetprocessstatus
           pages:
-            - title: Index
-        - component: FinSwitchUploadFile
+            - title: index
+        - component: finswitchuploadfile
           pages:
-            - title: Index
+            - title: index
 - title: ftp
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: FTPDownload
+        - component: ftpdownload
           pages:
-            - title: Index
-        - component: FTPList
+            - title: index
+        - component: ftplist
           pages:
-            - title: Index
-        - component: FTPOperations
+            - title: index
+        - component: ftpoperations
           pages:
-            - title: Index
-        - component: FTPUpload
+            - title: index
+        - component: ftpupload
           pages:
-            - title: Index
+            - title: index
 - title: graphicsmagick
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: GraphicsMagick
+        - component: graphicsmagick
           pages:
-            - title: Index
+            - title: index
 - title: json
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: JsonReader
+        - component: jsonreader
           pages:
-            - title: Index
-        - component: JsonWriter
+            - title: index
+        - component: jsonwriter
           pages:
-            - title: Index
+            - title: index
 - title: linx5-help-contents
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: AddToList
+        - component: addtolist
           pages:
-            - title: Index
-        - component: ClearList
+            - title: index
+        - component: clearlist
           pages:
-            - title: Index
-        - component: DoWhile
+            - title: index
+        - component: dowhile
           pages:
-            - title: Index
-        - component: ForEach
+            - title: index
+        - component: foreach
           pages:
-            - title: Index
-        - component: IfElse
+            - title: index
+        - component: ifelse
           pages:
-            - title: Index
-        - component: RunProcess
+            - title: index
+        - component: runprocess
           pages:
-            - title: Index
-        - component: SetValue
+            - title: index
+        - component: setvalue
           pages:
-            - title: Index
-        - component: ThrowException
+            - title: index
+        - component: throwexception
           pages:
-            - title: Index
-        - component: TryCatch
+            - title: index
+        - component: trycatch
           pages:
-            - title: Index
-    - feature: Samples
+            - title: index
+    - feature: samples
       components:
-        - component: ParseCSVFile
+        - component: parsecsvfile
           pages:
-            - title: Index
-        - component: ParseXmlFile
+            - title: index
+        - component: parsexmlfile
           pages:
-            - title: Index
-        - component: PublishWebService
+            - title: index
+        - component: publishwebservice
           pages:
-            - title: Index
-        - component: SendEmail
+            - title: index
+        - component: sendemail
           pages:
-            - title: Index
-        - component: StoreImagesInDatabase
+            - title: index
+        - component: storeimagesindatabase
           pages:
-            - title: Index
-        - component: WriteCSVFile
+            - title: index
+        - component: writecsvfile
           pages:
-            - title: Index
-        - component: WriteLargeFile
+            - title: index
+        - component: writelargefile
           pages:
-            - title: Index
-        - component: WriteTextFiles
+            - title: index
+        - component: writetextfiles
           pages:
-            - title: Index
-    - feature: Tools
+            - title: index
+    - feature: tools
       components:
-        - component: Debug
+        - component: debug
           pages:
-            - title: Index
-        - component: Deploy
+            - title: index
+        - component: deploy
           pages:
-            - title: Index
-        - component: ExpressionEditor
+            - title: index
+        - component: expressioneditor
           pages:
-            - title: Index
-        - component: Flow
+            - title: index
+        - component: flow
           pages:
-            - title: Index
-        - component: Run
+            - title: index
+        - component: run
           pages:
-            - title: Index
-        - component: Settings
+            - title: index
+        - component: settings
           pages:
-            - title: Index
-    - feature: Types
+            - title: index
+    - feature: types
       components:
-        - component: Boolean
+        - component: boolean
           pages:
-            - title: Index
-        - component: Byte
+            - title: index
+        - component: byte
           pages:
-            - title: Index
-        - component: CustomType
+            - title: index
+        - component: customtype
           pages:
-            - title: Index
-        - component: DateTime
+            - title: index
+        - component: datetime
           pages:
-            - title: Index
-        - component: Decimal
+            - title: index
+        - component: decimal
           pages:
-            - title: Index
-        - component: Double
+            - title: index
+        - component: double
           pages:
-            - title: Index
-        - component: Integer
+            - title: index
+        - component: integer
           pages:
-            - title: Index
-        - component: List
+            - title: index
+        - component: list
           pages:
-            - title: Index
-        - component: String
+            - title: index
+        - component: string
           pages:
-            - title: Index
+            - title: index
 - title: linx5main
   pages: 
     - title: licence
-    - title: ReleaseNotes
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: AddToList
+        - component: addtolist
           pages:
-            - title: Index
-        - component: ClearList
+            - title: index
+        - component: clearlist
           pages:
-            - title: Index
-        - component: DoWhile
+            - title: index
+        - component: dowhile
           pages:
-            - title: Index
-        - component: ForEach
+            - title: index
+        - component: foreach
           pages:
-            - title: Index
-        - component: IfElse
+            - title: index
+        - component: ifelse
           pages:
-            - title: Index
-        - component: RunProcess
+            - title: index
+        - component: runprocess
           pages:
-            - title: Index
-        - component: SetValue
+            - title: index
+        - component: setvalue
           pages:
-            - title: Index
-        - component: ThrowException
+            - title: index
+        - component: throwexception
           pages:
-            - title: Index
-        - component: TryCatch
+            - title: index
+        - component: trycatch
           pages:
-            - title: Index
-    - feature: Samples
+            - title: index
+    - feature: samples
       components:
-        - component: ParseCSVFile
+        - component: parsecsvfile
           pages:
-            - title: Index
-        - component: ParseXmlFile
+            - title: index
+        - component: parsexmlfile
           pages:
-            - title: Index
-        - component: PublishWebService
+            - title: index
+        - component: publishwebservice
           pages:
-            - title: Index
-        - component: SendEmail
+            - title: index
+        - component: sendemail
           pages:
-            - title: Index
-        - component: StoreImagesInDatabase
+            - title: index
+        - component: storeimagesindatabase
           pages:
-            - title: Index
-        - component: WriteCSVFile
+            - title: index
+        - component: writecsvfile
           pages:
-            - title: Index
-        - component: WriteLargeFile
+            - title: index
+        - component: writelargefile
           pages:
-            - title: Index
-        - component: WriteTextFiles
+            - title: index
+        - component: writetextfiles
           pages:
-            - title: Index
-    - feature: Tools
+            - title: index
+    - feature: tools
       components:
-        - component: Debug
+        - component: debug
           pages:
-            - title: Index
-        - component: Deploy
+            - title: index
+        - component: deploy
           pages:
-            - title: Index
-        - component: ExpressionEditor
+            - title: index
+        - component: expressioneditor
           pages:
-            - title: Index
-        - component: Flow
+            - title: index
+        - component: flow
           pages:
-            - title: Index
-        - component: Run
+            - title: index
+        - component: run
           pages:
-            - title: Index
-        - component: Settings
+            - title: index
+        - component: settings
           pages:
-            - title: Index
-    - feature: Types
+            - title: index
+    - feature: types
       components:
-        - component: Boolean
+        - component: boolean
           pages:
-            - title: Index
-        - component: Byte
+            - title: index
+        - component: byte
           pages:
-            - title: Index
-        - component: CustomType
+            - title: index
+        - component: customtype
           pages:
-            - title: Index
-        - component: DateTime
+            - title: index
+        - component: datetime
           pages:
-            - title: Index
-        - component: Decimal
+            - title: index
+        - component: decimal
           pages:
-            - title: Index
-        - component: Double
+            - title: index
+        - component: double
           pages:
-            - title: Index
-        - component: Integer
+            - title: index
+        - component: integer
           pages:
-            - title: Index
-        - component: List
+            - title: index
+        - component: list
           pages:
-            - title: Index
-        - component: String
+            - title: index
+        - component: string
           pages:
-            - title: Index
+            - title: index
 - title: mercurial
   pages: 
-    - title: ReleaseNotes
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: Archive
+        - component: archive
           pages:
-            - title: Index
-        - component: Clone
+            - title: index
+        - component: clone
           pages:
-            - title: Index
-        - component: Commit
+            - title: index
+        - component: commit
           pages:
-            - title: Index
-        - component: Incoming
+            - title: index
+        - component: incoming
           pages:
-            - title: Index
-        - component: Init
+            - title: index
+        - component: init
           pages:
-            - title: Index
-        - component: Log
+            - title: index
+        - component: log
           pages:
-            - title: Index
-        - component: Merge
+            - title: index
+        - component: merge
           pages:
-            - title: Index
-        - component: Outgoing
+            - title: index
+        - component: outgoing
           pages:
-            - title: Index
-        - component: Pull
+            - title: index
+        - component: pull
           pages:
-            - title: Index
-        - component: Push
+            - title: index
+        - component: push
           pages:
-            - title: Index
-        - component: Status
+            - title: index
+        - component: status
           pages:
-            - title: Index
-        - component: Tag
+            - title: index
+        - component: tag
           pages:
-            - title: Index
-        - component: Tags
+            - title: index
+        - component: tags
           pages:
-            - title: Index
-        - component: Update
+            - title: index
+        - component: update
           pages:
-            - title: Index
+            - title: index
 - title: msmq
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: MsmqCreateQueue
+        - component: msmqcreatequeue
           pages:
-            - title: Index
-        - component: MsmqDeleteQueue
+            - title: index
+        - component: msmqdeletequeue
           pages:
-            - title: Index
-        - component: MsmqReceiveMessage
+            - title: index
+        - component: msmqreceivemessage
           pages:
-            - title: Index
-        - component: MsmqSendMessage
+            - title: index
+        - component: msmqsendmessage
           pages:
-            - title: Index
-    - feature: Services
+            - title: index
+    - feature: services
       components:
-        - component: MsmqService
+        - component: msmqservice
           pages:
-            - title: Index
+            - title: index
 - title: pastel
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: PastelImportDocument
+        - component: pastelimportdocument
           pages:
-            - title: Index
-        - component: PastelImportGLBatch
+            - title: index
+        - component: pastelimportglbatch
           pages:
-            - title: Index
+            - title: index
 - title: pdf
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: PdfOperations
+        - component: pdfoperations
           pages:
-            - title: Index
-        - component: ReadPdf
+            - title: index
+        - component: readpdf
           pages:
-            - title: Index
+            - title: index
 - title: rabbitmq
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: RabbitMQReader
+        - component: rabbitmqreader
           pages:
-            - title: Index
-        - component: RabbitMQWriter
+            - title: index
+        - component: rabbitmqwriter
           pages:
-            - title: Index
-    - feature: Services
+            - title: index
+    - feature: services
       components:
-        - component: RabbitMQService
+        - component: rabbitmqservice
           pages:
-            - title: Index
+            - title: index
 - title: sqlserverreportingservices
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: SSRSRenderReport
+        - component: ssrsrenderreport
           pages:
-            - title: Index
+            - title: index
 - title: text
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: RazorTemplateTransform
+        - component: razortemplatetransform
           pages:
-            - title: Index
-        - component: RegularExpression
+            - title: index
+        - component: regularexpression
           pages:
-            - title: Index
-        - component: StringBuilder
+            - title: index
+        - component: stringbuilder
           pages:
-            - title: Index
+            - title: index
 - title: utilities
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: Assert
+        - component: assert
           pages:
-            - title: Index
-        - component: CommandLine
+            - title: index
+        - component: commandline
           pages:
-            - title: Index
-        - component: Sleep
+            - title: index
+        - component: sleep
           pages:
-            - title: Index
-    - feature: Services
+            - title: index
+    - feature: services
       components:
-        - component: TimerService
+        - component: timerservice
           pages:
-            - title: Index
+            - title: index
 - title: web
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: CallRESTWebService
+        - component: callrestwebservice
           pages:
-            - title: Index
-        - component: CallSOAPWebService
+            - title: index
+        - component: callsoapwebservice
           pages:
-            - title: Index
-    - feature: Services
+            - title: index
+    - feature: services
       components:
-        - component: RESTWebService
+        - component: restwebservice
           pages:
-            - title: Index
-        - component: SOAPWebService
+            - title: index
+        - component: soapwebservice
           pages:
-            - title: Index
+            - title: index
 - title: xero
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Common
+    - feature: common
       components:
-        - component: Authentication
+        - component: authentication
           pages:
-            - title: Index
-        - component: Filters
+            - title: index
+        - component: filters
           pages:
-            - title: Index
-    - feature: Functions
+            - title: index
+    - feature: functions
       components:
-        - component: Account
+        - component: account
           pages:
-            - title: Index
-        - component: Attachment
+            - title: index
+        - component: attachment
           pages:
-            - title: Index
-        - component: BankTransaction
+            - title: index
+        - component: banktransaction
           pages:
-            - title: Index
-        - component: BankTransfer
+            - title: index
+        - component: banktransfer
           pages:
-            - title: Index
-        - component: BrandingTheme
+            - title: index
+        - component: brandingtheme
           pages:
-            - title: Index
-        - component: Contact
+            - title: index
+        - component: contact
           pages:
-            - title: Index
-        - component: ContactGroup
+            - title: index
+        - component: contactgroup
           pages:
-            - title: Index
-        - component: CreditNote
+            - title: index
+        - component: creditnote
           pages:
-            - title: Index
-        - component: CreditNoteAllocation
+            - title: index
+        - component: creditnoteallocation
           pages:
-            - title: Index
-        - component: Currency
+            - title: index
+        - component: currency
           pages:
-            - title: Index
-        - component: Employee
+            - title: index
+        - component: employee
           pages:
-            - title: Index
-        - component: ExpenseClaim
+            - title: index
+        - component: expenseclaim
           pages:
-            - title: Index
-        - component: Invoice
+            - title: index
+        - component: invoice
           pages:
-            - title: Index
-        - component: Item
+            - title: index
+        - component: item
           pages:
-            - title: Index
-        - component: Journal
+            - title: index
+        - component: journal
           pages:
-            - title: Index
-        - component: LinkedTransaction
+            - title: index
+        - component: linkedtransaction
           pages:
-            - title: Index
-        - component: ManualJournal
+            - title: index
+        - component: manualjournal
           pages:
-            - title: Index
-        - component: Organisation
+            - title: index
+        - component: organisation
           pages:
-            - title: Index
-        - component: Overpayment
+            - title: index
+        - component: overpayment
           pages:
-            - title: Index
-        - component: OverpaymentAllocation
+            - title: index
+        - component: overpaymentallocation
           pages:
-            - title: Index
-        - component: Payment
+            - title: index
+        - component: payment
           pages:
-            - title: Index
-        - component: Prepayment
+            - title: index
+        - component: prepayment
           pages:
-            - title: Index
-        - component: PrepaymentAllocation
+            - title: index
+        - component: prepaymentallocation
           pages:
-            - title: Index
-        - component: PurchaseOrder
+            - title: index
+        - component: purchaseorder
           pages:
-            - title: Index
-        - component: Receipt
+            - title: index
+        - component: receipt
           pages:
-            - title: Index
-        - component: RepeatingInvoice
+            - title: index
+        - component: repeatinginvoice
           pages:
-            - title: Index
-        - component: TaxRate
+            - title: index
+        - component: taxrate
           pages:
-            - title: Index
-        - component: TrackingCategory
+            - title: index
+        - component: trackingcategory
           pages:
-            - title: Index
-        - component: TrackingOption
+            - title: index
+        - component: trackingoption
           pages:
-            - title: Index
-        - component: User
+            - title: index
+        - component: user
           pages:
-            - title: Index
+            - title: index
 - title: xml
   pages: 
-    - title: Licence
-    - title: ReleaseNotes
+    - title: licence
+    - title: releasenotes
   features:
-    - feature: Functions
+    - feature: functions
       components:
-        - component: XmlPeek
+        - component: xmlpeek
           pages:
-            - title: Index
-        - component: XmlPoke
+            - title: index
+        - component: xmlpoke
           pages:
-            - title: Index
-        - component: XmlReader
+            - title: index
+        - component: xmlreader
           pages:
-            - title: Index
-        - component: XmlWriter
+            - title: index
+        - component: xmlwriter
           pages:
-            - title: Index
+            - title: index

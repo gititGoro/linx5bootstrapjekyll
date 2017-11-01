@@ -1,0 +1,6 @@
+<Item>
+  <Name>Custom Type</Name>
+  <Description>
+    You can define your own type by adding a Custom Type. A Custom Type can contain properties of any type including Custom Types.
+  </Description>
+</Item>

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>String Builder</Name>
+		<Description>Allows to efficiently build large strings.</Description>
+	</Item>

@@ -6,9 +6,6 @@ function appendToYaml()  {
 ls -d */ | while read -r groupDirectory
 do
     groupTitle=${groupDirectory%%/}
-    # yaml="${yaml}layout: docs"$'\n'
-
- #  yaml="${yaml}- title: ${groupTitle}"$'\n'
     echo "- title: $groupTitle"
     cd $groupDirectory
     if [[ $(ls *.md) ]]; then #top level markdown files
