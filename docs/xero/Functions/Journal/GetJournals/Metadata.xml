@@ -1,4 +1,0 @@
-<Item>
-	<Name>GetJournals</Name>
-	<Description>Use this function to retrieve either one or many journals. A maximum of 100 journals will be returned in any response. Journals are ordered oldest to newest.</Description>
-</Item>
