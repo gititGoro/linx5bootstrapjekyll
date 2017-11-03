@@ -7,43 +7,6 @@ feature: payment
 component: getpayments
 toc: true
 ---
----
-layout: docs
-title: getpayments
-description: getpayments
-group: functions
-feature: payment
-component: getpayments
-toc: true
----
----
-layout: docs
-title: getpayments
-description: getpayments
-group: functions
-feature: payment
-component: getpayments
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: payment
-feature: getpayments
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetPayments
-description: GetPayments
-group: Functions
-feature: Payment
-component: GetPayments
-toc: true
-redirect_from: docs/Functions/Payment/GetPayments/index
----
 GetPayments
 ============
 

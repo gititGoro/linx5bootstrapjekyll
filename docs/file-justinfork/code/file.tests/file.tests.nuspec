@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<language>en-US</language>
+		<description>Tests</description>
+		<dependencies>
+			<dependency id="Twenty57.Linx.Components.File" version="$version$" />
+		</dependencies>
+	</metadata>
+</package>

@@ -7,43 +7,6 @@ feature: organisation
 component: getorganisations
 toc: true
 ---
----
-layout: docs
-title: getorganisations
-description: getorganisations
-group: functions
-feature: organisation
-component: getorganisations
-toc: true
----
----
-layout: docs
-title: getorganisations
-description: getorganisations
-group: functions
-feature: organisation
-component: getorganisations
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: organisation
-feature: getorganisations
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetOrganisations
-description: GetOrganisations
-group: Functions
-feature: Organisation
-component: GetOrganisations
-toc: true
-redirect_from: docs/Functions/Organisation/GetOrganisations/index
----
 GetOrganisations
 ============
 

@@ -1,0 +1,170 @@
+﻿<pluginUI:CustomWindow x:Class="Twenty57.Linx.Components.Database.UI.Editors.ConnectionEditor.ConnectionEditorWindow"
+											 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+											 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+											 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+											 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+											 xmlns:pluginUI="clr-namespace:Twenty57.Linx.Plugin.UI.Windows;assembly=Twenty57.Linx.Plugin.UI"
+											 xmlns:pluginUIHelpers="clr-namespace:Twenty57.Linx.Plugin.UI.Helpers;assembly=Twenty57.Linx.Plugin.UI"
+											 xmlns:pluginConverters="Twenty57.Linx.Plugin.UI."
+											 xmlns:converters="clr-namespace:Twenty57.Linx.Components.Database.UI.Converters"
+											 xmlns:local="clr-namespace:Twenty57.Linx.Components.Database.UI.Editors.ConnectionEditor.ViewModel"
+											 mc:Ignorable="d" 
+											 Style="{StaticResource DialogWindowStyle}"
+											 d:DesignHeight="300" d:DesignWidth="420"
+											 Height="500" Width="680"
+											 MinHeight="300" MinWidth="420"
+											 Title="Connection Editor"
+											 ShowInTaskbar="False"
+											 WindowStartupLocation="CenterOwner"
+											 pluginUIHelpers:DialogCloser.DialogResult="{Binding DialogResult}">
+	<Window.Resources>
+		<converters:IsBusyToMouseCursorConverter x:Key="mouseCursorConverter" />
+		<converters:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+		<BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+		<converters:InverseBooleanToVisibilityConverter x:Key="inverseBooleanToVisibilityConverter" />
+	</Window.Resources>
+	<Window.Cursor>
+		<Binding Path="IsBusy" Converter="{StaticResource mouseCursorConverter}" />
+	</Window.Cursor>
+	<Grid IsEnabled="{Binding IsBusy, Converter={StaticResource inverseBooleanConverter}}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" Orientation="Horizontal">
+			<TextBlock Margin="5 5 0 0" VerticalAlignment="Center" Foreground="{StaticResource ForegroundDarkBrush}">Connection type:</TextBlock>
+			<ComboBox x:Name="ConnectionTypeComboBox" Margin="5 5 0 0" Width="160" SelectedItem="{Binding ConnectionType}" ItemsSource="{Binding ConnectionTypes, Mode=OneTime}" SelectionChanged="ConnectionTypeComboBox_SelectionChanged"/>
+			<Button Margin="5 5 0 0" Height="{Binding ActualHeight, ElementName=ConnectionTypeComboBox, Mode=OneWay}" 
+					Visibility="{Binding IsWizardAvailable, Converter={StaticResource booleanToVisibilityConverter}, Mode=OneWay}"
+					Command="{Binding OpenWizardCommand}">Wizard...</Button>
+		</StackPanel>
+
+		<Grid Grid.Row="1" Margin="5">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="30" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid Grid.Row="0" Background="{StaticResource BackgroundBrush}">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="15" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="2*" />
+				</Grid.ColumnDefinitions>
+				<TextBlock x:Name="NameHeader" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="{StaticResource ForegroundDarkBrush}">Name</TextBlock>
+				<TextBlock x:Name="ValueHeader" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="{StaticResource ForegroundDarkBrush}">Value</TextBlock>
+			</Grid>
+
+			<ListView Name="ParameterListView" Grid.Row="1" ItemsSource="{Binding ConnectionParameters}" KeyUp="ListView_KeyUp" Loaded="ListView_Loaded" KeyboardNavigation.TabNavigation="Continue">
+				<ListView.Resources>
+					<DataTemplate DataType="{x:Type local:ConnectionParameter}">
+						<Grid Height="40" ToolTip="{Binding Description, Mode=OneWay}">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="15" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="2*" />
+							</Grid.ColumnDefinitions>
+							<Border Grid.Column="0" Background="{StaticResource TitlebarInactive}" />
+							<Border Grid.Column="1" Background="{StaticResource ForegroundLightBrush}" BorderThickness="0" Padding="5 0 5 0" MaxWidth="{Binding ActualWidth, ElementName=NameHeader}">
+								<Grid>
+									<StackPanel Orientation="Horizontal" Visibility="{Binding HasSuccinctDescription, Converter={StaticResource booleanToVisibilityConverter}}" IsVisibleChanged="LabeledNamePanel_IsVisibleChanged">
+																				<TextBox VerticalAlignment="Center" BorderThickness="0" TextWrapping="NoWrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" >
+																						<TextBox.Style>
+																								<Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+																										<EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotKeyboardFocus" ></EventSetter>
+																								</Style>
+																						</TextBox.Style>
+																				</TextBox>
+										<TextBlock VerticalAlignment="Center" Margin="2 0 0 0" Foreground="{StaticResource WatermarkTextBrush}" Text="{Binding SuccinctDescription, StringFormat=({0})}" />
+									</StackPanel>
+									<TextBox VerticalAlignment="Center" Margin="2 0 0 0" BorderThickness="0" TextWrapping="NoWrap" IsVisibleChanged="NameTextBox_IsVisibleChanged"
+											 Visibility="{Binding HasSuccinctDescription, Converter={StaticResource inverseBooleanToVisibilityConverter}}" 
+											 Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}">
+										<TextBox.Style>
+											<Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+																								<EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotKeyboardFocus" ></EventSetter>
+																								<Setter Property="Background" Value="Transparent" />
+												<Style.Resources>
+													<VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+														<VisualBrush.Visual>
+															<Label Content="Property Name" Foreground="LightGray" Background="Transparent" Width="10000" />
+														</VisualBrush.Visual>
+													</VisualBrush>
+												</Style.Resources>
+												<Style.Triggers>
+													<Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+														<Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+													</Trigger>
+													<Trigger Property="Text" Value="{x:Null}">
+														<Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+													</Trigger>
+													<Trigger Property="IsKeyboardFocused" Value="True">
+														<Setter Property="Background" Value="Transparent" />
+													</Trigger>
+												</Style.Triggers>
+											</Style>
+										</TextBox.Style>
+									</TextBox>
+								</Grid>
+							</Border>
+							<Border Grid.Column="2" Background="{StaticResource ForegroundLightBrush}" BorderThickness="0" Padding="5 0 5 0" MaxWidth="{Binding ActualWidth, ElementName=ValueHeader}" Margin="10 0 0 0">
+								<Grid>
+									<TextBox VerticalAlignment="Center" BorderThickness="0" TextWrapping="NoWrap" Text="{Binding TextValue, UpdateSourceTrigger=PropertyChanged}">
+										<TextBox.Style>
+											<Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+																								<EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotKeyboardFocus" ></EventSetter>
+																								<Setter Property="Visibility" Value="Collapsed" />
+												<Setter Property="Background" Value="Transparent" />
+												<Style.Resources>
+													<VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+														<VisualBrush.Visual>
+															<Label Content="Property Value" Foreground="LightGray" Background="Transparent" Width="10000" />
+														</VisualBrush.Visual>
+													</VisualBrush>
+												</Style.Resources>
+												<Style.Triggers>
+													<DataTrigger Binding="{Binding ComponentType}" Value="Text">
+														<Setter Property="Visibility" Value="Visible" />
+													</DataTrigger>
+													<Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+														<Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+													</Trigger>
+													<Trigger Property="Text" Value="{x:Null}">
+														<Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+													</Trigger>
+													<Trigger Property="IsKeyboardFocused" Value="True">
+														<Setter Property="Background" Value="Transparent" />
+													</Trigger>
+												</Style.Triggers>
+											</Style>
+										</TextBox.Style>
+									</TextBox>
+									<CheckBox VerticalAlignment="Center" IsChecked="{Binding FlagValue}">
+										<CheckBox.Style>
+											<Style BasedOn="{StaticResource CheckboxStyle}" TargetType="CheckBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+												<Setter Property="Visibility" Value="Collapsed" />
+												<Style.Triggers>
+													<DataTrigger Binding="{Binding ComponentType}" Value="Flag">
+														<Setter Property="Visibility" Value="Visible" />
+													</DataTrigger>
+												</Style.Triggers>
+											</Style>
+										</CheckBox.Style>
+									</CheckBox>
+								</Grid>
+							</Border>
+						</Grid>
+					</DataTemplate>
+				</ListView.Resources>
+			</ListView>
+		</Grid>
+
+		<DockPanel Grid.Row="2" Style="{StaticResource DialogWindowButtonDockPanelStyle}" FlowDirection="LeftToRight">
+			<Button Width="150" Command="{Binding TestConnectionCommand}" DockPanel.Dock="Left" Margin="10 0 0 0" TabIndex="1">TEST CONNECTION...</Button>
+			<Button Content="_CANCEL" IsCancel="True" DockPanel.Dock="Right" TabIndex="3" />
+			<Button Style="{StaticResource DialogPrimaryButtonStyle}" Content="_SAVE" DockPanel.Dock="Right" Margin="0 0 10 0" Command="{Binding SaveCommand}" TabIndex="2" />
+		</DockPanel>
+	</Grid>
+</pluginUI:CustomWindow>

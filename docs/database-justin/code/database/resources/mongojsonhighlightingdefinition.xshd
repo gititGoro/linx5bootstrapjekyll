@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!-- http://stackoverflow.com/questions/4255398/wpf-avalonedit-sql-xhsd-request -->
+<SyntaxDefinition name="mongojson" extensions=".mongojson"
+				  xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+
+  <Color name="String" foreground="Red" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="String2" foreground="#993" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="Comment" foreground="Green" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="Punctuation" foreground="Red" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="Expression" foreground="#404040" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="Parameter" foreground="#008080" exampleText="@ID"/>
+
+  <RuleSet name="ExpressionRuleSet">
+	<Span color="Expression">
+	  <Begin>@{</Begin>
+	  <End>}</End>
+	</Span>
+  </RuleSet>
+
+  <RuleSet ignoreCase="true">
+
+	<Import ruleSet="ExpressionRuleSet"/>
+
+	<Span color="String" multiline="true">
+	  <Begin>'</Begin>
+	  <End>'</End>
+	  <RuleSet>
+		<Import ruleSet="ExpressionRuleSet"/>
+	  </RuleSet>
+	</Span>
+
+	<Span color="String2">
+	  <Begin>"</Begin>
+	  <End>"</End>
+	</Span>
+
+	<!-- span for escape sequences -->
+	<Span  color="Comment" begin="//" end="\n"/>
+	<Span color="Comment"  multiline="true">
+	  <Begin>/\*</Begin>
+	  <End>\*/</End>
+	</Span>
+
+	<Keywords fontWeight="bold" foreground="Blue">
+	  <Word>$gt</Word>
+	  <Word>$gte</Word>
+	  <Word>$in</Word>
+	  <Word>$lt</Word>
+	  <Word>$lte</Word>
+	  <Word>$ne</Word>
+	  <Word>$nin</Word>
+	  <Word>$or</Word>
+	  <Word>$and</Word>
+	  <Word>$not</Word>
+	  <Word>$nor</Word>
+	  <Word>$exists</Word>
+	  <Word>$type</Word>
+	  <Word>$mod</Word>
+	  <Word>$regex</Word>
+	  <Word>$where</Word>
+	  <Word>$geoWithin</Word>
+	  <Word>$geoIntersects</Word>
+	  <Word>$near</Word>
+	  <Word>$nearSphere</Word>
+	  <Word>$all</Word>
+	  <Word>$elemMatch</Word>
+	  <Word>$size</Word>
+	  <Word>$project</Word>
+	  <Word>$match</Word>
+	  <Word>$limit</Word>
+	  <Word>$skip</Word>
+	  <Word>$unwind</Word>
+	  <Word>$group</Word>
+	  <Word>$sort</Word>
+	  <Word>$geoNear</Word>
+	  <Word>$addToSet</Word>
+	  <Word>$first</Word>
+	  <Word>$last</Word>
+	  <Word>$max</Word>
+	  <Word>$min</Word>
+	  <Word>$avg</Word>
+	  <Word>$push</Word>
+	  <Word>$sum</Word>
+	  <Word>$and</Word>
+	  <Word>$or</Word>
+	  <Word>$not</Word>
+	  <Word>$cmp</Word>
+	  <Word>$eq</Word>
+	  <Word>$gt</Word>
+	  <Word>$gte</Word>
+	  <Word>$lt</Word>
+	  <Word>$lte</Word>
+	  <Word>$ne</Word>
+	  <Word>$add</Word>
+	  <Word>$divide</Word>
+	  <Word>$mod</Word>
+	  <Word>$multiply</Word>
+	  <Word>$subtract</Word>
+	  <Word>$concat</Word>
+	  <Word>$strcasecmp</Word>
+	  <Word>$substr</Word>
+	  <Word>$toLower</Word>
+	  <Word>$toUpper</Word>
+	  <Word>$dayOfYear</Word>
+	  <Word>$dayOfMonth</Word>
+	  <Word>$dayOfWeek</Word>
+	  <Word>$year</Word>
+	  <Word>$month</Word>
+	  <Word>$week</Word>
+	  <Word>$hour</Word>
+	  <Word>$minute</Word>
+	  <Word>$second</Word>
+	  <Word>$millisecond</Word>
+	  <Word>$inc</Word>
+	  <Word>$rename</Word>
+	  <Word>$setOnInsert</Word>
+	  <Word>$set</Word>
+	  <Word>$unset</Word>
+	  <Word>$bit</Word>
+	  <Word>$addtoset</Word>
+	  <Word>$pullAll</Word>
+	  <Word>$pull</Word>
+	  <Word>$push</Word>
+	  <Word>$each</Word>
+	  <Word>$slice</Word>
+	  <Word>$options</Word>
+	</Keywords>
+
+	<Rule color="Punctuation">
+	  [?,.;()\[\]{}+\-/%*&lt;&gt;^+~!|&amp;]+
+	</Rule>
+
+	<Rule color="Parameter">
+	  \@\w+\b
+	</Rule>
+
+  </RuleSet>
+
+</SyntaxDefinition>

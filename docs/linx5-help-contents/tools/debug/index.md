@@ -7,33 +7,75 @@ feature: tools
 component: debug
 toc: true
 ---
-# Linx Licence
+Debug
+=====
 
-### Licence
+The debug tool allows you to run a process while debugging. While
+debugging, you can see the values used in the execution of the process.
+Add breakpoints to review a specific function input or output values in
+detail.
 
-IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Twenty57 for the Twenty57 software that accompanies this EULA, which includes computer software and may include associated media, printed materials, "online" or electronic documentation, and Internet-based services ("Software").  An amendment or addendum to this EULA may accompany the Software.  YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE. IF YOU DO NOT AGREE, DO NOT INSTALL, COPY, OR USE THE SOFTWARE.
+![](debug01.jpg)
 
-1.	GRANT OF LICENSE.  Twenty57 grants you the following rights provided that you comply with all terms and conditions of this EULA:
-	1.1	General License Grant.	Twenty57 grants to you, as an individual, a personal, nonexclusive, royalty-free license to use one copy of the Software.  
-	If you are an entity, Twenty57 grants you a personal, non-exclusive, royalty-free license to use one copy of the Software, provided that for each individual using the Software within your organization, you have acquired a separate and valid license for each such individual.
-2.	RESERVATION OF RIGHTS AND OWNERSHIP.  Twenty57 reserves all rights not expressly granted to you in this EULA.  The Software is protected by copyright and other intellectual property laws and treaties. Twenty57 or its suppliers own the title, copyright, and other intellectual property rights in the Software.  The Software is licensed, not sold.
-3.	LIMITATIONS ON REVERSE ENGINEERING, DECOMPILATION, AND DISASSEMBLY.  You may not reverse engineer, decompile, or disassemble the Software, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
-4.	ADDITIONAL SOFTWARE/SERVICES.  This EULA applies to updates, supplements, add-on components, or Internet-based services components, of the Software that Twenty57 may provide to you or make available to you after the date you obtain your initial copy of the Software, unless we provide other terms along with the update, supplement, add-on component, or Internet-based services component.  Twenty57 reserves the right to discontinue any Internet-based services provided to you or made available to you through the use of the Software.  
-5.	TERMINATION.  Without prejudice to any other rights, Twenty57 may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the Software and all of its component parts.
-6.	DISCLAIMER OF WARRANTIES.   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TWENTY57 AND ITS SUPPLIERS PROVIDE THE SOFTWARE AND SUPPORT SERVICES (IF ANY) AS IS AND WITH ALL FAULTS, AND HEREBY DISCLAIM ALL OTHER WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, ANY (IF ANY) IMPLIED WARRANTIES, DUTIES OR CONDITIONS OF MERCHANTABILITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF RELIABILITY OR AVAILABILITY, OF ACCURACY OR COMPLETENESS OF RESPONSES, OF RESULTS, OF WORKMANLIKE EFFORT, OF LACK OF VIRUSES, AND OF LACK OF NEGLIGENCE, ALL WITH REGARD TO THE SOFTWARE, AND THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT OR OTHER SERVICES, INFORMATION, SOFTWARE, AND RELATED CONTENT THROUGH THE SOFTWARE OR OTHERWISE ARISING OUT OF THE USE OF THE SOFTWARE.  ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THE SOFTWARE.
-7.	EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TWENTY57 OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT OR OTHER SERVICES, INFORMATION, SOFTWARE, AND RELATED CONTENT THROUGH THE SOFTWARE OR OTHERWISE ARISING OUT OF THE USE OF THE SOFTWARE, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS EULA, EVEN IN THE EVENT OF THE FAULT, TORT (INCLUDING NEGLIGENCE), MISREPRESENTATION, STRICT LIABILITY, BREACH OF CONTRACT OR BREACH OF WARRANTY OF TWENTY57 OR ANY SUPPLIER, AND EVEN IF TWENTY57 OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
-8.	LIMITATION OF LIABILITY AND REMEDIES. NOTWITHSTANDING ANY DAMAGES THAT YOU MIGHT INCUR FOR ANY REASON WHATSOEVER (INCLUDING, WITHOUT LIMITATION, ALL DAMAGES REFERENCED HEREIN AND ALL DIRECT OR GENERAL DAMAGES IN CONTRACT OR ANYTHING ELSE), THE ENTIRE LIABILITY OF TWENTY57 AND ANY OF ITS SUPPLIERS UNDER ANY PROVISION OF THIS EULA AND YOUR EXCLUSIVE REMEDY HEREUNDER SHALL BE LIMITED TO THE ACTUAL DAMAGES YOU INCUR IN REASONABLE RELIANCE ON THE SOFTWARE UP TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE.  THE FOREGOING LIMITATIONS, EXCLUSIONS AND DISCLAIMERS SHALL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EVEN IF ANY REMEDY FAILS ITS ESSENTIAL PURPOSE.
-9.	APPLICABLE LAW.  This EULA is governed by the laws of South Africa.  If you acquired this Software in any other country, then local law may apply. 
-10.	ENTIRE AGREEMENT; SEVERABILITY.  This EULA (including any addendum or amendment to this EULA which is included with the Software) are the entire agreement between you and Twenty57 relating to the Software and the support services (if any) and they supersede all prior or contemporaneous oral or written communications, proposals and representations with respect to the Software or any other subject matter covered by this EULA.  To the extent the terms of any Twenty57 policies or programs for support services conflict with the terms of this EULA, the terms of this EULA shall control.  If any provision of this EULA is held to be void, invalid, unenforceable or illegal, the other provisions shall continue in full force and effect.
+The debug menu item is in the toolbar. It only becomes active when a
+process is selected.
 
-### Third party licences
-Linx incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+![](debug02.jpg)
 
-- [GongSolutions](https://github.com/punker76/gong-wpf-dragdrop/blob/master/LICENSE "GongSolutions")
-- [Json.Net](https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md)
-- [Nancy](https://github.com/NancyFx/Nancy/blob/master/license.txt)
-- [AvalonDock](https://avalondock.codeplex.com/license)
-- [Dapper](http://www.apache.org/licenses/LICENSE-2.0)
-- [DotNetZip.Reduced](http://dotnetzip.codeplex.com/license)
-- [RazorEngine](https://github.com/Antaris/RazorEngine/blob/master/LICENSE.md)
-- [WpfAnimatedGif](http://www.apache.org/licenses/LICENSE-2.0.txt)
+When the debug tool is active, the application menu is replaced by the
+debug menu. The properties panel now becomes inactive as you cannot
+change the properties while debugging. Three other interface areas then
+also change to facilitate debugging
+
+-  #### Process tab
+
+    Each function now has some information regarding the function
+    execution details.
+
+    *\#=0* indicates the number of times a function executed
+
+    *Time=00:00:00 (minutes:seconds:milliseconds)* indicates the time
+    taken to execute the last instance.
+
+    *AveTime=00:00:00 (minutes:seconds:milliseconds)* is the average
+    time this function required to execute.
+
+-  #### Debug Output panel
+
+    Here the status of the debug operation is shown.
+
+    Initially, the panel will show the compilation status. If
+    compilation is successful, the green *run* button in the debug menu
+    becomes active so you can run and debug the process.
+
+-  #### Debug Values panel
+
+    Values used and generated in the execution of the process are shown
+    in this panel.
+
+![](debug03.jpg)
+
+When you hit *RUN* the *Debug Output* panel shows that the process has
+started. The properties panel in the bottom left now becomes unavailable
+for editing. You cannot make changes here while debugging.
+
+While the debug process is running you can pause the execution using the
+*Pause* button in the menu. You can also stop the execution with the
+*Stop* button or end debugging altogether.
+
+![](debug05.jpg)
+
+Adding a breakpoint to a function makes the debugger stop at that step
+in the process. The *Debug Values* panel now shows the data that has
+been processed. In the screenshot above, a web service was called and
+returned some *ResponseHeaders* and some *ResponseBody* data.
+
+In this state you can opt to continue the process (two arrows), stop the
+process (stop icon) or continue and stop at the next function (rounded
+arrow). If you are using the RunProcess function, you will also have an
+option to step into the process being run by that component and debug it
+(exclamation mark).
+
+![](debug06.jpg)
+
+The Debug Output panel will let you know when the process has finished.

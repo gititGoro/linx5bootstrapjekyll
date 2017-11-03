@@ -7,11 +7,46 @@ feature: functions
 component: jsonwriter
 toc: true
 ---
-# Licence for Json plugin
+JSONWriter
+==========
 
-### Author: [Twenty57](http://www.twenty57.com)
+JSONWriter is a function to create JSON formatted strings.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- Json.Net: [https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md](https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md)
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Data
+
+    The data to write to a JSON string. Structured objects return well
+    formatted JSON strings. Other values return the string value only.
+
+-  #### Date format
+
+    Sets how dates are formatted in the JSON output.
+
+-  #### Enum format
+
+    Format enum values as a string or numeric value.
+
+-  #### Escape String
+
+    Sets how strings are escaped in the JSON output.
+
+-  #### Ignore null properties
+
+    Do not include null data values in the generated JSON output.
+
+-  #### Indent
+
+    Indent every key-value pair in the JSON output.
+
+-  #### Property map
+
+    If JSON and object property names are different, then create a mapping using the editor.
+
+Links
+-----
+
+[Wikipedia JSON](http://en.wikipedia.org/wiki/JSON)
+
+<http://www.json.org/>

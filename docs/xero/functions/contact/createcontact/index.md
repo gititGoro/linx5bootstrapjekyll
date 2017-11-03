@@ -7,43 +7,6 @@ feature: contact
 component: createcontact
 toc: true
 ---
----
-layout: docs
-title: createcontact
-description: createcontact
-group: functions
-feature: contact
-component: createcontact
-toc: true
----
----
-layout: docs
-title: createcontact
-description: createcontact
-group: functions
-feature: contact
-component: createcontact
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contact
-feature: createcontact
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateContact
-description: CreateContact
-group: Functions
-feature: Contact
-component: CreateContact
-toc: true
-redirect_from: docs/Functions/Contact/CreateContact/index
----
 CreateContact
 ============
 

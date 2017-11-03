@@ -7,43 +7,6 @@ feature: account
 component: getaccounts
 toc: true
 ---
----
-layout: docs
-title: getaccounts
-description: getaccounts
-group: functions
-feature: account
-component: getaccounts
-toc: true
----
----
-layout: docs
-title: getaccounts
-description: getaccounts
-group: functions
-feature: account
-component: getaccounts
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: account
-feature: getaccounts
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetAccounts
-description: GetAccounts
-group: Functions
-feature: Account
-component: GetAccounts
-toc: true
-redirect_from: docs/Functions/Account/GetAccounts/index
----
 GetAccounts
 ============
 

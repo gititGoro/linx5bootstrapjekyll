@@ -1,0 +1,2 @@
+LINXFIVE-2235: TextFileRead bug when clearing fields with validation errors
+Reviewer: JC

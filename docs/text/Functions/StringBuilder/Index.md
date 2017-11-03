@@ -7,14 +7,30 @@ feature: functions
 component: stringbuilder
 toc: true
 ---
-# Licence for Text plugin
+StringBuilder
+======================
 
-### Author: [Twenty57](http://www.twenty57.com)
+The StringBuilder allows to efficiently build up large strings.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- GongSolutions: [https://github.com/punker76/gong-wpf-dragdrop/blob/master/LICENSE](https://github.com/punker76/gong-wpf-dragdrop/blob/master/LICENSE)
-- AvalonEdit: [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
-- RazorEngine: [https://github.com/Antaris/RazorEngine/blob/master/doc/LICENSE.md](https://github.com/Antaris/RazorEngine/blob/master/doc/LICENSE.md)
-- Microsoft.AspNet.Razor: [http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm](http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm)
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Value
+
+    The initial string.
+
+Output
+------
+
+- #### Value
+
+    The string built up so far.
+
+- #### Append
+
+    A write-only property that adds a string to the end of the current string. Set this to the 'Target' property of the [SetValue](https://linx.software/plugins/BuiltIn/Functions/SetValue/) function.
+
+- #### AppendLine
+
+    A write-only property that adds a string to the end of the current string, and adds a line-terminator afterwards. Set this to the 'Target' property of the [SetValue](https://linx.software/plugins/BuiltIn/Functions/SetValue/) function.
+ 

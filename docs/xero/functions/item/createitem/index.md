@@ -7,43 +7,6 @@ feature: item
 component: createitem
 toc: true
 ---
----
-layout: docs
-title: createitem
-description: createitem
-group: functions
-feature: item
-component: createitem
-toc: true
----
----
-layout: docs
-title: createitem
-description: createitem
-group: functions
-feature: item
-component: createitem
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: item
-feature: createitem
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateItem
-description: CreateItem
-group: Functions
-feature: Item
-component: CreateItem
-toc: true
-redirect_from: docs/Functions/Item/CreateItem/index
----
 CreateItem
 ============
 

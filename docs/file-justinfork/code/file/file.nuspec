@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>$id$</id>
+		<title>File</title>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<description>A collection of file components
+
+Functions in package:
+FileList - list files
+FileOpen - keeps a file open for speeding up large numbers of write operations
+FileOperations - copy, move and delete files
+TextFileRead - reads a text file
+TextFileWrite - writes a text file
+BinaryFileRead - reads a binary file
+BinaryFileWrite - writes a binary file
+DirectoryOperations - copy, move, create and delete directories
+Robocopy - copy, mirror or move files and directories by making use of the Windows Robocopy command
+
+Services in package:
+DirectoryWatch - Monitors a specific directory for file changes
+		</description>
+		<tags>file text binary csv</tags>
+		<language>en-US</language>
+	</metadata>
+</package>

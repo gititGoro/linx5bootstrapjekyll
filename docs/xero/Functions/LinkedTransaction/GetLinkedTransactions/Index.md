@@ -7,43 +7,6 @@ feature: linkedtransaction
 component: getlinkedtransactions
 toc: true
 ---
----
-layout: docs
-title: getlinkedtransactions
-description: getlinkedtransactions
-group: functions
-feature: linkedtransaction
-component: getlinkedtransactions
-toc: true
----
----
-layout: docs
-title: getlinkedtransactions
-description: getlinkedtransactions
-group: functions
-feature: linkedtransaction
-component: getlinkedtransactions
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: linkedtransaction
-feature: getlinkedtransactions
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetLinkedTransactions
-description: GetLinkedTransactions
-group: Functions
-feature: LinkedTransaction
-component: GetLinkedTransactions
-toc: true
-redirect_from: docs/Functions/LinkedTransaction/GetLinkedTransactions/index
----
 GetLinkedTransactions
 ============
 

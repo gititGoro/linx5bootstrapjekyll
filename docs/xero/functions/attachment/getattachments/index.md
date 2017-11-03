@@ -7,43 +7,6 @@ feature: attachment
 component: getattachments
 toc: true
 ---
----
-layout: docs
-title: getattachments
-description: getattachments
-group: functions
-feature: attachment
-component: getattachments
-toc: true
----
----
-layout: docs
-title: getattachments
-description: getattachments
-group: functions
-feature: attachment
-component: getattachments
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: attachment
-feature: getattachments
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetAttachments
-description: GetAttachments
-group: Functions
-feature: Attachment
-component: GetAttachments
-toc: true
-redirect_from: docs/Functions/Attachment/GetAttachments/index
----
 GetAttachments
 ============
 

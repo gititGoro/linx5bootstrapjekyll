@@ -7,43 +7,6 @@ feature: user
 component: getusers
 toc: true
 ---
----
-layout: docs
-title: getusers
-description: getusers
-group: functions
-feature: user
-component: getusers
-toc: true
----
----
-layout: docs
-title: getusers
-description: getusers
-group: functions
-feature: user
-component: getusers
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: user
-feature: getusers
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetUsers
-description: GetUsers
-group: Functions
-feature: User
-component: GetUsers
-toc: true
-redirect_from: docs/Functions/User/GetUsers/index
----
 GetUsers
 ============
 

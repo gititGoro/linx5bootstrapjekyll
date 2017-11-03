@@ -1,0 +1,152 @@
+diff --git a/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml.cs b/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml.cs
+--- a/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml.cs
++++ b/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml.cs
+@@ -4,6 +4,7 @@
+ using System.Text.RegularExpressions;
+ using System.Windows;
+ using System.Windows.Controls;
++using System.Windows.Data;
+ using System.Windows.Input;
+ using System.Windows.Media;
+ using Twenty57.Linx.Components.File.TextFileRead.Editors.TextFileReadFieldsEditor.ViewModel;
+@@ -15,7 +16,8 @@
+ 		private const string DataGridColumnKeyFormat = "ReadFieldsEditor_DataGridColumn_{0}";
+ 
+ 		private FieldsEditorViewModel context;
+-
++		private double windowWidth = 0;
++		private DataGrid DataGridFields { get; set; }
+ 		protected override bool PersistLayout
+ 		{
+ 			get
+@@ -26,8 +28,9 @@
+ 
+ 		public static bool Display(FieldsEditorViewModel context, Window owner = null)
+ 		{
+-			TextFileReadFieldsEditor window = new TextFileReadFieldsEditor(context);
+-			window.Owner = owner ?? Application.Current.MainWindow;
++			var windowOwner = owner ?? Application.Current.MainWindow;
++			TextFileReadFieldsEditor window = new TextFileReadFieldsEditor(context, windowOwner.ActualWidth);
++			window.Owner = windowOwner;
+ 			return window.ShowDialog() ?? false;
+ 		}
+ 
+@@ -80,5 +83,5 @@
+ 			return additionalLayoutInfo;
+ 		}
+ 
+-		public TextFileReadFieldsEditor(FieldsEditorViewModel context)
++		public TextFileReadFieldsEditor(FieldsEditorViewModel context, double initialWindowWidth)
+ 		{
+@@ -84,4 +87,5 @@
+ 		{
++			windowWidth = initialWindowWidth;
+ 			InitializeComponent();
+ 			DataContext = context;
+ 			this.context = context;
+@@ -85,4 +89,5 @@
+ 			InitializeComponent();
+ 			DataContext = context;
+ 			this.context = context;
++			SetupDataGrid();
+ 			AddHandler(Validation.ErrorEvent, new RoutedEventHandler(OnErrorEvent));
+@@ -88,5 +93,5 @@
+ 			AddHandler(Validation.ErrorEvent, new RoutedEventHandler(OnErrorEvent));
+-			SetDelimiterEnabled(context.TextFileType == FileType.Delimited);
++
+ 		}
+ 
+ 		private void OnErrorEvent(object sender, RoutedEventArgs e)
+@@ -225,6 +230,80 @@
+ 			dataGrid.MoveFocus(new TraversalRequest(FocusNavigationDirection.First));
+ 		}
+ 
++		private void SetupDataGrid()
++		{
++			double sumOfOtherFields = 335;
++			double nameWidthMinimum = this.ActualWidth - sumOfOtherFields;
++			DataGridFields = new DataGrid() { VerticalScrollBarVisibility = ScrollBarVisibility.Auto, CanUserDeleteRows = true, IsSynchronizedWithCurrentItem = true, CanUserAddRows = false, CanUserResizeRows = false, HorizontalAlignment = HorizontalAlignment.Stretch, VerticalAlignment = VerticalAlignment.Stretch, AutoGenerateColumns = false, IsManipulationEnabled = true };
++			Binding binding = new Binding();
++			binding.Path = new PropertyPath("FieldList");
++			binding.Mode = BindingMode.TwoWay;
++			BindingOperations.SetBinding(DataGridFields, DataGrid.ItemsSourceProperty, binding);
++			DataGridFields.InitializingNewItem += DataGridFields_InitializingNewItem;
++			DataGridFields.Loaded += DataGridFields_Loaded;
++			DataGridFields.PreviewKeyDown += DataGrid_PreviewKeyDown;
++
++			DataGridFields.Resources.Add(typeof(DataGridRow), (Style)FindResource("DataGridDataRowValidationStyle"));
++			DataGridFields.RowStyle = (Style)FindResource("DataGridRowStyle");
++
++			#region NameColumn
++			DataGridTextColumn nameColumn = new DataGridTextColumn() { Header = "Name", MinWidth = 200 };
++			nameColumn.Width = new DataGridLength(200, DataGridLengthUnitType.Star);
++			nameColumn.Foreground = (Brush)FindResource("ForegroundDarkBrush");
++			binding = new Binding() { Path = new PropertyPath("Name"), Mode = BindingMode.TwoWay, NotifyOnValidationError = true };
++			binding.ValidationRules.Add(new ValidFieldNameRule());
++			binding.ValidationRules.Add(new UniqueFieldNameRule());
++			nameColumn.Binding = binding;
++			DataGridFields.Columns.Add(nameColumn);
++			#endregion
++
++			#region LengthColumn
++			DataGridTextColumn lengthColumn = new DataGridTextColumn() { Header = "Length", MinWidth = 30 };
++			lengthColumn.Width = new DataGridLength(30, DataGridLengthUnitType.Star);
++			lengthColumn.Foreground = (Brush)FindResource("ForegroundDarkBrush");
++			binding = new Binding() { Path = new PropertyPath("Length"), Mode = BindingMode.TwoWay, NotifyOnValidationError = true, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged };
++			binding.ValidationRules.Add(new PositiveNumericRule() { fieldName = "FieldLength" });
++			lengthColumn.Binding = binding;
++			DataGridFields.Columns.Add(lengthColumn);
++			#endregion
++
++			#region TypeColumn
++			DataGridComboBoxColumn typeColumn = new DataGridComboBoxColumn() { Header = "Type", MinWidth = 50 };
++			typeColumn.Width = new DataGridLength(50, DataGridLengthUnitType.Star);
++			typeColumn.ElementStyle = (Style)FindResource("DataGridComboBoxColumnElementStyle");
++			typeColumn.EditingElementStyle = (Style)FindResource("DataGridComboBoxColumnEditingElementStyle");
++			binding = new Binding() { Path = new PropertyPath("TypeName"), Mode = BindingMode.TwoWay, UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged };
++			BindingOperations.SetBinding(typeColumn, DataGridComboBoxColumn.SelectedValuePathProperty, binding);
++			DataGridFields.Columns.Add(typeColumn);
++			#endregion
++
++			#region InputFormatColumn
++			DataGridTextColumn inputFormatColumn = new DataGridTextColumn() { Header = "Input Format", MinWidth = 200 };
++			inputFormatColumn.Width = new DataGridLength(200, DataGridLengthUnitType.Star);
++			binding = new Binding() { Path = new PropertyPath("Format") };
++			inputFormatColumn.Foreground = (Brush)FindResource("ForegroundDarkBrush");
++			inputFormatColumn.Binding = binding;
++			DataGridFields.Columns.Add(inputFormatColumn);
++			#endregion
++
++			#region SkipColumn
++			DataGridCheckBoxColumn skipColumn = new DataGridCheckBoxColumn() { Header = "Skip", Width = new DataGridLength(0, DataGridLengthUnitType.Auto) };
++			binding = new Binding() { Path = new PropertyPath("Format") };
++			skipColumn.Binding = binding;
++			DataGridFields.Columns.Add(skipColumn);
++			#endregion
++
++			#region CrossColumn
++			DataGridTemplateColumn crossColumn = new DataGridTemplateColumn() { IsReadOnly = true, Width = new DataGridLength(0, DataGridLengthUnitType.Auto) };
++			crossColumn.CellTemplate = (DataTemplate)FindResource("CrossCellDataTemplate");
++			DataGridFields.Columns.Add(crossColumn);
++			#endregion
++
++			ContainerGrid.Children.Add(DataGridFields);
++			DataGridFields.SetValue(Grid.RowProperty, 3);
++			SetDelimiterEnabled(this.context.TextFileType == FileType.Delimited);
++		}
++
+ 		private void DataGrid_PreviewKeyDown(object sender, KeyEventArgs e)
+ 		{
+ 			if (e.Key == Key.Enter)
+@@ -235,5 +314,11 @@
+ 				dataGrid.BeginEdit();
+ 			}
+ 		}
++
++		private void RefreshGrid(object sender, RoutedEventArgs e)
++		{
++			ContainerGrid.Children.Remove(this.DataGridFields);
++			SetupDataGrid();
++		}
+ 	}
+ }

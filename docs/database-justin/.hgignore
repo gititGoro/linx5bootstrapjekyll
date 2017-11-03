@@ -1,0 +1,25 @@
+syntax: glob
+
+bin
+Bin
+obj
+Debug
+Release
+_vti*
+App_Data
+InternalReferences
+TemporaryFiles
+*.suo
+*.user
+*.projdata
+*.webinfo
+*.log
+*.bak
+TestResult*
+Thumbs.db
+*.VisualState.xml
+*.data
+*.orig
+Code/Linx.sln.DotSettings
+*/_ReSharper.Linx/*
+packages/

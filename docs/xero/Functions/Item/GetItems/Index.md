@@ -7,43 +7,6 @@ feature: item
 component: getitems
 toc: true
 ---
----
-layout: docs
-title: getitems
-description: getitems
-group: functions
-feature: item
-component: getitems
-toc: true
----
----
-layout: docs
-title: getitems
-description: getitems
-group: functions
-feature: item
-component: getitems
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: item
-feature: getitems
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetItems
-description: GetItems
-group: Functions
-feature: Item
-component: GetItems
-toc: true
-redirect_from: docs/Functions/Item/GetItems/index
----
 GetItems
 ============
 

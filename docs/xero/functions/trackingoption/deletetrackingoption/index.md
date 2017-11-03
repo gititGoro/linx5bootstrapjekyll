@@ -7,43 +7,6 @@ feature: trackingoption
 component: deletetrackingoption
 toc: true
 ---
----
-layout: docs
-title: deletetrackingoption
-description: deletetrackingoption
-group: functions
-feature: trackingoption
-component: deletetrackingoption
-toc: true
----
----
-layout: docs
-title: deletetrackingoption
-description: deletetrackingoption
-group: functions
-feature: trackingoption
-component: deletetrackingoption
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingoption
-feature: deletetrackingoption
-component: index.md
-toc: true
----
----
-layout: docs
-title: DeleteTrackingOption
-description: DeleteTrackingOption
-group: Functions
-feature: TrackingOption
-component: DeleteTrackingOption
-toc: true
-redirect_from: docs/Functions/TrackingOption/DeleteTrackingOption/index
----
 DeleteTrackingOption
 ============
 

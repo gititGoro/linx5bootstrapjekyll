@@ -1,0 +1,2 @@
+LINXFIVE-2065: SQLEditor - allow drop anywhere on sql panel
+Reviewer: JC

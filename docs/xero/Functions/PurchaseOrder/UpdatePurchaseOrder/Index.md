@@ -7,43 +7,6 @@ feature: purchaseorder
 component: updatepurchaseorder
 toc: true
 ---
----
-layout: docs
-title: updatepurchaseorder
-description: updatepurchaseorder
-group: functions
-feature: purchaseorder
-component: updatepurchaseorder
-toc: true
----
----
-layout: docs
-title: updatepurchaseorder
-description: updatepurchaseorder
-group: functions
-feature: purchaseorder
-component: updatepurchaseorder
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: purchaseorder
-feature: updatepurchaseorder
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdatePurchaseOrder
-description: UpdatePurchaseOrder
-group: Functions
-feature: PurchaseOrder
-component: UpdatePurchaseOrder
-toc: true
-redirect_from: docs/Functions/PurchaseOrder/UpdatePurchaseOrder/index
----
 UpdatePurchaseOrder
 ============
 

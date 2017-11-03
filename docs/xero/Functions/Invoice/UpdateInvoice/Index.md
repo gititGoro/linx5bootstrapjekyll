@@ -7,43 +7,6 @@ feature: invoice
 component: updateinvoice
 toc: true
 ---
----
-layout: docs
-title: updateinvoice
-description: updateinvoice
-group: functions
-feature: invoice
-component: updateinvoice
-toc: true
----
----
-layout: docs
-title: updateinvoice
-description: updateinvoice
-group: functions
-feature: invoice
-component: updateinvoice
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: invoice
-feature: updateinvoice
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateInvoice
-description: UpdateInvoice
-group: Functions
-feature: Invoice
-component: UpdateInvoice
-toc: true
-redirect_from: docs/Functions/Invoice/UpdateInvoice/index
----
 UpdateInvoice
 ============
 

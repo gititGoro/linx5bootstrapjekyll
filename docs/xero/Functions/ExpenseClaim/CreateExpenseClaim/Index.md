@@ -7,43 +7,6 @@ feature: expenseclaim
 component: createexpenseclaim
 toc: true
 ---
----
-layout: docs
-title: createexpenseclaim
-description: createexpenseclaim
-group: functions
-feature: expenseclaim
-component: createexpenseclaim
-toc: true
----
----
-layout: docs
-title: createexpenseclaim
-description: createexpenseclaim
-group: functions
-feature: expenseclaim
-component: createexpenseclaim
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: expenseclaim
-feature: createexpenseclaim
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateExpenseClaim
-description: CreateExpenseClaim
-group: Functions
-feature: ExpenseClaim
-component: CreateExpenseClaim
-toc: true
-redirect_from: docs/Functions/ExpenseClaim/CreateExpenseClaim/index
----
 CreateExpenseClaim
 ============
 

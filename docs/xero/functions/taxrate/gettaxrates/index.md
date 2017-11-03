@@ -7,43 +7,6 @@ feature: taxrate
 component: gettaxrates
 toc: true
 ---
----
-layout: docs
-title: gettaxrates
-description: gettaxrates
-group: functions
-feature: taxrate
-component: gettaxrates
-toc: true
----
----
-layout: docs
-title: gettaxrates
-description: gettaxrates
-group: functions
-feature: taxrate
-component: gettaxrates
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: taxrate
-feature: gettaxrates
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetTaxRates
-description: GetTaxRates
-group: Functions
-feature: TaxRate
-component: GetTaxRates
-toc: true
-redirect_from: docs/Functions/TaxRate/GetTaxRates/index
----
 GetTaxRates
 ============
 

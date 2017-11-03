@@ -7,43 +7,6 @@ feature: brandingtheme
 component: getbrandingthemes
 toc: true
 ---
----
-layout: docs
-title: getbrandingthemes
-description: getbrandingthemes
-group: functions
-feature: brandingtheme
-component: getbrandingthemes
-toc: true
----
----
-layout: docs
-title: getbrandingthemes
-description: getbrandingthemes
-group: functions
-feature: brandingtheme
-component: getbrandingthemes
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: brandingtheme
-feature: getbrandingthemes
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetBrandingThemes
-description: GetBrandingThemes
-group: Functions
-feature: BrandingTheme
-component: GetBrandingThemes
-toc: true
-redirect_from: docs/Functions/BrandingTheme/GetBrandingThemes/index
----
 GetBrandingThemes
 ============
 

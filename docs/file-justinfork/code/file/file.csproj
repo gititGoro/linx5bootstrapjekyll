@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A425607E-F045-40B9-B16A-01A5424434E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twenty57.Linx.Components.File</RootNamespace>
+    <AssemblyName>Twenty57.Linx.Components.File</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BinaryFileRead\BinaryFileRead.cs" />
+    <Compile Include="BinaryFileRead\BinaryFileReadCodeGenerator.cs" />
+    <Compile Include="BinaryFileRead\BinaryFileReadDesigner.cs" />
+    <Compile Include="BinaryFileRead\BinaryFileReadX.cs" />
+    <Compile Include="BinaryFileRead\BinaryFileReadFunctionUpdater.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWrite.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWriteFunctionUpdater.cs" />
+    <Compile Include="Common\BinaryFileHandle.cs" />
+    <Compile Include="Common\FileHandle.cs" />
+    <Compile Include="Common\TextFileHandle.cs" />
+    <Compile Include="Converters\SerializableExpandableObjectConverter.cs" />
+    <Compile Include="DirectoryOperations\DirectoryOperations.cs" />
+    <Compile Include="DirectoryOperations\V1\DirectoryOperationsCodeGenerator.cs" />
+    <Compile Include="DirectoryOperations\V1\DirectoryOperationsDesigner.cs" />
+    <Compile Include="DirectoryOperations\V1\DirectoryOperationsShared.cs" />
+    <Compile Include="DirectoryOperations\V1\DirectoryOperationsX.cs" />
+    <Compile Include="DirectoryOperations\V2\DirectoryOperationsCodeGenerator.cs" />
+    <Compile Include="DirectoryOperations\V2\DirectoryOperationsDesigner.cs" />
+    <Compile Include="DirectoryOperations\V2\DirectoryOperationsShared.cs" />
+    <Compile Include="DirectoryOperations\V2\DirectoryOperationsX.cs" />
+    <Compile Include="DirectoryWatch\DirectoryWatch.cs" />
+    <Compile Include="DirectoryWatch\DirectoryWatchCodeGenerator.cs" />
+    <Compile Include="DirectoryWatch\DirectoryWatchDesigner.cs" />
+    <Compile Include="DirectoryWatch\DirectoryWatchShared.cs" />
+    <Compile Include="DirectoryWatch\DirectoryWatchX.cs" />
+    <Compile Include="Common\FileDesignerBase.cs" />
+    <Compile Include="DirectoryWatch\OutputValues.cs" />
+    <Compile Include="DirectoryWatch\ServiceUpdater.cs" />
+    <Compile Include="FileList\FileList.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWriteCodeGenerator.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWriteDesigner.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWriteShared.cs" />
+    <Compile Include="BinaryFileWrite\BinaryFileWriteX.cs" />
+    <Compile Include="FileList\FileListCodeGenerator.cs" />
+    <Compile Include="FileList\FileListDesigner.cs" />
+    <Compile Include="FileList\FileListFunctionUpdater.cs" />
+    <Compile Include="FileList\FileListShared.cs" />
+    <Compile Include="FileList\FileListX.cs" />
+    <Compile Include="FileList\FileListX_Gen1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileListX_Gen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FileOpen\FileOpen.cs" />
+    <Compile Include="FileOpen\FileOpenCodeGenerator.cs" />
+    <Compile Include="FileOpen\FileOpenDesigner.cs" />
+    <Compile Include="FileOpen\FileOpenShared.cs" />
+    <Compile Include="FileOpen\FileOpenX.cs" />
+    <Compile Include="FileOpen\FunctionUpdater.cs" />
+    <Compile Include="FileOperations\FileOperations.cs" />
+    <Compile Include="FileOperations\FileOperationsCodeGenerator.cs" />
+    <Compile Include="FileOperations\FileOperationsDesigner.cs" />
+    <Compile Include="FileOperations\FileOperationsShared.cs" />
+    <Compile Include="FileOperations\FileOperationsX.cs" />
+    <Compile Include="Common\FileUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\FileShared.cs" />
+    <Compile Include="Robocopy\Robocopy.cs" />
+    <Compile Include="Robocopy\RobocopyCodeGenerator.cs" />
+    <Compile Include="Robocopy\RobocopyDesigner.cs" />
+    <Compile Include="Robocopy\RobocopyShared.cs" />
+    <Compile Include="Robocopy\RobocopyX.cs" />
+    <Compile Include="TextFileRead\CSVSniffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\Editors\EditorResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\Editors\TextFileReadFieldsEditor\Converters\TrueConverter.cs" />
+    <Compile Include="TextFileRead\Editors\TextFileReadFieldsEditor\FieldsEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\Editors\TextFileReadFieldsEditor\TextFileReadFieldsEditor.xaml.cs">
+      <DependentUpon>TextFileReadFieldsEditor.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\Editors\TextFileReadFieldsEditor\TextFileReadFieldsInlineEditor.xaml.cs">
+      <DependentUpon>TextFileReadFieldsInlineEditor.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\Editors\TextFileReadFieldsEditor\ViewModel\FieldsEditorViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\FieldParser.cs" />
+    <Compile Include="TextFileRead\Templates\TextFileReadFieldsAndLoop_Gen.cs">
+      <DependentUpon>TextFileReadFieldsAndLoop_Gen.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="TextFileRead\Templates\TextFileReadFields_Gen.cs">
+      <DependentUpon>TextFileReadFields_Gen.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="TextFileRead\Templates\TextFileReadStringsAndLoop_Gen.cs">
+      <DependentUpon>TextFileReadStringsAndLoop_Gen.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="TextFileRead\Templates\TextFileReadStrings_Gen.cs">
+      <DependentUpon>TextFileReadStrings_Gen.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="TextFileRead\TextFileReadDesigner.cs" />
+    <Compile Include="TextFileRead\TextFileReadShared.cs" />
+    <Compile Include="TextFileRead\TextFileRead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\TextFileReadCodeGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\TextFileReaderFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileRead\TextFileReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextFileWrite\FunctionUpdater.cs" />
+    <Compile Include="TextFileWrite\TextFileWrite.cs" />
+    <Compile Include="TextFileWrite\TextFileWriteCodeGenerator.cs" />
+    <Compile Include="TextFileWrite\TextFileWriteDesigner.cs" />
+    <Compile Include="TextFileWrite\TextFileWriteShared.cs" />
+    <Compile Include="TextFileWrite\TextFileWriteX.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileList\FileListX_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>FileListX_Gen1.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.File</CustomToolNamespace>
+    </None>
+    <None Include="packages.config" />
+    <None Include="TextFileRead\Templates\TextFileReadFieldsAndLoop_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TextFileReadFieldsAndLoop_Gen.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.File</CustomToolNamespace>
+    </None>
+    <None Include="TextFileRead\Templates\TextFileReadFields_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TextFileReadFields_Gen.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.File</CustomToolNamespace>
+    </None>
+    <None Include="TextFileRead\Templates\TextFileReadStringsAndLoop_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TextFileReadStringsAndLoop_Gen.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.File</CustomToolNamespace>
+    </None>
+    <None Include="TextFileRead\Templates\TextFileReadStrings_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TextFileReadStrings_Gen.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.File</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Twenty57.Linx.Plugin.Common, Version=16.0.2.228, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Twenty57.Linx.Plugin.Common.16.0.2.228\lib\net45\Twenty57.Linx.Plugin.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twenty57.Linx.Plugin.UI, Version=16.0.2.228, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Twenty57.Linx.Plugin.UI.16.0.2.228\lib\net45\Twenty57.Linx.Plugin.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twenty57.Linx.Plugin.Utilities, Version=1.0.6437.23198, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twenty57.Linx.Plugin.Utilities.1.0.6437.23198\lib\net45\Twenty57.Linx.Plugin.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PluginIcon.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="TextFileRead\Editors\EditorResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TextFileRead\Editors\TextFileReadFieldsEditor\TextFileReadFieldsEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TextFileRead\Editors\TextFileReadFieldsEditor\TextFileReadFieldsInlineEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

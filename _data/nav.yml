@@ -79,6 +79,23 @@
         - component: connectioneditor
           pages:
             - title: index
+- title: database-justin
+  features:
+    - feature: build
+    - feature: code
+      components:
+        - component: assemblies
+          pages:
+            - title: index
+        - component: database
+          pages:
+            - title: index
+        - component: database.tests
+          pages:
+            - title: index
+        - component: packages
+          pages:
+            - title: index
 - title: email
   pages: 
     - title: licence
@@ -160,6 +177,20 @@
         - component: directorywatch
           pages:
             - title: index
+- title: file-justinfork
+  features:
+    - feature: build
+    - feature: code
+      components:
+        - component: file
+          pages:
+            - title: index
+        - component: file.tests
+          pages:
+            - title: index
+        - component: packages
+          pages:
+            - title: index
 - title: finswitch
   pages: 
     - title: licence
@@ -177,6 +208,25 @@
           pages:
             - title: index
 - title: ftp
+  pages: 
+    - title: licence
+    - title: releasenotes
+  features:
+    - feature: functions
+      components:
+        - component: ftpdownload
+          pages:
+            - title: index
+        - component: ftplist
+          pages:
+            - title: index
+        - component: ftpoperations
+          pages:
+            - title: index
+        - component: ftpupload
+          pages:
+            - title: index
+- title: ftp-clone
   pages: 
     - title: licence
     - title: releasenotes

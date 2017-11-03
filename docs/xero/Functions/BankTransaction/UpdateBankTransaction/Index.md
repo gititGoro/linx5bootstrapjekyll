@@ -7,43 +7,6 @@ feature: banktransaction
 component: updatebanktransaction
 toc: true
 ---
----
-layout: docs
-title: updatebanktransaction
-description: updatebanktransaction
-group: functions
-feature: banktransaction
-component: updatebanktransaction
-toc: true
----
----
-layout: docs
-title: updatebanktransaction
-description: updatebanktransaction
-group: functions
-feature: banktransaction
-component: updatebanktransaction
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: banktransaction
-feature: updatebanktransaction
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateBankTransaction
-description: UpdateBankTransaction
-group: Functions
-feature: BankTransaction
-component: UpdateBankTransaction
-toc: true
-redirect_from: docs/Functions/BankTransaction/UpdateBankTransaction/index
----
 UpdateBankTransaction
 ============
 

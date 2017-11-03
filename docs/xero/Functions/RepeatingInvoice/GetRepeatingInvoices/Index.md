@@ -7,43 +7,6 @@ feature: repeatinginvoice
 component: getrepeatinginvoices
 toc: true
 ---
----
-layout: docs
-title: getrepeatinginvoices
-description: getrepeatinginvoices
-group: functions
-feature: repeatinginvoice
-component: getrepeatinginvoices
-toc: true
----
----
-layout: docs
-title: getrepeatinginvoices
-description: getrepeatinginvoices
-group: functions
-feature: repeatinginvoice
-component: getrepeatinginvoices
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: repeatinginvoice
-feature: getrepeatinginvoices
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetRepeatingInvoices
-description: GetRepeatingInvoices
-group: Functions
-feature: RepeatingInvoice
-component: GetRepeatingInvoices
-toc: true
-redirect_from: docs/Functions/RepeatingInvoice/GetRepeatingInvoices/index
----
 GetRepeatingInvoices
 ============
 

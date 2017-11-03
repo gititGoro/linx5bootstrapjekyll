@@ -1,0 +1,15 @@
+﻿<ResourceDictionary x:Class="Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.EditorResources"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:procedureParametersEditor="clr-namespace:Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.ProcedureParametersEditor"
+             xmlns:resultSetEditor="clr-namespace:Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.ResultSetEditor">
+    
+	<DataTemplate x:Key="ProcedureParametersInlineEditorTemplate">
+		<procedureParametersEditor:ProcedureParametersInlineEditor />
+	</DataTemplate>
+	
+	<DataTemplate x:Key="DataSetInlineEditorTemplate">
+		<resultSetEditor:ResultSetInlineEditor />
+	</DataTemplate>
+	
+</ResourceDictionary>

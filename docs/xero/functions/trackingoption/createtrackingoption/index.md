@@ -7,43 +7,6 @@ feature: trackingoption
 component: createtrackingoption
 toc: true
 ---
----
-layout: docs
-title: createtrackingoption
-description: createtrackingoption
-group: functions
-feature: trackingoption
-component: createtrackingoption
-toc: true
----
----
-layout: docs
-title: createtrackingoption
-description: createtrackingoption
-group: functions
-feature: trackingoption
-component: createtrackingoption
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingoption
-feature: createtrackingoption
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateTrackingOption
-description: CreateTrackingOption
-group: Functions
-feature: TrackingOption
-component: CreateTrackingOption
-toc: true
-redirect_from: docs/Functions/TrackingOption/CreateTrackingOption/index
----
 CreateTrackingOption
 ============
 

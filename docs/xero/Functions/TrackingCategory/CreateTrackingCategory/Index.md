@@ -7,43 +7,6 @@ feature: trackingcategory
 component: createtrackingcategory
 toc: true
 ---
----
-layout: docs
-title: createtrackingcategory
-description: createtrackingcategory
-group: functions
-feature: trackingcategory
-component: createtrackingcategory
-toc: true
----
----
-layout: docs
-title: createtrackingcategory
-description: createtrackingcategory
-group: functions
-feature: trackingcategory
-component: createtrackingcategory
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingcategory
-feature: createtrackingcategory
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateTrackingCategory
-description: CreateTrackingCategory
-group: Functions
-feature: TrackingCategory
-component: CreateTrackingCategory
-toc: true
-redirect_from: docs/Functions/TrackingCategory/CreateTrackingCategory/index
----
 CreateTrackingCategory
 ============
 

@@ -7,11 +7,34 @@ feature: functions
 component: jsonreader
 toc: true
 ---
-# Licence for Json plugin
+JSONReader
+==========
 
-### Author: [Twenty57](http://www.twenty57.com)
+JSON is a text format for serialized structured data. A typical use of the JSONReader is reading the data transferred to a Linx process from a web site or service.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- Json.Net: [https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md](https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md)
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### JSON string
+
+    A JSON formatted string.
+
+-  #### Output type
+
+    The [custom type](https://linx.software/plugins/BuiltIn/Types/CustomType/) that the JSON string will be
+    deserialized to.
+
+-  #### Is list
+
+    Set to true if the json string represents a list of the output type.
+
+-  #### Property map
+
+    If JSON and object property names are different, then create a mapping using the editor.
+
+Links
+-----
+
+<http://en.wikipedia.org/wiki/JSON>
+
+<http://www.json.org/>

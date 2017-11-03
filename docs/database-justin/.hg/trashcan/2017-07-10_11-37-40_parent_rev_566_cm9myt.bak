@@ -1,0 +1,12 @@
+diff --git a/Code/Database/ExecuteSQL/ExecuteSQL.cs b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+--- a/Code/Database/ExecuteSQL/ExecuteSQL.cs
++++ b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteSQL : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "ExecuteSQL"; }

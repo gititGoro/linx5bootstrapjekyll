@@ -7,43 +7,6 @@ feature: attachment
 component: updateattachment
 toc: true
 ---
----
-layout: docs
-title: updateattachment
-description: updateattachment
-group: functions
-feature: attachment
-component: updateattachment
-toc: true
----
----
-layout: docs
-title: updateattachment
-description: updateattachment
-group: functions
-feature: attachment
-component: updateattachment
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: attachment
-feature: updateattachment
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateAttachment
-description: UpdateAttachment
-group: Functions
-feature: Attachment
-component: UpdateAttachment
-toc: true
-redirect_from: docs/Functions/Attachment/UpdateAttachment/index
----
 UpdateAttachment
 ============
 

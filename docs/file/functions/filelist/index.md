@@ -7,10 +7,39 @@ feature: functions
 component: filelist
 toc: true
 ---
-# Licence for File plugin
+FileList
+========
 
-### Author: [Twenty57](http://www.twenty57.com)
+FileList returns a list of files from a folder and optionally its subfolders.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Check Loop results to process the files one at a time.
 
-- [Twenty57 plugin](https://linx.software/Support/BuiltIn/Licence)
+Properties
+----------
+
+-  #### Folder path
+
+    Source of the file names to return.
+
+-  #### Include subfolders
+
+    Check this to look for files in subfolders as well.
+
+-  #### Loop results
+
+    Check this to return the file names one at a time.
+
+-  #### Return full path
+
+    If true will return the full path to the file else will only return
+    the file name.
+
+-  #### Search pattern
+
+    A pattern to limit the results.
+
+    \* matches zero or more characters.
+
+    ? matches exactly zero or one character.
+
+

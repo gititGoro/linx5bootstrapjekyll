@@ -7,43 +7,6 @@ feature: filters
 component: where
 toc: true
 ---
----
-layout: docs
-title: where
-description: where
-group: common
-feature: filters
-component: where
-toc: true
----
----
-layout: docs
-title: where
-description: where
-group: common
-feature: filters
-component: where
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: filters
-feature: where
-component: index.md
-toc: true
----
----
-layout: docs
-title: Where
-description: Where
-group: Common
-feature: Filters
-component: Where
-toc: true
-redirect_from: docs/Common/Filters/Where/index
----
 # Where Filter
 
 The where parameter allows you to filter elements using operators on their properties.

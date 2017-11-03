@@ -7,43 +7,6 @@ feature: banktransaction
 component: getbanktransactions
 toc: true
 ---
----
-layout: docs
-title: getbanktransactions
-description: getbanktransactions
-group: functions
-feature: banktransaction
-component: getbanktransactions
-toc: true
----
----
-layout: docs
-title: getbanktransactions
-description: getbanktransactions
-group: functions
-feature: banktransaction
-component: getbanktransactions
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: banktransaction
-feature: getbanktransactions
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetBankTransactions
-description: GetBankTransactions
-group: Functions
-feature: BankTransaction
-component: GetBankTransactions
-toc: true
-redirect_from: docs/Functions/BankTransaction/GetBankTransactions/index
----
 GetBankTransactions
 ============
 

@@ -7,43 +7,6 @@ feature: purchaseorder
 component: getpurchaseorders
 toc: true
 ---
----
-layout: docs
-title: getpurchaseorders
-description: getpurchaseorders
-group: functions
-feature: purchaseorder
-component: getpurchaseorders
-toc: true
----
----
-layout: docs
-title: getpurchaseorders
-description: getpurchaseorders
-group: functions
-feature: purchaseorder
-component: getpurchaseorders
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: purchaseorder
-feature: getpurchaseorders
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetPurchaseOrders
-description: GetPurchaseOrders
-group: Functions
-feature: PurchaseOrder
-component: GetPurchaseOrders
-toc: true
-redirect_from: docs/Functions/PurchaseOrder/GetPurchaseOrders/index
----
 GetPurchaseOrders
 ============
 

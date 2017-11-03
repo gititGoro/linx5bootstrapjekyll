@@ -7,43 +7,6 @@ feature: attachment
 component: createattachment
 toc: true
 ---
----
-layout: docs
-title: createattachment
-description: createattachment
-group: functions
-feature: attachment
-component: createattachment
-toc: true
----
----
-layout: docs
-title: createattachment
-description: createattachment
-group: functions
-feature: attachment
-component: createattachment
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: attachment
-feature: createattachment
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateAttachment
-description: CreateAttachment
-group: Functions
-feature: Attachment
-component: CreateAttachment
-toc: true
-redirect_from: docs/Functions/Attachment/CreateAttachment/index
----
 CreateAttachment
 ============
 

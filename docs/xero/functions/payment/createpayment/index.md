@@ -7,43 +7,6 @@ feature: payment
 component: createpayment
 toc: true
 ---
----
-layout: docs
-title: createpayment
-description: createpayment
-group: functions
-feature: payment
-component: createpayment
-toc: true
----
----
-layout: docs
-title: createpayment
-description: createpayment
-group: functions
-feature: payment
-component: createpayment
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: payment
-feature: createpayment
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreatePayment
-description: CreatePayment
-group: Functions
-feature: Payment
-component: CreatePayment
-toc: true
-redirect_from: docs/Functions/Payment/CreatePayment/index
----
 CreatePayment
 ============
 

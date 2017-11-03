@@ -7,43 +7,6 @@ feature: expenseclaim
 component: updateexpenseclaim
 toc: true
 ---
----
-layout: docs
-title: updateexpenseclaim
-description: updateexpenseclaim
-group: functions
-feature: expenseclaim
-component: updateexpenseclaim
-toc: true
----
----
-layout: docs
-title: updateexpenseclaim
-description: updateexpenseclaim
-group: functions
-feature: expenseclaim
-component: updateexpenseclaim
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: expenseclaim
-feature: updateexpenseclaim
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateExpenseClaim
-description: UpdateExpenseClaim
-group: Functions
-feature: ExpenseClaim
-component: UpdateExpenseClaim
-toc: true
-redirect_from: docs/Functions/ExpenseClaim/UpdateExpenseClaim/index
----
 UpdateExpenseClaim
 ============
 

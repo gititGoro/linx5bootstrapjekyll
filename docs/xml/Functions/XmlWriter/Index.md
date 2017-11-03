@@ -7,11 +7,33 @@ feature: functions
 component: xmlwriter
 toc: true
 ---
-# Licence for Xml plugin
+XMLWriter
+=========
 
-### Author: [Twenty57](http://www.twenty57.com)
+The XMLWriter transforms an object to an
+[XML](http://en.wikipedia.org/wiki/XML)-representation.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- AvalonEdit: [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Data
+
+    The data to write to an XML string.
+
+-  #### Root element name
+
+    The name to use for the root element of the produced XML.
+
+-  #### TransformXSLT
+
+    Optional. An XSLT script that transforms the default XML document
+    generated to a new form.
+
+Links
+-----
+
+[Wikipedia XML](http://en.wikipedia.org/wiki/XML)
+
+[Wikipedia XSLT](http://en.wikipedia.org/wiki/XSLT)
+
+[XSLT tutorial](https://www.w3schools.com/xml/xsl_intro.asp)

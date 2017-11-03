@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+										xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+										xmlns:TextFileReadFieldsInlineEditor="clr-namespace:Twenty57.Linx.Components.File.TextFileRead.Editors.TextFileReadFieldsEditor"
+                    x:Class="Twenty57.Linx.Components.File.TextFileRead.Editors.EditorResources">
+
+	<DataTemplate x:Key="TextFileReadFieldsInlineEditorTemplate">
+		<TextFileReadFieldsInlineEditor:TextFileReadFieldsInlineEditor />
+	</DataTemplate>
+
+</ResourceDictionary>

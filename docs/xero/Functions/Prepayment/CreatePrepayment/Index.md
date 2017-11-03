@@ -7,43 +7,6 @@ feature: prepayment
 component: createprepayment
 toc: true
 ---
----
-layout: docs
-title: createprepayment
-description: createprepayment
-group: functions
-feature: prepayment
-component: createprepayment
-toc: true
----
----
-layout: docs
-title: createprepayment
-description: createprepayment
-group: functions
-feature: prepayment
-component: createprepayment
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: prepayment
-feature: createprepayment
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreatePrepayment
-description: CreatePrepayment
-group: Functions
-feature: Prepayment
-component: CreatePrepayment
-toc: true
-redirect_from: docs/Functions/Prepayment/CreatePrepayment/index
----
 CreatePrepayment
 ============
 

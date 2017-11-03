@@ -1,0 +1,386 @@
+diff --git a/Code/Database/BeginTransaction/BeginTransaction.cs b/Code/Database/BeginTransaction/BeginTransaction.cs
+--- a/Code/Database/BeginTransaction/BeginTransaction.cs
++++ b/Code/Database/BeginTransaction/BeginTransaction.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class BeginTransaction : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "BeginTransaction"; }
+diff --git a/Code/Database/DbBulkCopy/DbBulkCopy.cs b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+--- a/Code/Database/DbBulkCopy/DbBulkCopy.cs
++++ b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class DbBulkCopy : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string SearchKeywords
+ 		{
+ 			get { return "database bulk load"; }
+diff --git a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+--- a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
++++ b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+@@ -28,6 +28,121 @@
+ 											 Style="{StaticResource DialogWindowStyle}">
+ 
+ 	<pluginUI:CustomWindow.Resources>
++		<SolidColorBrush x:Key="TabGreen" Color="#2EB398"/>
++		<SolidColorBrush x:Key="BackGreen" Color="#AFDBD2"/>
++		<Style TargetType="{x:Type TabControl}" x:Key="BaseTabStyle">
++			<Setter Property="Background" Value="{StaticResource DialogWindowBackgroundBrush}" />
++		</Style>
++		<Style TargetType="{x:Type TabControl}" x:Key="EditorTestStyle" BasedOn="{StaticResource BaseTabStyle}">
++			<Setter Property="BorderThickness" Value="0,2,0,0" />
++			<Setter Property="BorderBrush" Value="{StaticResource TabGreen}" />
++		</Style>
++		<Style TargetType="{x:Type TabItem}" x:Key="baseSqlTestStyle">
++			<Setter Property="Width" Value="60" />
++			<Setter Property="Height" Value="25"/>
++		</Style>
++
++		<Style TargetType="{x:Type TabItem}" x:Key="SQLTestTabItemStyle" BasedOn="{StaticResource baseSqlTestStyle}">
++			<Setter Property="Template">
++				<Setter.Value>
++					<ControlTemplate TargetType="{x:Type TabItem}">
++						<Grid>
++							<Border Name="Border" Margin="0,0,0,2" Background="Transparent">
++								<Border BorderThickness="0,0,0,2" BorderBrush="{StaticResource DialogWindowBackgroundBrush}">
++									<ContentPresenter x:Name="ContentSite" VerticalAlignment="Center"
++									  HorizontalAlignment="Center"
++									  ContentSource="Header" Margin="12,2,12,2"
++									  RecognizesAccessKey="True">
++									</ContentPresenter>
++								</Border>
++							</Border>
++						</Grid>
++						<ControlTemplate.Triggers>
++							<Trigger Property="IsSelected" Value="True">
++								<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource TabGreen}" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="2,2,2,0" />
++								<Setter TargetName="Border" Property="Margin" Value="-2,0,0,-2" />
++							</Trigger>
++							<Trigger Property="IsSelected" Value="False">
++								<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DialogWindowBackgroundBrush}" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,2" />
++							</Trigger>
++						</ControlTemplate.Triggers>
++					</ControlTemplate>
++				</Setter.Value>
++			</Setter>
++		</Style>
++
++		<Style TargetType="{x:Type TabItem}" x:Key="baseVariablesObjectsStyle">
++			<Setter Property="Width" Value="95" />
++			<Setter Property="Height" Value="22"/>
++		</Style>
++
++		<Style TargetType="{x:Type TabItem}" x:Key="VariablesTabItemStyle" BasedOn="{StaticResource baseVariablesObjectsStyle}">
++			<Setter Property="Template">
++				<Setter.Value>
++					<ControlTemplate TargetType="{x:Type TabItem}">
++						<Grid>
++							<Border Name="Border" Margin="0,0,0,0" Background="Transparent">
++								<Border BorderThickness="1,1,0,0" BorderBrush="#808080">
++									<ContentPresenter x:Name="ContentSite" VerticalAlignment="Center"
++									  HorizontalAlignment="Center"
++									  ContentSource="Header" Margin="12,2,12,2"
++									  RecognizesAccessKey="True">
++									</ContentPresenter>
++								</Border>
++							</Border>
++						</Grid>
++						<ControlTemplate.Triggers>
++							<Trigger Property="IsSelected" Value="True">
++								<Setter TargetName="Border" Property="Background" Value="{StaticResource BackGreen}" />
++								<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource TabGreen}" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,2" />
++								<Setter TargetName="Border" Property="Margin" Value="0,0,0,2" />
++							</Trigger>
++							<Trigger Property="IsSelected" Value="False">
++								<Setter TargetName="Border" Property="BorderBrush" Value="#808080" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,1" />
++								<Setter TargetName="Border" Property="Margin" Value="0,0,0,2" />
++							</Trigger>
++						</ControlTemplate.Triggers>
++					</ControlTemplate>
++				</Setter.Value>
++			</Setter>
++		</Style>
++
++		<Style TargetType="{x:Type TabItem}" x:Key="ObjectTabItemStyle" BasedOn="{StaticResource baseVariablesObjectsStyle}">
++			<Setter Property="Template">
++				<Setter.Value>
++					<ControlTemplate TargetType="{x:Type TabItem}">
++						<Grid>
++							<Border Name="Border" Margin="0,0,0,0" Background="Transparent">
++								<Border BorderThickness="0,1,1,0" BorderBrush="#808080">
++									<ContentPresenter x:Name="ContentSite" VerticalAlignment="Center"
++									  HorizontalAlignment="Center"
++									  ContentSource="Header" Margin="12,2,12,2"
++									  RecognizesAccessKey="True">
++									</ContentPresenter>
++								</Border>
++							</Border>
++						</Grid>
++						<ControlTemplate.Triggers>
++							<Trigger Property="IsSelected" Value="True">
++								<Setter TargetName="Border" Property="Background" Value="{StaticResource BackGreen}" />
++								<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource TabGreen}" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,2" />
++								<Setter TargetName="Border" Property="Margin" Value="0,0,0,2" />
++							</Trigger>
++							<Trigger Property="IsSelected" Value="False">
++								<Setter TargetName="Border" Property="BorderBrush" Value="#808080" />
++								<Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,1" />
++								<Setter TargetName="Border" Property="Margin" Value="0,0,0,2" />
++							</Trigger>
++						</ControlTemplate.Triggers>
++					</ControlTemplate>
++				</Setter.Value>
++			</Setter>
++		</Style>
+ 		<Style TargetType="Button" x:Key="expressionButtonStyle" BasedOn="{StaticResource DialogButtonStyle}">
+ 			<Setter Property="Width" Value="120" />
+ 			<Setter Property="Height" Value="20" />
+@@ -50,7 +165,6 @@
+ 			<RowDefinition Height="*"/>
+ 			<RowDefinition Height="Auto"/>
+ 		</Grid.RowDefinitions>
+-
+ 		<Grid Grid.Row="0" Name="mainGrid">
+ 			<Grid.ColumnDefinitions>
+ 				<ColumnDefinition Width="2*" MinWidth="280"/>
+@@ -60,5 +174,4 @@
+ 				<RowDefinition Height="*" MinHeight="80"/>
+ 				<RowDefinition Height="Auto"/>
+ 			</Grid.RowDefinitions>
+-
+ 			<DockPanel Grid.Column="2"
+@@ -64,6 +177,7 @@
+ 			<DockPanel Grid.Column="2"
+-								 Grid.Row="0"
+-								 LastChildFill="False" VerticalAlignment="Stretch" Margin="0 0 0 5">
++								 Grid.Row="1"
++								 LastChildFill="False" VerticalAlignment="Top" Margin="0 0 0 5"
++								 Panel.ZIndex="1000">
+ 
+ 				<Button DockPanel.Dock="Right" 
+ 								Style="{StaticResource expressionButtonStyle}"
+@@ -73,9 +187,10 @@
+ 			<Border BorderThickness="0" 
+ 								BorderBrush="DarkGray"
+ 								Grid.Row="1">
+-				<TabControl x:Name="editorTestTabControl" SelectedIndex="{Binding EditorTestTabSelectedIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+-					<TabItem Header="SQL">
++				<TabControl x:Name="editorTestTabControl" 
++				SelectedIndex="{Binding EditorTestTabSelectedIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource EditorTestStyle}">
++					<TabItem Header="SQL" Style="{StaticResource SQLTestTabItemStyle}">
+ 						<Grid x:Name="sqlGrid">
+ 							<Grid.ColumnDefinitions>
+ 								<ColumnDefinition MinWidth="100" Width="300*" />
+ 								<ColumnDefinition Width="3*"/>
+@@ -78,8 +193,8 @@
+ 						<Grid x:Name="sqlGrid">
+ 							<Grid.ColumnDefinitions>
+ 								<ColumnDefinition MinWidth="100" Width="300*" />
+ 								<ColumnDefinition Width="3*"/>
+-								<ColumnDefinition MinWidth="100"  Width="100*"/>
++								<ColumnDefinition   Width="100*"/>
+ 							</Grid.ColumnDefinitions>
+ 							<Grid.RowDefinitions>
+ 								<RowDefinition Height="*"/>
+@@ -101,49 +216,60 @@
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+-										Width="3" />
+-							<TabControl TabStripPlacement ="Top" Grid.Column="2" SelectedIndex="{Binding SQLSelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+-								<TabItem Header="Variables">
+-									<Border BorderThickness="1" BorderBrush="{StaticResource TitlebarActive}">
+-										<pluginUIEditors:VariablesEditor Designer="{Binding Designer, Mode=OneWay}" DataContext="{Binding}"/>
+-									</Border>
+-								</TabItem>
+-								<TabItem Header="Database" >
+-									<Grid>
+-										<StackPanel>
+-											<Image gif:ImageBehavior.AnimatedSource="{StaticResource AppIcon_Loading}" Height="20" Width="20" Visibility="{Binding LoadingDatabaseObjects, Converter={StaticResource VisibilityConverter}}" Margin="5" Grid.Column="0"/>
+-										</StackPanel>
+-										<TreeView ItemsSource="{Binding DatabaseObjects}" Visibility="{Binding DatabaseObjectsLoaded, Converter={StaticResource VisibilityConverter}}" 
+-										dd:DragDrop.IsDragSource="True" dd:DragDrop.DragHandler="{Binding}">
+-											<TreeView.Resources>
+-												<HierarchicalDataTemplate DataType="{x:Type model:ComplexNodeViewModel}" ItemsSource="{Binding Children}">
+-													<StackPanel Orientation="Horizontal" Margin="0,1,2,1">
+-														<TextBlock  Text="{Binding Text}">
+-															<TextBlock.ContextMenu >
+-																<ContextMenu Visibility="{Binding ContextMenuVisible, Mode=OneWay, Converter={StaticResource VisibilityConverter}}" >
+-																	<MenuItem Header="Generate Select" Command="{Binding GenerateSelectCommand, Mode=OneWay}" />
+-																	<MenuItem Header="Generate Insert" Command="{Binding GenerateInsertCommand, Mode=OneWay}" />
+-																	<MenuItem Header="Generate Update" Command="{Binding GenerateUpdateCommand, Mode=OneWay}" />
+-																</ContextMenu>
+-															</TextBlock.ContextMenu>
+-														</TextBlock>
+-													</StackPanel>
+-												</HierarchicalDataTemplate>
+-												<DataTemplate DataType="{x:Type model:SimpleNodeViewModel}">
+-													<StackPanel Orientation="Horizontal" Margin="0,1,2,1">
+-														<TextBlock Text="{Binding Text}" />
+-													</StackPanel>
+-												</DataTemplate>
+-											</TreeView.Resources>
+-											<TreeView.ItemContainerStyle>
+-												<Style TargetType="{x:Type TreeViewItem}">
+-													<Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+-													<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+-												</Style>
+-											</TreeView.ItemContainerStyle>
+-										</TreeView>
+-									</Grid>
+-								</TabItem>
+-							</TabControl>
++										Background="White"
++										BorderBrush="#808080"
++										Width="2" />
++							<Border BorderThickness="1"  Grid.Column="3" Background="{StaticResource DialogWindowBackgroundBrush}" BorderBrush="#BBBBBB" Grid.ColumnSpan="2">
++								<TabControl TabStripPlacement ="Top"   Style="{StaticResource BaseTabStyle}"
++								SelectedIndex="{Binding SQLSelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
++									<TabItem Header="Variables" Style="{StaticResource VariablesTabItemStyle}">
++										<Border BorderBrush="{StaticResource DialogWindowBackgroundBrush}" BorderThickness="3" Margin="-3">
++											<pluginUIEditors:VariablesEditor Designer="{Binding Designer, Mode=OneWay}" DataContext="{Binding}" BorderThickness="0"/>
++										</Border>
++									</TabItem>
++									<TabItem Header="Objects" Style="{StaticResource ObjectTabItemStyle}" BorderThickness="0">
++										<Border BorderBrush="{StaticResource DialogWindowBackgroundBrush}" BorderThickness="3" Margin="-3">
++											<Grid>
++												<Grid.RowDefinitions>
++													<RowDefinition Height="85*"/>
++													<RowDefinition Height="23*"/>
++													<RowDefinition Height="230*"/>
++												</Grid.RowDefinitions>
++												<StackPanel Background="{StaticResource DialogWindowBackgroundBrush}" Grid.RowSpan="3">
++													<Image gif:ImageBehavior.AnimatedSource="{StaticResource AppIcon_Loading}" Height="20" Width="20" Visibility="{Binding LoadingDatabaseObjects, Converter={StaticResource VisibilityConverter}}" Margin="5" Grid.Column="0"/>
++												</StackPanel>
++												<TreeView Margin="0,0,0,0" Background="{StaticResource DialogWindowBackgroundBrush}"  ItemsSource="{Binding DatabaseObjects}" Visibility="{Binding DatabaseObjectsLoaded, Converter={StaticResource VisibilityConverter}}" dd:DragDrop.IsDragSource="True" dd:DragDrop.DragHandler="{Binding}" Grid.RowSpan="3">
++													<TreeView.Resources>
++														<HierarchicalDataTemplate DataType="{x:Type model:ComplexNodeViewModel}" ItemsSource="{Binding Children}">
++															<StackPanel  Background="{StaticResource DialogWindowBackgroundBrush}" Orientation="Horizontal" >
++																<TextBlock  Background="{StaticResource DialogWindowBackgroundBrush}"  Text="{Binding Text}">
++																	<TextBlock.ContextMenu >
++																		<ContextMenu Visibility="{Binding ContextMenuVisible, Mode=OneWay, Converter={StaticResource VisibilityConverter}}" >
++																			<MenuItem Header="Generate Select" Command="{Binding GenerateSelectCommand, Mode=OneWay}" />
++																			<MenuItem Header="Generate Insert" Command="{Binding GenerateInsertCommand, Mode=OneWay}" />
++																			<MenuItem Header="Generate Update" Command="{Binding GenerateUpdateCommand, Mode=OneWay}" />
++																		</ContextMenu>
++																	</TextBlock.ContextMenu>
++																</TextBlock>
++															</StackPanel>
++														</HierarchicalDataTemplate>
++														<DataTemplate DataType="{x:Type model:SimpleNodeViewModel}">
++															<StackPanel Background="{StaticResource DialogWindowBackgroundBrush}" Orientation="Horizontal" Margin="0,1,2,1">
++																<TextBlock Text="{Binding Text}" />
++															</StackPanel>
++														</DataTemplate>
++													</TreeView.Resources>
++													<TreeView.ItemContainerStyle>
++														<Style TargetType="{x:Type TreeViewItem}">
++															<Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
++															<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
++														</Style>
++													</TreeView.ItemContainerStyle>
++												</TreeView>
++											</Grid>
++										</Border>
++									</TabItem>
++								</TabControl>
++							</Border>
+ 						</Grid>
+ 					</TabItem>
+@@ -148,9 +274,9 @@
+ 						</Grid>
+ 					</TabItem>
+-					<TabItem Header="Test">
++					<TabItem Header="Test" Style="{StaticResource SQLTestTabItemStyle}">
+ 						<helpers:TestSqlPaneScrollViewer x:Name="testSqlPane" Grid.Column="4" Foreground="{StaticResource TitlebarActive}" VerticalScrollBarVisibility="Auto" >
+ 							<Grid x:Name="testGrid" >
+ 								<Grid.RowDefinitions>
+ 									<RowDefinition Height="*" />
+ 								</Grid.RowDefinitions>
+ 								<Grid.ColumnDefinitions>
+@@ -151,8 +277,9 @@
+ 						<helpers:TestSqlPaneScrollViewer x:Name="testSqlPane" Grid.Column="4" Foreground="{StaticResource TitlebarActive}" VerticalScrollBarVisibility="Auto" >
+ 							<Grid x:Name="testGrid" >
+ 								<Grid.RowDefinitions>
+ 									<RowDefinition Height="*" />
+ 								</Grid.RowDefinitions>
+ 								<Grid.ColumnDefinitions>
+-									<ColumnDefinition Width="100*" MinWidth="100" />
++									<ColumnDefinition Width="20*" MinWidth="100" />
++									<ColumnDefinition Width="137*"/>
+ 									<ColumnDefinition Width="3" />
+@@ -158,7 +285,7 @@
+ 									<ColumnDefinition Width="3" />
+-									<ColumnDefinition Width="400*" MinWidth="100" />
++									<ColumnDefinition Width="626*" MinWidth="100" />
+ 								</Grid.ColumnDefinitions>
+ 
+ 								<Border Grid.Column="0" BorderThickness="1" 
+ 									BorderBrush="{StaticResource TitlebarActive}" 
+ 									IsEnabled="{Binding CanExecuteSQL, Mode=OneWay}"
+@@ -160,9 +287,9 @@
+ 								</Grid.ColumnDefinitions>
+ 
+ 								<Border Grid.Column="0" BorderThickness="1" 
+ 									BorderBrush="{StaticResource TitlebarActive}" 
+ 									IsEnabled="{Binding CanExecuteSQL, Mode=OneWay}"
+-									Background="{StaticResource ForegroundLightBrush}">
++									Background="{StaticResource ForegroundLightBrush}" Grid.ColumnSpan="2">
+ 									<ScrollViewer x:Name="parameterScrollViewer" VerticalScrollBarVisibility="Auto" MaxHeight="{Binding ElementName=testSqlPane, Path=ActualHeight, Converter={StaticResource testSqlPaneScrollViewerHeightConverter}}" >
+ 										<StackPanel Orientation="Vertical" CanVerticallyScroll="False">
+ 											<TextBlock Margin="5" Foreground="{StaticResource ForegroundDarkBrush}">Test SQL</TextBlock>
+@@ -197,9 +324,9 @@
+ 										</StackPanel>
+ 									</ScrollViewer>
+ 								</Border>
+-								<GridSplitter Grid.Column="1"
++								<GridSplitter Grid.Column="2"
+ 										Grid.Row="0"
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+ 										Width="3" />
+@@ -201,9 +328,9 @@
+ 										Grid.Row="0"
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+ 										Width="3" />
+-								<StackPanel x:Name="resultsStackPanel" Grid.Column="2"
++								<StackPanel x:Name="resultsStackPanel" Grid.Column="3"
+ 								Visibility="{Binding HasQueryResults, Converter={StaticResource booleanToVisibilityConverter}, Mode=OneWay}">
+ 									<StackPanel Margin="5" Orientation="Horizontal">
+ 										<TextBlock FontWeight="Bold" FontSize="12">Results</TextBlock>
+@@ -222,7 +349,7 @@
+ 										</i:Interaction.Behaviors>
+ 									</DataGrid>
+ 								</StackPanel>
+-								<TextBox Grid.Column="2" 
++								<TextBox Grid.Column="3" 
+ 									 TextWrapping="Wrap"
+ 									 IsReadOnly="True"
+ 									 ScrollViewer.VerticalScrollBarVisibility="Auto"
+diff --git a/Code/Database/ExecuteSQL/ExecuteSQL.cs b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+--- a/Code/Database/ExecuteSQL/ExecuteSQL.cs
++++ b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteSQL : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "ExecuteSQL"; }

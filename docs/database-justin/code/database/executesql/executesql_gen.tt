@@ -1,0 +1,114 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+<#@ import namespace="Twenty57.Linx.Components.Database.ExecuteSQL" #>
+
+<#@ parameter name="FunctionContextProperty" type="System.String" #>
+<#@ parameter name="GetParamName" type="System.Func<string, string>" #>
+<#@ parameter name="Timeout" type="System.Int32" #>
+<#@ parameter name="UseTransaction" type="System.Boolean" #>
+<#@ parameter name="TransactionProperty" type="System.String" #>
+<#@ parameter name="ConnectionType" type="Twenty57.Linx.Components.Database.Common.ConnectionType" #>
+<#@ parameter name="ConnectionStringProperty" type="System.String" #>
+<#@ parameter name="Sql" type="System.String" #>
+<#@ parameter name="ReturnMode" type="Twenty57.Linx.Components.Database.ExecuteSQL.ExecuteSQLShared.ReturnModeType" #>
+<#@ parameter name="SqlIdentifiers" type="System.String" #>
+<#@ parameter name="SqlValues" type="System.String" #>
+<#@ parameter name="ResultTypeFields" type="Twenty57.Linx.Components.Database.ExecuteSQL.ResultTypeFields" #>
+<#@ parameter name="RowType" type="Twenty57.Linx.Plugin.Common.ITypeReference" #>
+<#@ parameter name="RowTypeName" type="System.String" #>
+<#@ parameter name="ExecutionPathName" type="System.String" #>
+<#@ parameter name="ExecutionPathOutputName" type="System.String" #>
+
+var OutputNames = <#= CSharpUtilities.ArrayAsString(ResultTypeFields.Select(x => x.Name)) #>;
+var ColumnNames = <#= CSharpUtilities.ArrayAsString(ResultTypeFields.Select(x => x.ColumnName)) #>;
+var SqlIdentifiers = <#= SqlIdentifiers #>;
+var SqlValues = <#= SqlValues #>;
+
+var executeSqlX = new Twenty57.Linx.Components.Database.ExecuteSQL.ExecuteSQLX(
+<# if (UseTransaction) { #>
+<#= TransactionProperty #>.GetConnectionType(), <#= TransactionProperty #>.GetDbTransaction(), 
+<# } else { #>
+<#= CSharpUtilities.EnumAsString(ConnectionType) #>, <#= ConnectionStringProperty #>, 
+<# } #>
+<#= Timeout #>, OutputNames, ColumnNames, <#= Sql #>, SqlIdentifiers, SqlValues);
+executeSqlX.LogEvent += message => <#= FunctionContextProperty #>.Log(message);
+
+<# if (RowType != null) { #>
+
+var rowBuilder = new System.Func<<#= RowTypeName #>>(() => {
+	<# var rowFields = ResultTypeFields.Where(f => !string.IsNullOrEmpty(f.Name));
+	var logFormatString = "Retrieved "; 
+	int index = 0;
+	foreach (var nextField in rowFields)
+		logFormatString += string.Format("{0} = {{{1}}}, ", nextField.ColumnName, index++);
+	#>
+	<#= FunctionContextProperty #>.Log(System.String.Format(<#= CSharpUtilities.ToVerbatimString(logFormatString.TrimEnd(',', ' ')) #>
+	<# foreach (var nextField in rowFields) { #>
+		, Twenty57.Linx.Components.Database.Common.LogHelpers.GetDisplayString(executeSqlX.Reader[<#= CSharpUtilities.ToVerbatimString(nextField.ColumnName) #>])
+	<# } #>
+	));
+
+	return new <#= RowTypeName #>
+	{
+		<# foreach (var nextField in rowFields) { #>
+			<#= GetParamName(nextField.Name) #> = Twenty57.Linx.Components.Database.ExecuteSQL.DatabaseHelpers.CheckDbValue<<#= Twenty57.Linx.Components.Database.Common.TypeHelpers.GetCodeStringForType(nextField.TypeReference) #>>(executeSqlX.Reader[<#= CSharpUtilities.ToVerbatimString(nextField.ColumnName) #>]), 
+		<# } #>
+	};
+});
+
+<# if (ReturnMode == ExecuteSQLShared.ReturnModeType.ListOfRows) { #>
+try
+{
+	executeSqlX.OpenReader();
+
+	var table = new List<<#= RowTypeName #>>();
+	while (executeSqlX.Reader.Read())
+		table.Add(rowBuilder());
+	return table;
+}
+finally
+{
+	executeSqlX.Dispose();
+}
+<# } else if ((ReturnMode == ExecuteSQLShared.ReturnModeType.FirstRow) || (ReturnMode == ExecuteSQLShared.ReturnModeType.FirstRowElseEmptyRow)) { #>
+try
+{
+	executeSqlX.OpenReader();
+
+	<#= RowTypeName #> row;
+	if (executeSqlX.Reader.Read())
+		row = rowBuilder();
+	else
+	{
+		<# if (ReturnMode == ExecuteSQLShared.ReturnModeType.FirstRow) { #>
+		throw new Exception("No rows returned by query.");
+		<# } else { #>
+		row = new <#= RowTypeName #>();
+		<# } #>
+	}
+
+	return row;
+}
+finally
+{
+	executeSqlX.Dispose();
+}
+<# } else { #>
+executeSqlX.OpenReader();
+<#= ExecutionPathOutputName #> = 
+executeSqlX.Rows<Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult>(reader => {
+	var row = rowBuilder();
+	return new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult("<#= ExecutionPathName #>", row);
+});
+<# } #>
+<# } else { #>
+try
+{
+	executeSqlX.OpenReader();
+}
+finally
+{
+	executeSqlX.Dispose();
+}
+<# } #>

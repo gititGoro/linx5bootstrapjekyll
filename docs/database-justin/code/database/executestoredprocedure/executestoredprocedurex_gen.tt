@@ -1,0 +1,166 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Twenty57.Linx.Components.Database.Common" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+
+<#@ parameter name="FunctionContextProperty" type="System.String" #>
+<#@ parameter name="UseTransaction" type="System.Boolean" #>
+<#@ parameter name="TransactionProperty" type="System.String" #>
+<#@ parameter name="ConnectionType" type="Twenty57.Linx.Components.Database.Common.ConnectionType" #>
+<#@ parameter name="ConnectionStringProperty" type="System.String" #>
+<#@ parameter name="StoredProcedureProperty" type="System.String" #>
+<#@ parameter name="Parameters" type="Twenty57.Linx.Components.Database.Common.DatabaseModel.ProcedureParameters" #>
+<#@ parameter name="GetParamName" type="System.Func<string, string>" #>
+
+<#@ parameter name="OutputTypeName" type="System.String" #>
+<#@ parameter name="OutParametersOutputPropertyName" type="System.String" #>
+<#@ parameter name="OutParametersOutputTypeName" type="System.String" #>
+
+<#@ parameter name="OutputOption" type="Twenty57.Linx.Components.Database.ExecuteStoredProcedure.OutputOption" #>
+<#@ parameter name="ResultSets" type="Twenty57.Linx.Components.Database.Common.DatabaseModel.ResultSet[]" #>
+<#@ parameter name="RowTypeNames" type="System.String[]" #>
+<#@ parameter name="ResultSetRowOutputPropertyNames" type="System.String[]" #>
+<#@ parameter name="ExecutionPathOutputName" type="System.String" #>
+<#@ parameter name="ExecutionPathNames" type="System.String[]" #>
+
+var procX = new Twenty57.Linx.Components.Database.ExecuteStoredProcedure.ExecuteStoredProcedureX(
+	<# if (UseTransaction) { #>
+	  <#= TransactionProperty #>.GetConnectionType()
+	, <#= TransactionProperty #>.GetDbTransaction()
+	<# } else { #>
+	  <#= CSharpUtilities.EnumAsString(ConnectionType) #>
+	, <#= ConnectionStringProperty #>
+	<# } #>
+	, <#= StoredProcedureProperty #>
+	<# foreach (var nextParameter in Parameters) { #>
+	, new Twenty57.Linx.Components.Database.Common.DatabaseModel.ProcedureParameterValue(
+		<#= CSharpUtilities.ToVerbatimString(nextParameter.Name) #>
+		, <# if ((nextParameter.Direction == DatabaseModel.ParameterDirection.In) || (nextParameter.Direction == DatabaseModel.ParameterDirection.InOut)) { #>
+			<#= GetParamName(nextParameter.DisplayPropertyName) #>
+			<# } else { #> Twenty57.Linx.Components.Database.Common.TypeHelpers.GetDefaultValue< <#= Twenty57.Linx.Components.Database.Common.TypeHelpers.GetCodeStringForType(nextParameter.DataType.GetSystemType()) #> >() 
+			<# } #>
+			<# if (Twenty57.Linx.Components.Database.Common.TypeHelpers.IsList(nextParameter.DataType.GetSystemType())) { #> .ToArray() <# } #>
+		, <#= CSharpUtilities.EnumAsString(nextParameter.Direction) #>
+		<# if (nextParameter.RequiresSize) { #> 
+		, <#= nextParameter.Size ?? Twenty57.Linx.Components.Database.Common.TypeHelpers.GetEnumerationValueAttributes<Twenty57.Linx.Components.Database.Common.DatabaseModel.RequiresSize>(nextParameter.DataType)[0].DefaultColumnSize #>
+		<# } #>
+		<# if (nextParameter.DataType == DatabaseModel.DataType.RefCursor) { #>
+		, isRefCursor: true
+		<# } #>
+		)
+	<# } #>
+	);
+procX.LogEvent += message => <#= FunctionContextProperty #>.Log(message);
+<# var hasResultSets = ResultSets.Length != 0; #>
+procX.Execute(<#= CSharpUtilities.BoolAsString(hasResultSets) #>);
+
+<# var outParameters = Parameters.Where(p => (p.Direction != DatabaseModel.ParameterDirection.In) && (p.DataType != DatabaseModel.DataType.RefCursor));
+bool hasOutput = (outParameters.Any()) || ((hasResultSets) && (OutputOption != OutputOption.RowByRow));
+if (hasOutput) { #>
+var output = new <#= OutputTypeName #>();
+<# if ((outParameters.Any()) && (hasResultSets)) { #>
+procX.ReaderClosedEvent += (sender, args) => {
+	if (output.<#= OutParametersOutputPropertyName #> != null)
+	{
+		<# LogFields("Output parameters: ", outParameters.Select(p => new KeyValuePair<string, string>(p.OutputPropertyName, string.Format("procX.GetParameterValue({0})", CSharpUtilities.ToVerbatimString(p.Name))))); #>
+
+		<# foreach (var nextParameter in outParameters) { #>
+		output.<#= OutParametersOutputPropertyName #>.<#= nextParameter.OutputPropertyName #> = Twenty57.Linx.Components.Database.Common.TypeHelpers.ConvertDbValue< <#= Twenty57.Linx.Components.Database.Common.TypeHelpers.GetCodeStringForType(nextParameter.DataType.GetSystemType()) #> >(procX.GetParameterValue(<#= CSharpUtilities.ToVerbatimString(nextParameter.Name) #>));
+		<# } #>
+	}
+};
+<# } #>
+<# } #>
+
+<# if (hasResultSets) { #>
+<# for (int i=0; i<ResultSets.Length; i++) { #>
+var createOutputRow<#= i #> = new Func<System.Data.IDataReader, <#= RowTypeNames[i] #> >(reader => {
+	<# var rowFields = ResultSets[i].Fields.Where(f => !string.IsNullOrEmpty(f.OutputName));
+	LogFields("Retrieved ", rowFields.Select(f => new KeyValuePair<string, string>(f.ColumnName, string.Format("reader[{0}]", CSharpUtilities.ToVerbatimString(f.ColumnName)))));
+	#>
+	return new <#= RowTypeNames[i] #> {
+		<# foreach (var nextField in rowFields) { #>
+		<#= nextField.OutputName #> = Twenty57.Linx.Components.Database.Common.TypeHelpers.ConvertDbValue< <#= Twenty57.Linx.Components.Database.Common.TypeHelpers.GetCodeStringForType(nextField.DataType.GetSystemType()) #> >(reader[<#= CSharpUtilities.ToVerbatimString(nextField.ColumnName) #>]), 
+		<# } #>
+	};
+});
+<# } #>
+
+<# if (OutputOption == OutputOption.RowByRow) { #>
+	<#= ExecutionPathOutputName #> = 
+	<# for (int i=0; i<ResultSets.Length; i++) {
+	if (i != 0) Write(".Concat("); #>
+	procX.NextResultRows<Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult>(reader => {
+		return new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult(<#= CSharpUtilities.ToVerbatimString(ExecutionPathNames[i]) #>, createOutputRow<#= i #>(reader));
+	})
+	<# if (i != 0) Write(")"); #>
+	<# } #>;
+<# } else if (OutputOption == OutputOption.ListOfRows) { #>
+	try
+	{
+		<# for (int i=0; i<ResultSets.Length; i++) { 
+		string propertyName = "output." + ResultSetRowOutputPropertyNames[i]; #>
+		<#= propertyName #> = new List< <#= RowTypeNames[i] #> >();
+		while (procX.Reader.Read())
+			<#= propertyName #>.Add(createOutputRow<#= i #>(procX.Reader));
+		procX.Reader.NextResult();
+		<# } #>
+	}
+	finally
+	{
+		procX.Dispose();
+	}
+<# } else { #>
+	try
+	{
+		<# for (int i=0; i<ResultSets.Length; i++) { #>
+		if (procX.Reader.Read())
+			output.<#= ResultSetRowOutputPropertyNames[i] #> = createOutputRow<#= i #>(procX.Reader);
+		else
+		<# if (OutputOption == OutputOption.FirstRow) { #>
+			throw new Exception(<#= CSharpUtilities.ToVerbatimString(string.Format("No rows returned for {0}.", ResultSetRowOutputPropertyNames[i])) #>);
+		<# } else { #>
+			output.<#= ResultSetRowOutputPropertyNames[i] #> = new <#= RowTypeNames[i] #>();
+		<# } #>
+		procX.Reader.NextResult();
+		<# } #>
+	}
+	finally
+	{
+		procX.Dispose();
+	}
+<# } #>
+<# } #>
+
+<# if (outParameters.Any()) { 
+LogFields("Output parameters: ", outParameters.Select(p => new KeyValuePair<string, string>(p.OutputPropertyName, string.Format("procX.GetParameterValue({0})", CSharpUtilities.ToVerbatimString(p.Name))))); #>
+
+output.<#= OutParametersOutputPropertyName #> = new <#= OutParametersOutputTypeName #> {
+	<# foreach (var nextParameter in outParameters) { #>
+	<#= nextParameter.OutputPropertyName #> = Twenty57.Linx.Components.Database.Common.TypeHelpers.ConvertDbValue< <#= Twenty57.Linx.Components.Database.Common.TypeHelpers.GetCodeStringForType(nextParameter.DataType.GetSystemType()) #> >(procX.GetParameterValue(<#= CSharpUtilities.ToVerbatimString(nextParameter.Name) #>)), 
+	<# } #>
+};
+<# } #>
+
+<# if (hasOutput) { #>
+return output;
+<# } #>
+
+<#+
+private void LogFields(string logPrefix, IEnumerable<KeyValuePair<string, string>> fields)
+{
+	if (fields.Any())
+	{
+		var logFormatString = logPrefix;
+		int index = 0;
+		foreach (var nextField in fields)
+			logFormatString += string.Format("{0} = {{{1}}}, ", nextField.Key, index++);
+		#>
+		<#= FunctionContextProperty #>.Log(System.String.Format(<#= CSharpUtilities.ToVerbatimString(logFormatString.TrimEnd(',', ' ')) #>
+		<#+ foreach (var nextField in fields) { #>
+			, Twenty57.Linx.Components.Database.Common.LogHelpers.GetDisplayString(<#= nextField.Value #>)
+		<#+ } #>
+		));
+	<#+ }
+} #>

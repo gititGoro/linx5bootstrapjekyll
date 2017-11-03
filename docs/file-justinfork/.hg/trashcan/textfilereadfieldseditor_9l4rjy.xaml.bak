@@ -1,0 +1,394 @@
+﻿<ui:CustomWindow x:Class="Twenty57.Linx.Components.File.TextFileRead.Editors.TextFileReadFieldsEditor.TextFileReadFieldsEditor" 
+							 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+							 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+							 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+							 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+							 xmlns:local="clr-namespace:Twenty57.Linx.Components.File.TextFileRead.Editors.TextFileReadFieldsEditor.ViewModel" 
+							 xmlns:converters="clr-namespace:Twenty57.Linx.Components.File.TextFileRead.Editors.TextFileReadFieldsEditor.Converters"
+							 xmlns:filecomp="clr-namespace:Twenty57.Linx.Components.File.TextFileRead" 
+							 xmlns:ui="clr-namespace:Twenty57.Linx.Plugin.UI.Windows;assembly=Twenty57.Linx.Plugin.UI"
+							 xmlns:helpers1="clr-namespace:Twenty57.Linx.Plugin.UI.Helpers;assembly=Twenty57.Linx.Plugin.UI"
+							 mc:Ignorable="d" ShowInTaskbar="False" Title="Fields" WindowStartupLocation="CenterOwner" Width="800" MinWidth="800" Height="700" 
+							 MinHeight="700" helpers1:DialogCloser.DialogResult="{Binding DialogResult}" 
+							 Style="{StaticResource DialogWindowStyle}">
+	<ui:CustomWindow.Resources>
+		<converters:TrueConverter x:Key="TrueConverter" />
+
+		<Style TargetType="DataGridCell">
+			<EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridCell_PreviewMouseLeftButtonDown" />
+            <EventSetter Event="GotKeyboardFocus" Handler="DataGridCell_GotKeyboardFocus" />
+            <Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type DataGridCell}">
+						<Border BorderThickness="0 0 1 1" BorderBrush="{StaticResource TitlebarInactive}">
+							<Border x:Name="border" BorderBrush="Transparent" BorderThickness="1" Background="Transparent" SnapsToDevicePixels="True">
+								<VisualStateManager.VisualStateGroups>
+									<VisualStateGroup x:Name="FocusStates">
+										<VisualState x:Name="Unfocused" />
+										<VisualState x:Name="Focused" />
+									</VisualStateGroup>
+									<VisualStateGroup x:Name="CurrentStates">
+										<VisualState x:Name="Regular" />
+										<VisualState x:Name="Current">
+											<Storyboard>
+												<ColorAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+													<EasingColorKeyFrame KeyTime="0" Value="{DynamicResource {StaticResource TitlebarActive}}" />
+												</ColorAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualState>
+									</VisualStateGroup>
+								</VisualStateManager.VisualStateGroups>
+								<ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							</Border>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<Style TargetType="TextBlock" x:Key="TextBlockH2">
+			<Setter Property="FontWeight" Value="SemiBold" />
+			<Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+		</Style>
+		<Style TargetType="TextBox" x:Key="ValidationTxt">
+			<Style.Triggers>
+				<Trigger Property="Validation.HasError" Value="true">
+					<Setter Property="Background" Value="MistyRose" />
+					<Setter Property="BorderBrush" Value="Red" />
+					<Setter Property="BorderThickness" Value="0.5" />
+					<Setter Property="VerticalContentAlignment" Value="Center" />
+					<Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent}" />
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+		<Style TargetType="Border" x:Key="HintStyle">
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding Path=CanInfer}" Value="True">
+					<Setter Property="Visibility" Value="Visible" />
+				</DataTrigger>
+				<DataTrigger Binding="{Binding Path=CanInfer}" Value="False">
+					<Setter Property="Visibility" Value="Collapsed" />
+				</DataTrigger>
+			</Style.Triggers>
+		</Style>
+		<Style TargetType="TextBox" x:Key="OtherDelimiterStyle">
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding Path=Delimiter}" Value="{x:Static filecomp:DelimiterType.Comma}">
+					<Setter Property="IsEnabled" Value="False" />
+					<Setter Property="Text" Value="" />
+				</DataTrigger>
+				<DataTrigger Binding="{Binding Path=Delimiter}" Value="{x:Static filecomp:DelimiterType.Tab}">
+					<Setter Property="IsEnabled" Value="False" />
+					<Setter Property="Text" Value="" />
+				</DataTrigger>
+				<DataTrigger Binding="{Binding Path=Delimiter}" Value="{x:Static filecomp:DelimiterType.Other}">
+					<Setter Property="IsEnabled" Value="True" />
+				</DataTrigger>
+				<Trigger Property="Validation.HasError" Value="true">
+					<Setter Property="Background" Value="MistyRose" />
+					<Setter Property="BorderBrush" Value="Red" />
+					<Setter Property="BorderThickness" Value="0.5" />
+					<Setter Property="VerticalContentAlignment" Value="Center" />
+					<Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent}" />
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+		<Style x:Key="LinkButton" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<TextBlock TextDecorations="Underline">
+								<ContentPresenter /></TextBlock>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Foreground" Value="Blue" />
+			<Style.Triggers>
+				<Trigger Property="IsMouseOver" Value="true">
+					<Setter Property="Foreground" Value="Red" />
+					<Setter Property="Cursor" Value="Hand" />
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+		<local:EnumToBoolConverter x:Key="EtoBConverter" />
+		<DataTemplate x:Key="DataTemplate_Level2">
+			<Button Content="{Binding}" Height="40" Width="50" />
+		</DataTemplate>
+
+		<DataTemplate x:Key="DataTemplate_Level1">
+			<ItemsControl ItemsSource="{Binding}" ItemTemplate="{DynamicResource DataTemplate_Level2}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Orientation="Horizontal" />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</DataTemplate>
+	</ui:CustomWindow.Resources>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="115" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="1.5*" />
+			</Grid.RowDefinitions>
+			<Border Background="{StaticResource BackgroundBrush}" Height="25">
+				<TextBlock Text="File Format" Grid.Row="0" Margin="10 0 0 0" Foreground="Black" />
+			</Border>
+			<Grid Grid.Row="1" Margin="10,0,0,0" HorizontalAlignment="Left">
+				<Grid.Resources>
+					<Style TargetType="RadioButton">
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style TargetType="TextBox">
+						<Setter Property="HorizontalAlignment" Value="Left" />
+					</Style>
+				</Grid.Resources>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="120" />
+					<ColumnDefinition Width="120" />
+					<ColumnDefinition Width="120" />
+					<ColumnDefinition Width="120" />
+				</Grid.ColumnDefinitions>
+				<Grid Grid.Row="0" Grid.Column="0" Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Text="File type" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ResourceKey=TextBlockH2}" />
+					<RadioButton Grid.Row="1" GroupName="RBFileType" IsChecked="{Binding Mode=TwoWay, Path=TextFileType, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:FileType.Delimited}}" Content="Delimited" Click="FileTypeChanged" />
+					<RadioButton Grid.Row="2" GroupName="RBFileType" IsChecked="{Binding Mode=TwoWay, Path=TextFileType, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:FileType.FixedLength}}" Content="Fixed length" Click="FileTypeChanged" />
+				</Grid>
+				<Grid Grid.Row="0" Grid.Column="1" Margin="5">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Name="HeaderDelimiters" Text="Delimiters" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ResourceKey=TextBlockH2}" />
+					<RadioButton Name="RBComma" Grid.Row="1" Grid.Column="0" GroupName="RBDelimiters" Content="Comma" IsChecked="{Binding Mode=TwoWay, Path=Delimiter, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:DelimiterType.Comma}}" Click="DelimiterChanged" />
+					<RadioButton Name="RBTab" Grid.Row="2" Grid.Column="0" GroupName="RBDelimiters" Content="Tab" IsChecked="{Binding Mode=TwoWay, Path=Delimiter, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:DelimiterType.Tab}}" Click="DelimiterChanged" />
+					<StackPanel Orientation="Horizontal" Grid.Row="3">
+						<RadioButton Name="RBOther" GroupName="RBDelimiters" Content="Other" IsChecked="{Binding Mode=TwoWay, Path=Delimiter, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:DelimiterType.Other}}" Click="DelimiterChanged" Margin="0 0 5 0" />
+						<TextBox Name="txtOtherDelimiter" Height="20" Width="30" Style="{StaticResource ResourceKey=OtherDelimiterStyle}" VerticalAlignment="Center">
+							<Binding Path="OtherDelimiter" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+								<Binding.ValidationRules>
+									<local:SingleCharRule fieldName="User supplied delimiter" />
+									<local:OtherCharNotEmptyRule />
+								</Binding.ValidationRules>
+							</Binding>
+						</TextBox>
+					</StackPanel>
+				</Grid>
+				<Grid Grid.Row="0" Grid.Column="2" Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Text="Text qualifier" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ResourceKey=TextBlockH2}" />
+					<RadioButton GroupName="RBTextQualifier" Content="&quot;" Grid.Row="1" Grid.Column="0" IsChecked="{Binding Mode=TwoWay, Path=TextQualifier, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:TextQualifierType.DoubleQuotes}}" />
+					<RadioButton GroupName="RBTextQualifier" Content="&apos;" Grid.Row="2" Grid.Column="0" IsChecked="{Binding Mode=TwoWay, Path=TextQualifier, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:TextQualifierType.SingleQuotes}}" />
+					<RadioButton GroupName="RBTextQualifier" Content="None" Grid.Row="3" Grid.Column="0" IsChecked="{Binding Mode=TwoWay, Path=TextQualifier, Converter={StaticResource EtoBConverter}, ConverterParameter={x:Static filecomp:TextQualifierType.None}}" />
+				</Grid>
+				<Grid Grid.Row="0" Grid.Column="3" Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Text="Lines to skip" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ResourceKey=TextBlockH2}" />
+					<Label Content="Header" Grid.Row="1" Grid.Column="0" Margin="0 0 5 0" />
+					<TextBox Name="txtHeaderLinesSkip" Grid.Row="1" Grid.Column="1" Style="{StaticResource ResourceKey=ValidationTxt}" VerticalAlignment="Center" Width="20" HorizontalAlignment="Left">
+						<Binding Path="SkipHeaderLines" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+							<Binding.ValidationRules>
+								<local:PositiveNumericRule fieldName="Header Lines to skip" />
+							</Binding.ValidationRules>
+						</Binding>
+					</TextBox>
+					<Label Content="Footer" Grid.Row="2" Grid.Column="0" />
+					<TextBox Name="txtFooterLinesSkip" Grid.Row="2" Grid.Column="1" Style="{StaticResource ResourceKey=ValidationTxt}" VerticalAlignment="Center" Width="20" HorizontalAlignment="Left">
+						<Binding Path="SkipFooterLines" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+							<Binding.ValidationRules>
+								<local:PositiveNumericRule fieldName="Footer Lines to skip" />
+							</Binding.ValidationRules>
+						</Binding>
+					</TextBox>
+				</Grid>
+			</Grid>
+			<Grid Grid.Row="2" Grid.ColumnSpan="2">
+				<Grid Grid.Height="25">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition Width="Auto" />
+					</Grid.ColumnDefinitions>
+					<Border Background="{StaticResource BackgroundBrush}" Margin="0 0 5 0">
+						<TextBlock Text="Define Fields" VerticalAlignment="Center" Foreground="Black" Margin="10 0 0 0"/>
+					</Border>
+					<Button Content="CLEAR FIELDS" Command="{Binding ClearFields, Mode=OneWay}" Grid.Column="1" Padding="10 0" Width="102" Height="20">
+						<Button.Style>
+							<Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButtonStyle}">
+								<Setter Property="IsEnabled" Value="false" />
+								<Style.Triggers>
+									<DataTrigger Binding="{Binding Path=CanClearFields}" Value="True">
+										<Setter Property="IsEnabled" Value="True" />
+									</DataTrigger>
+									<DataTrigger Binding="{Binding Path=CanClearFields}" Value="False">
+										<Setter Property="IsEnabled" Value="False" />
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</Button.Style>
+					</Button>
+				</Grid>
+			</Grid>
+			<DataGrid Name="DataGridFields" ItemsSource="{Binding FieldList, Mode=TwoWay}" VerticalScrollBarVisibility="Auto" CanUserDeleteRows="True" IsSynchronizedWithCurrentItem="True" CanUserAddRows="False" CanUserResizeRows="False" HorizontalAlignment="Stretch" Margin="10,5,0,5" VerticalAlignment="Stretch" AutoGenerateColumns="False" Grid.Row="3" IsManipulationEnabled="True"
+								InitializingNewItem="DataGridFields_InitializingNewItem" Loaded="DataGridFields_Loaded" PreviewKeyDown="DataGrid_PreviewKeyDown">
+				<DataGrid.Resources>
+					<Style TargetType="{x:Type DataGridRow}">
+						<Setter Property="ValidationErrorTemplate">
+							<Setter.Value>
+								<ControlTemplate>
+									<ContentControl Width="11" Height="11" Template="{StaticResource AppIcon_ValidationError}" ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}, Path=(Validation.Errors)[0].ErrorContent}" />
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</DataGrid.Resources>
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Name" MinWidth="200" Width="*" Foreground="{StaticResource ForegroundDarkBrush}">
+						<DataGridTextColumn.Binding>
+							<Binding Path="Name" Mode="TwoWay" NotifyOnValidationError="True">
+								<Binding.ValidationRules>
+									<local:ValidFieldNameRule />
+									<local:UniqueFieldNameRule />
+								</Binding.ValidationRules>
+							</Binding>
+						</DataGridTextColumn.Binding>
+					</DataGridTextColumn>
+					<DataGridTextColumn Header="Length" MinWidth="30" Foreground="{StaticResource ForegroundDarkBrush}">
+						<DataGridTextColumn.Binding>
+							<Binding Path="Length" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+								<Binding.ValidationRules>
+									<local:PositiveNumericRule fieldName="Field Length" />
+								</Binding.ValidationRules>
+							</Binding>
+						</DataGridTextColumn.Binding>
+					</DataGridTextColumn>
+					<DataGridComboBoxColumn Header="Type" MinWidth="50" SelectedValueBinding="{Binding Path=TypeName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+						<DataGridComboBoxColumn.ElementStyle>
+							<Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+								<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+							</Style>
+						</DataGridComboBoxColumn.ElementStyle>
+						<DataGridComboBoxColumn.EditingElementStyle>
+							<Style TargetType="{x:Type ComboBox}">
+								<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+							</Style>
+						</DataGridComboBoxColumn.EditingElementStyle>
+					</DataGridComboBoxColumn>
+					<DataGridTextColumn Binding="{Binding Path=Format}" Header="Input Format" MinWidth="200" Width="*" Foreground="{StaticResource ForegroundDarkBrush}" />
+					<DataGridCheckBoxColumn Binding="{Binding Skip}" Header="Skip" Width="Auto" />
+					<DataGridTemplateColumn IsReadOnly="True" Width="Auto">
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Button Command="Delete" Height="20" Width="20" Template="{StaticResource AppIcon_Delete}">
+									<Button.Style>
+										<Style TargetType="{x:Type Button}">
+											<Setter Property="Visibility" Value="Hidden" />
+											<Style.Triggers>
+												<DataTrigger Binding="{Binding Skip, Converter={StaticResource TrueConverter}}" Value="True">
+													<Setter Property="Visibility" Value="Visible" />
+												</DataTrigger>
+											</Style.Triggers>
+										</Style>
+									</Button.Style>
+								</Button>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+				</DataGrid.Columns>
+			</DataGrid>
+			<Grid Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="Auto" />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Grid Height="40">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition  Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<Border Background="{StaticResource BackgroundBrush}" Margin="0 0 5 0">
+						<TextBlock Name="SampleTextBlock" Text="Sample Data" VerticalAlignment="Center" Margin="10 0 0 0" Foreground="Black" />
+					</Border>
+					<Border BorderThickness="1" BorderBrush="Gray" Style="{StaticResource ResourceKey=HintStyle}" Width="372" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90 0 0 0" CornerRadius="3" Background="Beige">
+						<TextBlock Margin="5,0,5,0">
+							<TextBlock Text="Hint: if you " Foreground="Black" />
+							<Hyperlink Command="{Binding LoadSample, Mode=OneWay}">
+								<TextBlock Text="load a sample file" />
+							</Hyperlink>
+							<TextBlock Text=" we will infer the fields and file format" Foreground="Black" />
+						</TextBlock>
+					</Border>
+					<Button Content="LOAD SAMPLE" Command="{Binding LoadSample, Mode=OneWay}" Grid.Column="1" Padding="10 0" Width="102" Height="20"/>
+				</Grid>
+				<StackPanel Orientation="Horizontal" Height="30" Grid.Row="1">
+					<TextBlock VerticalAlignment="Center" Style="{StaticResource ResourceKey=TextBlockH2}" Margin="10 0 5 0">Sample File:</TextBlock>
+					<Label VerticalAlignment="Center" Content="{Binding SampleFileName}" Foreground="Black" />
+				</StackPanel>
+				<TabControl Grid.Row="2">
+					<TabItem Header="Raw" VerticalAlignment="Stretch">
+						<TextBox Text="{Binding SampleFileText}" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+					</TabItem>
+					<TabItem Header="Formatted">
+						<DataGrid Margin="5" AutoGenerateColumns="True" CanUserSortColumns="False" AutoGeneratingColumn="formattedDataGrid_AutoGeneratingColumn" IsReadOnly="True" ItemsSource="{Binding SampleFormattedData,Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" />
+					</TabItem>
+				</TabControl>
+			</Grid>
+		</Grid>
+		<StackPanel Orientation="Horizontal" Grid.Row="1" FlowDirection="RightToLeft" Style="{StaticResource DialogWindowButtonStackPanelStyle}">
+			<Button Content="CANCEL" IsCancel="True" TabIndex="2" />
+			<Button Content="SAVE" Command="{Binding SaveCommand, Mode=OneWay}" Name="SaveButton" Margin="10 0 0 0" TabIndex="1">
+				<Button.Style>
+					<Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogPrimaryButtonStyle}">
+						<Setter Property="IsEnabled" Value="false" />
+						<Style.Triggers>
+							<MultiDataTrigger>
+								<MultiDataTrigger.Conditions>
+									<Condition Binding="{Binding ElementName=txtHeaderLinesSkip, Path=(Validation.HasError)}" Value="false" />
+									<Condition Binding="{Binding ElementName=txtFooterLinesSkip, Path=(Validation.HasError)}" Value="false" />
+									<Condition Binding="{Binding ElementName=txtOtherDelimiter, Path=(Validation.HasError)}" Value="false" />
+								</MultiDataTrigger.Conditions>
+								<Setter Property="IsEnabled" Value="true" />
+							</MultiDataTrigger>
+						</Style.Triggers>
+					</Style>
+				</Button.Style>
+			</Button>
+		</StackPanel>
+	</Grid>
+</ui:CustomWindow>

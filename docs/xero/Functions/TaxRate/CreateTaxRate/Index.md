@@ -7,43 +7,6 @@ feature: taxrate
 component: createtaxrate
 toc: true
 ---
----
-layout: docs
-title: createtaxrate
-description: createtaxrate
-group: functions
-feature: taxrate
-component: createtaxrate
-toc: true
----
----
-layout: docs
-title: createtaxrate
-description: createtaxrate
-group: functions
-feature: taxrate
-component: createtaxrate
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: taxrate
-feature: createtaxrate
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateTaxRate
-description: CreateTaxRate
-group: Functions
-feature: TaxRate
-component: CreateTaxRate
-toc: true
-redirect_from: docs/Functions/TaxRate/CreateTaxRate/index
----
 CreateTaxRate
 ============
 

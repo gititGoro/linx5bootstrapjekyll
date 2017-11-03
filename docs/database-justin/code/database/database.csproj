@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2F5DC30-5938-447D-9A3A-60D96E87D848}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twenty57.Linx.Components.Database</RootNamespace>
+    <AssemblyName>Twenty57.Linx.Components.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GongSolutions.Wpf.DragDrop">
+      <HintPath>..\Assemblies\GongSolutions.Wpf.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.3\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.ADODB">
+      <HintPath>..\Assemblies\Interop.ADODB.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\Assemblies\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSDASC">
+      <HintPath>..\Assemblies\Interop.MSDASC.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.4\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.4\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.4\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy, Version=2.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongocsharpdriver.2.4.4\lib\net45\MongoDB.Driver.Legacy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess.proxy">
+      <HintPath>..\Assemblies\Oracle.DataAccess.proxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twenty57.Linx.Plugin.Common, Version=16.0.1.226, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Twenty57.Linx.Plugin.Common.16.0.1.226\lib\net45\Twenty57.Linx.Plugin.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twenty57.Linx.Plugin.UI, Version=16.0.1.226, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Twenty57.Linx.Plugin.UI.16.0.1.226\lib\net45\Twenty57.Linx.Plugin.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twenty57.Linx.Plugin.Utilities">
+      <HintPath>..\Assemblies\Twenty57.Linx.Plugin.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.14\lib\net\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeginTransaction\BeginTransaction.cs" />
+    <Compile Include="BeginTransaction\BeginTransactionCodeGenerator.cs" />
+    <Compile Include="BeginTransaction\BeginTransactionDesigner.cs" />
+    <Compile Include="BeginTransaction\BeginTransactionShared.cs" />
+    <Compile Include="BeginTransaction\BeginTransactionX.cs" />
+    <Compile Include="BeginTransaction\BeginTransaction_Gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeginTransaction_Gen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeginTransaction\ITransactionDesignerData.cs" />
+    <Compile Include="Common\DbDesignerBase.cs" />
+    <Compile Include="Common\DbShared.cs" />
+    <Compile Include="Common\LogHelpers.cs" />
+    <Compile Include="Common\SqlGenerator.cs" />
+    <Compile Include="Common\Transaction.cs" />
+    <Compile Include="DbBulkCopy\DbBulkCopy.cs" />
+    <Compile Include="DbBulkCopy\DbBulkCopyCodeGenerator.cs" />
+    <Compile Include="DbBulkCopy\DbBulkCopyDesigner.cs" />
+    <Compile Include="DbBulkCopy\DbBulkCopyShared.cs" />
+    <Compile Include="DbBulkCopy\ConnectionEditorItem.cs" />
+    <Compile Include="DbBulkCopy\DbBulkCopy_Gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbBulkCopy_Gen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbBulkCopy\DynamicCompiledTypeReference.cs" />
+    <Compile Include="DbBulkCopy\Editors\EditorResources.xaml.cs">
+      <DependentUpon>EditorResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DbBulkCopy\Editors\TableChooser\EditingInfo.cs" />
+    <Compile Include="DbBulkCopy\Editors\TableChooser\TableChooserItem.cs" />
+    <Compile Include="DbBulkCopy\Editors\TableChooser\TableChooserWindow.xaml.cs">
+      <DependentUpon>TableChooserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DbBulkCopy\Editors\TableChooser\TableInLineEditor.xaml.cs">
+      <DependentUpon>TableInLineEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DbBulkCopy\Editors\TableChooser\ViewModel\TableChooserViewModel.cs" />
+    <Compile Include="DbBulkCopy\Editors\TableChooser\ViewModel\TableColumnModel.cs" />
+    <Compile Include="DbBulkCopy\FunctionUpdater.cs" />
+    <Compile Include="DbBulkCopy\Helpers\GacUtil.cs" />
+    <Compile Include="DbBulkCopy\Runtime\BulkCopy.cs" />
+    <Compile Include="DbBulkCopy\Runtime\DbBulkCopierX.cs" />
+    <Compile Include="DbBulkCopy\Runtime\FeedableDataReader.cs" />
+    <Compile Include="DbBulkCopy\Runtime\Loader.cs" />
+    <Compile Include="DbBulkCopy\Runtime\SingleEnumerable.cs" />
+    <Compile Include="ExecuteSQL\DataReader.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\Helpers\TestSqlPaneScrollViewerHeightConverter.cs" />
+    <Compile Include="ExecuteSQL\FunctionUpdater.cs" />
+    <Compile Include="Common\ConnectionStringHelpers.cs" />
+    <Compile Include="Common\DatabaseAssistant.cs" />
+    <Compile Include="Common\StringExpressionHelpers.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\Helpers\GridSplitterVisibilityConverter.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\Helpers\MouseWheelBehavior.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\Helpers\TestSqlPaneScrollViewer.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\SQLParameterModel.cs" />
+    <Compile Include="Common\DatabaseModel.cs" />
+    <Compile Include="Mongo\Common\MongoDBCodeGenerator.cs" />
+    <Compile Include="Mongo\MongoDBMapReduce\MongoDBMapReduceFunctionUpdater.cs" />
+    <Compile Include="Mongo\MongoDBRead\MongoDBReadFunctionUpdater.cs" />
+    <Compile Include="Mongo\MongoDBMapReduce\MongoDBMapReduce.cs" />
+    <Compile Include="Mongo\MongoDBMapReduce\MongoDBMapReduceCodeGenerator.cs" />
+    <Compile Include="Mongo\MongoDBMapReduce\MongoDBMapReduceDesigner.cs" />
+    <Compile Include="Mongo\MongoDBMapReduce\MongoDBMapReduceShared.cs" />
+    <Compile Include="UI\Controls\StringEditor.cs" />
+    <Compile Include="UI\Controls\ConnectionControl\ConnectionControl.xaml.cs">
+      <DependentUpon>ConnectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ConnectionControl\ConnectionViewModel.cs" />
+    <Compile Include="UI\DependencyObjectExtensions.cs" />
+    <Compile Include="UI\Editors\ConnectionEditor\ConnectionEditorItem.cs" />
+    <Compile Include="ExecuteStoredProcedure\FunctionUpdater.cs" />
+    <Compile Include="UI\Editors\ConnectionEditor\ConnectionEditorWindow.xaml.cs">
+      <DependentUpon>ConnectionEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Editors\ConnectionEditor\ViewModel\ConnectionParameter.cs" />
+    <Compile Include="UI\Editors\ConnectionEditor\ViewModel\ConnectionViewModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\EditingInfo.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\EditorResources.xaml.cs">
+      <DependentUpon>EditorResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\RefreshResultSets\RefreshResultSetsItem.cs" />
+    <Compile Include="UI\Converters\BoolToValueConverter.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ProcedureParametersEditorItem.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ProcedureParametersEditorWindow.xaml.cs">
+      <DependentUpon>ProcedureParametersEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ProcedureParametersInlineEditor.xaml.cs">
+      <DependentUpon>ProcedureParametersInlineEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\Validators\PositiveNumericRule.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ViewModel\ProcedureParameterModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ViewModel\ProcedureParametersViewModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ResultSetEditorItem.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ResultSetEditorWindow.xaml.cs">
+      <DependentUpon>ResultSetEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ResultSetInlineEditor.xaml.cs">
+      <DependentUpon>ResultSetInlineEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ViewModel\ResultSetFieldModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ViewModel\ResultSetViewModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\StoredProcedureEditor\StoredProcedureEditorItem.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\StoredProcedureEditor\StoredProcedureEditorWindow.xaml.cs">
+      <DependentUpon>StoredProcedureEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteStoredProcedure\Editors\StoredProcedureEditor\ViewModel\ProcedureParameterModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\Editors\StoredProcedureEditor\ViewModel\StoredProcedureViewModel.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedure.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedureCodeGenerator.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedureDesigner.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedureShared.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedureX.cs" />
+    <Compile Include="ExecuteStoredProcedure\ExecuteStoredProcedureX_Gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExecuteStoredProcedureX_Gen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mongo\Editors\MongoAggregationEditor.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Converters\TreeViewItemStyleConverter.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\DocumentSegment.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\MongoPlaceholders.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\SegmentedDocument.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\SegmentedDocumentSerialiser.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\Template.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\Models\TemplateSource.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\MongoJsonEditor.xaml.cs">
+      <DependentUpon>MongoJsonEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mongo\Editors\MongoJsonEditor\ViewModel\MongoDBComponent.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\ViewModel\MongoJsonEditorViewModel.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\ViewModel\TemplateTreeItemViewModel.cs" />
+    <Compile Include="Mongo\Editors\MongoJsonEditor\ViewModel\TemplateTreeViewModel.cs" />
+    <Compile Include="Mongo\Editors\MongoCriteriaEditor.cs" />
+    <Compile Include="Mongo\Editors\MongoUpdateEditor.cs" />
+    <Compile Include="Mongo\Editors\TemplateTreeView.xaml.cs">
+      <DependentUpon>TemplateTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mongo\Editors\UIHelpers.cs" />
+    <Compile Include="Mongo\MongoDatabaseObject.cs" />
+    <Compile Include="Mongo\MongoDBRead\MongoDBRead.cs" />
+    <Compile Include="Mongo\MongoDBRead\MongoDBReadCodeGenerator.cs" />
+    <Compile Include="Mongo\MongoDBRead\MongoDBReadDesigner.cs" />
+    <Compile Include="Mongo\MongoDBRead\MongoDBReadShared.cs" />
+    <Compile Include="Mongo\MongoDBWrite\MongoDBWriteOperation.cs" />
+    <Compile Include="Mongo\MongoDBWrite\MongoDBWrite.cs" />
+    <Compile Include="Mongo\MongoDBWrite\MongoDBWriteCodeGenerator.cs" />
+    <Compile Include="Mongo\MongoDBWrite\MongoDBWriteDesigner.cs" />
+    <Compile Include="Mongo\MongoDBWrite\MongoDBWriteShared.cs" />
+    <Compile Include="Mongo\MongoDBX.cs" />
+    <Compile Include="Mongo\MongoStringHandler.cs" />
+    <Compile Include="Common\TypeHelpers.cs" />
+    <Compile Include="UI\Controls\MvvmTextEditor.cs" />
+    <Compile Include="UI\Converters\GridLengthConverter.cs" />
+    <Compile Include="UI\Converters\InverseBooleanConverter.cs" />
+    <Compile Include="UI\Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\IsBusyToMouseCursorConverter.cs" />
+    <Compile Include="UI\Converters\ToStringConverter.cs" />
+    <Compile Include="UI\Converters\WidthChangeConverter.cs" />
+    <Compile Include="UI\DragDropController.cs" />
+    <Compile Include="ExecuteSQL\Editors\EditorResources.cs" />
+    <Compile Include="ExecuteSQL\Editors\ResultTypeEditor\ResultTypeInLineEditor.xaml.cs" />
+    <Compile Include="ExecuteSQL\Editors\ResultTypeEditor\ResultTypeEditorItem.cs" />
+    <Compile Include="ExecuteSQL\Editors\ResultTypeEditor\ResultTypeEditorWindow.xaml.cs" />
+    <Compile Include="ExecuteSQL\Editors\ResultTypeEditor\ViewModel\ResultFieldModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\ResultTypeEditor\ViewModel\ResultTypeViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\SQLEditor.xaml.cs">
+      <DependentUpon>SQLEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\SQLEditorItem.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\ComplexNodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQL_Gen1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExecuteSQL_Gen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\NodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\ParameterNodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\SimpleNodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\SQLViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\StoredProcedureNodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\Editors\SQLEditor\ViewModel\TableNodeViewModel.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQL.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQLCodeGenerator.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQLDesigner.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQLShared.cs" />
+    <Compile Include="ExecuteSQL\ExecuteSQLX.cs" />
+    <Compile Include="ExecuteSQL\ResultTypeField.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\SqlStringHandler.cs" />
+    <Compile Include="Common\TypeExtensions.cs" />
+    <Compile Include="ExecuteSQL\DatabaseHelpers.cs" />
+    <Compile Include="UI\ShowMessageEventHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Stored Procedure Editor.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Resources\Connection Wizard.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="PluginIcon.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="DbBulkCopy\Editors\EditorResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DbBulkCopy\Editors\TableChooser\TableChooserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DbBulkCopy\Editors\TableChooser\TableInLineEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteSQL\Editors\EditorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExecuteSQL\Editors\ResultTypeEditor\ResultTypeInLineEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExecuteSQL\Editors\ResultTypeEditor\ResultTypeEditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExecuteSQL\Editors\SQLEditor\SQLEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\ConnectionControl\ConnectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Editors\ConnectionEditor\ConnectionEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\EditorResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ProcedureParametersEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\ProcedureParametersEditor\ProcedureParametersInlineEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ResultSetEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\ResultSetEditor\ResultSetInlineEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteStoredProcedure\Editors\StoredProcedureEditor\StoredProcedureEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mongo\Editors\MongoJsonEditor\MongoJsonEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mongo\Editors\TemplateTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MongoTemplates.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SQLHighlightingDefinition.xshd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="BeginTransaction\BeginTransaction_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>BeginTransaction_Gen.cs</LastGenOutput>
+    </None>
+    <None Include="DbBulkCopy\DbBulkCopy_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DbBulkCopy_Gen.cs</LastGenOutput>
+    </None>
+    <None Include="ExecuteSQL\ExecuteSQL_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ExecuteSQL_Gen1.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.Database.ExecuteSQL</CustomToolNamespace>
+    </None>
+    <EmbeddedResource Include="Resources\MongoJsonHighlightingDefinition.xshd" />
+    <None Include="ExecuteStoredProcedure\ExecuteStoredProcedureX_Gen.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ExecuteStoredProcedureX_Gen.cs</LastGenOutput>
+      <CustomToolNamespace>Twenty57.Linx.Components.Database.ExecuteStoredProcedure</CustomToolNamespace>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

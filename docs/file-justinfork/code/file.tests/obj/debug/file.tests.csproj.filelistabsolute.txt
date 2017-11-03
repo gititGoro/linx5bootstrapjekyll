@@ -1,0 +1,14 @@
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Components.File.Tests.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Components.File.Tests.pdb
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\nunit.framework.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Components.File.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Plugin.Common.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Plugin.TestKit.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Plugin.Utilities.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Plugin.UI.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Plugin.Compiler.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\Twenty57.Linx.Components.File.pdb
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\bin\Debug\nunit.framework.xml
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\obj\Debug\File.Tests.csprojResolveAssemblyReference.cache
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\obj\Debug\Twenty57.Linx.Components.File.Tests.dll
+C:\Hg\linx5-components-file-justinfork\Code\File.Tests\obj\Debug\Twenty57.Linx.Components.File.Tests.pdb

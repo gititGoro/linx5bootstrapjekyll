@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlTemplateFile>
+<Templates>
+	<Template>
+		<Name>Sort then group</Name>
+		<Description>Example of an aggregation operation, sorting records then grouping.</Description>
+		<Category>Aggregation Samples</Category>
+		<TemplateText>[
+			[[Placeholder]This sample operates on a table of student records in the following form:
+			{
+				name: "Jessica",
+				age: 12,
+				score: 100,
+				class: "A",
+			}
+			the aggregation finds the eldest student, total number of students and cumulative score for each class:]]
+
+			{
+				$sort: { age: -1 }  [[Placeholder] sort records by age in decending order ]] 
+			},
+			{
+			$group: {						[[Placeholder] group records ]]
+			_id: "$class"						[[Placeholder] by 'class' field ]]
+
+			[[Placeholder]create a new field called 'eldest' containing the name of first entry in the group ]]
+			eldest: { $first: "$name"}
+
+			[[Placeholder] create a new field 'number of students' containing the number of redcords in each group ]]
+			number_of_students: { $sum: 1 },
+
+			[[Placeholder] create a new field 'class_score' containing the sum of all 'score' fields in the group ]]
+			class_score: { $sum: "$score" },
+			}
+			},
+			[[pipelineOperatorArray] Additional aggregation operators can be inserted here ]]
+]</TemplateText>
+	</Template>
+	<Template>
+		<Name>Change multiple fields</Name>
+		<Description>Example of an update operation, affecting multiple fields.</Description>
+		<Category>Update Samples</Category>
+		<TemplateText>{
+	$set : { price: 51 },  [[Placeholder] Set the 'price' field to 51 ]]
+	$inc : { stock : 1 },  [[Placeholder] Incrememnt the 'stock' field by 1 ]]
+	$push : { flavours : "Watermelon" }, [[Placeholder] Add 'watermelon' to the 'flavours' list field ]]
+	[[updateOperatorArray]Additional update operators can be inserted here]] 
+}</TemplateText>
+	</Template>
+	<Template>
+		<Name>Basic criteria example</Name>
+		<Description>Example of a mongo criteria.</Description>
+		<Category>Query Samples</Category>
+		<TemplateText>{
+	[[Placeholder] Select all records where ..]]
+	 price: 30 ,							[[Placeholder] 'price' is  30, as well as any record where... ]] 
+	 $and: [
+			{ quantity: { $gt: 100 } },   [[Placeholder] 'quantitiy' is greater than 100 and...]]
+			{ price: { $lt: 9.95 } }      [[Placeholder] 'price' is less than 9.95 ]]
+	]
+	[[queryarray] Additional query selectors can be added here ]]
+}</TemplateText>
+	</Template>
+	<Template>
+		<Name>    Equal</Name>
+		<Description>Matches values that are equal than the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : [[Value]Value]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$gt Greater Than</Name>
+		<Description>Matches values that are greater than the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $gt : [[Value]Value]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$gte Greater or Equal</Name>
+		<Description>Matches values that are equal to or greater than the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $gte : [[Value]Value]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$in In</Name>
+		<Description>Matches any of the values that exist in an array specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $in : [ [[Value]Value 1]], [[Value]Value 2...]]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$lt Less Than</Name>
+		<Description>Matches values that are less than the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $lt : [[Value]Value]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$lte</Name>
+		<Description>Matches values that are less than or equal to the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $lte : [[Value]Value]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$ne Not Equal</Name>
+		<Description>Matches all values that are not equal to the value specified in the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $ne : [[Value]Value]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$nin Not In</Name>
+		<Description>Matches values that do not exist in an array specified to the query.</Description>
+		<Category>Query Selectors.Comparison</Category>
+		<TemplateText>[[Field]Field Name]] : { $nin : [ [[Value]Value]], [[Value]Value 2...]]] ]} </TemplateText>
+	</Template>
+	<Template>
+		<Name>$or</Name>
+		<Description>Joins query clauses with a logical OR returns all documents that match the conditions of either clause.</Description>
+		<Category>Query Selectors.Logical</Category>
+		<TemplateText>$or : [ { [[Query]Condition 1]] }, { [[Query]Condition 2]] }]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$and</Name>
+		<Description>Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.</Description>
+		<Category>Query Selectors.Logical</Category>
+		<TemplateText>$and : [ { [[Query]Condition 1]] }, { [[Query]Condition 2]] } ]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$not</Name>
+		<Description>Inverts the effect of a query expression and returns documents that do not match the query expression.</Description>
+		<Category>Query Selectors.Logical</Category>
+		<TemplateText>$not : { [[Query]Condition]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$nor</Name>
+		<Description>Joins query clauses with a logical NOR returns all documents that fail to match both clauses.</Description>
+		<Category>Query Selectors.Logical</Category>
+		<TemplateText>$nor : { [[Query]Condition 1]], [[Query]Condition 2]] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$exists</Name>
+		<Description>Matches documents that have the specified field.</Description>
+		<Category>Query Selectors.Element</Category>
+		<TemplateText>[[Field]Field Name]] : { $exists : [[Placeholder]true or false]] }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$type</Name>
+		<Description>Selects documents if a field is of the specified type.</Description>
+		<Category>Query Selectors.Element</Category>
+		<TemplateText>
+			[[Field]Field Name]] : { $type : [[Placeholder]
+			Enter the number corresponding to the type you would like to match:
+			1:    Double
+			2:    String
+			3:    Object
+			4:    Array
+			5:    Binary data
+			6:    Undefined (deprecated)
+			7:    Object id
+			8:    Boolean
+			9:    Date
+			10:   Null
+			11:   Regular Expression
+			13:   JavaScript
+			14:   Symbol
+			15:   JavaScript (with scope)
+			16:   32-bit integer
+			17:   Timestamp
+			18:   64-bit integer
+			255:  Min key
+			127:  Max key
+			]] }
+		</TemplateText>
+	</Template>
+	<Template>
+		<Name>$mod</Name>
+		<Description>Performs a modulo operation on the value of a field and selects documents with a specified result.</Description>
+		<Category>Query Selectors.Evaluation</Category>
+		<TemplateText>[[Field]Field Name]] : { $mod : [ [[Placeholder]Divisor]], [[Placeholder]Expected Remainder]] ] } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$regex</Name>
+		<Description>Selects documents where values match a specified regular expression.</Description>
+		<Category>Query Selectors.Evaluation</Category>
+		<TemplateText>
+			[[Field]Field Name]] : {
+			$regex : '[[Placeholder]Regular Expression (eg: "acme.*corp")]]',
+			$options : '[[Placeholder]Regular Expression Options, include any of combination of the following characters:
+			i - toggles case insensitivity, and allows all letters in the pattern to match upper and lower cases.
+			m - toggles multiline regular expression. Without this option, all regular expression match within one line.
+					If there are no newline characters (e.g. \n) or no start/end of line construct, the m option has no effect.
+			x - toggles an “extended” capability. When set, $regex ignores all white space characters unless escaped or included in a character class.
+					Additionally, it ignores characters between an un-escaped # character and the next new line, so that you may include comments in complicated patterns. This only applies to data characters; white space characters may never appear within special character sequences in a pattern.
+					The x option does not affect the handling of the VT character (i.e. code 11.)
+			s - allows the dot (e.g. .) character to match all characters including newline characters.
+			]]' }
+			}
+		</TemplateText>
+	</Template>
+	<Template>
+		<Name>$where</Name>
+		<Category>Query Selectors.Evaluation</Category>
+		<TemplateText>[[Field]Field Name]] :{ $where : "[[Placeholder]Javascript Expression (eg: this.field1==this.field2)]]" }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$geoWithin</Name>
+		<Description>Selects geometries within a bounding GeoJSON geometry.</Description>
+		<Category>Query Selectors.Geospatial</Category>
+		<TemplateText>[[Field]Field Name]] : { $geoWithin : "[[Value]GeoJSON geometry]]" } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$geoIntersects</Name>
+		<Description>Selects geometries that intersect with a GeoJSON geometry.</Description>
+		<Category>Query Selectors.Geospatial</Category>
+		<TemplateText>[[Field]Field Name]] : { $geoIntersects : "[[Value]GeoJSON geometry]]" } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$near</Name>
+		<Description>Returns geospatial objects in proximity to a point.</Description>
+		<Category>Query Selectors.Geospatial</Category>
+		<TemplateText>[[Field]Field Name]] : { $near : "[[Value]GeoJSON geometry]]" } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$nearSphere</Name>
+		<Description>Returns geospatial objects in proximity to a point on a sphere.</Description>
+		<Category>Query Selectors.Geospatial</Category>
+		<TemplateText>[[Field]Field Name]] : { $nearSphere : "[[Value]GeoJSON geometry]]" } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$all</Name>
+		<Description>Matches arrays that contain all elements specified in the query.</Description>
+		<Category>Query Selectors.Array</Category>
+		<TemplateText>[[Field]Array Field Name]] : { $all :  [ [[Placeholder]Element 1]], [[Placeholder]Element 2...]] ]} </TemplateText>
+	</Template>
+	<Template>
+		<Name>$elemMatch</Name>
+		<Description>Selects documents if an element in the array field matches all the specified $elemMatch condition.</Description>
+		<Category>Query Selectors.Array</Category>
+		<TemplateText>[[Field]Array Field Name]] : { $elemMatch : {[[Query]Condition]]} } </TemplateText>
+	</Template>
+	<Template>
+		<Name>$size</Name>
+		<Description>Selects documents if the array field is a specified size.</Description>
+		<Category>Query Selectors.Array</Category>
+		<TemplateText>[[Field]Array Field Name]] : {  $size :  [[Placeholder]Target Size]] } </TemplateText>
+	</Template>
+	
+	<!-- Aggregation PipeLine-->
+	<Template>
+		<Name>$project</Name>
+		<Description>Reshapes a document stream. $project can rename, add, or remove fields as well as create computed values and sub-documents.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$project : {
+	[[Value]Output Field Name]] : [[expression]Value (Field name or expression)]],
+	[[NameExpressionArray] Additional fields...]]
+}</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$match</Name>
+		<Description>Filters the document stream, and only allows matching documents to pass into the next pipeline stage. $match uses standard MongoDB queries.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$match: { [[queryarray]Query Selector]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$limit</Name>
+		<Description>Restricts the number of documents in an aggregation pipeline.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$limit: [[placeholder]Number of documents to return]]</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$skip</Name>
+		<Description>Skips over a specified number of documents from the pipeline and returns the rest.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$skip: [[placeholder]Number of documents to skip]]</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$unwind</Name>
+		<Description>Takes an array of documents and returns them as a stream of documents.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$unwind: "[[placeholder]Array field]]"</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$group</Name>
+		<Description>Groups documents together for the purpose of calculating aggregate values based on a collection of documents.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$group: {
+		_id : { 
+				[[placeholder]The _id objects specifies which documents will be grouped, for example:
+					idField1 : "$age",
+					idField2 : "$name",
+				will group all documents with the same 'age' and 'name' fields.]]
+					},
+		[[groupoperatorarray]Insert any number of group operators here to specify aggregated fields
+		for example:
+		totalAge : { $sum : "$age" }
+		will create a new field called "totalAge" which will contain the sum of all "age" fields in the grouped documents.
+		]]
+		}</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$sort</Name>
+		<Description>Takes all input documents and returns them in a stream of sorted documents.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>$sort: {[[Field]Field name]] : [[value]1 for ascending order, -1 for descending order}]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$geoNear</Name>
+		<Description>Returns an ordered stream of documents based on proximity to a geospatial point.</Description>
+		<Category>Aggregation.Pipeline Operators</Category>
+		<TemplateText>
+			$geoNear: {
+			near: [[value]Target point]],
+			distanceField: "[[value]Field name to hold calculated distance]]",
+			maxDistance: [[value]Maximum distance]],
+			query: { [[query] Mongo query document]] },
+			includeLocs: "[[value]Field name to hold location]]",
+			uniqueDocs: [[value]true or false]],
+			num: [[value]Number of documents to return (optional)]]
+			}
+		</TemplateText>
+	</Template>
+	
+	<!-- Expression operators -->
+		<Template>
+			<Name>$addToSet</Name>
+			<Description>Returns an array of all the unique values for the selected field among for each document in that group.</Description>
+			<Category>Aggregation.Group Operators</Category>
+			<TemplateText>[[value]New field name]] : { $addToSet: [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$first</Name>
+		<Description>Returns the first value in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[value]New field name]] : { $first : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$last</Name>
+		<Description>Returns the last value in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[value]New field name]] : { $last : [[expression]Value (Database field or expression)]] "</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$max</Name>
+		<Description>Returns the highest value in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[value]New field name]] : { $max : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$min</Name>
+		<Description>Returns the lowest value in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[value]New field name]] : { $min : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$avg</Name>
+		<Description>Returns an average of all the values in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[value]New field name]] : { $avg : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$push</Name>
+		<Description>Returns an array of all values for the selected field among for each document in that group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[placeholder]New array field name]] : { $push : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	<Template>
+		<Name>$sum</Name>
+		<Description>Returns the sum of all the values in a group.</Description>
+		<Category>Aggregation.Group Operators</Category>
+		<TemplateText>[[placeholder]New array field name]] : { $sum : [[expression]Value (Database field or expression)]] }</TemplateText>
+	</Template>
+	
+	<!-- Expression operators : Boolean -->
+	<Template>
+		<Name>$and</Name>
+		<Description>Returns true only when all values in its input array are true.</Description>
+		<Category>Aggregation.Expression Operators.Boolean Operators</Category>
+		<TemplateText>$and : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$or</Name>
+		<Description>Returns true when any value in its input array are true.</Description>
+		<Category>Aggregation.Expression Operators.Boolean Operators</Category>
+		<TemplateText>$or : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$not</Name>
+		<Description>Returns the boolean value that is the opposite of the input value.</Description>
+		<Category>Aggregation.Expression Operators.Boolean Operators</Category>
+		<TemplateText>$not : [[expression]Value 1]]</TemplateText>
+	</Template>
+	
+	<!-- Expression operators : Comparison -->
+	<Template>
+		<Name>$cmp</Name>
+		<Description>Compares two values and returns the result of the comparison as an integer.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$cmp : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$eq</Name>
+		<Description>Takes two values and returns true if the values are equivalent.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$eq : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$gt</Name>
+		<Description>Takes two values and returns true if the first is larger than the second.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$gt : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$gte</Name>
+		<Description>Takes two values and returns true if the first is larger than or equal to the second.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$gte : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$lt</Name>
+		<Description>Takes two values and returns true if the second value is larger than the first.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$lt : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$lte</Name>
+		<Description>Takes two values and returns true if the second value is larger than or equal to the first.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$lte : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$ne</Name>
+		<Description>Takes two values and returns true if the values are not equivalent.</Description>
+		<Category>Aggregation.Expression Operators.Comparison Operators</Category>
+		<TemplateText>$ne : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+
+	<!-- Expression operators : Arithmetic Operators -->
+	<Template>
+		<Name>$add</Name>
+		<Description>Computes the sum of an array of numbers.</Description>
+		<Category>Aggregation.Expression Operators.Arithmetic Operators</Category>
+		<TemplateText>$add : [ [[expression]Value 1]], [[expression]Value 2]] ]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$divide</Name>
+		<Description>Takes two numbers and divides the first number by the second.</Description>
+		<Category>Aggregation.Expression Operators.Arithmetic Operators</Category>
+		<TemplateText>$divide : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$mod</Name>
+		<Description>Takes two numbers and calculates the modulo of the first number divided by the second.</Description>
+		<Category>Aggregation.Expression Operators.Arithmetic Operators</Category>
+		<TemplateText>$mod : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$multiply</Name>
+		<Description>Computes the product of an array of numbers.</Description>
+		<Category>Aggregation.Expression Operators.Arithmetic Operators</Category>
+		<TemplateText>$multiply : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$subtract</Name>
+		<Description>Takes two numbers and subtracts the second number from the first.</Description>
+		<Category>Aggregation.Expression Operators.Arithmetic Operators</Category>
+		<TemplateText>$subtract : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	
+	<!-- Expression operators : String Operators -->
+	<Template>
+		<Name>$concat</Name>
+		<Description>Concatenates two strings.</Description>
+		<Category>Aggregation.Expression Operators.String Operators</Category>
+		<TemplateText>$concat : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$strcasecmp</Name>
+		<Description>Compares two strings and returns an integer that reflects the comparison.</Description>
+		<Category>Aggregation.Expression Operators.String Operators</Category>
+		<TemplateText>$strcasecmp : [ [[expression]Value 1]], [[expression]Value 2]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$substr</Name>
+		<Description>Takes a string and returns portion of that string.</Description>
+		<Category>Aggregation.Expression Operators.String Operators</Category>
+		<TemplateText>$substr : [ [[expression]Value (Database field or expression)]], [[placeholder]Start Index]], [[placeholder]Length]]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$toLower</Name>
+		<Description>Converts a string to lowercase.</Description>
+		<Category>Aggregation.Expression Operators.String Operators</Category>
+		<TemplateText>$toLower : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+	<Template>
+		<Name>$toUpper</Name>
+		<Description>Converts a string to uppercase.</Description>
+		<Category>Aggregation.Expression Operators.String Operators</Category>
+		<TemplateText>$toUpper : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<!-- Expression operators : Date Operators -->
+
+	<Template>
+		<Name>$dayOfYear</Name>
+		<Description>Converts a date to a number between 1 and 366.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$dayOfYear: [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$dayOfMonth</Name>
+		<Description>Converts a date to a number between 1 and 31.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$dayOfMonth : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$dayOfWeek</Name>
+		<Description> Converts a date to a number between 1 and 7.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$dayOfWeek : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$year</Name>
+		<Description>Converts a date to the full year.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$year : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$month</Name>
+		<Description>Converts a date to a number between 1 and 12.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$month : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$week</Name>
+		<Description>Converts a date to a number between 1 and 53.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$week : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$hour</Name>
+		<Description>Converts a date to a number between 1 and 23.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$hour : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$minute</Name>
+		<Description>Converts a date to a number between 1 and 59.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$minute : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$second</Name>
+		<Description>Converts a date into a number between 0 and 59. May be 60 to account for leap seconds.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$second : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$millisecond</Name>
+		<Description>Returns the millisecond portion of a date as an integer between 0 and 999.</Description>
+		<Category>Aggregation.Expression Operators.Date Operators</Category>
+		<TemplateText>$millisecond : [[expression]Value (Database field or expression)]]</TemplateText>
+	</Template>
+
+	<!-- Update Operators -->
+	<Template>
+		<Name>$inc</Name>
+		<Description>Increments the value of the field by the specified amount.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$inc : { [[field]Field name]] : [[value]Amount]], [[namevaluearray]...]] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$rename</Name>
+		<Description>Renames a field.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$rename : { [[field]Field name]] : "[[value]New name]]", [[namevaluearray]...]] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$setOnInsert</Name>
+		<Description>Sets the value of a field upon document creation during an upsert. Has no effect on update operations that modify existing documents.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$setOnInsert : { [[field]Field name]] : "[[value]Value]]", [[namevaluearray]...]] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$set</Name>
+		<Description>Sets the value of a field in an existing document.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$set : { [[field]Field name]] : "[[value]Value]]", [[namevaluearray]...]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$unset</Name>
+		<Description>Removes the specified field from an existing document.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$unset : { [[field]Field name]] : "", [[namevaluearray]...]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$bit</Name>
+		<Description>Performs bitwise AND and OR updates of integer values.</Description>
+		<Category>Update Operators</Category>
+		<TemplateText>$bit : { [[field]Field name]] : { [[value]'and' or 'or']] : NumberInt([[value]Integer value]]) } }</TemplateText>
+	</Template>
+	
+	<!-- Array Updates-->
+	<Template>
+		<Name>$addtoset</Name>
+		<Description>Adds elements to an existing array only if they do not already exist in the array.</Description>
+		<Category>Update Operators.Arrays</Category>
+		<TemplateText>$addtoset : { [[field]Field name]] : [[value]Value]], [[namevaluearray]...]] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$pullAll</Name>
+		<Description>Removes all matching values from an array.</Description>
+		<Category>Update Operators.Arrays</Category>
+		<TemplateText>$pullAll : { [[field]Field name]] : [ [[value]Value 1]], [[valuearray]Value 2 ...]] ] }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$pull</Name>
+		<Description>Removes items from an array that match a query statement.</Description>
+		<Category>Update Operators.Arrays</Category>
+		<TemplateText>$pull : { [[field]Field name]] : { [[query]Query selector]] } }</TemplateText>
+	</Template>
+
+	<Template>
+		<Name>$push</Name>
+		<Description>Adds an item to an array.</Description>
+		<Category>Update Operators.Arrays</Category>
+		<TemplateText>$push : { [[field]Field Name]] : [[value]Value]] }</TemplateText>
+	</Template>
+	
+	<Template>
+		<Name>$push multiple</Name>
+		<Description>Adds multiple items to an array.</Description>
+		<Category>Update Operators.Arrays</Category>
+		<TemplateText>
+			$push: {
+			[[field]Field name]] : {
+			$each : [ [[value]Value 1]], [[valuearray]Value 2 ...]] ],
+			$slice : -[[value]number of entries insert]],
+			$sort : { [[field]Field name]] : [[value] -1 for descending order, 1 for ascending order]], [[namevaluearray]...]] }
+			}</TemplateText>
+	</Template>
+
+</Templates>
+	
+	
+</XmlTemplateFile>

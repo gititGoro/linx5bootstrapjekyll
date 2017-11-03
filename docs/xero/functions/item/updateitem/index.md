@@ -7,43 +7,6 @@ feature: item
 component: updateitem
 toc: true
 ---
----
-layout: docs
-title: updateitem
-description: updateitem
-group: functions
-feature: item
-component: updateitem
-toc: true
----
----
-layout: docs
-title: updateitem
-description: updateitem
-group: functions
-feature: item
-component: updateitem
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: item
-feature: updateitem
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateItem
-description: UpdateItem
-group: Functions
-feature: Item
-component: UpdateItem
-toc: true
-redirect_from: docs/Functions/Item/UpdateItem/index
----
 UpdateItem
 ============
 

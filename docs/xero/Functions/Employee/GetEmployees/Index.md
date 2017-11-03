@@ -7,43 +7,6 @@ feature: employee
 component: getemployees
 toc: true
 ---
----
-layout: docs
-title: getemployees
-description: getemployees
-group: functions
-feature: employee
-component: getemployees
-toc: true
----
----
-layout: docs
-title: getemployees
-description: getemployees
-group: functions
-feature: employee
-component: getemployees
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: employee
-feature: getemployees
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetEmployees
-description: GetEmployees
-group: Functions
-feature: Employee
-component: GetEmployees
-toc: true
-redirect_from: docs/Functions/Employee/GetEmployees/index
----
 GetEmployees
 ============
 

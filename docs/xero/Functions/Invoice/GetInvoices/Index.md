@@ -7,43 +7,6 @@ feature: invoice
 component: getinvoices
 toc: true
 ---
----
-layout: docs
-title: getinvoices
-description: getinvoices
-group: functions
-feature: invoice
-component: getinvoices
-toc: true
----
----
-layout: docs
-title: getinvoices
-description: getinvoices
-group: functions
-feature: invoice
-component: getinvoices
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: invoice
-feature: getinvoices
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetInvoices
-description: GetInvoices
-group: Functions
-feature: Invoice
-component: GetInvoices
-toc: true
-redirect_from: docs/Functions/Invoice/GetInvoices/index
----
 GetInvoices
 ============
 

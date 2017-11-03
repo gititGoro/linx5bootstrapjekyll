@@ -1,0 +1,43 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+
+<#@ parameter name="FunctionContextProperty" type="System.String" #>
+<#@ parameter name="ConnectionType" type="Twenty57.Linx.Components.Database.Common.ConnectionType" #>
+<#@ parameter name="ConnectionStringProperty" type="System.String" #>
+<#@ parameter name="Timeout" type="System.Int32" #>
+<#@ parameter name="BatchSize" type="System.Int32" #>
+<#@ parameter name="TableName" type="System.String" #>
+<#@ parameter name="ColumnNames" type="System.String[]" #>
+<#@ parameter name="ColumnPropertyNames" type="System.String[]" #>
+<#@ parameter name="ColumnDataTypes" type="Twenty57.Linx.Components.Database.Common.DatabaseModel.DataType[]" #>
+
+<#@ parameter name="ExecutionPathOutputName" type="System.String" #>
+<#@ parameter name="ExecutionPathName" type="System.String" #>
+
+
+var bulkCopier = new Twenty57.Linx.Components.Database.DbBulkCopy.Runtime.DbBulkCopierX(
+	<#= CSharpUtilities.EnumAsString(ConnectionType) #>, <#= ConnectionStringProperty #>, <#= CSharpUtilities.ToVerbatimString(TableName) #>
+<# foreach (var nextColumnName in ColumnNames) { #>
+, <#= CSharpUtilities.ToVerbatimString(nextColumnName) #>
+<# } #>);
+bulkCopier.Timeout = <#= Timeout #>;
+bulkCopier.BatchSize = <#= BatchSize #>;
+bulkCopier.LogEvent += message => <#= FunctionContextProperty #>.Log(message);
+
+var makeRow = new System.Func<dynamic, object[]>(row => {
+	object[] columns = new object[<#= ColumnPropertyNames.Length #>];
+	<# for (int i = 0; i < ColumnPropertyNames.Length; i++) { #>
+	columns[<#= i #>] = 
+		<# if (ColumnDataTypes[i] == Twenty57.Linx.Components.Database.Common.DatabaseModel.DataType.Binary) { #>
+		row.<#= ColumnPropertyNames[i] #> == null ? null : row.<#= ColumnPropertyNames[i] #>.ToArray();
+		<# } else { #>
+		row.<#= ColumnPropertyNames[i] #>;
+		<# } #>
+	<# } #>
+	return columns;
+});
+
+bulkCopier.Start();
+<#= ExecutionPathOutputName #> = Twenty57.Linx.Components.Database.DbBulkCopy.Runtime.SingleEnumerable.Make(
+	new Twenty57.Linx.Components.Database.DbBulkCopy.Runtime.Loader(bulkCopier, makeRow))
+	.Select(l => new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult(<#= CSharpUtilities.ToVerbatimString(ExecutionPathName) #>, l));

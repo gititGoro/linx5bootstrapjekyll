@@ -1,0 +1,84 @@
+diff --git a/Code/Database/BeginTransaction/BeginTransaction.cs b/Code/Database/BeginTransaction/BeginTransaction.cs
+--- a/Code/Database/BeginTransaction/BeginTransaction.cs
++++ b/Code/Database/BeginTransaction/BeginTransaction.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class BeginTransaction : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "BeginTransaction"; }
+diff --git a/Code/Database/DbBulkCopy/DbBulkCopy.cs b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+--- a/Code/Database/DbBulkCopy/DbBulkCopy.cs
++++ b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class DbBulkCopy : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string SearchKeywords
+ 		{
+ 			get { return "database bulk load"; }
+diff --git a/Code/Database/ExecuteSQL/ExecuteSQL.cs b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+--- a/Code/Database/ExecuteSQL/ExecuteSQL.cs
++++ b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteSQL : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "ExecuteSQL"; }
+diff --git a/Code/Database/ExecuteStoredProcedure/ExecuteStoredProcedure.cs b/Code/Database/ExecuteStoredProcedure/ExecuteStoredProcedure.cs
+--- a/Code/Database/ExecuteStoredProcedure/ExecuteStoredProcedure.cs
++++ b/Code/Database/ExecuteStoredProcedure/ExecuteStoredProcedure.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteStoredProcedure : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string SearchKeywords
+ 		{
+ 			get { return "database stored procedure"; }
+diff --git a/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs b/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
+--- a/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
++++ b/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class MongoDBMapReduce : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "MongoDBMapReduce"; }
+diff --git a/Code/Database/Mongo/MongoDBRead/MongoDBRead.cs b/Code/Database/Mongo/MongoDBRead/MongoDBRead.cs
+--- a/Code/Database/Mongo/MongoDBRead/MongoDBRead.cs
++++ b/Code/Database/Mongo/MongoDBRead/MongoDBRead.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class MongoDBRead : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "MongoDBRead"; }
+diff --git a/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs b/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
+--- a/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
++++ b/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class MongoDBWrite : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "MongoDBWrite"; }

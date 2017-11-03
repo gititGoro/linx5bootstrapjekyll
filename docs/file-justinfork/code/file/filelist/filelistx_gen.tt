@@ -1,0 +1,54 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Twenty57.Linx.Components.File" #>
+
+<#@ parameter name="FunctionContextPropertyName" type="System.String"#>
+
+<#@ parameter name="IncludeSubfolders" type="System.String"#> 
+<#@ parameter name="FolderPath" type="System.String"#> 
+<#@ parameter name="SearchPattern" type="System.String"#> 
+<#@ parameter name="LoopResults" type="System.Boolean"#>
+<#@ parameter name="ReturnFullPath" type="System.Boolean"#>
+
+<#@ parameter name="FileInfoTypeName" type="System.String"#> 
+<#@ parameter name="OutputTypeName" type="System.String"#> 
+<#@ parameter name="ExecutionPathName" type="System.String" #>
+<#@ parameter name="ExecutionPathOutputName" type="System.String"#> 
+
+<#= FunctionContextPropertyName #>.Log("Querying files in " + <#= FolderPath #>);
+
+var buildFileInfo = new System.Func<System.IO.FileInfo, <#= FileInfoTypeName #>>(file => {
+	<#= FunctionContextPropertyName #>.Log(file.FullName);
+
+	return new <#= FileInfoTypeName #>
+	{
+		<#= FileListShared.OutputFileNameName #> = <# if (ReturnFullPath) { #>file.FullName<# } else { #>file.Name<# } #>,
+		<#= FileListShared.OutputCreationTimeName #> = file.CreationTime,
+		<#= FileListShared.OutputLastAccessTimeName #> = file.LastAccessTime,
+		<#= FileListShared.OutputLastWriteTimeName #> = file.LastWriteTime,
+		<#= FileListShared.OutputSizeName #> = file.Length,
+		<#= FileListShared.OutputReadOnlyName #> = ((file.Attributes | System.IO.FileAttributes.ReadOnly) == file.Attributes),
+		<#= FileListShared.OutputHiddenName #> = ((file.Attributes | System.IO.FileAttributes.Hidden) == file.Attributes)
+	};
+});
+
+var files = Twenty57.Linx.Components.File.FileListX
+	.GetFiles(<#= IncludeSubfolders #>, 
+		<#= FolderPath #>, 
+		<#= SearchPattern #>);
+<#= FunctionContextPropertyName #>.Log(files.Count() + " files found.");
+var fileInfos = files.Select(file =>
+		<# if (LoopResults) { #> new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult("<#= ExecutionPathName #>", <# } #>
+		buildFileInfo(file)	
+		<# if (LoopResults) { #> ) <# } #>
+		);
+
+var output = new <#= OutputTypeName #>();
+output.<#= FileListShared.OutputNumberOfFilesName #> = files.Count();
+
+<# if (LoopResults) { #>
+<#= ExecutionPathOutputName #> = fileInfos;
+<# } else {#>
+output.<#= FileListShared.OutputFileInfoName #> = fileInfos.ToList();
+<# }#>
+
+return output;

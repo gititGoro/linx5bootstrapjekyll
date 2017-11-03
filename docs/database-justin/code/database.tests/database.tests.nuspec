@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<description>Tests</description>		
+		<language>en-US</language>
+		<dependencies>
+			<dependency id="Twenty57.Linx.Components.Database" version="$version$" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\Digiata.Resources.dll" target="lib\net45" />
+		<file src="bin\Release\Twenty57.Linx.Components.Database.Tests.dll.config" target="lib\net45" />
+	</files>	
+</package>

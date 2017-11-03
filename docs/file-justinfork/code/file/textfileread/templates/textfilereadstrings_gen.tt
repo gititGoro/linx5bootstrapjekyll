@@ -1,0 +1,27 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Twenty57.Linx.Components.File.TextFileRead" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+
+<#@ parameter name="functionContextPropertyName" type="System.String" #>
+<#@ parameter name="filePathPropertyName" type="System.String" #>
+<#@ parameter name="readType" type="Twenty57.Linx.Components.File.TextFileRead.FileReadOptions" #>
+<#@ parameter name="codePage" type="Twenty57.Linx.Components.File.Common.TextCodepage" #>
+
+<#@ parameter name="skipHeaderLines" type="System.String" #>
+<#@ parameter name="skipFooterLines" type="System.String" #>
+
+var fileHandle = (Twenty57.Linx.Components.File.Common.TextFileHandle)<#= filePathPropertyName #>;
+fileHandle.LogEvent += message => <#= functionContextPropertyName #>.Log(message);
+var reader = new Twenty57.Linx.Components.File.TextFileRead.TextFileReader(
+	fileHandle, 
+	<#= CSharpUtilities.EnumAsString(readType) #>, 
+	<#= CSharpUtilities.EnumAsString(codePage) #>, 
+	<#= skipHeaderLines #>,
+	<#= skipFooterLines #>);
+reader.LogEvent += message => <#= functionContextPropertyName #>.Log(message);
+
+<#
+var readMethod = readType==Twenty57.Linx.Components.File.TextFileRead.FileReadOptions.Complete ? "ReadComplete" : "ReadTableNoFields";
+#>
+
+return reader.<#= readMethod #>();

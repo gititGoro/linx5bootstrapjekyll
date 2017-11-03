@@ -7,43 +7,6 @@ feature: currency
 component: getcurrencies
 toc: true
 ---
----
-layout: docs
-title: getcurrencies
-description: getcurrencies
-group: functions
-feature: currency
-component: getcurrencies
-toc: true
----
----
-layout: docs
-title: getcurrencies
-description: getcurrencies
-group: functions
-feature: currency
-component: getcurrencies
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: currency
-feature: getcurrencies
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetCurrencies
-description: GetCurrencies
-group: Functions
-feature: Currency
-component: GetCurrencies
-toc: true
-redirect_from: docs/Functions/Currency/GetCurrencies/index
----
 GetCurrencies
 ============
 

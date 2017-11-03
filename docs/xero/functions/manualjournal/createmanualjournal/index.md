@@ -7,43 +7,6 @@ feature: manualjournal
 component: createmanualjournal
 toc: true
 ---
----
-layout: docs
-title: createmanualjournal
-description: createmanualjournal
-group: functions
-feature: manualjournal
-component: createmanualjournal
-toc: true
----
----
-layout: docs
-title: createmanualjournal
-description: createmanualjournal
-group: functions
-feature: manualjournal
-component: createmanualjournal
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: manualjournal
-feature: createmanualjournal
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateManualJournal
-description: CreateManualJournal
-group: Functions
-feature: ManualJournal
-component: CreateManualJournal
-toc: true
-redirect_from: docs/Functions/ManualJournal/CreateManualJournal/index
----
 CreateManualJournal
 ============
 

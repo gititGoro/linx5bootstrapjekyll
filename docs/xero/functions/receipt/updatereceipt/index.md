@@ -7,43 +7,6 @@ feature: receipt
 component: updatereceipt
 toc: true
 ---
----
-layout: docs
-title: updatereceipt
-description: updatereceipt
-group: functions
-feature: receipt
-component: updatereceipt
-toc: true
----
----
-layout: docs
-title: updatereceipt
-description: updatereceipt
-group: functions
-feature: receipt
-component: updatereceipt
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: receipt
-feature: updatereceipt
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateReceipt
-description: UpdateReceipt
-group: Functions
-feature: Receipt
-component: UpdateReceipt
-toc: true
-redirect_from: docs/Functions/Receipt/UpdateReceipt/index
----
 UpdateReceipt
 ============
 

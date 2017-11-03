@@ -1,0 +1,33 @@
+using Twenty57.Linx.Plugin.Common;
+using Twenty57.Linx.Components.Database.Mongo.MongoDBWrite;
+
+namespace Twenty57.Linx.Components.MongoDB
+{
+	public class MongoDBWrite : FunctionProvider
+	{
+		public override string Name
+		{
+			get { return "MongoDBWrite"; }
+		}
+
+		public override string SearchKeywords
+		{
+			get { return "mongo database write"; }
+		}
+
+		public override FunctionDesigner CreateDesigner(IDesignerContext context)
+		{
+			return new MongoDBWriteDesigner(context);
+		}
+
+		public override FunctionDesigner CreateDesigner(IFunctionData data, IDesignerContext context)
+		{
+			return new MongoDBWriteDesigner(data, context);
+		}
+
+		public override FunctionCodeGenerator CreateCodeGenerator(IFunctionData data)
+		{
+			return new MongoDBWriteCodeGenerator(data);
+		}
+	}
+}

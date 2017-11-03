@@ -1,0 +1,36 @@
+diff --git a/Code/Database/BeginTransaction/BeginTransaction.cs b/Code/Database/BeginTransaction/BeginTransaction.cs
+--- a/Code/Database/BeginTransaction/BeginTransaction.cs
++++ b/Code/Database/BeginTransaction/BeginTransaction.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class BeginTransaction : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "BeginTransaction"; }
+diff --git a/Code/Database/DbBulkCopy/DbBulkCopy.cs b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+--- a/Code/Database/DbBulkCopy/DbBulkCopy.cs
++++ b/Code/Database/DbBulkCopy/DbBulkCopy.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class DbBulkCopy : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string SearchKeywords
+ 		{
+ 			get { return "database bulk load"; }
+diff --git a/Code/Database/ExecuteSQL/ExecuteSQL.cs b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+--- a/Code/Database/ExecuteSQL/ExecuteSQL.cs
++++ b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteSQL : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "ExecuteSQL"; }

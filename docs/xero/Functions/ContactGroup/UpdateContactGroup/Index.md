@@ -7,43 +7,6 @@ feature: contactgroup
 component: updatecontactgroup
 toc: true
 ---
----
-layout: docs
-title: updatecontactgroup
-description: updatecontactgroup
-group: functions
-feature: contactgroup
-component: updatecontactgroup
-toc: true
----
----
-layout: docs
-title: updatecontactgroup
-description: updatecontactgroup
-group: functions
-feature: contactgroup
-component: updatecontactgroup
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contactgroup
-feature: updatecontactgroup
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateContactGroup
-description: UpdateContactGroup
-group: Functions
-feature: ContactGroup
-component: UpdateContactGroup
-toc: true
-redirect_from: docs/Functions/ContactGroup/UpdateContactGroup/index
----
 UpdateContactGroup
 ============
 

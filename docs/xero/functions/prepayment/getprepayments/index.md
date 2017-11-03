@@ -7,43 +7,6 @@ feature: prepayment
 component: getprepayments
 toc: true
 ---
----
-layout: docs
-title: getprepayments
-description: getprepayments
-group: functions
-feature: prepayment
-component: getprepayments
-toc: true
----
----
-layout: docs
-title: getprepayments
-description: getprepayments
-group: functions
-feature: prepayment
-component: getprepayments
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: prepayment
-feature: getprepayments
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetPrepayments
-description: GetPrepayments
-group: Functions
-feature: Prepayment
-component: GetPrepayments
-toc: true
-redirect_from: docs/Functions/Prepayment/GetPrepayments/index
----
 GetPrepayments
 ============
 

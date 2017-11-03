@@ -7,43 +7,6 @@ feature: linkedtransaction
 component: createlinkedtransaction
 toc: true
 ---
----
-layout: docs
-title: createlinkedtransaction
-description: createlinkedtransaction
-group: functions
-feature: linkedtransaction
-component: createlinkedtransaction
-toc: true
----
----
-layout: docs
-title: createlinkedtransaction
-description: createlinkedtransaction
-group: functions
-feature: linkedtransaction
-component: createlinkedtransaction
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: linkedtransaction
-feature: createlinkedtransaction
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateLinkedTransaction
-description: CreateLinkedTransaction
-group: Functions
-feature: LinkedTransaction
-component: CreateLinkedTransaction
-toc: true
-redirect_from: docs/Functions/LinkedTransaction/CreateLinkedTransaction/index
----
 CreateLinkedTransaction
 ============
 

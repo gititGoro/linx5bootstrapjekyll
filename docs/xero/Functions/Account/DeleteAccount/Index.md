@@ -7,43 +7,6 @@ feature: account
 component: deleteaccount
 toc: true
 ---
----
-layout: docs
-title: deleteaccount
-description: deleteaccount
-group: functions
-feature: account
-component: deleteaccount
-toc: true
----
----
-layout: docs
-title: deleteaccount
-description: deleteaccount
-group: functions
-feature: account
-component: deleteaccount
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: account
-feature: deleteaccount
-component: index.md
-toc: true
----
----
-layout: docs
-title: DeleteAccount
-description: DeleteAccount
-group: Functions
-feature: Account
-component: DeleteAccount
-toc: true
-redirect_from: docs/Functions/Account/DeleteAccount/index
----
 DeleteAccount
 ============
 

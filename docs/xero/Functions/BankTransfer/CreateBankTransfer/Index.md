@@ -7,43 +7,6 @@ feature: banktransfer
 component: createbanktransfer
 toc: true
 ---
----
-layout: docs
-title: createbanktransfer
-description: createbanktransfer
-group: functions
-feature: banktransfer
-component: createbanktransfer
-toc: true
----
----
-layout: docs
-title: createbanktransfer
-description: createbanktransfer
-group: functions
-feature: banktransfer
-component: createbanktransfer
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: banktransfer
-feature: createbanktransfer
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateBankTransfer
-description: CreateBankTransfer
-group: Functions
-feature: BankTransfer
-component: CreateBankTransfer
-toc: true
-redirect_from: docs/Functions/BankTransfer/CreateBankTransfer/index
----
 CreateBankTransfer
 ============
 

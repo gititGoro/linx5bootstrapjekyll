@@ -7,43 +7,6 @@ feature: receipt
 component: getreceipts
 toc: true
 ---
----
-layout: docs
-title: getreceipts
-description: getreceipts
-group: functions
-feature: receipt
-component: getreceipts
-toc: true
----
----
-layout: docs
-title: getreceipts
-description: getreceipts
-group: functions
-feature: receipt
-component: getreceipts
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: receipt
-feature: getreceipts
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetReceipts
-description: GetReceipts
-group: Functions
-feature: Receipt
-component: GetReceipts
-toc: true
-redirect_from: docs/Functions/Receipt/GetReceipts/index
----
 GetReceipts
 ============
 

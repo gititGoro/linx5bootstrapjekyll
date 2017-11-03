@@ -1,0 +1,16 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+
+<#@ parameter name="FunctionContextProperty" type="System.String" #>
+<#@ parameter name="ConnectionType" type="Twenty57.Linx.Components.Database.Common.ConnectionType" #>
+<#@ parameter name="ConnectionStringPropertyName" type="System.String" #>
+<#@ parameter name="IsolationLevelName" type ="System.String" #>
+<#@ parameter name="ExecutionPathName" type="System.String" #>
+<#@ parameter name="ExecutionPathOutputName" type="System.String" #>
+
+var beginTransactionX = new Twenty57.Linx.Components.Database.BeginTransaction.BeginTransactionX(
+	<#= CSharpUtilities.EnumAsString(ConnectionType) #>,
+	<#= ConnectionStringPropertyName #>,
+	System.Data.IsolationLevel.<#= IsolationLevelName #>);
+beginTransactionX.Transaction.LogEvent += message => <#= FunctionContextProperty #>.Log(message);
+<#= ExecutionPathOutputName #> = beginTransactionX.Select(transaction => new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult(<#= CSharpUtilities.ToVerbatimString(ExecutionPathName) #>, transaction));

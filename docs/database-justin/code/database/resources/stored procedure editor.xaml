@@ -1,0 +1,29 @@
+﻿<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+	<Canvas Width="64" Height="64" Canvas.Left="0" Canvas.Top="0">
+		<Canvas.RenderTransform>
+			<TranslateTransform X="7.2" Y="0"/>
+		</Canvas.RenderTransform>
+		<Canvas.Resources/>
+		<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#000000">
+			<Path.Data>
+				<PathGeometry Figures="M54.714 42.112l-1.359 1.359l-8.155-8.154l1.359-1.359c1.5-1.5 3.937-1.5 5.437 0l2.718 2.72  C56.212 38.177 56.212 40.612 54.714 42.112z M35.686 58.42c-0.374 0.375-0.374 0.982 0 1.358c0.376 0.377 0.984 0.377 1.358 0  l14.951-14.945l-1.361-1.36L35.686 58.42z M28.89 51.626c-0.375 0.375-0.375 0.983 0 1.357c0.376 0.375 0.982 0.375 1.359 0  l14.95-14.947l-1.358-1.358L28.89 51.626z M46.557 39.395L31.608 54.344c-0.752 0.749-0.751 1.967 0 2.716  c0.749 0.752 1.966 0.756 2.718 0l14.949-14.947L46.557 39.395z M34.323 61.132c-0.459-0.459-0.681-1.042-0.764-1.644  c-0.195 0.031-0.393 0.061-0.594 0.061c-1.026 0-1.991-0.404-2.716-1.13c-0.728-0.728-1.128-1.691-1.128-2.719  c0-0.188 0.028-0.368 0.055-0.55c-0.621-0.084-1.194-0.357-1.646-0.807c-0.043-0.043-0.059-0.103-0.099-0.148l-2.345 9.388  l9.364-2.346C34.409 61.201 34.363 61.172 34.323 61.132z" FillRule="NonZero"/>
+			</Path.Data>
+		</Path>
+		<Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="0" Width="51.7" Canvas.Top="0" Height="17.9" Fill="#000000"/>
+		<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#000000">
+			<Path.Data>
+				<PathGeometry Figures="M46.813 28.295c0.638 0 1.262 0.095 1.854 0.276c1.722-1.038 2.705-2.164 2.705-3.279v-9.015  c0 3.873-11.789 7.877-25.5 7.877c-13.71 0-25.5-4.004-25.5-7.877v9.015c0 3.87 11.789 7.874 25.499 7.874  c5.607 0 10.892-0.67 15.182-1.727l1.298-1.297C43.543 28.951 45.127 28.295 46.813 28.295z" FillRule="NonZero"/>
+			</Path.Data>
+		</Path>
+		<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#000000">
+			<Path.Data>
+				<PathGeometry Figures="M25.005 47.488c0.005-0.005 0.009-0.01 0.014-0.014l7.998-7.997c-2.281 0.234-4.681 0.365-7.144 0.365  c-13.71 0-25.5-4.004-25.5-7.876v9.014c0 3.646 10.463 7.41 23.137 7.834l0.591-2.365L25.005 47.488z" FillRule="NonZero"/>
+			</Path.Data>
+		</Path>
+		<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#000000">
+			<Path.Data>
+				<PathGeometry Figures="M21.923 55.173c-11.948-0.647-21.55-4.131-21.55-7.511v8.72c0 3.175 8.476 6.441 19.409 7.362l0.839-3.359L21.923 55.173z" FillRule="NonZero"/>
+			</Path.Data>
+		</Path>
+	</Canvas>
+</Viewbox>

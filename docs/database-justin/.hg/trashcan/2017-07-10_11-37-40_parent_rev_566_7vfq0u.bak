@@ -1,0 +1,36 @@
+diff --git a/Code/Database/ExecuteSQL/ExecuteSQL.cs b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+--- a/Code/Database/ExecuteSQL/ExecuteSQL.cs
++++ b/Code/Database/ExecuteSQL/ExecuteSQL.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class ExecuteSQL : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "ExecuteSQL"; }
+diff --git a/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs b/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
+--- a/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
++++ b/Code/Database/Mongo/MongoDBMapReduce/MongoDBMapReduce.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class MongoDBMapReduce : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "MongoDBMapReduce"; }
+diff --git a/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs b/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
+--- a/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
++++ b/Code/Database/Mongo/MongoDBWrite/MongoDBWrite.cs
+@@ -5,6 +5,8 @@
+ {
+ 	public class MongoDBWrite : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "MongoDBWrite"; }

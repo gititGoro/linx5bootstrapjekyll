@@ -7,43 +7,6 @@ feature: creditnoteallocation
 component: createcreditnoteallocation
 toc: true
 ---
----
-layout: docs
-title: createcreditnoteallocation
-description: createcreditnoteallocation
-group: functions
-feature: creditnoteallocation
-component: createcreditnoteallocation
-toc: true
----
----
-layout: docs
-title: createcreditnoteallocation
-description: createcreditnoteallocation
-group: functions
-feature: creditnoteallocation
-component: createcreditnoteallocation
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: creditnoteallocation
-feature: createcreditnoteallocation
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateCreditNoteAllocation
-description: CreateCreditNoteAllocation
-group: Functions
-feature: CreditNoteAllocation
-component: CreateCreditNoteAllocation
-toc: true
-redirect_from: docs/Functions/CreditNoteAllocation/CreateCreditNoteAllocation/index
----
 CreateCreditNoteAllocation
 ============
 

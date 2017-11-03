@@ -7,43 +7,6 @@ feature: creditnote
 component: updatecreditnote
 toc: true
 ---
----
-layout: docs
-title: updatecreditnote
-description: updatecreditnote
-group: functions
-feature: creditnote
-component: updatecreditnote
-toc: true
----
----
-layout: docs
-title: updatecreditnote
-description: updatecreditnote
-group: functions
-feature: creditnote
-component: updatecreditnote
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: creditnote
-feature: updatecreditnote
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateCreditNote
-description: UpdateCreditNote
-group: Functions
-feature: CreditNote
-component: UpdateCreditNote
-toc: true
-redirect_from: docs/Functions/CreditNote/UpdateCreditNote/index
----
 UpdateCreditNote
 ============
 

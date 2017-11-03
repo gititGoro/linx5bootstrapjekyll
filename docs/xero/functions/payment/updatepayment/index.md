@@ -7,43 +7,6 @@ feature: payment
 component: updatepayment
 toc: true
 ---
----
-layout: docs
-title: updatepayment
-description: updatepayment
-group: functions
-feature: payment
-component: updatepayment
-toc: true
----
----
-layout: docs
-title: updatepayment
-description: updatepayment
-group: functions
-feature: payment
-component: updatepayment
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: payment
-feature: updatepayment
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdatePayment
-description: UpdatePayment
-group: Functions
-feature: Payment
-component: UpdatePayment
-toc: true
-redirect_from: docs/Functions/Payment/UpdatePayment/index
----
 UpdatePayment
 ============
 

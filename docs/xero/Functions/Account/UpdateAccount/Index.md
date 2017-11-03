@@ -7,43 +7,6 @@ feature: account
 component: updateaccount
 toc: true
 ---
----
-layout: docs
-title: updateaccount
-description: updateaccount
-group: functions
-feature: account
-component: updateaccount
-toc: true
----
----
-layout: docs
-title: updateaccount
-description: updateaccount
-group: functions
-feature: account
-component: updateaccount
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: account
-feature: updateaccount
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateAccount
-description: UpdateAccount
-group: Functions
-feature: Account
-component: UpdateAccount
-toc: true
-redirect_from: docs/Functions/Account/UpdateAccount/index
----
 UpdateAccount
 ============
 

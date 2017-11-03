@@ -7,43 +7,6 @@ feature: employee
 component: createemployee
 toc: true
 ---
----
-layout: docs
-title: createemployee
-description: createemployee
-group: functions
-feature: employee
-component: createemployee
-toc: true
----
----
-layout: docs
-title: createemployee
-description: createemployee
-group: functions
-feature: employee
-component: createemployee
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: employee
-feature: createemployee
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateEmployee
-description: CreateEmployee
-group: Functions
-feature: Employee
-component: CreateEmployee
-toc: true
-redirect_from: docs/Functions/Employee/CreateEmployee/index
----
 CreateEmployee
 ============
 

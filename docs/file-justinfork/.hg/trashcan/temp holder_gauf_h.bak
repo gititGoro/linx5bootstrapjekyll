@@ -1,0 +1,161 @@
+diff --git a/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml b/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml
+--- a/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml
++++ b/Code/File/TextFileRead/Editors/TextFileReadFieldsEditor/TextFileReadFieldsEditor.xaml
+@@ -13,7 +13,6 @@
+ 							 Style="{StaticResource DialogWindowStyle}">
+ 	<ui:CustomWindow.Resources>
+ 		<converters:TrueConverter x:Key="TrueConverter" />
+-
+ 		<Style TargetType="DataGridCell">
+ 			<EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridCell_PreviewMouseLeftButtonDown" />
+             <EventSetter Event="GotKeyboardFocus" Handler="DataGridCell_GotKeyboardFocus" />
+@@ -45,8 +44,21 @@
+ 				</Setter.Value>
+ 			</Setter>
+ 		</Style>
+-
++		<DataTemplate x:Key="CrossCellDataTemplate">
++			<Button Command="Delete" Height="20" Width="20" Template="{StaticResource AppIcon_Delete}">
++				<Button.Style>
++					<Style TargetType="{x:Type Button}">
++						<Setter Property="Visibility" Value="Hidden" />
++						<Style.Triggers>
++							<DataTrigger Binding="{Binding Skip, Converter={StaticResource TrueConverter}}" Value="True">
++								<Setter Property="Visibility" Value="Visible" />
++							</DataTrigger>
++						</Style.Triggers>
++					</Style>
++				</Button.Style>
++			</Button>
++		</DataTemplate>
+ 		<Style TargetType="TextBlock" x:Key="TextBlockH2">
+ 			<Setter Property="FontWeight" Value="SemiBold" />
+ 			<Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+ 		</Style>
+@@ -49,7 +61,25 @@
+ 		<Style TargetType="TextBlock" x:Key="TextBlockH2">
+ 			<Setter Property="FontWeight" Value="SemiBold" />
+ 			<Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+ 		</Style>
++		<Style x:Key="DataGridDataRowValidationStyle" TargetType="{x:Type DataGridRow}">
++			<Setter Property="ValidationErrorTemplate">
++				<Setter.Value>
++					<ControlTemplate>
++						<ContentControl Width="11" Height="11" Template="{StaticResource AppIcon_ValidationError}" ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}, Path=(Validation.Errors)[0].ErrorContent}" />
++					</ControlTemplate>
++				</Setter.Value>
++			</Setter>
++		</Style>
++		<Style TargetType="DataGridRow" x:Key="DataGridRowStyle">
++			<Setter Property="ValidationErrorTemplate" Value="{x:Null}"/>
++		</Style>
++		<Style x:Key="DataGridComboBoxColumnElementStyle" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
++			<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
++		</Style>
++		<Style x:Key="DataGridComboBoxColumnEditingElementStyle" TargetType="{x:Type ComboBox}">
++			<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
++		</Style>
+ 		<Style TargetType="TextBox" x:Key="ValidationTxt">
+ 			<Style.Triggers>
+ 				<Trigger Property="Validation.HasError" Value="true">
+@@ -131,7 +161,7 @@
+ 			<RowDefinition />
+ 			<RowDefinition Height="Auto" />
+ 		</Grid.RowDefinitions>
+-		<Grid>
++		<Grid Name="ContainerGrid">
+ 			<Grid.RowDefinitions>
+ 				<RowDefinition Height="Auto" />
+ 				<RowDefinition Height="115" />
+@@ -238,7 +268,7 @@
+ 					</TextBox>
+ 				</Grid>
+ 			</Grid>
+-			<Grid Grid.Row="2" Grid.ColumnSpan="2">
++			<Grid  Grid.Row="2" Grid.ColumnSpan="2">
+ 				<Grid Grid.Height="25">
+ 					<Grid.ColumnDefinitions>
+ 						<ColumnDefinition />
+@@ -247,7 +277,7 @@
+ 					<Border Background="{StaticResource BackgroundBrush}" Margin="0 0 5 0">
+ 						<TextBlock Text="Define Fields" VerticalAlignment="Center" Foreground="Black" Margin="10 0 0 0"/>
+ 					</Border>
+-					<Button Content="CLEAR FIELDS" Command="{Binding ClearFields, Mode=OneWay}" Grid.Column="1" Padding="10 0" Width="102" Height="20">
++					<Button Content="CLEAR FIELDS" Click="RefreshGrid" Command="{Binding ClearFields, Mode=OneWay}" Grid.Column="1" Padding="10 0" Width="102" Height="20">
+ 						<Button.Style>
+ 							<Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButtonStyle}">
+ 								<Setter Property="IsEnabled" Value="false" />
+@@ -264,73 +294,6 @@
+ 					</Button>
+ 				</Grid>
+ 			</Grid>
+-			<DataGrid Name="DataGridFields" ItemsSource="{Binding FieldList, Mode=TwoWay}" VerticalScrollBarVisibility="Auto" CanUserDeleteRows="True" IsSynchronizedWithCurrentItem="True" CanUserAddRows="False" CanUserResizeRows="False" HorizontalAlignment="Stretch" Margin="10,5,0,5" VerticalAlignment="Stretch" AutoGenerateColumns="False" Grid.Row="3" IsManipulationEnabled="True"
+-								InitializingNewItem="DataGridFields_InitializingNewItem" Loaded="DataGridFields_Loaded" PreviewKeyDown="DataGrid_PreviewKeyDown">
+-				<DataGrid.Resources>
+-					<Style TargetType="{x:Type DataGridRow}">
+-						<Setter Property="ValidationErrorTemplate">
+-							<Setter.Value>
+-								<ControlTemplate>
+-									<ContentControl Width="11" Height="11" Template="{StaticResource AppIcon_ValidationError}" ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}}, Path=(Validation.Errors)[0].ErrorContent}" />
+-								</ControlTemplate>
+-							</Setter.Value>
+-						</Setter>
+-					</Style>
+-				</DataGrid.Resources>
+-				<DataGrid.Columns>
+-					<DataGridTextColumn Header="Name" MinWidth="200" Width="*" Foreground="{StaticResource ForegroundDarkBrush}">
+-						<DataGridTextColumn.Binding>
+-							<Binding Path="Name" Mode="TwoWay" NotifyOnValidationError="True">
+-								<Binding.ValidationRules>
+-									<local:ValidFieldNameRule />
+-									<local:UniqueFieldNameRule />
+-								</Binding.ValidationRules>
+-							</Binding>
+-						</DataGridTextColumn.Binding>
+-					</DataGridTextColumn>
+-					<DataGridTextColumn Header="Length" MinWidth="30" Foreground="{StaticResource ForegroundDarkBrush}">
+-						<DataGridTextColumn.Binding>
+-							<Binding Path="Length" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+-								<Binding.ValidationRules>
+-									<local:PositiveNumericRule fieldName="Field Length" />
+-								</Binding.ValidationRules>
+-							</Binding>
+-						</DataGridTextColumn.Binding>
+-					</DataGridTextColumn>
+-					<DataGridComboBoxColumn Header="Type" MinWidth="50" SelectedValueBinding="{Binding Path=TypeName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+-						<DataGridComboBoxColumn.ElementStyle>
+-							<Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+-								<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+-							</Style>
+-						</DataGridComboBoxColumn.ElementStyle>
+-						<DataGridComboBoxColumn.EditingElementStyle>
+-							<Style TargetType="{x:Type ComboBox}">
+-								<Setter Property="ItemsSource" Value="{Binding Path=DataContext.TypeNameList, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+-							</Style>
+-						</DataGridComboBoxColumn.EditingElementStyle>
+-					</DataGridComboBoxColumn>
+-					<DataGridTextColumn Binding="{Binding Path=Format}" Header="Input Format" MinWidth="200" Width="*" Foreground="{StaticResource ForegroundDarkBrush}" />
+-					<DataGridCheckBoxColumn Binding="{Binding Skip}" Header="Skip" Width="Auto" />
+-					<DataGridTemplateColumn IsReadOnly="True" Width="Auto">
+-						<DataGridTemplateColumn.CellTemplate>
+-							<DataTemplate>
+-								<Button Command="Delete" Height="20" Width="20" Template="{StaticResource AppIcon_Delete}">
+-									<Button.Style>
+-										<Style TargetType="{x:Type Button}">
+-											<Setter Property="Visibility" Value="Hidden" />
+-											<Style.Triggers>
+-												<DataTrigger Binding="{Binding Skip, Converter={StaticResource TrueConverter}}" Value="True">
+-													<Setter Property="Visibility" Value="Visible" />
+-												</DataTrigger>
+-											</Style.Triggers>
+-										</Style>
+-									</Button.Style>
+-								</Button>
+-							</DataTemplate>
+-						</DataGridTemplateColumn.CellTemplate>
+-					</DataGridTemplateColumn>
+-				</DataGrid.Columns>
+-			</DataGrid>
+ 			<Grid Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Stretch">
+ 				<Grid.RowDefinitions>
+ 					<RowDefinition Height="40"/>

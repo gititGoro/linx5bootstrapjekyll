@@ -7,10 +7,17 @@ feature: functions
 component: sleep
 toc: true
 ---
-# Licence for Utilities package
+Sleep
+=====
 
-### Author: [Twenty57](http://www.twenty57.com)
+The Sleep function interrupts a process and waits for the specified interval to pass. Use this function when you want a process to pause for a specified length of time.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Timeout
+
+    The time the function will wait in milliseconds. This value has to
+    be a positive number.
+
+

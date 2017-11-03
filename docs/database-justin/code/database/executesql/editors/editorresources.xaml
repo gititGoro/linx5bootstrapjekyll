@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+										xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+										xmlns:resultTypeEditor="clr-namespace:Twenty57.Linx.Components.Database.ExecuteSQL.Editors.ResultTypeEditor"
+										x:Class="Twenty57.Linx.Components.Database.ExecuteSQL.Editors.EditorResources">
+
+	<DataTemplate x:Key="ResultTypeInlineEditorTemplate">
+		<resultTypeEditor:ResultTypeInlineEditor />
+	</DataTemplate>
+
+</ResourceDictionary>

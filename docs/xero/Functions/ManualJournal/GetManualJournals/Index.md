@@ -7,43 +7,6 @@ feature: manualjournal
 component: getmanualjournals
 toc: true
 ---
----
-layout: docs
-title: getmanualjournals
-description: getmanualjournals
-group: functions
-feature: manualjournal
-component: getmanualjournals
-toc: true
----
----
-layout: docs
-title: getmanualjournals
-description: getmanualjournals
-group: functions
-feature: manualjournal
-component: getmanualjournals
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: manualjournal
-feature: getmanualjournals
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetManualJournals
-description: GetManualJournals
-group: Functions
-feature: ManualJournal
-component: GetManualJournals
-toc: true
-redirect_from: docs/Functions/ManualJournal/GetManualJournals/index
----
 GetManualJournals
 ============
 

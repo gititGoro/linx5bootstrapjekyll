@@ -7,43 +7,6 @@ feature: trackingoption
 component: updatetrackingoption
 toc: true
 ---
----
-layout: docs
-title: updatetrackingoption
-description: updatetrackingoption
-group: functions
-feature: trackingoption
-component: updatetrackingoption
-toc: true
----
----
-layout: docs
-title: updatetrackingoption
-description: updatetrackingoption
-group: functions
-feature: trackingoption
-component: updatetrackingoption
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingoption
-feature: updatetrackingoption
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateTrackingOption
-description: UpdateTrackingOption
-group: Functions
-feature: TrackingOption
-component: UpdateTrackingOption
-toc: true
-redirect_from: docs/Functions/TrackingOption/UpdateTrackingOption/index
----
 UpdateTrackingOption
 ============
 

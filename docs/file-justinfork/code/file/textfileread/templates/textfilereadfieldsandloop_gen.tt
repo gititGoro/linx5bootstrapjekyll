@@ -1,0 +1,80 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="Twenty57.Linx.Components.File.TextFileRead" #>
+<#@ import namespace="Twenty57.Linx.Plugin.Common.CodeGeneration" #>
+
+<#@ parameter name="functionContextPropertyName" type="System.String" #>
+<#@ parameter name="filePathPropertyName" type="System.String" #>
+<#@ parameter name="readType" type="Twenty57.Linx.Components.File.TextFileRead.FileReadOptions" #>
+<#@ parameter name="codePage" type="Twenty57.Linx.Components.File.Common.TextCodepage" #>
+<#@ parameter name="skipHeaderLines" type="System.String" #>
+<#@ parameter name="skipFooterLines" type="System.String" #>
+
+<#@ parameter name="outputTypeName" type="System.String" #>
+
+<#@ parameter name="fields" type="Twenty57.Linx.Components.File.TextFileRead.TextFileReaderFields" #>
+<#@ parameter name="pathOutputTypeName" type="System.String" #>
+<#@ parameter name="resultsExecutionPathName" type="System.String" #>
+<#@ parameter name="outputLineNumberName" type="System.String" #>
+<#@ parameter name="recordInnerTypeName" type="System.String" #>
+<#@ parameter name="recordInnerMemberName" type="System.String" #>
+<#@ parameter name="executionPathOutputName" type="System.String" #>
+
+<#string lengthList = "";
+foreach(var field in fields.FieldList)
+	lengthList+= field.Length + ",";
+lengthList = lengthList.Substring(0,lengthList.Length - 1);
+#>
+
+var fieldParser = new Twenty57.Linx.Components.File.TextFileRead.FieldParser(
+		<#= CSharpUtilities.EnumAsString(fields.TextFileType) #>,
+		<#= CSharpUtilities.EnumAsString(fields.Delimiter) #>,
+		<#= CSharpUtilities.EnumAsString(fields.TextQualifier) #>,
+		<#= CSharpUtilities.ToVerbatimString(fields.OtherDelimiter) #>,
+		<#= CSharpUtilities.ToVerbatimString(lengthList) #>);
+Func<Twenty57.Linx.Components.File.TextFileRead.TextFileReader.NextString,<#= pathOutputTypeName #>> parseField = (nextLine)=> 
+{
+	if(nextLine != null)
+	{
+		var parsedFields = fieldParser.GetValues(nextLine.LineContents);
+		var record = new <#= pathOutputTypeName #>();
+		var recordInner = new <#= recordInnerTypeName #>();
+		record.<#= outputLineNumberName #> = nextLine.LineNumber;
+		<# 
+		int index = 0;
+		foreach(var field in fields.FieldList) 
+		{ 
+			if(!field.Skip)
+			{#>
+				if(<#= index #> < parsedFields.Length)
+				{
+					<# if(field.Type.Is(typeof(DateTime)) && !String.IsNullOrWhiteSpace(field.Format)) {#>
+					recordInner.<#= field.Name #> = DateTime.ParseExact(parsedFields[<#= index #>], "<#= field.Format #>", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None);
+					<# } else if (field.Type.Is(typeof(decimal)) || (field.Type.Is(typeof(double)))) { #>
+					recordInner.<#= field.Name #> = <#= field.Type.GetGeneratedType() #>.Parse(parsedFields[<#= index #>], System.Globalization.CultureInfo.InvariantCulture);
+					<# } else { #> 
+					recordInner.<#= field.Name #> = (<#= field.Type.GetGeneratedType() #>)Convert.ChangeType(parsedFields[<#= index #>], typeof(<#= field.Type.GetGeneratedType() #>));
+					<# } #>
+				}
+		<# }
+			index++;
+		} #>
+		record.<#= recordInnerMemberName #> = recordInner;
+		return record;
+	}
+	else
+	{
+		return null;
+	}
+};
+
+var fileHandle = (Twenty57.Linx.Components.File.Common.TextFileHandle)<#= filePathPropertyName #>;
+fileHandle.LogEvent += message => <#= functionContextPropertyName #>.Log(message);
+var reader = new Twenty57.Linx.Components.File.TextFileRead.TextFileReader(
+	fileHandle, 
+	<#= CSharpUtilities.EnumAsString(readType) #>, 
+	<#= CSharpUtilities.EnumAsString(codePage) #>, 
+	<#= skipHeaderLines #>,
+	<#= skipFooterLines #>
+	);
+reader.LogEvent += message => <#= functionContextPropertyName #>.Log(message);
+<#= executionPathOutputName#> = reader.Lines().Select(v=> new Twenty57.Linx.Plugin.Common.CodeGeneration.NextResult("<#= resultsExecutionPathName #>", parseField(v)));

@@ -7,43 +7,6 @@ feature: banktransfer
 component: getbanktransfers
 toc: true
 ---
----
-layout: docs
-title: getbanktransfers
-description: getbanktransfers
-group: functions
-feature: banktransfer
-component: getbanktransfers
-toc: true
----
----
-layout: docs
-title: getbanktransfers
-description: getbanktransfers
-group: functions
-feature: banktransfer
-component: getbanktransfers
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: banktransfer
-feature: getbanktransfers
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetBankTransfers
-description: GetBankTransfers
-group: Functions
-feature: BankTransfer
-component: GetBankTransfers
-toc: true
-redirect_from: docs/Functions/BankTransfer/GetBankTransfers/index
----
 GetBankTransfers
 ============
 

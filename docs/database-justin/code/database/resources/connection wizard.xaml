@@ -1,0 +1,13 @@
+﻿<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+	<Canvas Width="64" Height="64" Canvas.Left="0" Canvas.Top="0">
+		<Canvas.RenderTransform>
+			<TranslateTransform X="0" Y="24"/>
+		</Canvas.RenderTransform>
+		<Canvas.Resources/>
+		<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#000000">
+			<Path.Data>
+				<PathGeometry Figures="M48 0v6H16V0H0v16h16v-6h32v6h16V0H48z M11.5 12h-7V4h7V12z M60 12h-8V4h8V12z" FillRule="NonZero"/>
+			</Path.Data>
+		</Path>
+	</Canvas>
+</Viewbox>

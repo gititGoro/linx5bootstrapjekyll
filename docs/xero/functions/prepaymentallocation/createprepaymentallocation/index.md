@@ -7,43 +7,6 @@ feature: prepaymentallocation
 component: createprepaymentallocation
 toc: true
 ---
----
-layout: docs
-title: createprepaymentallocation
-description: createprepaymentallocation
-group: functions
-feature: prepaymentallocation
-component: createprepaymentallocation
-toc: true
----
----
-layout: docs
-title: createprepaymentallocation
-description: createprepaymentallocation
-group: functions
-feature: prepaymentallocation
-component: createprepaymentallocation
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: prepaymentallocation
-feature: createprepaymentallocation
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreatePrepaymentAllocation
-description: CreatePrepaymentAllocation
-group: Functions
-feature: PrepaymentAllocation
-component: CreatePrepaymentAllocation
-toc: true
-redirect_from: docs/Functions/PrepaymentAllocation/CreatePrepaymentAllocation/index
----
 CreatePrepaymentAllocation
 ============
 

@@ -7,43 +7,6 @@ feature: banktransaction
 component: createbanktransaction
 toc: true
 ---
----
-layout: docs
-title: createbanktransaction
-description: createbanktransaction
-group: functions
-feature: banktransaction
-component: createbanktransaction
-toc: true
----
----
-layout: docs
-title: createbanktransaction
-description: createbanktransaction
-group: functions
-feature: banktransaction
-component: createbanktransaction
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: banktransaction
-feature: createbanktransaction
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateBankTransaction
-description: CreateBankTransaction
-group: Functions
-feature: BankTransaction
-component: CreateBankTransaction
-toc: true
-redirect_from: docs/Functions/BankTransaction/CreateBankTransaction/index
----
 CreateBankTransaction
 ============
 

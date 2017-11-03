@@ -1,0 +1,39 @@
+diff --git a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+--- a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
++++ b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+@@ -212,9 +212,9 @@
+ 					<TabItem Header="SQL" Style="{StaticResource SQLTestTabItemStyle}" Background="White">
+ 						<Grid x:Name="sqlGrid">
+ 							<Grid.ColumnDefinitions>
+-								<ColumnDefinition MinWidth="100" Width="300*" />
+-								<ColumnDefinition Width="3*"/>
+-								<ColumnDefinition MinWidth="204"  Width="100*"/>
++								<ColumnDefinition Width="571*" />
++								<ColumnDefinition Width="3*" MinWidth="3"/>
++								<ColumnDefinition MinWidth="204"  Width="204*"/>
+ 							</Grid.ColumnDefinitions>
+ 							<Grid.RowDefinitions>
+ 								<RowDefinition Height="*"/>
+@@ -233,6 +233,7 @@
+ 								</mvvmTextEditor:MvvmTextEditor.Resources>
+ 							</mvvmTextEditor:MvvmTextEditor>
+ 							<GridSplitter Grid.Column="1"
++										Margin="0,-2,0,-1"
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+@@ -236,5 +237,6 @@
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+-										BorderBrush="{StaticResource SoftGrey}"
++										BorderBrush="#B3B3B3"
++										BorderThickness="1,0,0,0"
+ 										Width="3" />
+@@ -240,5 +242,5 @@
+ 										Width="3" />
+-							<Border BorderThickness="1" Margin="0,-2,-2,0" Grid.Column="3" Background="{StaticResource DialogWindowBackgroundBrush}" BorderBrush="#BBBBBB" Grid.ColumnSpan="2">
++							<Border BorderThickness="1" Margin="0,-2,-2,-2" Grid.Column="3" Background="{StaticResource DialogWindowBackgroundBrush}" BorderBrush="#BBBBBB" Grid.ColumnSpan="2">
+ 								<TabControl TabStripPlacement ="Top"   Style="{StaticResource VariablesObjectsStyle}"
+ 								SelectedIndex="{Binding SQLSelectedTabIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+ 									<TabItem Style="{StaticResource VariablesTabItemStyle}">

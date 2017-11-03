@@ -7,43 +7,6 @@ feature: contact
 component: updatecontact
 toc: true
 ---
----
-layout: docs
-title: updatecontact
-description: updatecontact
-group: functions
-feature: contact
-component: updatecontact
-toc: true
----
----
-layout: docs
-title: updatecontact
-description: updatecontact
-group: functions
-feature: contact
-component: updatecontact
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contact
-feature: updatecontact
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateContact
-description: UpdateContact
-group: Functions
-feature: Contact
-component: UpdateContact
-toc: true
-redirect_from: docs/Functions/Contact/UpdateContact/index
----
 UpdateContact
 ============
 

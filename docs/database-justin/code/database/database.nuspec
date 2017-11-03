@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>$id$</id>
+		<title>Database</title>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<description>A collection of Database components
+
+Functions in package:
+DbBulkCopy - Copies large amounts of rows to a table in a SQL Server or Oracle database.
+ExecuteSQL - Runs SQL statements on a database.
+ExecuteStoredProcedure - Runs a stored procedure on a database.
+MongoDBRead - Reads data from a Mongo DB.
+MongoDBWrite - Writes data to a Mongo DB.
+		</description>
+		<tags>database statement stored procedure db sql</tags>
+		<language>en-US</language>
+	</metadata>
+	<files>
+		<file src="bin\Release\GongSolutions.Wpf.DragDrop.dll" target="lib\net45" />
+		<file src="bin\Release\Interop.ADODB.dll" target="lib\net45" />
+		<file src="bin\Release\Interop.ADOX.dll" target="lib\net45" />
+		<file src="bin\Release\Interop.MSDASC.dll" target="lib\net45" />
+		<file src="bin\Release\System.Windows.Interactivity.dll" target="lib\net45" />
+		<file src="bin\Release\Twenty57.Linx.Plugin.Utilities.dll" target="lib\net45" />
+	</files>
+</package>

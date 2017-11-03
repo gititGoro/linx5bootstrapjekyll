@@ -7,43 +7,6 @@ feature: contactgroup
 component: getcontactgroups
 toc: true
 ---
----
-layout: docs
-title: getcontactgroups
-description: getcontactgroups
-group: functions
-feature: contactgroup
-component: getcontactgroups
-toc: true
----
----
-layout: docs
-title: getcontactgroups
-description: getcontactgroups
-group: functions
-feature: contactgroup
-component: getcontactgroups
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contactgroup
-feature: getcontactgroups
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetContactGroups
-description: GetContactGroups
-group: Functions
-feature: ContactGroup
-component: GetContactGroups
-toc: true
-redirect_from: docs/Functions/ContactGroup/GetContactGroups/index
----
 GetContactGroups
 ============
 

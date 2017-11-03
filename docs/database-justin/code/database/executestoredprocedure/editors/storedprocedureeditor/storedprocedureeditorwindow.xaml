@@ -1,0 +1,217 @@
+﻿<pluginUI:CustomWindow x:Class="Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.StoredProcedureEditor.StoredProcedureEditorWindow"
+											 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+											 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+											 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+											 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+											 xmlns:pluginUI="clr-namespace:Twenty57.Linx.Plugin.UI.Windows;assembly=Twenty57.Linx.Plugin.UI"
+											 xmlns:pluginUIHelpers="clr-namespace:Twenty57.Linx.Plugin.UI.Helpers;assembly=Twenty57.Linx.Plugin.UI"
+											 xmlns:converters="clr-namespace:Twenty57.Linx.Components.Database.UI.Converters"
+											 xmlns:local="clr-namespace:Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.StoredProcedureEditor.ViewModel"
+											 xmlns:connnectioncontrol="clr-namespace:Twenty57.Linx.Components.Database.UI.Controls.ConnectionControl"
+											 xmlns:window="clr-namespace:Twenty57.Linx.Components.Database.ExecuteStoredProcedure.Editors.StoredProcedureEditor"
+											 mc:Ignorable="d" 
+											 Style="{StaticResource DialogWindowStyle}"
+											 d:DesignHeight="300" d:DesignWidth="420"
+											 Height="500" Width="700"
+											 MinHeight="300" MinWidth="420"
+											 Title="Stored Procedure Editor"
+											 ShowInTaskbar="False"
+											 WindowStartupLocation="CenterOwner"
+											 pluginUIHelpers:DialogCloser.DialogResult="{Binding DialogResult}">
+	<Window.Resources>
+		<converters:IsBusyToMouseCursorConverter x:Key="MouseCursorConverter" />
+		<BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+		<converters:InverseBooleanToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+
+		<Style TargetType="TextBlock" x:Key="EnableDisableStyle">
+			<Style.Triggers>
+				<Trigger Property="IsEnabled" Value="True">
+					<Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+				</Trigger>
+				<Trigger Property="IsEnabled" Value="False">
+					<Setter Property="Foreground" Value="LightGray" />
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+
+		<Style TargetType="Border" x:Key="ScrollBarPlaceholderStyle">
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding Path=ListBoxScrollViewer.ComputedVerticalScrollBarVisibility, RelativeSource={RelativeSource AncestorType=window:StoredProcedureEditorWindow}}" Value="Visible">
+					<Setter Property="Width" Value="12" />
+				</DataTrigger>
+			</Style.Triggers>
+		</Style>
+
+		<Style TargetType="{x:Type ListViewItem}">
+			<Setter Property="SnapsToDevicePixels" Value="true" />
+			<Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ListViewItem">
+						<Border Name="Border" SnapsToDevicePixels="true" Background="Transparent">
+							<StackPanel>
+								<GridViewRowPresenter x:Name="gridrowPresenter" Content="{TemplateBinding Property=ContentControl.Content}" />
+								<ContentPresenter x:Name="contentPresenter" Content="{TemplateBinding Property=ContentControl.Content}" Visibility="Collapsed" />
+							</StackPanel>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="GridView.ColumnCollection" Value="{x:Null}">
+								<Setter TargetName="contentPresenter" Property="Visibility" Value="Visible" />
+								<Setter TargetName="gridrowPresenter" Property="Visibility" Value="Collapsed" />
+							</Trigger>
+							<MultiTrigger>
+								<MultiTrigger.Conditions>
+									<Condition Property="IsSelected" Value="true" />
+									<Condition Property="IsFocused" Value="true" />
+								</MultiTrigger.Conditions>
+								<Setter TargetName="Border" Property="Background" Value="{StaticResource SelectedBackgroundBrush}" />
+								<Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}" />
+							</MultiTrigger>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Foreground" Value="{StaticResource ForegroundDisabledBrush}" />
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<connnectioncontrol:ConnectionControl Grid.Row="0" x:Name="ConnectionControl" />
+		
+		<Grid Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Border Grid.Row="0" Grid.Column="0" Width="{Binding LabelColumnWidth, ElementName=ConnectionControl, Mode=OneWay}" />
+			<TextBlock Grid.Row="0" Grid.Column="1" Margin="5 5 5 0" Foreground="Blue" Visibility="{Binding HasConnectionString, Converter={StaticResource InverseBoolToVisibilityConverter}}">Enter a valid connection string to list stored procedures.</TextBlock>
+			<TextBlock Grid.Row="1" Grid.Column="0" Margin="5 5 0 0" Foreground="{StaticResource ForegroundDarkBrush}">Stored procedure:</TextBlock>
+			<ComboBox Grid.Row="1" Grid.Column="1" Margin="5 5 5 0" IsEditable="True" 
+							Text="{Binding StoredProcedure}" 
+							SelectedIndex="{Binding StoredProcedureIndex, Mode=OneWay}"
+							ItemsSource="{Binding StoredProcedures, Mode=OneWay, IsAsync=True}"
+							Cursor="{Binding IsLoadingStoredProcedures, Converter={StaticResource MouseCursorConverter}}"
+							DropDownOpened="StoredProceduresComboBox_DropDownOpened" />
+			<TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5 5 5 0" Foreground="Red" TextWrapping="Wrap" Visibility="{Binding HasErrorText, Converter={StaticResource BoolToVisibilityConverter}}" Text="{Binding ErrorText, Mode=OneWay}" />
+		</Grid>
+
+		<DockPanel Grid.Row="2" IsEnabled="{Binding HasProcedureParameters}" LastChildFill="True">
+			<Border DockPanel.Dock="Top" Margin="0 5 0 0" Height="35" Background="{StaticResource BackgroundBrush}">
+				<TextBlock Margin="5" VerticalAlignment="Center" Style="{StaticResource EnableDisableStyle}" FontWeight="Bold">Parameters</TextBlock>
+			</Border>
+
+			<Grid DockPanel.Dock="Top" Margin="5 5 5 0" Height="30">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				<Border x:Name="NameHeader" Grid.Column="0" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+				</Border>
+				<Border x:Name="DirectionHeader" Grid.Column="1" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Direction</TextBlock>
+				</Border>
+				<Border x:Name="DataTypeHeader" Grid.Column="2" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Type</TextBlock>
+				</Border>
+				<Border x:Name="PrecisionHeader" Grid.Column="3" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Precision</TextBlock>
+				</Border>
+				<Border x:Name="ScaleHeader" Grid.Column="4" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Scale</TextBlock>
+				</Border>
+				<Border x:Name="LengthHeader" Grid.Column="5" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Length</TextBlock>
+				</Border>
+				<Border x:Name="NullableHeader" Grid.Column="6" Margin="1" Background="{StaticResource BackgroundBrush}">
+					<TextBlock Style="{StaticResource EnableDisableStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Nullable</TextBlock>
+				</Border>
+				<Border Grid.Column="7" Style="{StaticResource ScrollBarPlaceholderStyle}" />
+			</Grid>
+
+			<ListView x:Name="ParametersListView" DockPanel.Dock="Top" Margin="5 0 5 5" Background="{StaticResource WindowBackgroundBrush}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Loaded="ParametersListView_Loaded"
+						ItemsSource="{Binding ProcedureParameters}">
+				<ListView.Resources>
+					<DataTemplate DataType="{x:Type local:ProcedureParameterModel}">
+						<Grid Height="25">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="2*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<Border Grid.Column="0" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=NameHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Name}" />
+							</Border>
+							<Border Grid.Column="1" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=DirectionHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Direction}" />
+							</Border>
+							<Border Grid.Column="2" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=DataTypeHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" FontFamily="Courier New" Text="{Binding DataType}" />
+							</Border>
+							<Border Grid.Column="3" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=PrecisionHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Precision}" />
+							</Border>
+							<Border Grid.Column="4" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=ScaleHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Scale}" />
+							</Border>
+							<Border Grid.Column="5" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=LengthHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Size}" />
+							</Border>
+							<Border Grid.Column="6" Margin="1 0 1 0" Background="#30D0D0D0" Width="{Binding ElementName=NullableHeader, Path=ActualWidth}">
+								<TextBlock Margin="2 0 2 0" Foreground="{StaticResource ForegroundDarkBrush}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding Nullable}" />
+							</Border>
+						</Grid>
+					</DataTemplate>
+				</ListView.Resources>
+			</ListView>
+		</DockPanel>
+
+		<StackPanel Grid.Row="3" IsEnabled="{Binding HasResultSets}">
+			<Border DockPanel.Dock="Top" Margin="0 5 0 0" Height="35" Background="{StaticResource BackgroundBrush}">
+				<TextBlock Margin="5" VerticalAlignment="Center" Style="{StaticResource EnableDisableStyle}" FontWeight="Bold">Result sets</TextBlock>
+			</Border>
+			<TextBlock Margin="5" Foreground="{StaticResource ForegroundDarkBrush}" Visibility="{Binding HasResultSets, Converter={StaticResource BoolToVisibilityConverter}}" 
+						 Text="{Binding ResultSetCountText}" />
+		</StackPanel>
+
+		<StackPanel Grid.Row="4" Background="{StaticResource DialogWindowBackgroundBrush}">
+			<StackPanel Margin="5">
+				<CheckBox Margin="0 0 0 5" IsChecked="{Binding ShouldUpdateConnectionString}">Update connection string</CheckBox>
+				<CheckBox Margin="0 0 0 5" IsChecked="{Binding ShouldUpdateStoredProcedure}">Update stored procedure</CheckBox>
+				<CheckBox Margin="0 0 0 5" IsChecked="{Binding ShouldUpdateParameters}">Update parameters</CheckBox>
+				<CheckBox IsChecked="{Binding ShouldUpdateResultSets}">Update result sets</CheckBox>
+			</StackPanel>
+			<StackPanel Style="{StaticResource DialogWindowButtonStackPanelStyle}" Orientation="Horizontal" FlowDirection="RightToLeft">
+				<Button Content="_CANCEL" IsCancel="True" TabIndex="2" />
+				<Button Style="{StaticResource DialogPrimaryButtonStyle}" Content="_SAVE" Margin="10 0 0 0" Command="{Binding SaveCommand, Mode=OneTime}" TabIndex="1"/>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</pluginUI:CustomWindow>

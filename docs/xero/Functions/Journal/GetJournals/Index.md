@@ -7,43 +7,6 @@ feature: journal
 component: getjournals
 toc: true
 ---
----
-layout: docs
-title: getjournals
-description: getjournals
-group: functions
-feature: journal
-component: getjournals
-toc: true
----
----
-layout: docs
-title: getjournals
-description: getjournals
-group: functions
-feature: journal
-component: getjournals
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: journal
-feature: getjournals
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetJournals
-description: GetJournals
-group: Functions
-feature: Journal
-component: GetJournals
-toc: true
-redirect_from: docs/Functions/Journal/GetJournals/index
----
 GetJournals
 ============
 

@@ -7,43 +7,6 @@ feature: purchaseorder
 component: createpurchaseorder
 toc: true
 ---
----
-layout: docs
-title: createpurchaseorder
-description: createpurchaseorder
-group: functions
-feature: purchaseorder
-component: createpurchaseorder
-toc: true
----
----
-layout: docs
-title: createpurchaseorder
-description: createpurchaseorder
-group: functions
-feature: purchaseorder
-component: createpurchaseorder
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: purchaseorder
-feature: createpurchaseorder
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreatePurchaseOrder
-description: CreatePurchaseOrder
-group: Functions
-feature: PurchaseOrder
-component: CreatePurchaseOrder
-toc: true
-redirect_from: docs/Functions/PurchaseOrder/CreatePurchaseOrder/index
----
 CreatePurchaseOrder
 ============
 

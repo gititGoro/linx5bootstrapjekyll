@@ -7,43 +7,6 @@ feature: contactgroup
 component: deletecontactgroupcontact
 toc: true
 ---
----
-layout: docs
-title: deletecontactgroupcontact
-description: deletecontactgroupcontact
-group: functions
-feature: contactgroup
-component: deletecontactgroupcontact
-toc: true
----
----
-layout: docs
-title: deletecontactgroupcontact
-description: deletecontactgroupcontact
-group: functions
-feature: contactgroup
-component: deletecontactgroupcontact
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contactgroup
-feature: deletecontactgroupcontact
-component: index.md
-toc: true
----
----
-layout: docs
-title: DeleteContactGroupContact
-description: DeleteContactGroupContact
-group: Functions
-feature: ContactGroup
-component: DeleteContactGroupContact
-toc: true
-redirect_from: docs/Functions/ContactGroup/DeleteContactGroupContact/index
----
 DeleteContactGroupContact
 ============
 

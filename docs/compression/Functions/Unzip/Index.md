@@ -7,10 +7,26 @@ feature: functions
 component: unzip
 toc: true
 ---
-# Licence for Compression plugin
+# Unzip
 
-### Author: [Twenty57](http://www.twenty57.com)
+Extracts a zip archive to a given directory.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+## Properties
 
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+- ### Archive
+A file path string of the zip archive to be extracted.
+
+- ### Extract to
+A file path string to the directory where the contents of the zip archive will be placed after extraction.
+
+- ### Overwrite existing files
+If checked then any files with the same name as those being extracted will be overwritten with the extracted files. Otherwise stops the process and returns an error.
+
+- ### Password
+Password of zip archive to be extracted.
+
+## Output
+If the process was successful then a list of strings containing the file paths to each extracted file will be returned.
+
+## Video
+[Linx 5 Zip and Unzip ](https://www.youtube.com/watch?v=pMYJoSWFUhk)

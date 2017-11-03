@@ -7,43 +7,6 @@ feature: linkedtransaction
 component: updatelinkedtransaction
 toc: true
 ---
----
-layout: docs
-title: updatelinkedtransaction
-description: updatelinkedtransaction
-group: functions
-feature: linkedtransaction
-component: updatelinkedtransaction
-toc: true
----
----
-layout: docs
-title: updatelinkedtransaction
-description: updatelinkedtransaction
-group: functions
-feature: linkedtransaction
-component: updatelinkedtransaction
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: linkedtransaction
-feature: updatelinkedtransaction
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateLinkedTransaction
-description: UpdateLinkedTransaction
-group: Functions
-feature: LinkedTransaction
-component: UpdateLinkedTransaction
-toc: true
-redirect_from: docs/Functions/LinkedTransaction/UpdateLinkedTransaction/index
----
 UpdateLinkedTransaction
 ============
 

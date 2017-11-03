@@ -7,43 +7,6 @@ feature: taxrate
 component: updatetaxrate
 toc: true
 ---
----
-layout: docs
-title: updatetaxrate
-description: updatetaxrate
-group: functions
-feature: taxrate
-component: updatetaxrate
-toc: true
----
----
-layout: docs
-title: updatetaxrate
-description: updatetaxrate
-group: functions
-feature: taxrate
-component: updatetaxrate
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: taxrate
-feature: updatetaxrate
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateTaxRate
-description: UpdateTaxRate
-group: Functions
-feature: TaxRate
-component: UpdateTaxRate
-toc: true
-redirect_from: docs/Functions/TaxRate/UpdateTaxRate/index
----
 UpdateTaxRate
 ============
 

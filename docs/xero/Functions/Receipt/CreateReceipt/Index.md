@@ -7,43 +7,6 @@ feature: receipt
 component: createreceipt
 toc: true
 ---
----
-layout: docs
-title: createreceipt
-description: createreceipt
-group: functions
-feature: receipt
-component: createreceipt
-toc: true
----
----
-layout: docs
-title: createreceipt
-description: createreceipt
-group: functions
-feature: receipt
-component: createreceipt
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: receipt
-feature: createreceipt
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateReceipt
-description: CreateReceipt
-group: Functions
-feature: Receipt
-component: CreateReceipt
-toc: true
-redirect_from: docs/Functions/Receipt/CreateReceipt/index
----
 CreateReceipt
 ============
 

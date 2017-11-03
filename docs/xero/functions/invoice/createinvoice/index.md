@@ -7,43 +7,6 @@ feature: invoice
 component: createinvoice
 toc: true
 ---
----
-layout: docs
-title: createinvoice
-description: createinvoice
-group: functions
-feature: invoice
-component: createinvoice
-toc: true
----
----
-layout: docs
-title: createinvoice
-description: createinvoice
-group: functions
-feature: invoice
-component: createinvoice
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: invoice
-feature: createinvoice
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateInvoice
-description: CreateInvoice
-group: Functions
-feature: Invoice
-component: CreateInvoice
-toc: true
-redirect_from: docs/Functions/Invoice/CreateInvoice/index
----
 CreateInvoice
 ============
 

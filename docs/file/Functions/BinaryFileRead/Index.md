@@ -7,10 +7,19 @@ feature: functions
 component: binaryfileread
 toc: true
 ---
-# Licence for File plugin
+BinaryFileRead
+==============
 
-### Author: [Twenty57](http://www.twenty57.com)
+The BinaryFileRead function allows for reading binary files.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+The function will read the entire file into memory for you to use.
+Reading large files may require a lot of memory.
 
-- [Twenty57 plugin](https://linx.software/Support/BuiltIn/Licence)
+Properties
+----------
+
+-  #### File Path
+
+    The path to the binary file.
+
+

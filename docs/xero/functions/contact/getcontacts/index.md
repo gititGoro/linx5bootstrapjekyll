@@ -7,43 +7,6 @@ feature: contact
 component: getcontacts
 toc: true
 ---
----
-layout: docs
-title: getcontacts
-description: getcontacts
-group: functions
-feature: contact
-component: getcontacts
-toc: true
----
----
-layout: docs
-title: getcontacts
-description: getcontacts
-group: functions
-feature: contact
-component: getcontacts
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: contact
-feature: getcontacts
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetContacts
-description: GetContacts
-group: Functions
-feature: Contact
-component: GetContacts
-toc: true
-redirect_from: docs/Functions/Contact/GetContacts/index
----
 GetContacts
 ============
 

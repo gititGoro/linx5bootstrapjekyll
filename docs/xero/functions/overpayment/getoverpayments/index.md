@@ -7,43 +7,6 @@ feature: overpayment
 component: getoverpayments
 toc: true
 ---
----
-layout: docs
-title: getoverpayments
-description: getoverpayments
-group: functions
-feature: overpayment
-component: getoverpayments
-toc: true
----
----
-layout: docs
-title: getoverpayments
-description: getoverpayments
-group: functions
-feature: overpayment
-component: getoverpayments
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: overpayment
-feature: getoverpayments
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetOverpayments
-description: GetOverpayments
-group: Functions
-feature: Overpayment
-component: GetOverpayments
-toc: true
-redirect_from: docs/Functions/Overpayment/GetOverpayments/index
----
 GetOverpayments
 ============
 

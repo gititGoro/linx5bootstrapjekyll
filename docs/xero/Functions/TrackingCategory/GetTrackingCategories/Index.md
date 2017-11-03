@@ -7,43 +7,6 @@ feature: trackingcategory
 component: gettrackingcategories
 toc: true
 ---
----
-layout: docs
-title: gettrackingcategories
-description: gettrackingcategories
-group: functions
-feature: trackingcategory
-component: gettrackingcategories
-toc: true
----
----
-layout: docs
-title: gettrackingcategories
-description: gettrackingcategories
-group: functions
-feature: trackingcategory
-component: gettrackingcategories
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingcategory
-feature: gettrackingcategories
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetTrackingCategories
-description: GetTrackingCategories
-group: Functions
-feature: TrackingCategory
-component: GetTrackingCategories
-toc: true
-redirect_from: docs/Functions/TrackingCategory/GetTrackingCategories/index
----
 GetTrackingCategories
 ============
 

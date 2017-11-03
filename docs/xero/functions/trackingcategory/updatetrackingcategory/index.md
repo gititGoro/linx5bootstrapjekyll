@@ -7,43 +7,6 @@ feature: trackingcategory
 component: updatetrackingcategory
 toc: true
 ---
----
-layout: docs
-title: updatetrackingcategory
-description: updatetrackingcategory
-group: functions
-feature: trackingcategory
-component: updatetrackingcategory
-toc: true
----
----
-layout: docs
-title: updatetrackingcategory
-description: updatetrackingcategory
-group: functions
-feature: trackingcategory
-component: updatetrackingcategory
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: trackingcategory
-feature: updatetrackingcategory
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateTrackingCategory
-description: UpdateTrackingCategory
-group: Functions
-feature: TrackingCategory
-component: UpdateTrackingCategory
-toc: true
-redirect_from: docs/Functions/TrackingCategory/UpdateTrackingCategory/index
----
 UpdateTrackingCategory
 ============
 

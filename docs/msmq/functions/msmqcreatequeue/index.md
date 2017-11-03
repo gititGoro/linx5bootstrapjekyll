@@ -7,10 +7,29 @@ feature: functions
 component: msmqcreatequeue
 toc: true
 ---
-# Licence for MSMQ plugin
+MSMQCreateQueue
+===============
 
-### Author: [Twenty57](http://www.twenty57.com)
+MSMQCreateQueue creates an MSMQ queue if it doesn't yet exist.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Computer name
+
+    The name of the computer to create the queue on ('.' indicates
+    the local computer).
+
+-  #### Queue name
+
+    The name of the queue to create.
+
+-  #### Shared
+
+    If checked, the queue will be shared with everyone having access to
+    the specified computer.
+
+Links
+-----
+
+[Microsoft's MSMQ overview](https://msdn.microsoft.com/en-us/library/ms711472(v=vs.85).aspx)

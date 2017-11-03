@@ -1,0 +1,12 @@
+diff --git a/Code/Database/BeginTransaction/BeginTransaction.cs b/Code/Database/BeginTransaction/BeginTransaction.cs
+--- a/Code/Database/BeginTransaction/BeginTransaction.cs
++++ b/Code/Database/BeginTransaction/BeginTransaction.cs
+@@ -4,6 +4,8 @@
+ {
+ 	public class BeginTransaction : FunctionProvider
+ 	{
++		public override string Category { get; } = "Database";
++
+ 		public override string Name
+ 		{
+ 			get { return "BeginTransaction"; }

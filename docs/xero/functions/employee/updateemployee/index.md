@@ -7,43 +7,6 @@ feature: employee
 component: updateemployee
 toc: true
 ---
----
-layout: docs
-title: updateemployee
-description: updateemployee
-group: functions
-feature: employee
-component: updateemployee
-toc: true
----
----
-layout: docs
-title: updateemployee
-description: updateemployee
-group: functions
-feature: employee
-component: updateemployee
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: employee
-feature: updateemployee
-component: index.md
-toc: true
----
----
-layout: docs
-title: UpdateEmployee
-description: UpdateEmployee
-group: Functions
-feature: Employee
-component: UpdateEmployee
-toc: true
-redirect_from: docs/Functions/Employee/UpdateEmployee/index
----
 UpdateEmployee
 ============
 

@@ -7,10 +7,26 @@ feature: functions
 component: generatehash
 toc: true
 ---
-# Licence for Cryptography plugin
+GenerateHash
+============
 
-### Author: [Twenty57](http://www.twenty57.com)
+GenerateHash computes a Base64-encoded hash for the input data using the specified
+hashing algorithm.
 
-This plugin incorporates third party components whose licences require us to include the licence and/or copyright notices. Here are those licences:
+Properties
+----------
 
-- [Twenty57 plugin](https://linx.software/plugins/builtin/licence/)
+-  #### Data
+
+    The input data for which the hash will be calculated.
+
+-  #### Hash algorithm
+
+    The algorithm to use when computing the hash. Possible values are:
+    MD5, RIPEMD160, SHA1, SHA256, SHA384 or SHA512.
+
+Output
+------
+
+-  A string-formatted hexadecimal number that contains the computed hash.
+

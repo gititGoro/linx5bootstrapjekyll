@@ -1,0 +1,107 @@
+diff --git a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+--- a/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
++++ b/Code/Database/ExecuteSQL/Editors/SQLEditor/SQLEditor.xaml
+@@ -189,7 +189,7 @@
+ 				<ColumnDefinition Width="2*" MinWidth="280"/>
+ 			</Grid.ColumnDefinitions>
+ 			<Grid.RowDefinitions>
+-				<RowDefinition Height="5"/>
++				<RowDefinition Height="3"/>
+ 				<RowDefinition Height="*" MinHeight="80"/>
+ 				<RowDefinition Height="Auto"/>
+ 			</Grid.RowDefinitions>
+@@ -299,5 +299,5 @@
+ 						</Grid>
+ 					</TabItem>
+ 					<TabItem Header="Test" Style="{StaticResource SQLTestTabItemStyle}">
+-						<helpers:TestSqlPaneScrollViewer x:Name="testSqlPane" Grid.Column="4" Foreground="{StaticResource TitlebarActive}" VerticalScrollBarVisibility="Auto" >
++						<helpers:TestSqlPaneScrollViewer x:Name="testSqlPane" Foreground="{StaticResource TitlebarActive}" VerticalScrollBarVisibility="Auto" >
+ 							<Grid x:Name="testGrid" >
+@@ -303,5 +303,2 @@
+ 							<Grid x:Name="testGrid" >
+-								<Grid.RowDefinitions>
+-									<RowDefinition Height="*" />
+-								</Grid.RowDefinitions>
+ 								<Grid.ColumnDefinitions>
+@@ -307,4 +304,3 @@
+ 								<Grid.ColumnDefinitions>
+-									<ColumnDefinition Width="20*" MinWidth="100" />
+-									<ColumnDefinition Width="137*"/>
++									<ColumnDefinition Width="100*" />
+ 									<ColumnDefinition Width="3" />
+@@ -310,4 +306,4 @@
+ 									<ColumnDefinition Width="3" />
+-									<ColumnDefinition Width="626*" MinWidth="100" />
++									<ColumnDefinition Width="400*" />
+ 								</Grid.ColumnDefinitions>
+ 
+@@ -312,5 +308,5 @@
+ 								</Grid.ColumnDefinitions>
+ 
+-								<Border Grid.Column="0" BorderThickness="1" 
+-									BorderBrush="{StaticResource TitlebarActive}" 
++								<Border Grid.Column="0" BorderThickness="1"
++									BorderBrush="Orange" 
+ 									IsEnabled="{Binding CanExecuteSQL, Mode=OneWay}"
+@@ -316,7 +312,9 @@
+ 									IsEnabled="{Binding CanExecuteSQL, Mode=OneWay}"
+-									Background="{StaticResource ForegroundLightBrush}" Grid.ColumnSpan="2">
+-									<ScrollViewer x:Name="parameterScrollViewer" VerticalScrollBarVisibility="Auto" MaxHeight="{Binding ElementName=testSqlPane, Path=ActualHeight, Converter={StaticResource testSqlPaneScrollViewerHeightConverter}}" >
+-										<StackPanel Orientation="Vertical" CanVerticallyScroll="False">
++									Background="{StaticResource ForegroundLightBrush}" HorizontalAlignment="Stretch"  Margin="0">
++									<ScrollViewer x:Name="parameterScrollViewer" VerticalScrollBarVisibility="Auto"
++									 MaxHeight="{Binding ElementName=testSqlPane, Path=ActualHeight, Converter={StaticResource testSqlPaneScrollViewerHeightConverter}}"
++									 Margin="0" HorizontalAlignment="Stretch">
++										<StackPanel Orientation="Vertical" CanVerticallyScroll="False" HorizontalAlignment="Stretch">
+ 											<TextBlock Margin="5" Foreground="{StaticResource ForegroundDarkBrush}">Test SQL</TextBlock>
+ 											<ListView x:Name="SQLParametersList" Margin="5" ItemsSource="{Binding SQLParameters}">
+ 												<i:Interaction.Behaviors>
+@@ -343,9 +341,9 @@
+ 													</DataTemplate>
+ 												</ListView.Resources>
+ 											</ListView>
+-											<DockPanel Grid.Column="0" LastChildFill="False" Background="{StaticResource ForegroundLightBrush}">
++											<DockPanel LastChildFill="False" Background="{StaticResource ForegroundLightBrush}">
+ 												<Button DockPanel.Dock="Left" Margin="5" Content="_EXECUTE SQL" Width="102" Height="20" Command="{Binding ExecuteSQLCommand, Mode=OneWay}" />
+ 											</DockPanel>
+ 										</StackPanel>
+ 									</ScrollViewer>
+ 								</Border>
+@@ -347,10 +345,10 @@
+ 												<Button DockPanel.Dock="Left" Margin="5" Content="_EXECUTE SQL" Width="102" Height="20" Command="{Binding ExecuteSQLCommand, Mode=OneWay}" />
+ 											</DockPanel>
+ 										</StackPanel>
+ 									</ScrollViewer>
+ 								</Border>
+-								<GridSplitter Grid.Column="2"
++								<GridSplitter Grid.Column="1"
+ 										Grid.Row="0"
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+@@ -353,10 +351,13 @@
+ 										Grid.Row="0"
+ 										HorizontalAlignment="Center"
+ 										VerticalAlignment="Stretch"
+ 										ShowsPreview="True"
+-										Width="3" />
+-								<StackPanel x:Name="resultsStackPanel" Grid.Column="3"
+-								Visibility="{Binding HasQueryResults, Converter={StaticResource booleanToVisibilityConverter}, Mode=OneWay}">
++										Margin="0"
++										BorderBrush="Purple"
++										BorderThickness="1"
++										Width="3"/>
++								<StackPanel x:Name="resultsStackPanel" Grid.Column="2"
++									Visibility="{Binding HasQueryResults, Converter={StaticResource booleanToVisibilityConverter}, Mode=OneWay}">
+ 									<StackPanel Margin="5" Orientation="Horizontal">
+ 										<TextBlock FontWeight="Bold" FontSize="12">Results</TextBlock>
+ 										<TextBlock Margin="5 0 0 0" VerticalAlignment="Bottom" 
+@@ -374,7 +375,7 @@
+ 										</i:Interaction.Behaviors>
+ 									</DataGrid>
+ 								</StackPanel>
+-								<TextBox Grid.Column="3" 
++								<TextBox Grid.Column="2" 
+ 									 TextWrapping="Wrap"
+ 									 IsReadOnly="True"
+ 									 ScrollViewer.VerticalScrollBarVisibility="Auto"

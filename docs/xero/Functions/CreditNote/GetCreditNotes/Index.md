@@ -7,43 +7,6 @@ feature: creditnote
 component: getcreditnotes
 toc: true
 ---
----
-layout: docs
-title: getcreditnotes
-description: getcreditnotes
-group: functions
-feature: creditnote
-component: getcreditnotes
-toc: true
----
----
-layout: docs
-title: getcreditnotes
-description: getcreditnotes
-group: functions
-feature: creditnote
-component: getcreditnotes
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: creditnote
-feature: getcreditnotes
-component: index.md
-toc: true
----
----
-layout: docs
-title: GetCreditNotes
-description: GetCreditNotes
-group: Functions
-feature: CreditNote
-component: GetCreditNotes
-toc: true
-redirect_from: docs/Functions/CreditNote/GetCreditNotes/index
----
 GetCreditNotes
 ============
 

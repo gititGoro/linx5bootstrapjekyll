@@ -7,43 +7,6 @@ feature: creditnote
 component: createcreditnote
 toc: true
 ---
----
-layout: docs
-title: createcreditnote
-description: createcreditnote
-group: functions
-feature: creditnote
-component: createcreditnote
-toc: true
----
----
-layout: docs
-title: createcreditnote
-description: createcreditnote
-group: functions
-feature: creditnote
-component: createcreditnote
-toc: true
----
----
-layout: docs
-title: index.md
-description: index.md
-group: creditnote
-feature: createcreditnote
-component: index.md
-toc: true
----
----
-layout: docs
-title: CreateCreditNote
-description: CreateCreditNote
-group: Functions
-feature: CreditNote
-component: CreateCreditNote
-toc: true
-redirect_from: docs/Functions/CreditNote/CreateCreditNote/index
----
 CreateCreditNote
 ============
 
