@@ -1,9 +1,9 @@
-# example repository config (see 'hg help config' for more info)
+# example repository config (see "hg help config" for more info)
 [paths]
-default = https://bitbucket.org/T57/linx5-components-excel-help
+default = ssh://hg@bitbucket.org/T57/linx5-components-excel-help
 
 # path aliases to other clones of this repo in URLs or filesystem paths
-# (see 'hg help config.paths' for more info)
+# (see "hg help config.paths" for more info)
 #
 # default-push = ssh://jdoe@example.net/hg/jdoes-fork
 # my-fork      = ssh://jdoe@example.net/hg/jdoes-fork

@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Commit</Name>
+		<Description>Commits the specified files or all outstanding changes.</Description>
+	</Item>

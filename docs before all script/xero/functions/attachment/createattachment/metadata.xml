@@ -1,0 +1,4 @@
+<Item>
+	<Name>CreateAttachment</Name>
+	<Description>Allows you to create an attachment for a document. If an attachment already exists on the specified document, then the attachment being uploaded will overwrite it.</Description>
+</Item>

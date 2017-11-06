@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Call SOAP WebService</Name>
+		<Description>Connect to web APIs using the SOAP protocol.</Description>
+	</Item>

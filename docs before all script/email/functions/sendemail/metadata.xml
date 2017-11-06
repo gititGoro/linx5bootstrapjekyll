@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Send Email</Name>
+		<Description>Send emails using the SMTP protocol. Add attachments and send as text or HTML.</Description>
+	</Item>

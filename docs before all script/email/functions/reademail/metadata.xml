@@ -1,0 +1,4 @@
+	<Item>
+		<Name>Read Email</Name>
+		<Description>Use the IMAP or POP3 protocol to read emails. Extract and use email attachments.</Description>
+	</Item>

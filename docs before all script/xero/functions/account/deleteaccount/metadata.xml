@@ -1,0 +1,4 @@
+<Item>
+	<Name>DeleteAccount</Name>
+	<Description>Allows you to delete individual accounts in a Xero organisation. Non-system accounts and accounts not used on transactions can be deleted using this function. If an account is not able to be deleted you can update the status to ARCHIVED.</Description>
+</Item>

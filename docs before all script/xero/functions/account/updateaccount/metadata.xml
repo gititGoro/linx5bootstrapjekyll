@@ -1,0 +1,8 @@
+<Item>
+	<Name>UpdateAccount</Name>
+	<Description>Use this method to update account details.
+Limitations
+- Accounts of type 'BANK' cannot be updated.
+- You can only update accounts one at a time (i.e. you'll need to do multiple API calls to update many accounts).
+- You cannot update the status to archived when also updating other values.</Description>
+</Item>
